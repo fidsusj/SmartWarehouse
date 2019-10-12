@@ -16,5 +16,72 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{AurelienGeron.2018}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b9ef41b5f253b9e68202e6419fe33e44}{%
+           family={{Aur{é}lien G{é}ron}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {O'Reilly}%
+      }
+      \list{location}{1}{%
+        {Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {dpunkt.verlag GmbH}%
+      }
+      \strng{namehash}{b9ef41b5f253b9e68202e6419fe33e44}
+      \strng{fullhash}{b9ef41b5f253b9e68202e6419fe33e44}
+      \strng{bibnamehash}{b9ef41b5f253b9e68202e6419fe33e44}
+      \strng{authorbibnamehash}{b9ef41b5f253b9e68202e6419fe33e44}
+      \strng{authornamehash}{b9ef41b5f253b9e68202e6419fe33e44}
+      \strng{authorfullhash}{b9ef41b5f253b9e68202e6419fe33e44}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{isbn}{978-3-96009-061-8}
+      \field{title}{Machine Learning mit Scikit-Learn {\&} TensorFlow: Konzepte, Tools und Techniken f{ü}r intelligente Systeme: {Ü}bersetzung von Kristian Rother}
+      \field{year}{2018}
+    \endentry
+    \entry{MathWorks.2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
+           family={MathWorks},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {MathWorks}%
+      }
+      \strng{namehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{bibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Deep Learning: Drei Dinge, die Sie wissen sollten}
+      \field{urlday}{10}
+      \field{urlmonth}{2}
+      \field{urlyear}{2019}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://de.mathworks.com/discovery/deep-learning.html
+      \endverb
+      \verb{url}
+      \verb https://de.mathworks.com/discovery/deep-learning.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

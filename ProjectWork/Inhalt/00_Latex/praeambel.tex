@@ -1,0 +1,111 @@
+\documentclass[
+	fontsize=12pt,           % Leitlinien sprechen von Schriftgröße 12.
+	paper=A4,
+	twoside=false,
+	listof=totoc,            % Tabellen- und Abbildungsverzeichnis ins Inhaltsverzeichnis
+	bibliography=totoc,      % Literaturverzeichnis ins Inhaltsverzeichnis aufnehmen
+	titlepage,               % Titlepage-Umgebung anstatt \maketitle
+	headsepline,             % horizontale Linie unter Kolumnentitel
+	abstracton,              % Überschrift einschalten, Abstract muss in {abstract}-Umgebung stehen
+]{scrreprt}                  % Verwendung von KOMA-Report
+\usepackage[utf8]{inputenc}  % UTF8 Encoding einschalten
+\usepackage[ngerman]{babel}  % Neue deutsche Rechtschreibung
+\usepackage[T1]{fontenc}     % Ausgabe von westeuropäischen Zeichen (auch Umlaute)
+\usepackage{graphicx}        % Einbinden von Grafiken erlauben
+\usepackage{wrapfig}         % Grafiken fließend im Text
+\usepackage{setspace}        % Zeilenabstand \singlespacing, \onehalfspaceing, \doublespacing
+\usepackage[
+	%showframe,                % Ränder anzeigen lassen
+	left=2.7cm, right=2.5cm,
+	top=2.5cm,  bottom=2.5cm,
+	includeheadfoot
+]{geometry}                      % Seitenlayout einstellen
+\usepackage{scrlayer-scrpage}    % Gestaltung von Fuß- und Kopfzeilen
+\usepackage{acronym}             % Abkürzungen, Abkürzungsverzeichnis
+\usepackage{titletoc}            % Anpassungen am Inhaltsverzeichnis
+\contentsmargin{0.725cm}         % Abstand im Inhaltsverzeichnis zw. Punkt und Seitenzahl
+\usepackage[                     % Klickbare Links (enth. auch "nameref", "url" Package)
+  hidelinks,                     % Blende die "URL Boxen" aus.
+  breaklinks=true                % Breche zu lange URLs am Zeilenende um
+]{hyperref}
+\urlstyle{same}                  % Aktuelle Schrift auch für URLs
+% Anpassung von autoref für Gleichungen (ergänzt runde Klammern) und Algorithm
+\addto\extrasngerman{%
+	\def\equationautorefname~#1\null{Gleichung~(#1)\null}
+	\def\lstnumberautorefname{Zeile}
+	\def\algorithmautorefname{Algorithmus}
+}
+
+% ---- Abstand verkleinern von der Überschrift 
+\renewcommand*{\chapterheadstartvskip}{\vspace*{.5\baselineskip}}
+
+% ---- Für das Quellenverzeichnis
+\usepackage[
+	backend = biber,                % Verweis auf biber
+	language = auto,
+	style = numeric,                % Nummerierung der Quellen mit Zahlen
+	sorting = none,                 % none = Sortierung nach der Erscheinung im Dokument
+	sortcites = true,               % Sortiert die Quellen innerhalb eines cite-Befehls
+	block = space,                  % Extra Leerzeichen zwischen Blocks
+	hyperref = true,                % Links sind klickbar auch in der Quelle
+	%backref = true,                % Referenz, auf den Text an die zitierte Stelle
+	bibencoding = auto,
+	giveninits = true,              % Vornamen werden abgekürzt
+	doi=false,                      % DOI nicht anzeigen
+	isbn=false,                     % ISBN nicht anzeigen
+    alldates=short                  % Datum immer als DD.MM.YYYY anzeigen
+]{biblatex}
+\addbibresource{Inhalt/literatur.bib}
+\setcounter{biburlnumpenalty}{3000}     % Umbruchgrenze für Zahlen
+\setcounter{biburlucpenalty}{6000}      % Umbruchgrenze für Großbuchstaben
+\setcounter{biburllcpenalty}{9000}      % Umbruchgrenze für Kleinbuchstaben
+\DeclareNameAlias{default}{last-first}  % Nachname vor dem Vornamen
+\AtBeginBibliography{
+\renewcommand{\multinamedelim}{\addslash\space}
+\renewcommand{\finalnamedelim}{\multinamedelim}
+}  % Semikolon zwischen den Autorennamen
+\DefineBibliographyStrings{german}{
+  urlseen = {Einsichtnahme:},                      % Ändern des Titels von "besucht am"
+}
+\usepackage[babel,german=quotes]{csquotes}         % Deutsche Anführungszeichen + Zitate
+
+
+% ---- Für Mathevorlage
+\usepackage{amsmath}    % Erweiterung vom Mathe-Satz
+\usepackage{amssymb}    % Lädt amsfonts und weitere Symbole
+\usepackage{MnSymbol}   % Für Symbole, die in amssymb nicht enthalten sind.
+
+
+% ---- Für Quellcodevorlage
+\usepackage{scrhack}                    % Hack zur Verw. von listings in KOMA-Script
+\usepackage{listings}                   % Darstellung von Quellcode
+\usepackage{xcolor}                     % Einfache Verwendung von Farben
+\input{Inhalt/00_Latex/quellcodeStyle}  % Weitere Details sind ausgelagert
+
+\usepackage{algorithm}                  % Für Algorithmen-Umgebung (ähnlich wie lstlistings Umgebung)
+\usepackage{algpseudocode}              % Für Pseudocode. Füge "[noend]" hinzu, wenn du kein "endif",
+                                        % etc. haben willst.
+
+% ---- Tabellen
+\usepackage{booktabs}  % Für schönere Tabellen. Enthält neue Befehle wie \midrule
+\usepackage{multirow}  % Mehrzeilige Tabellen
+\usepackage{siunitx}   % Für SI Einheiten und das Ausrichten Nachkommastellen
+\sisetup{loctolang=DE:ngerman, decimalsymbol=comma} % Damit ein Komma und kein Punkt verwendet wird.
+
+% ---- Für Definitionsboxen in der Einleitung
+\usepackage{amsthm}                     % Liefert die Grundlagen für Theoreme
+\usepackage[framemethod=tikz]{mdframed} % Boxen für die Umrandung
+\input{Inhalt/00_Latex/highlightBoxen}  % Weitere Details sind ausgelagert
+
+% ---- Eigene Packages von Felix Hausberger
+%\usepackage{textcomp}
+\usepackage{subfigure}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{tocloft}
+
+% ---- Für das Formelverzeichnis von Felix Hausberger
+\newcommand{\listequationsname}{Formelverzeichnis}
+\newlistof{equations}{equ}{\listequationsname}
+\newcommand{\equations}[1]{%
+\addcontentsline{equ}{equations}{\protect\numberline{\theequation}#1}\par}

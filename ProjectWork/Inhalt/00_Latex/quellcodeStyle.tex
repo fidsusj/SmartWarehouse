@@ -1,0 +1,124 @@
+% -- Default Listing-Styles
+
+\lstset{
+	% Das Paket "listings" kann kein UTF-8. Deswegen werden hier 
+	% die häufigsten Zeichen definiert (ä,ö,ü,...)
+	literate=%
+		{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+		{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+		{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+		{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+		{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+		{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+		{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+		{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+		{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+		{ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+		{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+		{€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+		{»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1,
+	breaklines=true,        % Breche lange Zeilen um 
+	breakatwhitespace=true, % Wenn möglich, bei Leerzeichen umbrechen
+	% Symbol für Zeilenumbruch einfügen
+	prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\rhookswarrow}},
+	postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\rcurvearrowse\space}},
+	tabsize=4,                                 % Setze die Breite eines Tabs
+	basicstyle=\ttfamily\small,                % Grundsätzlicher Schriftstyle
+	columns=fixed,                             % Besseres Schriftbild
+	numbers=left,                              % Nummerierung der Zeilen
+	%frame=single,                             % Umrandung des Codes
+	showstringspaces=false,                    % Keine Leerzeichen hervorheben
+	keywordstyle=\color{blue},
+	ndkeywordstyle=\bfseries\color{darkgray},
+	identifierstyle=\color{black},
+	commentstyle=\itshape\color{JavaGruen},   % Kommentare in eigener Farbe
+	stringstyle=\color{JavaBlau},             % Strings in eigener Farbe,
+	captionpos=b,                             % Bild*unter*schrift
+	xleftmargin=5.0ex
+}
+
+% ---- Eigener JAVA-Style für den Quellcode
+\definecolor{JavaLila}{rgb}{0.4,0.1,0.4}
+\definecolor{JavaGruen}{rgb}{0.3,0.5,0.4}
+\definecolor{JavaBlau}{rgb}{0.0,0.0,1.0}
+
+\renewcommand{\ttdefault}{pcr}               % Schriftart, welche auch fett beinhaltet
+\lstdefinestyle{EigenerJavaStyle}{
+	language=Java,                             % Syntax Highlighting für Java
+	%frame=single,                             % Umrandung des Codes
+	frame=lr,
+	keywordstyle=\bfseries\color{JavaLila},    % Keywords in eigener Farbe und fett
+	commentstyle=\itshape\color{JavaGruen},    % Kommentare in eigener Farbe und italic
+	stringstyle=\color{JavaBlau}               % Strings in eigener Farbe
+}
+
+% ---- Eigener ABAP-Style für den Quellcode
+\definecolor{ABAPKeywordsBlue}{HTML}{6000ff}
+\definecolor{ABAPCommentGrey}{HTML}{808080}
+\definecolor{ABAPStringGreen}{HTML}{4da619}
+
+\renewcommand{\ttdefault}{pcr}
+\lstdefinestyle{EigenerABAPStyle}{
+	language=[R/3 6.10]ABAP,
+	frame=lr,
+	morestring=[b]\|,                          % Für Pipe-Strings
+	morestring=[b]\`,                          % für Backtick-Strings
+	keywordstyle=\bfseries\color{ABAPKeywordsBlue},
+	commentstyle=\itshape\color{ABAPCommentGrey},
+	stringstyle=\color{ABAPStringGreen},
+	tabsize=2
+}
+
+% ---- Eigener Python-Style für den Quellcode
+\definecolor{PyKeywordsBlue}{HTML}{0000AC}
+\definecolor{PyCommentGrey}{HTML}{808080}
+\definecolor{PyStringGreen}{HTML}{008080}
+
+\renewcommand{\ttdefault}{pcr}
+\lstdefinestyle{EigenerPythonStyle}{
+	language=Python,
+	columns=flexible,
+	frame=lr,
+	keywordstyle=\bfseries\color{PyKeywordsBlue},
+	commentstyle=\itshape\color{PyCommentGrey},
+	stringstyle=\color{PyStringGreen}
+}
+
+% ---- Eigener C#-Style für den Quellcode
+\definecolor{CSharpKeywordsBlue}{HTML}{6000ff}
+\definecolor{CSharpCommentGreen}{HTML}{4da619}
+\definecolor{CSharpStringRed}{HTML}{aa2200}
+
+\renewcommand{\ttdefault}{pcr}
+\lstdefinestyle{EigenerCSharpStyle}{
+	language=[Sharp]C,
+	columns=flexible,
+	frame=lr,
+	rulecolor=\color{blue!80!black},
+	keywordstyle=\bfseries\color{CSharpKeywordsBlue},
+	commentstyle=\itshape\color{CSharpCommentGreen},
+	stringstyle=\color{CSharpStringRed},
+	morekeywords={dynamic}
+}
+
+% ---- Eigener C#-Style für den Quellcode
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\renewcommand{\ttdefault}{pcr}
+\lstdefinestyle{EigenerJavaScriptStyle}{
+	frame=lr,
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={class, export, boolean, throw, implements, import, this},
+	ndkeywordstyle=\color{darkgray}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}

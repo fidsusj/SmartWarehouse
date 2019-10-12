@@ -1,0 +1,154 @@
+% ------------------------------------------------------------
+% LaTeX Template für die DHBW zum Schnellstart!
+% Original: https://github.wdf.sap.corp/D064996/LaTeX-Template-DHBW
+% ------------------------------------------------------------
+% ---- Präambel mit Angaben zum Dokument
+\input{Inhalt/00_Latex/praeambel}
+
+% ---- Elektronische Version oder Gedruckte Version?
+% ---- Unterschied: Die elektronische Version enthält keinen Platzhalter für die Unterschrift
+\usepackage{ifthen}
+\newboolean{e-Abgabe}
+\setboolean{e-Abgabe}{true}    % false=gedruckte Fassung
+
+% ---- Persönlichen Daten:
+\newcommand{\titel}{Machbarkeitsstudie: Smart Warehouse}
+\newcommand{\subtitel}{Echtzeit-Objektdetektoren im Vergleich}
+\newcommand{\titelheader}{Deep Learning}
+\newcommand{\arbeit}{Studienarbeit}
+\newcommand{\studiengang}{Angewandte Informatik}
+\newcommand{\studienjahr}{2019}
+\newcommand{\autor}{Felix Hausberger und Robin Kuck}
+\newcommand{\autorReverse}{Hausberger, Felix und Kuck, Robin}
+\newcommand{\verfassungsort}{Karlsruhe}
+\newcommand{\matrikelnr}{2773463, 4409176}
+\newcommand{\kurs}{TINF17B2}
+\newcommand{\bearbeitungsmonat}{Oktober 2019 - Mai 2019}
+\newcommand{\abgabe}{18. Mai 2020}
+\newcommand{\bearbeitungszeitraum}{30.09.2019 - 18.05.2020}
+\newcommand{\firmaName}{SAP SE}
+\newcommand{\firmaStrasse}{Dietmar-Hopp-Allee 16}
+\newcommand{\firmaPlz}{69190 Walldorf, Deutschland}
+\newcommand{\betreuerFirma}{}
+\newcommand{\betreuerDhbw}{PD Dr.-Ing. Markus Reischl}
+
+\input{Inhalt/00_Latex/kopfundFusszeile}
+
+% ---- Hilfreiches
+\newcommand{\zB}{z.\,B. }   % "z.B." mit kleinem Leeraum dazwischen (ohne wäre nicht korrekt)
+\newcommand{\dash}{d.\,h. }
+
+% ---- Silbentrennung (falls LaTeX defaults falsch / nicht gewünscht sind)
+\hyphenation{HANA}         % anstatt HA-NA
+\hyphenation{Graph-Script} % anstatt GraphS-cript
+
+% ---- Beginn des Dokuments
+\begin{document}
+\setlength{\parindent}{0pt}              % Keine Paragraphen Einrückung.
+                                         % Dafür haben wir den Abstand zwischen den Paragraphen.
+\setcounter{secnumdepth}{2}              % Nummerierungstiefe fürs Inhaltsverzeichnis
+\setcounter{tocdepth}{1}                 % Tiefe des Inhaltsverzeichnisses. Ggf. so anpassen,
+                                         % dass das Verzeichnis auf eine Seite passt.
+\sffamily                                % Serifenlose Schrift verwenden.
+
+% ---- Vorspann
+% ------ Titelseite
+\singlespacing
+\include{Inhalt/01_Standard/titelseite}  % Titelseite
+\newcounter{savepage}
+\pagenumbering{Roman}                    % Römische Seitenzahlen
+\onehalfspacing
+
+% ------ Erklärung, Sperrvermerk, Abstact
+\include{Inhalt/01_Standard/erklaerung}
+\include{Inhalt/01_Standard/sperrvermerk}
+\include{Inhalt/02_Abstract/abstract-en}
+\include{Inhalt/02_Abstract/abstract-de}
+
+% ------ Inhaltsverzeichnis
+\singlespacing
+\tableofcontents
+
+% ------ Verzeichnisse
+\renewcommand*{\chapterpagestyle}{plain}
+\pagestyle{plain}
+\setlength{\cftsecnumwidth}{3em}
+\setlength{\cfttabnumwidth}{3em}            
+%\include{Inhalt/03_Verzeichnisse/formelgroessen}
+\include{Inhalt/03_Verzeichnisse/abkuerzungen}
+\include{Inhalt/03_Verzeichnisse/abbildungen}
+\include{Inhalt/03_Verzeichnisse/formeln}
+%\listoftables                           % Erzeugen des Tabellenverzeichnisses
+\renewcommand{\lstlistlistingname}{Listenverzeichnis}
+\lstlistoflistings                      % Erzeugen des Listenverzeichnisses
+\setcounter{savepage}{\value{page}}
+
+
+% ---- Inhalt der Arbeit
+\cleardoublepage
+\pagenumbering{arabic}                  % Arabische Seitenzahlen für den Hauptteil
+\setlength{\parskip}{0.5\baselineskip}  % Abstand zwischen Absätzen
+\rmfamily
+\renewcommand*{\chapterpagestyle}{scrheadings}
+\pagestyle{scrheadings}
+\onehalfspacing
+\setcounter{chapter}{-1}
+\input{Inhalt/04_Vorwort/vorwort}
+
+\input{Inhalt/05_Einleitung/Einfuehrung/einfuehrung}
+\input{Inhalt/05_Einleitung/Problemstellung/problemstellung}
+\input{Inhalt/05_Einleitung/Zielsetzung/zielsetzung}
+
+\input{Inhalt/06_StandDerTechnik/standdertechnik}
+
+\input{Inhalt/07_Konzeption/variantendiskussion}
+\input{Inhalt/07_Konzeption/bewertungskriterien}
+
+\input{Inhalt/08_Implementierung/implementierung}
+
+\input{Inhalt/09_Bewertung/bewertung}
+
+\input{Inhalt/10_Zusammenfassung_Ausblick/zusammenfassung_ausblick}
+
+% ---- Literaturverzeichnis
+\cleardoublepage
+\renewcommand*{\chapterpagestyle}{plain}
+\pagestyle{plain}
+\pagenumbering{Roman}                   % Römische Seitenzahlen
+\setcounter{page}{\numexpr\value{savepage}+1}
+
+\printbibliography[title=Literaturverzeichnis]
+%\chapter*{Literaturverzeichnis}
+%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+%\printbibheading 
+%\printbibliography[keyword=book,heading=subbibliography,title={Literaturquellen}] % Ausgabe der Literaturquellen
+%\printbibliography[keyword=online,heading=subbibliography,title={Internetquellen}]     % Ausgabe der Internetquellen
+
+% ---- Anhang
+
+\newgeometry{
+	left=2.5cm,
+	right=2.5cm,
+	top=0cm,
+	bottom=2.5cm,
+	includeheadfoot
+}
+
+\appendix
+\chapter{Anhang}
+%\captionsetup{list=false}
+
+\section*{Abbildungen}
+
+
+
+\restoregeometry
+\newpage
+
+\onehalfspacing
+%\include{Inhalt/11_Anhang/...}
+
+%\clearpage
+%\pagenumbering{Roman}  % römische Seitenzahlen für Anhang
+
+\end{document}

@@ -2,6 +2,7 @@ import torch
 from torchvision import transforms
 from SSD.utils import *
 from PIL import Image, ImageDraw, ImageFont
+import cv2
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -97,7 +98,26 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
 
 
 if __name__ == '__main__':
-    img_path = '/media/ssd/ssd data/VOC2007/JPEGImages/000001.jpg'
-    original_image = Image.open(img_path, mode='r')
-    original_image = original_image.convert('RGB')
-    detect(original_image, min_score=0.2, max_overlap=0.5, top_k=200).show()
+    #img_path = '/media/ssd/ssd data/VOC2007/JPEGImages/000001.jpg'
+    #original_image = Image.open(img_path, mode='r')
+
+    cv2.namedWindow("preview")
+    vc = cv2.VideoCapture(0)
+
+    if vc.isOpened():
+        rval, frame = vc.read()
+        while rval:
+            # Interfere with model
+            cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            pil_im = Image.fromarray(cv2_image)
+            original_image = pil_im.convert('RGB')
+            bb_image = detect(original_image, min_score=0.2, max_overlap=0.5, top_k=200)
+            cv2.imshow("preview", bb_image)
+
+            # update frame
+            rval, frame = vc.read()
+            key = cv2.waitKey(20)
+            if key == 27:  # exit on ESC
+                break
+
+    cv2.destroyWindow("preview")

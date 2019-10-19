@@ -1,3 +1,4 @@
+import numpy
 import torch
 from torchvision import transforms
 from SSD.utils import *
@@ -8,7 +9,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load model checkpoint
 checkpoint = 'BEST_checkpoint_ssd300.pth.tar'
-checkpoint = torch.load(checkpoint)
+checkpoint = torch.load(checkpoint, map_location=torch.device('cpu'))
 start_epoch = checkpoint['epoch'] + 1
 best_loss = checkpoint['best_loss']
 print('\nLoaded checkpoint from epoch %d. Best loss so far is %.3f.\n' % (start_epoch, best_loss))
@@ -109,10 +110,12 @@ if __name__ == '__main__':
         while rval:
             # Interfere with model
             cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            pil_im = Image.fromarray(cv2_image)
-            original_image = pil_im.convert('RGB')
-            bb_image = detect(original_image, min_score=0.2, max_overlap=0.5, top_k=200)
-            cv2.imshow("preview", bb_image)
+            pil_image = Image.fromarray(cv2_image)
+            pil_image = pil_image.convert('RGB')
+            pil_image = detect(pil_image, min_score=0.2, max_overlap=0.5, top_k=200)
+            cv2_image = numpy.array(pil_image)
+            cv2_image = cv2_image[:, :, ::-1].copy()
+            cv2.imshow("preview", cv2_image)
 
             # update frame
             rval, frame = vc.read()

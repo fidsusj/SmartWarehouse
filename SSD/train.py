@@ -16,10 +16,10 @@ n_classes = len(label_map)  # number of different types of objects
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Learning parameters
-checkpoint = None # path to model checkpoint, None if none
-batch_size = 8  # batch size
+checkpoint = './BEST_checkpoint_ssd300.pth.tar' # path to model checkpoint, None if none
+batch_size = 16  # batch size
 start_epoch = 0  # start at this epoch
-epochs = 1  # number of epochs to run without early-stopping
+epochs = 30  # number of epochs to run without early-stopping
 epochs_since_improvement = 0  # number of epochs since there was an improvement in the validation metric
 best_loss = 100.  # assume a high loss at first
 workers = 4  # number of workers for loading data in the DataLoader

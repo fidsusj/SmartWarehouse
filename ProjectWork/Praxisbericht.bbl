@@ -69,8 +69,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Deep Learning: Drei Dinge, die Sie wissen sollten}
-      \field{urlday}{10}
-      \field{urlmonth}{2}
+      \field{urlday}{12}
+      \field{urlmonth}{10}
       \field{urlyear}{2019}
       \field{year}{2019}
       \field{urldateera}{ce}
@@ -79,6 +79,38 @@
       \endverb
       \verb{url}
       \verb https://de.mathworks.com/discovery/deep-learning.html
+      \endverb
+    \endentry
+    \entry{doks.innovation.2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c731f02d37d80d1cc6e3c60eaeba3782}{%
+           family={{doks. innovation}},
+           familyi={d\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {doks. innovation Homepage}%
+      }
+      \strng{namehash}{c731f02d37d80d1cc6e3c60eaeba3782}
+      \strng{fullhash}{c731f02d37d80d1cc6e3c60eaeba3782}
+      \strng{bibnamehash}{c731f02d37d80d1cc6e3c60eaeba3782}
+      \strng{authorbibnamehash}{c731f02d37d80d1cc6e3c60eaeba3782}
+      \strng{authornamehash}{c731f02d37d80d1cc6e3c60eaeba3782}
+      \strng{authorfullhash}{c731f02d37d80d1cc6e3c60eaeba3782}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{inventAIRyX}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.doks-innovation.com/inventairy-x/
+      \endverb
+      \verb{url}
+      \verb https://www.doks-innovation.com/inventairy-x/
       \endverb
     \endentry
   \enddatalist

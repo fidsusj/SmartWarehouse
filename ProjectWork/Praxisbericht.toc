@@ -10,30 +10,29 @@
 \contentsline {section}{\numberline {1.2}Problemstellung und Motivation}{3}{section.1.2}% 
 \contentsline {section}{\numberline {1.3}Vorgehensweise und Zielsetzung}{3}{section.1.3}% 
 \contentsline {chapter}{\numberline {2}Grundlagen und Forschungsstand}{5}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Neuronale Netze}{6}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}Hyperparameter}{6}{section.2.2}% 
-\contentsline {section}{\numberline {2.3}Objektdetektoren}{6}{section.2.3}% 
-\contentsline {subsection}{\numberline {2.3.1}Convolutional Neural Networks}{6}{subsection.2.3.1}% 
-\contentsline {subsection}{\numberline {2.3.2}Mask Regional Convolutional Neural Network}{6}{subsection.2.3.2}% 
-\contentsline {subsection}{\numberline {2.3.3}You Only Look Once}{6}{subsection.2.3.3}% 
-\contentsline {subsection}{\numberline {2.3.4}Single Shot MultiBox Detector}{6}{subsection.2.3.4}% 
-\contentsline {section}{\numberline {2.4}Einsatz in der Industrie}{6}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}Verwendete Bibliotheken}{6}{section.2.5}% 
-\contentsline {subsection}{\numberline {2.5.1}PyTorch}{6}{subsection.2.5.1}% 
-\contentsline {subsection}{\numberline {2.5.2}OpenCV}{6}{subsection.2.5.2}% 
-\contentsline {subsection}{\numberline {2.5.3}Django}{6}{subsection.2.5.3}% 
-\contentsline {section}{\numberline {2.6}Compute Unified Device Architecture}{6}{section.2.6}% 
-\contentsline {chapter}{\numberline {3}Konzeption}{8}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Bewertungskriterien}{8}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Initialer Vergleich der Objektdetektoren}{8}{section.3.2}% 
-\contentsline {section}{\numberline {3.3}Echtzeitumgebung}{8}{section.3.3}% 
-\contentsline {chapter}{\numberline {4}Realisierung}{9}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{9}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{9}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{9}{section.4.3}% 
-\contentsline {chapter}{\numberline {5}Ergebnisse}{10}{chapter.5}% 
-\contentsline {chapter}{\numberline {6}Bewertung}{11}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{12}{chapter.7}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.4}% 
-\contentsline {chapter}{\numberline {A}Anhang}{XI}{appendix.A}% 
+\contentsline {section}{\numberline {2.1}Neuronale Netze}{5}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Hyperparameter}{9}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Objektdetektoren}{15}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Convolutional Neural Networks}{15}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}Mask Regional Convolutional Neural Network}{17}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}You Only Look Once}{17}{subsection.2.3.3}% 
+\contentsline {subsection}{\numberline {2.3.4}Single Shot MultiBox Detector}{17}{subsection.2.3.4}% 
+\contentsline {section}{\numberline {2.4}Verwendete Bibliotheken}{17}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}PyTorch}{17}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}OpenCV}{17}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.4.3}Django}{17}{subsection.2.4.3}% 
+\contentsline {section}{\numberline {2.5}Compute Unified Device Architecture}{17}{section.2.5}% 
+\contentsline {chapter}{\numberline {3}Konzeption}{18}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Bewertungskriterien}{18}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Initialer Vergleich der Objektdetektoren}{18}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Echtzeitumgebung}{18}{section.3.3}% 
+\contentsline {chapter}{\numberline {4}Realisierung}{19}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{19}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{19}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{19}{section.4.3}% 
+\contentsline {chapter}{\numberline {5}Ergebnisse}{20}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}Bewertung}{21}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{22}{chapter.7}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.12}% 
+\contentsline {chapter}{\numberline {A}Anhang}{XII}{appendix.A}% 
 \contentsfinish 

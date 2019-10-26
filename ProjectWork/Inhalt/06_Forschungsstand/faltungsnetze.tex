@@ -1,0 +1,9 @@
+\section{Objektdetektoren}
+
+\subsection{Convolutional Neural Networks}
+
+Auch kann bei tiefen ANNs eine gewisse Klassifikationshierarchie für jede Schicht zugeordnet werden. Bei der Bilderkennung sind beispielsweise die ersten verborgenen Schichten dafür zuständig kleinere Muster zu erkennen, während mit fortschreitenden Schichten diese Muster zu immer größeren Mustern zusammengefasst werden können. \cite[S. 271 f.]{AurelienGeron.2018}
+
+Bei einem 28x28 Pixel großen schwarz-weiß Bild sind beispielsweise für die Modellierung des Grauwertes jedes Pixels insgesamt 784 Input LTUs notwendig. Da die erkannten Strukturen von vielen detaillierten nach und nach zu wenigen verallgemeinerten zusammengefasst werden können, sinkt die Anzahl an benötigten LTUs pro Schichten in einem Feed Forward Netz zur Ausgabeschicht. Ein trichterförmiger Aufbau des ANNs ist somit nicht unüblich. \cite[S. 271 f.]{AurelienGeron.2018}
+
+Diese Architektur ermöglicht ebenso die Wiederverwendbarkeit einzelner Schichten und Gewichtungen für ähnliche Klassifikationsprobleme, bei denen gleiche Muster vorzufinden sind. \cite[S. 271]{AurelienGeron.2018}

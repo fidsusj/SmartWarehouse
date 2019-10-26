@@ -1,19 +1,17 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
-[0] Config.pm:307> INFO - Logfile is 'Praxisbericht.blg'
-[39] biber-MSWIN64:315> INFO - === 
-[74] Biber.pm:371> INFO - Reading 'Praxisbericht.bcf'
-[213] Biber.pm:889> INFO - Found 11 citekeys in bib section 0
-[235] Biber.pm:4093> INFO - Processing section 0
-[256] Biber.pm:4254> INFO - Looking for bibtex format file 'Inhalt/literatur.bib' for section 0
-[271] bibtex.pm:1523> INFO - LaTeX decoding ...
-[315] bibtex.pm:1340> INFO - Found BibTeX data source 'Inhalt/literatur.bib'
-[382] Utils.pm:193> WARN - Entry 'ImadDabbura.20171221' (Inhalt/literatur.bib): Invalid format '2019-20-26' of date field 'urldate' - ignoring
-[391] Utils.pm:193> WARN - Entry 'RonnyRestrepo.20170816' (Inhalt/literatur.bib): Invalid format '2019-20-26' of date field 'urldate' - ignoring
-[399] Utils.pm:193> WARN - I didn't find a database entry for 'Wikipedia.20190123' (section 0)
-[419] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[419] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[419] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[419] Biber.pm:3927> INFO - No sort tailoring available for locale 'de-DE'
-[440] bbl.pm:636> INFO - Writing 'Praxisbericht.bbl' with encoding 'UTF-8'
-[449] bbl.pm:739> INFO - Output to Praxisbericht.bbl
-[450] Biber.pm:110> INFO - WARNINGS: 3
+[1] Config.pm:307> INFO - Logfile is 'Praxisbericht.blg'
+[46] biber-MSWIN64:315> INFO - === 
+[115] Biber.pm:371> INFO - Reading 'Praxisbericht.bcf'
+[237] Biber.pm:889> INFO - Found 14 citekeys in bib section 0
+[256] Biber.pm:4093> INFO - Processing section 0
+[274] Biber.pm:4254> INFO - Looking for bibtex format file 'Inhalt/literatur.bib' for section 0
+[290] bibtex.pm:1523> INFO - LaTeX decoding ...
+[311] bibtex.pm:1340> INFO - Found BibTeX data source 'Inhalt/literatur.bib'
+[424] Utils.pm:193> WARN - I didn't find a database entry for 'Wikipedia.20190123' (section 0)
+[444] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[444] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[444] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[444] Biber.pm:3927> INFO - No sort tailoring available for locale 'de-DE'
+[481] bbl.pm:636> INFO - Writing 'Praxisbericht.bbl' with encoding 'UTF-8'
+[488] bbl.pm:739> INFO - Output to Praxisbericht.bbl
+[490] Biber.pm:110> INFO - WARNINGS: 1

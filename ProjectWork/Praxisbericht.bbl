@@ -248,14 +248,17 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Gradient Descent Algorithm and Its Variants}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
       \field{year}{2017}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://towardsdatascience.com/gradient-descent-algorithm-and-its-variants-10f652806a3
       \endverb
       \verb{url}
       \verb https://towardsdatascience.com/gradient-descent-algorithm-and-its-variants-10f652806a3
       \endverb
-      \warn{\item Entry 'ImadDabbura.20171221' (Inhalt/literatur.bib): Invalid format '2019-20-26' of date field 'urldate' - ignoring}
     \endentry
     \entry{SebastianHeinz.2018}{misc}{}
       \name{author}{1}{}{%
@@ -309,14 +312,17 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Calculating the derivative of Tanh: step by step}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
       \field{year}{2017}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb http://ronny.rest/media/blog/2017/2017_08_16_tanh/tanh_v_sigmoid.jpg
       \endverb
       \verb{url}
       \verb http://ronny.rest/media/blog/2017/2017_08_16_tanh/tanh_v_sigmoid.jpg
       \endverb
-      \warn{\item Entry 'RonnyRestrepo.20170816' (Inhalt/literatur.bib): Invalid format '2019-20-26' of date field 'urldate' - ignoring}
     \endentry
     \entry{DanqingLiu.20171130}{misc}{}
       \name{author}{1}{}{%
@@ -348,6 +354,102 @@
       \endverb
       \verb{url}
       \verb https://medium.com/@danqing/a-practical-guide-to-relu-b83ca804f1f7
+      \endverb
+    \endentry
+    \entry{DaphneCornelisse.20180424}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=dbaff04488b1a921cecf6bd5411238b2}{%
+           family={{Daphne Cornelisse}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {freeCodeCamp Homepage}%
+      }
+      \strng{namehash}{dbaff04488b1a921cecf6bd5411238b2}
+      \strng{fullhash}{dbaff04488b1a921cecf6bd5411238b2}
+      \strng{bibnamehash}{dbaff04488b1a921cecf6bd5411238b2}
+      \strng{authorbibnamehash}{dbaff04488b1a921cecf6bd5411238b2}
+      \strng{authornamehash}{dbaff04488b1a921cecf6bd5411238b2}
+      \strng{authorfullhash}{dbaff04488b1a921cecf6bd5411238b2}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An intuitive guide to Convolutional Neural Networks}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050
+      \endverb
+      \verb{url}
+      \verb https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050
+      \endverb
+    \endentry
+    \entry{AbhineetSaxena.20160629}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a058957318f1d66489c53794afae6df7}{%
+           family={{Abhineet Saxena}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {XRDS~Crossroads - The ACM~Magazine for Students}%
+      }
+      \strng{namehash}{a058957318f1d66489c53794afae6df7}
+      \strng{fullhash}{a058957318f1d66489c53794afae6df7}
+      \strng{bibnamehash}{a058957318f1d66489c53794afae6df7}
+      \strng{authorbibnamehash}{a058957318f1d66489c53794afae6df7}
+      \strng{authornamehash}{a058957318f1d66489c53794afae6df7}
+      \strng{authorfullhash}{a058957318f1d66489c53794afae6df7}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Convolutional Neural Networks (CNNs): An Illustrated Explanation}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://blog.xrds.acm.org/2016/06/convolutional-neural-networks-cnns-illustrated-explanation/
+      \endverb
+      \verb{url}
+      \verb https://blog.xrds.acm.org/2016/06/convolutional-neural-networks-cnns-illustrated-explanation/
+      \endverb
+    \endentry
+    \entry{LeonadroAraujoSantos.2018}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=3a32e1c0f0a3111dd46ccd4f658c7ebd}{%
+           family={{Leonadro Araujo Santos}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {GitBook}%
+      }
+      \strng{namehash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
+      \strng{fullhash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
+      \strng{bibnamehash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
+      \strng{authorbibnamehash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
+      \strng{authornamehash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
+      \strng{authorfullhash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Pooling Layer: Introduction}
+      \field{urlday}{26}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/pooling_layer.html
+      \endverb
+      \verb{url}
+      \verb https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/pooling_layer.html
       \endverb
     \endentry
   \enddatalist

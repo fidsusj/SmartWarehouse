@@ -44,7 +44,7 @@ Ein Kompromiss der beiden Verfahren bietet das \textit{Mini-Batch} Verfahren, be
 
 \subsection*{Lernrate}
 
-Die Lernrate $\eta$ gibt an, wie groß die Sprünge zum globalen Minimum sein sollen und damit indirekt wie viele Iterationen benötigt werden, um das globale Minimum der Kostenfunktion zu erreichen. Ziel der Anpassung einer Lernrate ist es, mit möglichst wenig Iterationen und Testdaten die optimale Konstellation des neuronalen Netzes zu berechnen. Deshalb wird sie standardmäßig zu Beginn der Iterationen groß gewählt um sich dem Minimum schnell zu nähern während sie am Ende immer kleiner gewählt wird, um nicht über das globale Minimum hinaus zu gehen. Dieses Vorgehen wird als \textit{Simulated Annealing} bezeichnet, während das Funktion zum Festlegen der Lernrate als \textit{Learning Schedule} betitelt wird. \cite[S. 113f]{AurelienGeron.2018}
+Die Lernrate $\eta$ (siehe Formel \ref{gradientenverfahren}) gibt an, wie groß die Sprünge zum globalen Minimum sein sollen und damit indirekt wie viele Iterationen benötigt werden, um das globale Minimum der Kostenfunktion zu erreichen. Ziel der Anpassung einer Lernrate ist es, mit möglichst wenig Iterationen und Testdaten die optimale Konstellation des neuronalen Netzes zu berechnen. Deshalb wird sie standardmäßig zu Beginn der Iterationen groß gewählt um sich dem Minimum schnell zu nähern während sie am Ende immer kleiner gewählt wird, um nicht über das globale Minimum hinaus zu gehen. Dieses Vorgehen wird als \textit{Simulated Annealing} bezeichnet, während das Funktion zum Festlegen der Lernrate als \textit{Learning Schedule} betitelt wird. \cite[S. 113f]{AurelienGeron.2018}
 
 Eine Veranschaulichung der Anpassungen der Lernrate findet sich in Abbildung \ref{learning_rate}.
 
@@ -57,6 +57,20 @@ Eine Veranschaulichung der Anpassungen der Lernrate findet sich in Abbildung \re
 \end{figure}
 
 Die Anzahl der Durchläufe wird zu Beginn des Verfahrens zunächst hoch angesetzt, das Verfahren wird aber genau dann gestoppt, sobald der Gradientenvektor unter eine gewisse Abbruchgrenze fällt. Zwar ist das globale Minimum zu diesem Zeitpunkt noch nicht erreicht, allerdings kann es auch nie vollkommen erreicht werden, da die für das Gradientenverfahren genutzten Aktivierungsfunktionen nie einen partiellen Ableitungswert gleich Null zulassen \cite[S. 118, S. 272]{AurelienGeron.2018}. In diesem Sinne wird auch von \textit{Toleranz} gesprochen.
+
+\subsection*{Moment}
+
+Das Gradientenverfahren kann beschleunigt werden, indem während des Gradientenabstiegs frühere Gradienten Einfluss auf den nächsten Gradientenschritt nehmen. Es wird ein \glqq Momentum\grqq aufgebaut. Damit das Momentum allerdings nicht zu groß wird, beschränkt der Hyperparameter $\beta \in [0,1]$ die Größe des Momentums (siehe Formel \ref{momentum}). \cite[S. 296]{AurelienGeron.2018}
+
+\begin{equation} \label{momentum}
+\begin{split}
+m_x = \beta \cdot m_{x-1} + \eta\frac{\partial E}{\partial w_{ij}} \\
+w_{ijt} = w_{ijt-1} - m 
+\end{split}
+\end{equation}
+\equations{Momentum Optimierung}
+
+Die Momentum Optimierung kann dazu benutzt werden, das stochastische Gradientenverfahren bzw. Mini-Batch Verfahren zu beschleunigen und lokale Minima besser zu überwinden.
 
 \subsection*{Anzahl an Epochen}
 

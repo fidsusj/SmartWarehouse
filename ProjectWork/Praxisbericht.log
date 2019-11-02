@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  2 NOV 2019 14:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  2 NOV 2019 18:35
 entering extended mode
 **./Praxisbericht.tex
 (Praxisbericht.tex
@@ -2128,7 +2128,7 @@ chapter 1.
 (Inhalt/05_Einleitung/Zielsetzung/zielsetzung.tex [3])
 (Inhalt/06_Forschungsstand/neuronale_netze.tex [4]
 chapter 2.
-<Bilder/perceptron.png, id=285, 486.31688pt x 455.45157pt>
+<Bilder/perceptron.png, id=289, 486.31688pt x 455.45157pt>
 File: Bilder/perceptron.png Graphic file (type png)
 <use Bilder/perceptron.png>
 Package pdftex.def Info: Bilder/perceptron.png  used on input line 15.
@@ -2142,7 +2142,7 @@ Package pdftex.def Info: Bilder/perceptron.png  used on input line 15.
                                                   \fi \fi 
 l.48 
       <./Bilder/perceptron.png>]
-<Bilder/neural_network.png, id=323, 544.434pt x 214.401pt>
+<Bilder/neural_network.png, id=327, 544.434pt x 214.401pt>
 File: Bilder/neural_network.png Graphic file (type png)
 <use Bilder/neural_network.png>
 Package pdftex.def Info: Bilder/neural_network.png  used on input line 53.
@@ -2155,7 +2155,7 @@ Package pdftex.def Info: Bilder/neural_network.png  used on input line 53.
 l.62 
       <./Bilder/neural_network.png>] [8])
 (Inhalt/06_Forschungsstand/hyperparameter.tex [9] [10]
-<Bilder/gradient_descent.png, id=376, 911.405pt x 451.6875pt>
+<Bilder/gradient_descent.png, id=380, 911.405pt x 451.6875pt>
 File: Bilder/gradient_descent.png Graphic file (type png)
 <use Bilder/gradient_descent.png>
 Package pdftex.def Info: Bilder/gradient_descent.png  used on input line 33.
@@ -2167,86 +2167,85 @@ Package pdftex.def Info: Bilder/gradient_descent.png  used on input line 33.
                                                   \fi \fi 
 l.42 
       <./Bilder/gradient_descent.png (PNG copy)>]
-<Bilder/learning_rate.png, id=391, 793.96625pt x 663.47874pt>
+<Bilder/learning_rate.png, id=396, 793.96625pt x 663.47874pt>
 File: Bilder/learning_rate.png Graphic file (type png)
 <use Bilder/learning_rate.png>
 Package pdftex.def Info: Bilder/learning_rate.png  used on input line 53.
 (pdftex.def)             Requested size: 312.9803pt x 261.54985pt.
- [12]
-<Bilder/sigmoid.jpg, id=401, 903.375pt x 501.875pt>
+ [12] [13pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.2.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.78 
+      <./Bilder/learning_rate.png>]
+<Bilder/sigmoid.jpg, id=415, 903.375pt x 501.875pt>
 File: Bilder/sigmoid.jpg Graphic file (type jpg)
 <use Bilder/sigmoid.jpg>
-Package pdftex.def Info: Bilder/sigmoid.jpg  used on input line 71.
+Package pdftex.def Info: Bilder/sigmoid.jpg  used on input line 85.
 (pdftex.def)             Requested size: 426.79134pt x 237.10655pt.
-<Bilder/relu.png, id=406, 1029.8475pt x 468.75125pt>
+<Bilder/relu.png, id=420, 1029.8475pt x 468.75125pt>
 File: Bilder/relu.png Graphic file (type png)
 <use Bilder/relu.png>
-Package pdftex.def Info: Bilder/relu.png  used on input line 80.
+Package pdftex.def Info: Bilder/relu.png  used on input line 94.
 (pdftex.def)             Requested size: 213.39566pt x 97.12459pt.
-<Bilder/prelu.png, id=407, 1028.84375pt x 551.05875pt>
+<Bilder/prelu.png, id=421, 1028.84375pt x 551.05875pt>
 File: Bilder/prelu.png Graphic file (type png)
 <use Bilder/prelu.png>
-Package pdftex.def Info: Bilder/prelu.png  used on input line 81.
+Package pdftex.def Info: Bilder/prelu.png  used on input line 95.
 (pdftex.def)             Requested size: 213.39566pt x 114.29631pt.
- [13pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-4}) has been already used, duplicate ignored
+ [14pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.87 
-      <./Bilder/learning_rate.png>]
-<Bilder/elu.png, id=420, 1023.825pt x 528.97626pt>
+l.101 
+       <./Bilder/sigmoid.jpg>]
+<Bilder/elu.png, id=433, 1023.825pt x 528.97626pt>
 File: Bilder/elu.png Graphic file (type png)
 <use Bilder/elu.png>
-Package pdftex.def Info: Bilder/elu.png  used on input line 92.
+Package pdftex.def Info: Bilder/elu.png  used on input line 106.
 (pdftex.def)             Requested size: 426.79134pt x 220.50577pt.
-)
-(Inhalt/06_Forschungsstand/faltungsnetze.tex [14pdfTeX warning (ext4): destinat
-ion with the same identifier (name{figure.2.5}) has been already used, duplicat
-e ignored
+) (Inhalt/06_Forschungsstand/faltungsnetze.tex
+[15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.7 E
-     in Convolutional Layer zeichnen sich unter anderem dadurch aus, dass je...
- <./Bilder/sigmoid.jpg>] [15pdfTeX warning (ext4): destination with the same id
-entifier (name{figure.2.6}) has been already used, duplicate ignored
+l.1 \section
+            {Objektdetektoren}pdfTeX warning (ext4): destination with the same 
+identifier (name{figure.2.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.12 
-      <./Bilder/relu.png> <./Bilder/prelu.png>]
-<Bilder/convolutional_layer.png, id=444, 680.5425pt x 463.7325pt>
+l.1 \section
+            {Objektdetektoren} <./Bilder/relu.png> <./Bilder/prelu.png> <./Bild
+er/elu.png>]
+<Bilder/convolutional_layer.png, id=452, 680.5425pt x 463.7325pt>
 File: Bilder/convolutional_layer.png Graphic file (type png)
 <use Bilder/convolutional_layer.png>
 Package pdftex.def Info: Bilder/convolutional_layer.png  used on input line 15.
 
 (pdftex.def)             Requested size: 341.43306pt x 232.65817pt.
-<Bilder/zero_padding.png, id=449, 298.86656pt x 259.7203pt>
+ [16]
+<Bilder/zero_padding.png, id=462, 298.86656pt x 259.7203pt>
 File: Bilder/zero_padding.png Graphic file (type png)
 <use Bilder/zero_padding.png>
 Package pdftex.def Info: Bilder/zero_padding.png  used on input line 25.
 (pdftex.def)             Requested size: 199.16928pt x 173.08435pt.
- [16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-7}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.34 
-      <./Bilder/elu.png>]
-<Bilder/feature_maps.jpeg, id=460, 306.06345pt x 262.70145pt>
-File: Bilder/feature_maps.jpeg Graphic file (type jpg)
-<use Bilder/feature_maps.jpeg>
-Package pdftex.def Info: Bilder/feature_maps.jpeg  used on input line 37.
-(pdftex.def)             Requested size: 312.9803pt x 268.63737pt.
  [17pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.48 
+l.34 
       <./Bilder/convolutional_layer.png (PNG copy)>]
-<Bilder/pooling_layer.png, id=472, 999.735pt x 292.09125pt>
+<Bilder/feature_maps.jpeg, id=473, 306.06345pt x 262.70145pt>
+File: Bilder/feature_maps.jpeg Graphic file (type jpg)
+<use Bilder/feature_maps.jpeg>
+Package pdftex.def Info: Bilder/feature_maps.jpeg  used on input line 37.
+(pdftex.def)             Requested size: 312.9803pt x 268.63737pt.
+<Bilder/pooling_layer.png, id=480, 999.735pt x 292.09125pt>
 File: Bilder/pooling_layer.png Graphic file (type png)
 <use Bilder/pooling_layer.png>
 Package pdftex.def Info: Bilder/pooling_layer.png  used on input line 51.
@@ -2256,94 +2255,113 @@ Package pdftex.def Info: Bilder/pooling_layer.png  used on input line 51.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.63 D
-      iese Architektur ermöglicht ebenso die Wiederverwendbarkeit einzelner...
- <./Bilder/zero_padding.png>]) (Inhalt/06_Forschungsstand/ssd.tex [19pdfTeX war
-ning (ext4): destination with the same identifier (name{figure.2.10}) has been 
-already used, duplicate ignored
+l.58 
+      <./Bilder/zero_padding.png>])
+(Inhalt/06_Forschungsstand/forschungsstand.tex [19pdfTeX warning (ext4): destin
+ation with the same identifier (name{figure.2.10}) has been already used, dupli
+cate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.4 
-     <./Bilder/feature_maps.jpeg>]
-<Bilder/ssd_framework.png, id=489, 1270.7475pt x 475.7775pt>
+l.1 \subsection
+               {Mask Regional Convolutional Neural Network} <./Bilder/feature_m
+aps.jpeg>]) (Inhalt/06_Forschungsstand/ssd.tex
+<Bilder/ssd_framework.png, id=496, 1270.7475pt x 475.7775pt>
 File: Bilder/ssd_framework.png Graphic file (type png)
 <use Bilder/ssd_framework.png>
 Package pdftex.def Info: Bilder/ssd_framework.png  used on input line 7.
 (pdftex.def)             Requested size: 426.79134pt x 159.7948pt.
-<Bilder/bounding_boxes.png, id=495, 288.3272pt x 289.08pt>
-File: Bilder/bounding_boxes.png Graphic file (type png)
-<use Bilder/bounding_boxes.png>
-Package pdftex.def Info: Bilder/bounding_boxes.png  used on input line 17.
-(pdftex.def)             Requested size: 199.16928pt x 199.69478pt.
  [20pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.24 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.2
-.12}) has been already used, duplicate ignored
+l.14 
+      <./Bilder/pooling_layer.png>]
+<Bilder/bounding_boxes.png, id=512, 288.3272pt x 289.08pt>
+File: Bilder/bounding_boxes.png Graphic file (type png)
+<use Bilder/bounding_boxes.png>
+Package pdftex.def Info: Bilder/bounding_boxes.png  used on input line 17.
+(pdftex.def)             Requested size: 199.16928pt x 199.69478pt.
+ [21pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.24 
-      <./Bilder/pooling_layer.png> <./Bilder/ssd_framework.png (PNG copy)>]
-<Bilder/ssd_architecture.png, id=508, 1114.1625pt x 329.23pt>
+l.25 D
+      ie Kostenfunktion ist durch die gewichtete Summe des Lokalisationsverl...
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.13})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.25 D
+      ie Kostenfunktion ist durch die gewichtete Summe des Lokalisationsverl...
+ <./Bilder/ssd_framework.png (PNG copy)> <./Bilder/bounding_boxes.png>]
+<Bilder/ssd_architecture.png, id=525, 1114.1625pt x 329.23pt>
 File: Bilder/ssd_architecture.png Graphic file (type png)
 <use Bilder/ssd_architecture.png>
 Package pdftex.def Info: Bilder/ssd_architecture.png  used on input line 40.
 (pdftex.def)             Requested size: 426.79134pt x 126.11342pt.
 
-[21pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
-3}) has been already used, duplicate ignored
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.47 
-      <./Bilder/bounding_boxes.png>]
-<Bilder/iou_equation.png, id=523, 602.25pt x 469.755pt>
+      <./Bilder/ssd_architecture.png (PNG copy)>]
+<Bilder/iou_equation.png, id=538, 602.25pt x 469.755pt>
 File: Bilder/iou_equation.png Graphic file (type png)
 <use Bilder/iou_equation.png>
-Package pdftex.def Info: Bilder/iou_equation.png  used on input line 52.
+Package pdftex.def Info: Bilder/iou_equation.png  used on input line 50.
 (pdftex.def)             Requested size: 227.62204pt x 177.54826pt.
-)
-(Inhalt/06_Forschungsstand/forschungsstand.tex [22pdfTeX warning (ext4): destin
-ation with the same identifier (name{figure.2.14}) has been already used, dupli
-cate ignored
+ [23pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+15}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.20 	\item L
-             iteraturrecherche <./Bilder/ssd_architecture.png (PNG copy)>])
-(Inhalt/07_Konzeption/bewertungskriterien.tex [23pdfTeX warning (ext4): destina
-tion with the same identifier (name{figure.2.15}) has been already used, duplic
+l.61 
+      <./Bilder/iou_equation.png>]
+<Bilder/ssd_results.png, id=554, 948.54375pt x 276.43275pt>
+File: Bilder/ssd_results.png Graphic file (type png)
+<use Bilder/ssd_results.png>
+Package pdftex.def Info: Bilder/ssd_results.png  used on input line 64.
+(pdftex.def)             Requested size: 455.24408pt x 132.66933pt.
+
+Overfull \hbox (5.69037pt too wide) in paragraph at lines 64--65
+ [] 
+ []
+
+) (Inhalt/06_Forschungsstand/bibliotheken.tex [24pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.2.16}) has been already used, duplic
 ate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1 \chapter
-            {Konzeption} <./Bilder/iou_equation.png>]
+l.15 	\item L
+             iteraturrecherche <./Bilder/ssd_results.png>])
+(Inhalt/07_Konzeption/bewertungskriterien.tex [25]
 chapter 3.
 ) (Inhalt/07_Konzeption/vergleich.tex)
 (Inhalt/07_Konzeption/echtzeitumgebung.tex)
-(Inhalt/08_Realisierung/realisierung.tex [24
+(Inhalt/08_Realisierung/realisierung.tex [26
 
 ]
 chapter 4.
-) (Inhalt/09_Ergebnisse/ergebnisse.tex [25
+) (Inhalt/09_Ergebnisse/ergebnisse.tex [27
 
 ]
 chapter 5.
-) (Inhalt/10_Bewertung/bewertung.tex [26
+) (Inhalt/10_Bewertung/bewertung.tex [28
 
 ]
 chapter 6.
-) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [27
+) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [29
 
 ]
 chapter 7.
-) [28
+) [30
 
 ]
 chapter without number
@@ -2352,7 +2370,7 @@ chapter without number
 
 
 ]
-Overfull \hbox (16.02386pt too wide) in paragraph at lines 126--126
+Overfull \hbox (16.02386pt too wide) in paragraph at lines 127--127
 \T1/cmr/m/n/12 2016-12-29.  \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : []$https : / / 
 arxiv . org / pdf / 1512 . 02325 . pdf$[] (Ein-sicht-nah-me: 02.11.2019). 
  []
@@ -2396,64 +2414,66 @@ chapter A.
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
  (Praxisbericht.aux (Inhalt/01_Standard/titelseite.aux)
 (Inhalt/01_Standard/erklaerung.aux) (Inhalt/02_Abstract/abstract-en.aux)
 (Inhalt/02_Abstract/abstract-de.aux) (Inhalt/03_Verzeichnisse/abkuerzungen.aux)
 (Inhalt/03_Verzeichnisse/abbildungen.aux) (Inhalt/03_Verzeichnisse/formeln.aux)
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
 Package rerunfilecheck Info: File `Praxisbericht.out' has not changed.
-(rerunfilecheck)             Checksum: B062DC6D7535F05F6F2510F6417FE761;1735.
+(rerunfilecheck)             Checksum: E7043B5123C0AFFC311064E858E4FA4E;1735.
 Package logreq Info: Writing requests to 'Praxisbericht.run.xml'.
 \openout1 = `Praxisbericht.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
  ) 
 Here is how much of TeX's memory you used:
- 45792 strings out of 492946
- 907065 string characters out of 3125377
- 1448961 words of memory out of 3000000
- 48790 multiletter control sequences out of 15000+200000
- 555900 words of font info for 78 fonts, out of 3000000 for 9000
+ 45863 strings out of 492946
+ 908196 string characters out of 3125377
+ 1449150 words of memory out of 3000000
+ 48828 multiletter control sequences out of 15000+200000
+ 564881 words of font info for 109 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
- 80i,23n,77p,9184b,2458s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 80i,23n,79p,9184b,2458s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
 0\eccc1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
 pen\ec\dpi600\tcrm1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecrm1000.pk>{C:/Users/D070497/AppData/Local/Programs/
-MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Users/D070497/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Users/D070497
-/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{C:/U
+ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk>{C:/Users/D070497/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc} <C:\Users\D07049
+7\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk>{C:/U
 sers/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbo
-lE.enc} <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\ecsx1440.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\ecti1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\font
-s\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk> <C:\Users\D070497\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1095.pk> <C:\Users\D070497\AppDa
-ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\D
-070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1200.pk>
+lC.enc}{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/mnsy
+mbol/MnSymbolD.enc}{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/en
+c/dvips/mnsymbol/MnSymbolF.enc} <C:\Users\D070497\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\D070497\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\D070497\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk> <C:\Users\D
+070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1095.pk>
  <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
-ecss1728.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecsx1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\lj
-four\jknappen\ec\dpi600\ecss1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9
-\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk> <C:\Users\D070497\AppData\Loca
-l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx2488.pk><C:/Users/D070497/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol12.pfb><C:
-/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/mnsymbol/Mn
-Symbol8.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/D070497/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/D070497/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/
-D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.p
-fb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/symbols/msbm10.pfb>
-Output written on Praxisbericht.pdf (41 pages, 1854430 bytes).
+ecrm1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecsi1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\lj
+four\jknappen\ec\dpi600\ecss1728.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9
+\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk> <C:\Users\D070497\AppData\Loca
+l\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1200.pk> <C:\Users\D070497\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk> <C:\Us
+ers\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx248
+8.pk><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/mns
+ymbol/MnSymbol12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/mnsymbol/MnSymbol8.pfb><C:/Users/D070497/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/D070497/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/D070
+497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
+<C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Praxisbericht.pdf (43 pages, 2063032 bytes).
 PDF statistics:
- 1264 PDF objects out of 1440 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
- 322 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1342 PDF objects out of 1440 (max. 8388607)
+ 145 named destinations out of 1000 (max. 500000)
+ 327 words of extra memory for PDF output out of 10000 (max. 10000000)
 

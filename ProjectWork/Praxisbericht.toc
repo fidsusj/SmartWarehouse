@@ -12,27 +12,27 @@
 \contentsline {chapter}{\numberline {2}Grundlagen und Forschungsstand}{5}{chapter.2}% 
 \contentsline {section}{\numberline {2.1}Neuronale Netze}{5}{section.2.1}% 
 \contentsline {section}{\numberline {2.2}Hyperparameter}{9}{section.2.2}% 
-\contentsline {section}{\numberline {2.3}Objektdetektoren}{15}{section.2.3}% 
-\contentsline {subsection}{\numberline {2.3.1}Convolutional Neural Networks}{15}{subsection.2.3.1}% 
-\contentsline {subsection}{\numberline {2.3.2}Single Shot MultiBox Detector}{19}{subsection.2.3.2}% 
-\contentsline {subsection}{\numberline {2.3.3}Mask Regional Convolutional Neural Network}{23}{subsection.2.3.3}% 
-\contentsline {subsection}{\numberline {2.3.4}You Only Look Once}{23}{subsection.2.3.4}% 
-\contentsline {section}{\numberline {2.4}Verwendete Bibliotheken}{23}{section.2.4}% 
-\contentsline {subsection}{\numberline {2.4.1}PyTorch}{23}{subsection.2.4.1}% 
-\contentsline {subsection}{\numberline {2.4.2}OpenCV}{23}{subsection.2.4.2}% 
-\contentsline {subsection}{\numberline {2.4.3}Django}{23}{subsection.2.4.3}% 
-\contentsline {section}{\numberline {2.5}Compute Unified Device Architecture}{23}{section.2.5}% 
-\contentsline {chapter}{\numberline {3}Konzeption}{24}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Bewertungskriterien}{24}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Initialer Vergleich der Objektdetektoren}{24}{section.3.2}% 
-\contentsline {section}{\numberline {3.3}Echtzeitumgebung}{24}{section.3.3}% 
-\contentsline {chapter}{\numberline {4}Realisierung}{25}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{25}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{25}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{25}{section.4.3}% 
-\contentsline {chapter}{\numberline {5}Ergebnisse}{26}{chapter.5}% 
-\contentsline {chapter}{\numberline {6}Bewertung}{27}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{28}{chapter.7}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.12}% 
+\contentsline {section}{\numberline {2.3}Objektdetektoren}{16}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Convolutional Neural Networks}{16}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}Mask Regional Convolutional Neural Network}{20}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}You Only Look Once}{20}{subsection.2.3.3}% 
+\contentsline {subsection}{\numberline {2.3.4}Single Shot MultiBox Detector}{20}{subsection.2.3.4}% 
+\contentsline {section}{\numberline {2.4}Verwendete Bibliotheken}{25}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}PyTorch}{25}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}OpenCV}{25}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.4.3}Django}{25}{subsection.2.4.3}% 
+\contentsline {section}{\numberline {2.5}Compute Unified Device Architecture}{25}{section.2.5}% 
+\contentsline {chapter}{\numberline {3}Konzeption}{26}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Bewertungskriterien}{26}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Initialer Vergleich der Objektdetektoren}{26}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Echtzeitumgebung}{26}{section.3.3}% 
+\contentsline {chapter}{\numberline {4}Realisierung}{27}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{27}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{27}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{27}{section.4.3}% 
+\contentsline {chapter}{\numberline {5}Ergebnisse}{28}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}Bewertung}{29}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{30}{chapter.7}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.13}% 
 \contentsline {chapter}{\numberline {A}Anhang}{XII}{appendix.A}% 
 \contentsfinish 

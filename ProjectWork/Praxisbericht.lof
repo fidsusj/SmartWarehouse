@@ -11,15 +11,16 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces ReLU-Aktivierungsfunktionen}}{15}{figure.2.6}% 
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {RELU}}}{15}{figure.2.6}% 
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {PReLU/LReLU}}}{15}{figure.2.6}% 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces ELU}}{16}{figure.2.7}% 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces ELU}}{15}{figure.2.7}% 
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Convolutional Layer}}{17}{figure.2.8}% 
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Zero-Padding}}{18}{figure.2.9}% 
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Feature Maps}}{19}{figure.2.10}% 
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Pooling Layer}}{20}{figure.2.11}% 
-\contentsline {figure}{\numberline {2.12}{\ignorespaces SSD Grundprinzip}}{20}{figure.2.12}% 
+\contentsline {figure}{\numberline {2.12}{\ignorespaces SSD Grundprinzip}}{21}{figure.2.12}% 
 \contentsline {figure}{\numberline {2.13}{\ignorespaces Bounding Boxes}}{21}{figure.2.13}% 
 \contentsline {figure}{\numberline {2.14}{\ignorespaces SSD Architektur}}{22}{figure.2.14}% 
 \contentsline {figure}{\numberline {2.15}{\ignorespaces Intersection over Union}}{23}{figure.2.15}% 
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Vergleich SSD}}{24}{figure.2.16}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

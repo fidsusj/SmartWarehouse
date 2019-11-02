@@ -1,17 +1,17 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
-[1] Config.pm:307> INFO - Logfile is 'Praxisbericht.blg'
-[38] biber-MSWIN64:315> INFO - === 
-[76] Biber.pm:371> INFO - Reading 'Praxisbericht.bcf'
-[319] Biber.pm:889> INFO - Found 18 citekeys in bib section 0
-[349] Biber.pm:4093> INFO - Processing section 0
-[374] Biber.pm:4254> INFO - Looking for bibtex format file 'Inhalt/literatur.bib' for section 0
-[386] bibtex.pm:1523> INFO - LaTeX decoding ...
-[435] bibtex.pm:1340> INFO - Found BibTeX data source 'Inhalt/literatur.bib'
-[556] Utils.pm:193> WARN - year field '2016-12-29' in entry 'ssd.20161229' is not an integer - this will probably not sort properly.
-[603] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[604] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[604] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[604] Biber.pm:3927> INFO - No sort tailoring available for locale 'de-DE'
-[640] bbl.pm:636> INFO - Writing 'Praxisbericht.bbl' with encoding 'UTF-8'
-[650] bbl.pm:739> INFO - Output to Praxisbericht.bbl
-[652] Biber.pm:110> INFO - WARNINGS: 1
+[0] Config.pm:307> INFO - Logfile is 'Praxisbericht.blg'
+[53] biber-MSWIN64:315> INFO - === 
+[123] Biber.pm:371> INFO - Reading 'Praxisbericht.bcf'
+[306] Biber.pm:889> INFO - Found 18 citekeys in bib section 0
+[322] Biber.pm:4093> INFO - Processing section 0
+[338] Biber.pm:4254> INFO - Looking for bibtex format file 'Inhalt/literatur.bib' for section 0
+[347] bibtex.pm:1523> INFO - LaTeX decoding ...
+[399] bibtex.pm:1340> INFO - Found BibTeX data source 'Inhalt/literatur.bib'
+[496] Utils.pm:193> WARN - year field '2016-12-29' in entry 'ssd.20161229' is not an integer - this will probably not sort properly.
+[545] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[545] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[545] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[545] Biber.pm:3927> INFO - No sort tailoring available for locale 'de-DE'
+[582] bbl.pm:636> INFO - Writing 'Praxisbericht.bbl' with encoding 'UTF-8'
+[589] bbl.pm:739> INFO - Output to Praxisbericht.bbl
+[590] Biber.pm:110> INFO - WARNINGS: 1

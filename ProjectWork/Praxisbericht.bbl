@@ -64,6 +64,7 @@
       \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
@@ -143,6 +144,38 @@
       \endverb
       \verb{url}
       \verb https://www.lucidarme.me/simplest-perceptron-update-rules-demonstration/
+      \endverb
+    \endentry
+    \entry{Wikipedia.20190123}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Wikipedia}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \strng{bibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Deep Learning}
+      \field{urlday}{27}
+      \field{urlmonth}{1}
+      \field{urlyear}{2019}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://de.wikipedia.org/wiki/Deep_Learning
+      \endverb
+      \verb{url}
+      \verb https://de.wikipedia.org/wiki/Deep_Learning
       \endverb
     \endentry
     \entry{DavidE.Rumelhart.September1985}{misc}{}
@@ -452,8 +485,134 @@
       \verb https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/pooling_layer.html
       \endverb
     \endentry
+    \entry{ssd.20161229}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=8a42699672c27d229b4f4ca9b960093a}{%
+           family={{Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed, Chang-Yang Fu, Alexander C. Berg}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a42699672c27d229b4f4ca9b960093a}
+      \strng{fullhash}{8a42699672c27d229b4f4ca9b960093a}
+      \strng{bibnamehash}{8a42699672c27d229b4f4ca9b960093a}
+      \strng{authorbibnamehash}{8a42699672c27d229b4f4ca9b960093a}
+      \strng{authornamehash}{8a42699672c27d229b4f4ca9b960093a}
+      \strng{authorfullhash}{8a42699672c27d229b4f4ca9b960093a}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SSD:~Single Shot MultiBox Detector}
+      \field{type}{phdthesis}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2019}
+      \field{year}{2016-12-29}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1512.02325.pdf
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1512.02325.pdf
+      \endverb
+    \endentry
+    \entry{AndrewNg.2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8556a28e66cf2bee56cc69085e7141c3}{%
+           family={{Andrew Ng}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Coursera}%
+      }
+      \strng{namehash}{8556a28e66cf2bee56cc69085e7141c3}
+      \strng{fullhash}{8556a28e66cf2bee56cc69085e7141c3}
+      \strng{bibnamehash}{8556a28e66cf2bee56cc69085e7141c3}
+      \strng{authorbibnamehash}{8556a28e66cf2bee56cc69085e7141c3}
+      \strng{authornamehash}{8556a28e66cf2bee56cc69085e7141c3}
+      \strng{authorfullhash}{8556a28e66cf2bee56cc69085e7141c3}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Anchor Boxes}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2019}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.coursera.org/lecture/convolutional-neural-networks/anchor-boxes-yNwO0
+      \endverb
+      \verb{url}
+      \verb https://www.coursera.org/lecture/convolutional-neural-networks/anchor-boxes-yNwO0
+      \endverb
+    \endentry
+    \entry{MathWorks.2019b}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
+           family={MathWorks},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {MathWorks Homepage}%
+      }
+      \strng{namehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{bibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \field{extraname}{2}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{vgg16}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2019}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://de.mathworks.com/help/deeplearning/ref/vgg16.html;jsessionid=bf0fea41a0c7700184672711881f
+      \endverb
+      \verb{url}
+      \verb https://de.mathworks.com/help/deeplearning/ref/vgg16.html;jsessionid=bf0fea41a0c7700184672711881f
+      \endverb
+    \endentry
+    \entry{AdrianRosebrock.20161107}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c52e90b74259d63a2c1722d285674df3}{%
+           family={{Adrian Rosebrock}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {pyimagesearch}%
+      }
+      \strng{namehash}{c52e90b74259d63a2c1722d285674df3}
+      \strng{fullhash}{c52e90b74259d63a2c1722d285674df3}
+      \strng{bibnamehash}{c52e90b74259d63a2c1722d285674df3}
+      \strng{authorbibnamehash}{c52e90b74259d63a2c1722d285674df3}
+      \strng{authornamehash}{c52e90b74259d63a2c1722d285674df3}
+      \strng{authorfullhash}{c52e90b74259d63a2c1722d285674df3}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Intersection over Union (IoU) for object detection}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2019}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/
+      \endverb
+      \verb{url}
+      \verb https://www.pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/
+      \endverb
+    \endentry
   \enddatalist
-  \missing{Wikipedia.20190123}
 \endrefsection
 \endinput
 

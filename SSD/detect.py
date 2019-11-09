@@ -1,5 +1,4 @@
 import numpy
-import torch
 from torchvision import transforms
 from SSD.utils import *
 from PIL import Image, ImageDraw, ImageFont
@@ -9,7 +8,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load model checkpoint
 checkpoint = 'BEST_checkpoint_ssd300.pth.tar'
-checkpoint = torch.load(checkpoint, map_location=torch.device('cpu'))
+checkpoint = torch.load(checkpoint)  # Use map_location=torch.device('cpu') as 2nd parameter on laptop
 start_epoch = checkpoint['epoch'] + 1
 best_loss = checkpoint['best_loss']
 print('\nLoaded checkpoint from epoch %d. Best loss so far is %.3f.\n' % (start_epoch, best_loss))
@@ -99,8 +98,8 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
 
 
 if __name__ == '__main__':
-    #img_path = '/media/ssd/ssd data/VOC2007/JPEGImages/000001.jpg'
-    #original_image = Image.open(img_path, mode='r')
+    # img_path = '/media/ssd/ssd data/VOC2007/JPEGImages/000001.jpg'
+    # original_image = Image.open(img_path, mode='r')
 
     cv2.namedWindow("preview")
     vc = cv2.VideoCapture(0)

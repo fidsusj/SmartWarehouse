@@ -1,0 +1,28 @@
+\BOOKMARK [0][-]{chapter*.2}{Abk\374rzungsverzeichnis}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{Abbildungsverzeichnis}{}% 2
+\BOOKMARK [0][-]{chapter*.2}{Formelverzeichnis}{}% 3
+\BOOKMARK [0][-]{chapter*.3}{Listenverzeichnis}{}% 4
+\BOOKMARK [0][-]{chapter.0}{Vorwort}{}% 5
+\BOOKMARK [0][-]{chapter.1}{Einf\374hrung}{}% 6
+\BOOKMARK [1][-]{section.1.1}{Forschungsumfeld}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.2}{Problemstellung und Motivation}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.3}{Vorgehensweise und Zielsetzung}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Grundlagen und Forschungsstand}{}% 10
+\BOOKMARK [1][-]{section.2.1}{Neuronale Netze}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.2}{Hyperparameter}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Objektdetektoren}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.4}{Verwendete Bibliotheken}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.5}{Compute Unified Device Architecture}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Konzeption}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Bewertungskriterien}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Initialer Vergleich der Objektdetektoren}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Echtzeitumgebung}{chapter.3}% 19
+\BOOKMARK [0][-]{chapter.4}{Realisierung}{}% 20
+\BOOKMARK [1][-]{section.4.1}{Trainieren der Objektdetektoren}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.2}{Drohnen Anbindung}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.3}{Dashboard Entwicklung}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Ergebnisse}{}% 24
+\BOOKMARK [0][-]{chapter.6}{Bewertung}{}% 25
+\BOOKMARK [0][-]{chapter.7}{Zusammenfassung und Ausblick}{}% 26
+\BOOKMARK [0][-]{chapter*.15}{Literaturverzeichnis}{}% 27
+\BOOKMARK [0][-]{appendix.A}{Anhang}{}% 28

@@ -1,20 +1,18 @@
-[0] Config.pm:304> INFO - This is Biber 2.13
-[0] Config.pm:307> INFO - Logfile is 'Praxisbericht.blg'
-[24] biber-MSWIN64:315> INFO - === 
-[42] Biber.pm:375> INFO - Reading 'Praxisbericht.bcf'
-[130] Biber.pm:905> INFO - Found 19 citekeys in bib section 0
-[142] Biber.pm:4196> INFO - Processing section 0
-[144] Utils.pm:75> INFO - Globbing data source 'Inhalt/literatur.bib'
-[152] Utils.pm:91> INFO - Globbed data source 'Inhalt/literatur.bib' to Inhalt/literatur.bib
-[163] Biber.pm:4373> INFO - Looking for bibtex format file 'Inhalt/literatur.bib' for section 0
-[166] bibtex.pm:1462> INFO - LaTeX decoding ...
-[184] bibtex.pm:1281> INFO - Found BibTeX data source 'Inhalt/literatur.bib'
-[239] Utils.pm:300> WARN - year field '2016-12-29' in entry 'ssd.20161229' is not an integer - this will probably not sort properly.
-[252] Utils.pm:300> WARN - Entry 'JosephRedmon.2016' (Inhalt/literatur.bib): Invalid format '10-11-2019' of date field 'urldate' - ignoring
-[270] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[270] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[271] Biber.pm:4024> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[271] Biber.pm:4030> INFO - No sort tailoring available for locale 'de-DE'
-[285] bbl.pm:648> INFO - Writing 'Praxisbericht.bbl' with encoding 'UTF-8'
-[292] bbl.pm:751> INFO - Output to Praxisbericht.bbl
-[293] Biber.pm:110> INFO - WARNINGS: 2
+[0] Config.pm:304> INFO - This is Biber 2.12
+[1] Config.pm:307> INFO - Logfile is 'Praxisbericht.blg'
+[99] biber-MSWIN64:315> INFO - === 
+[190] Biber.pm:371> INFO - Reading 'Praxisbericht.bcf'
+[422] Biber.pm:889> INFO - Found 19 citekeys in bib section 0
+[461] Biber.pm:4093> INFO - Processing section 0
+[488] Biber.pm:4254> INFO - Looking for bibtex format file 'Inhalt/literatur.bib' for section 0
+[497] bibtex.pm:1523> INFO - LaTeX decoding ...
+[527] bibtex.pm:1340> INFO - Found BibTeX data source 'Inhalt/literatur.bib'
+[680] Utils.pm:193> WARN - year field '2016-12-29' in entry 'ssd.20161229' is not an integer - this will probably not sort properly.
+[704] Utils.pm:193> WARN - year field '2019-11-10' in entry 'JosephRedmon.2016' is not an integer - this will probably not sort properly.
+[757] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[757] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[757] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[758] Biber.pm:3927> INFO - No sort tailoring available for locale 'de-DE'
+[797] bbl.pm:636> INFO - Writing 'Praxisbericht.bbl' with encoding 'UTF-8'
+[808] bbl.pm:739> INFO - Output to Praxisbericht.bbl
+[809] Biber.pm:110> INFO - WARNINGS: 2

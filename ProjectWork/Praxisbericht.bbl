@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.1 $
+% $ biblatex bbl format version 3.0 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -40,8 +40,8 @@
       \strng{authorbibnamehash}{b9ef41b5f253b9e68202e6419fe33e44}
       \strng{authornamehash}{b9ef41b5f253b9e68202e6419fe33e44}
       \strng{authorfullhash}{b9ef41b5f253b9e68202e6419fe33e44}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -65,8 +65,8 @@
       \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Deep Learning: Drei Dinge, die Sie wissen sollten}
@@ -97,8 +97,8 @@
       \strng{authorbibnamehash}{c731f02d37d80d1cc6e3c60eaeba3782}
       \strng{authornamehash}{c731f02d37d80d1cc6e3c60eaeba3782}
       \strng{authorfullhash}{c731f02d37d80d1cc6e3c60eaeba3782}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{inventAIRyX}
@@ -129,8 +129,8 @@
       \strng{authorbibnamehash}{93625a27fb7fd8d08b27352ef7193af6}
       \strng{authornamehash}{93625a27fb7fd8d08b27352ef7193af6}
       \strng{authorfullhash}{93625a27fb7fd8d08b27352ef7193af6}
-      \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Simplest perceptron update rules demonstration}
@@ -162,7 +162,7 @@
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Deep Learning}
@@ -204,8 +204,8 @@
       \strng{editorbibnamehash}{e04f9b2c674d821557c879de74d91812}
       \strng{editornamehash}{e04f9b2c674d821557c879de74d91812}
       \strng{editorfullhash}{e04f9b2c674d821557c879de74d91812}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{9}
@@ -244,7 +244,7 @@
       \strng{authornamehash}{8837ff919f7bf3e2380b52960f977c8b}
       \strng{authorfullhash}{8837ff919f7bf3e2380b52960f977c8b}
       \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Understanding the difficulty of training deep feedforward neural networks}
@@ -277,7 +277,7 @@
       \strng{authornamehash}{2493f2af3b7725dc7e894326a0369612}
       \strng{authorfullhash}{2493f2af3b7725dc7e894326a0369612}
       \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Gradient Descent Algorithm and Its Variants}
@@ -309,7 +309,7 @@
       \strng{authornamehash}{ba633050784441fd9066fefd9e345112}
       \strng{authorfullhash}{ba633050784441fd9066fefd9e345112}
       \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Wie lernen neuronale Netze?}
@@ -341,7 +341,7 @@
       \strng{authornamehash}{8c3b5196b697c2999b6a25f561a38809}
       \strng{authorfullhash}{8c3b5196b697c2999b6a25f561a38809}
       \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Calculating the derivative of Tanh: step by step}
@@ -373,7 +373,7 @@
       \strng{authornamehash}{53f28a98efa452fd6b20b25853ca4bb7}
       \strng{authorfullhash}{53f28a98efa452fd6b20b25853ca4bb7}
       \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Practical Guide to ReLU}
@@ -405,7 +405,7 @@
       \strng{authornamehash}{dbaff04488b1a921cecf6bd5411238b2}
       \strng{authorfullhash}{dbaff04488b1a921cecf6bd5411238b2}
       \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{An intuitive guide to Convolutional Neural Networks}
@@ -436,8 +436,8 @@
       \strng{authorbibnamehash}{a058957318f1d66489c53794afae6df7}
       \strng{authornamehash}{a058957318f1d66489c53794afae6df7}
       \strng{authorfullhash}{a058957318f1d66489c53794afae6df7}
-      \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Convolutional Neural Networks (CNNs): An Illustrated Explanation}
@@ -469,7 +469,7 @@
       \strng{authornamehash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
       \strng{authorfullhash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
       \field{sortinit}{6}
-      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Pooling Layer: Introduction}
@@ -498,7 +498,7 @@
       \strng{authornamehash}{8a42699672c27d229b4f4ca9b960093a}
       \strng{authorfullhash}{8a42699672c27d229b4f4ca9b960093a}
       \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{SSD:~Single Shot MultiBox Detector}
@@ -531,7 +531,7 @@
       \strng{authornamehash}{8556a28e66cf2bee56cc69085e7141c3}
       \strng{authorfullhash}{8556a28e66cf2bee56cc69085e7141c3}
       \field{sortinit}{7}
-      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Anchor Boxes}
@@ -564,7 +564,7 @@
       \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \field{extraname}{2}
       \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{vgg16}
@@ -596,7 +596,7 @@
       \strng{authornamehash}{c52e90b74259d63a2c1722d285674df3}
       \strng{authorfullhash}{c52e90b74259d63a2c1722d285674df3}
       \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Intersection over Union (IoU) for object detection}
@@ -612,33 +612,29 @@
       \verb https://www.pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/
       \endverb
     \endentry
-    \entry{JosephRedmon.2016}{article}{}
-      \name{author}{4}{}{%
-        {{hash=51b5b11fcca54510f0569a06917b9735}{%
-           family={{Joseph Redmon}},
+    \entry{JosephRedmon.2016}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=a08947fb81e1a3e667e94b456c70d58b}{%
+           family={{Joseph Redmon, Santosh Kumar Divvala, Ross B. Girshick, Ali Farhadi}},
            familyi={J\bibinitperiod}}}%
-        {{hash=e2e7d0a3153c43abe9e79e3e303162ed}{%
-           family={{Santosh Kumar Divvala}},
-           familyi={S\bibinitperiod}}}%
-        {{hash=a1da4bcf9efd5af104d055ab52c9e2c0}{%
-           family={{Ross B. Girshick}},
-           familyi={R\bibinitperiod}}}%
-        {{hash=69507d9c0ec8307207c47571621e8f0c}{%
-           family={{Ali Farhadi}},
-           familyi={A\bibinitperiod}}}%
       }
-      \strng{namehash}{5930cc12799175f70f923a2e93a930ea}
-      \strng{fullhash}{0e0d7f6b7e5db9cf55c9e9129098d1b6}
-      \strng{bibnamehash}{5930cc12799175f70f923a2e93a930ea}
-      \strng{authorbibnamehash}{5930cc12799175f70f923a2e93a930ea}
-      \strng{authornamehash}{5930cc12799175f70f923a2e93a930ea}
-      \strng{authorfullhash}{0e0d7f6b7e5db9cf55c9e9129098d1b6}
+      \strng{namehash}{a08947fb81e1a3e667e94b456c70d58b}
+      \strng{fullhash}{a08947fb81e1a3e667e94b456c70d58b}
+      \strng{bibnamehash}{a08947fb81e1a3e667e94b456c70d58b}
+      \strng{authorbibnamehash}{a08947fb81e1a3e667e94b456c70d58b}
+      \strng{authornamehash}{a08947fb81e1a3e667e94b456c70d58b}
+      \strng{authorfullhash}{a08947fb81e1a3e667e94b456c70d58b}
       \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{You Only Look Once: Unified, Real-Time Object Detection}
-      \field{year}{2016}
+      \field{type}{phdthesis}
+      \field{urlday}{10}
+      \field{urlmonth}{11}
+      \field{urlyear}{2019}
+      \field{year}{2019-11-10}
+      \field{urldateera}{ce}
       \verb{file}
       \verb http://arxiv.org/abs/1506.02640
       \endverb
@@ -648,7 +644,6 @@
       \verb{url}
       \verb https://arxiv.org/pdf/1506.02640.pdf
       \endverb
-      \warn{\item Entry 'JosephRedmon.2016' (Inhalt/literatur.bib): Invalid format '10-11-2019' of date field 'urldate' - ignoring}
     \endentry
   \enddatalist
 \endrefsection

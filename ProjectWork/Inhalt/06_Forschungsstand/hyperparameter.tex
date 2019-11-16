@@ -1,28 +1,54 @@
 \section{Hyperparameter}
 
-Als Hyperparameter versteht man die Parameter, die zur anfänglichen Konfiguration des neuronalen Netzes als auch zur Konfiguration des Lernprozesses heran gezogen werden. Um im Laufe der Arbeit verstehen zu können, wie die Objektdetektoren auf Seiten der Netzarchitektur und des Lernverhaltens optimiert wurden, ist demnach ein kurzer Einblick in den Themenbereich der Hyperparameter von Nöten.
+% Bild: Sigmoind und tanh: Lieber Formel als Bild oder beides.
+
+Hyperparameter sind die Parameter, die zur anfänglichen Konfiguration des neuronalen Netzes als auch zur Konfiguration des Lernprozesses heran gezogen werden. Um im Laufe der Arbeit verstehen zu können, wie die Objektdetektoren auf Seiten der Netzarchitektur und des Lernverhaltens optimiert wurden, ist demnach ein kurzer Einblick in den Themenbereich der Hyperparameter von Nöten.
 
 \subsection*{Anzahl der LTUs}
-Die Anzahl der LTUs im ANN ist dafür ausschlaggebend, wie hoch der Komplexitätsanspruch eines Klassifizierungsproblems sein darf, um noch vom ANN gelöst werden zu können. Die Anzahl der LTUs hängt hauptsächlich von den Eingangsdaten ab. Über die optimalste Anzahl an LTUs pro Schicht lässt sich allerdings nur schwer etwas vorhersagen. Generell gilt, dass bei gleicher Anzahl an LTUs tiefere Netze eine weitaus höheren Parametereffizienz aufweisen als breitere Netze, da diese schneller gegen den gewünschten Zustand konvergieren. Zudem lassen sie sich somit schneller und kostengünstiger trainieren. So müssten bei einem 2x32 Netz 1024 Gewichtungen angepasst werden, während es bei einem 32x2 Netz dies nur 128 sind.  \cite[S. 271 f.]{AurelienGeron.2018}
+Die Anzahl der LTUs im ANN ist dafür ausschlaggebend, wie hoch der Komplexitätsanspruch eines Klassifizierungsproblems sein darf, um noch vom ANN gelöst werden zu können. Die Anzahl der LTUs hängt hauptsächlich von den Eingangsdaten ab. Über die optimalste Anzahl an LTUs pro Schicht lässt sich allerdings nur schwer etwas vorhersagen. Generell gilt, dass bei gleicher Anzahl an LTUs tiefere Netze eine weitaus höheren Parametereffizienz aufweisen als breitere Netze, da diese schneller gegen den gewünschten Zustand konvergieren. Zudem lassen sie sich somit schneller und kostengünstiger trainieren. So müssten bei einem 2x32 Netz 1024 Gewichtungen angepasst werden, während es bei einem 32x2 Netz dies nur 128 sind.  \cite{AurelienGeron.2018}
 
 \subsection*{Initialisierung der Gewichtungen}
-Auch stellt die Initialisierung der Gewichte eines ANNs zu Beginn des Trainingsprozesses eine berechtigte Frage dar. Falls keine bereits trainierten ANNs für ein Klassifikationsproblem vorliegen, so werden die Gewichtungen meist zufällig nach einer Normalverteilung gewählt \cite[S. 271]{AurelienGeron.2018}. 
+Auch stellt die Initialisierung der Gewichte eines ANNs zu Beginn des Trainingsprozesses eine berechtigte Frage dar. Falls keine bereits trainierten ANNs für ein Klassifikationsproblem vorliegen, so werden die Gewichtungen meist zufällig nach einer Normalverteilung gewählt \cite{AurelienGeron.2018}. 
 
-Dies hat allerdings zur Folge, dass nach der Berechnung der gewichteten Summen aller LTUs die Werte der folgenden Schicht nicht mehr normalverteilt sind, da für die Varianz das Superpositionsprinzip gilt (siehe Formel \ref{varianz})
+Dies hat allerdings zur Folge, dass nach der Berechnung der gewichteten Summen aller LTUs die Gewichtungswerte der folgenden Schicht nicht mehr normalverteilt sind, da für die Varianz zweier unkorrelierter Zufallsvariablen das Superpositionsprinzip (\ref{varianz}) gilt.
 
 \begin{equation} \label{varianz}
-Var(X + Y) = VAR(X) + VAR(Y)
+Var(X + Y) = Var(X) + Var(Y)
 \end{equation}
 \equations{Superpositionsprinzip anhand der Varianz}
+
+Durch die größer werdende Standardabweichung können demnach Gewichtungswerte entstehen, die weit über den Mittelwert von Null hinaus gehen. Dies kann wiederum dazu führen, dass der Gradientenabstieg während des Backpropagation-Verfahrens nur langsam vollzogen werden kann, da der Gradient bei bestimmten Aktivierungsfunktionen (siehe Abbildung \ref{sigmoid}) gegen Null konvergiert \cite{AurelienGeron.2018}. 
+
+Eine \textit{Xavier Initialisierung} umgeht das Problem der sogenannten \textit{schwindenden Gradienten}, indem die Gewichte nach \ref{xavier} gleichverteilt werden, wobei $n{j}$ die Anzahl an LTUs der $j-ten$ Schicht sind. \cite{XavierGlorot.2010}
 
 \begin{equation} \label{xavier}
 W \sim U[-\frac{\sqrt{6}}{\sqrt{n_{j} + n_{j+1}}},\frac{\sqrt{6}}{\sqrt{n_{j} + n_{j+1}}}]
 \end{equation}
 \equations{Standardverteilung nach Xavier Initialisierung}
 
-Durch die größer werdende Standardabweichung können demnach Werte entstehen, die weit über den Mittelwert von Null hinaus gehen. Dies kann wiederum dazu führen, dass der Gradientenabstieg während des Backpropagation-Verfahrens nur langsam vollzogen werden kann, da der Gradient bei bestimmten Aktivierungsfunktionen (siehe Abbildung \ref{sigmoid}) gegen Null konvergiert \cite[S. 275 f.]{AurelienGeron.2018}. 
+\subsection*{Anzahl an Epochen}
 
-Eine \textit{Xavier Initialisierung} umgeht das Problem der sogenannten \textit{schwindenden Gradienten}, indem die Gewichte nach \ref{xavier} gleichverteilt werden, wobei $n{j}$ die Anzahl an LTUs der $j-ten$ Schicht sind. \cite[S. 253]{XavierGlorot.2010}
+Die Anzahl der Epochen beschreibt die Durchläufe durch einen bestimmten Trainingsdatensatz während der Trainingsphase. Ist die Anzahl zu hoch gewählt wird Gefahr gelaufen sogenanntes \textit{Overfitting} des ANNs zu erreichen. Dies bedeutet ein fehlendes Abstraktionsvermögen des ANNs zu erreichen und damit alleinig eine richtige Erkennung der Trainingsdatensätze zu ermöglichen.  
+
+\subsection*{Lernrate}
+
+Die Lernrate $\eta$ (\ref{gradientenverfahren}) gibt an, wie groß die Sprünge zum globalen Minimum sein sollen und damit indirekt wie viele Iterationen benötigt werden, um das globale Minimum der Kostenfunktion zu erreichen. Ziel der Anpassung einer Lernrate ist es, mit möglichst wenig Iterationen und Testdaten die optimale Konstellation des neuronalen Netzes zu berechnen. Deshalb wird sie standardmäßig zu Beginn der Iterationen groß gewählt, um sich dem Minimum schnell zu nähern während sie am Ende immer kleiner gewählt wird, um nicht über das globale Minimum hinaus zu gehen. Dieses Vorgehen wird als \textit{Simulated Annealing} bezeichnet, während das Funktion zum Festlegen der Lernrate als \textit{Learning Schedule} betitelt wird. \cite{AurelienGeron.2018}
+
+Die Anzahl der Durchläufe wird zu Beginn des Verfahrens zunächst hoch angesetzt, das Verfahren wird aber genau dann gestoppt, sobald der Gradientenvektor unter eine gewisse Abbruchgrenze fällt. Zwar ist das globale Minimum zu diesem Zeitpunkt noch nicht erreicht, allerdings kann es auch nie vollkommen erreicht werden, da die für das Gradientenverfahren genutzten Aktivierungsfunktionen nie einen partiellen Ableitungswert gleich Null zulassen \cite{AurelienGeron.2018}. In diesem Sinne wird auch von \textit{Toleranz} gesprochen.
+
+\subsection*{Moment}
+
+Das Gradientenverfahren kann beschleunigt werden, indem während des Gradientenabstiegs frühere Gradienten Einfluss auf den nächsten Gradientenschritt nehmen. Es wird ein \glqq Momentum\grqq{} aufgebaut. Damit das Momentum (\ref{momentum}) allerdings nicht zu groß wird, beschränkt der Hyperparameter $\beta \in [0,1]$ die Größe des Momentums. \cite{AurelienGeron.2018}
+
+\begin{equation} \label{momentum}
+\begin{split}
+m_x = \beta \cdot m_{x-1} + \eta\frac{\partial E}{\partial w_{ij}} \\
+w_{ijt} = w_{ijt-1} - m 
+\end{split}
+\end{equation}
+\equations{Momentum Optimierung}
+
+Die Momentum Optimierung kann dazu benutzt werden, das \textit{stochastische Gradientenverfahren} bzw. \textit{Mini-Batch} Verfahren zu beschleunigen und lokale Minima besser zu überwinden.
 
 \subsection*{Auswahl des Gradientenverfahrens}
 
@@ -36,45 +62,11 @@ Generell unterscheidet man zwischen drei verschiedenen Arten das Gradientenverfa
 	\end{center}
 \end{figure}
 
-Beim \textit{Batch} Verfahren werden in einem Trainingsdurchlauf, auch \textit{Epoche} genannt, alle vorhandenen Daten des Trainingsdatensatzes herangezogen, um einen Gradientenabstieg zu vollziehen. Dies ist bei großen Trainingsdatensätzen auffällig langsam, dafür aber hinsichtlich der Erreichung des lokalen Minimums sehr zielstrebig. \cite[S. 116]{AurelienGeron.2018}
+Beim \textit{Batch} Verfahren werden in einem Trainingsdurchlauf, der \textit{Epoche}, alle vorhandenen Daten des Trainingsdatensatzes herangezogen, um einen Gradientenabstieg zu vollziehen. Dies ist bei großen Trainingsdatensätzen auffällig langsam, dafür aber hinsichtlich der Erreichung des lokalen Minimums sehr zielstrebig. \cite{AurelienGeron.2018}
 
-Das \textit{stochastische Gradientenverfahren} führt nach jedem einzelnen Dateneintrag im Trainingsdatensatz einen Gradientenabstieg durch. Da nur wenige Daten des ANNs verändert werden müssen, ist dieses Verfahren deutlich schneller, dafür aber unregelmäßiger hinsichtlich der Erreichung des Minimums. Oft wird das stochastische Gradientenverfahren verwendet, wenn nicht der komplette Trainingsdatensatz in den Hauptspeicher oder Grafikspeicher geladen werden kann. Diese Fähigkeit wird oft als \textit{Out-of-Core} Fähigkeit bezeichnet. Es hat auch den Vorteil, besser das globale Minimum der Kostenfunktion aufzufinden, da bei lokalen Minima die Chance besteht, durch den unregelmäßigen Gradientenabstieg das lokale Mimima wieder zu überwinden. \cite[S. 118 f.]{AurelienGeron.2018}
+Das \textit{stochastische Gradientenverfahren} führt nach jedem einzelnen Dateneintrag im Trainingsdatensatz einen Gradientenabstieg durch. Da nur wenige Daten des ANNs verändert werden müssen, ist dieses Verfahren deutlich schneller, dafür aber unregelmäßiger hinsichtlich der Erreichung des Minimums. Oft wird das stochastische Gradientenverfahren verwendet, wenn nicht der komplette Trainingsdatensatz in den Hauptspeicher oder Grafikspeicher geladen werden kann. Diese Fähigkeit wird oft als \textit{Out-of-Core} Fähigkeit bezeichnet. Es hat auch den Vorteil, besser das globale Minimum der Kostenfunktion aufzufinden, da bei lokalen Minima die Chance besteht, durch den unregelmäßigen Gradientenabstieg das lokale Mimima wieder zu überwinden. \cite{AurelienGeron.2018}
 
-Ein Kompromiss der beiden Verfahren bietet das \textit{Mini-Batch} Verfahren, bei dem wiederholt Teilmengen des gesamten Datensatzes für einen Gradientenabstieg verwendet werden. Genauso wie das \textit{Batch} Verfahren bietet das \textit{Mini-Batch} Verfahren den Vorteil, die partiellen Ableitungen als Matrizenoperationen auf die Grafikkarten auszulagern, um die Performanz durch Parallelisierung zu steigern. \cite[S. 121]{AurelienGeron.2018}
-
-\subsection*{Lernrate}
-
-Die Lernrate $\eta$ (siehe Formel \ref{gradientenverfahren}) gibt an, wie groß die Sprünge zum globalen Minimum sein sollen und damit indirekt wie viele Iterationen benötigt werden, um das globale Minimum der Kostenfunktion zu erreichen. Ziel der Anpassung einer Lernrate ist es, mit möglichst wenig Iterationen und Testdaten die optimale Konstellation des neuronalen Netzes zu berechnen. Deshalb wird sie standardmäßig zu Beginn der Iterationen groß gewählt um sich dem Minimum schnell zu nähern während sie am Ende immer kleiner gewählt wird, um nicht über das globale Minimum hinaus zu gehen. Dieses Vorgehen wird als \textit{Simulated Annealing} bezeichnet, während das Funktion zum Festlegen der Lernrate als \textit{Learning Schedule} betitelt wird. \cite[S. 113f]{AurelienGeron.2018}
-
-Eine Veranschaulichung der Anpassungen der Lernrate findet sich in Abbildung \ref{learning_rate}.
-
-\begin{figure}[ht]
-	\begin{center}
-		\includegraphics[width=11cm]{Bilder/learning_rate.png} 
-		\caption[Auswirkung unterschiedlicher Lernraten]{Auswirkung unterschiedlicher Lernraten \cite{SebastianHeinz.2018}}
-		\label{learning_rate}
-	\end{center}
-\end{figure}
-
-Die Anzahl der Durchläufe wird zu Beginn des Verfahrens zunächst hoch angesetzt, das Verfahren wird aber genau dann gestoppt, sobald der Gradientenvektor unter eine gewisse Abbruchgrenze fällt. Zwar ist das globale Minimum zu diesem Zeitpunkt noch nicht erreicht, allerdings kann es auch nie vollkommen erreicht werden, da die für das Gradientenverfahren genutzten Aktivierungsfunktionen nie einen partiellen Ableitungswert gleich Null zulassen \cite[S. 118, S. 272]{AurelienGeron.2018}. In diesem Sinne wird auch von \textit{Toleranz} gesprochen.
-
-\subsection*{Moment}
-
-Das Gradientenverfahren kann beschleunigt werden, indem während des Gradientenabstiegs frühere Gradienten Einfluss auf den nächsten Gradientenschritt nehmen. Es wird ein \glqq Momentum\grqq aufgebaut. Damit das Momentum allerdings nicht zu groß wird, beschränkt der Hyperparameter $\beta \in [0,1]$ die Größe des Momentums (siehe Formel \ref{momentum}). \cite[S. 296]{AurelienGeron.2018}
-
-\begin{equation} \label{momentum}
-\begin{split}
-m_x = \beta \cdot m_{x-1} + \eta\frac{\partial E}{\partial w_{ij}} \\
-w_{ijt} = w_{ijt-1} - m 
-\end{split}
-\end{equation}
-\equations{Momentum Optimierung}
-
-Die Momentum Optimierung kann dazu benutzt werden, das stochastische Gradientenverfahren bzw. Mini-Batch Verfahren zu beschleunigen und lokale Minima besser zu überwinden.
-
-\subsection*{Anzahl an Epochen}
-
-Die Anzahl der Epochen beschreibt die Durchläufe durch einen bestimmten Trainingsdatensatz während der Trainingsphase. Ist die Anzahl zu hoch gewählt wird Gefahr gelaufen sogenanntes \textit{Overfitting} des ANNs zu erreichen. Dies bedeutet ein fehlendes Abstraktionsvermögen des ANNs zu erreichen und damit alleinig eine richtige Erkennung der Trainingsdatensätze zu ermöglichen.  
+Ein Kompromiss der beiden Verfahren bietet das \textit{Mini-Batch} Verfahren, bei dem wiederholt Teilmengen des gesamten Datensatzes für einen Gradientenabstieg verwendet werden. Genauso wie das \textit{Batch} Verfahren bietet das \textit{Mini-Batch} Verfahren den Vorteil, die partiellen Ableitungen als Matrizenoperationen auf die Grafikkarten auszulagern, um die Performanz durch Parallelisierung zu steigern. \cite{AurelienGeron.2018}
 
 \subsection*{Aktivierungsfunktionen}
 
@@ -82,13 +74,13 @@ Zwei bekannte und ähnliche Aktivierungsfunktionen sind die \textit{Sigmoid-Funk
 
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[width=15cm]{Bilder/sigmoid.jpg} 
+		\includegraphics[width=15cm]{Bilder/sigmoid.png} 
 		\caption[Sigmoid und Tangens Hyperbolicus]{Sigmoid und Tangens Hyperbolicus \cite{RonnyRestrepo.20170816}}
 		\label{sigmoid}
 	\end{center}
 \end{figure}
 
-Da diese allerdings anfällig für das Problem \textit{schwindender Gradienten} sind \cite[S. 276]{AurelienGeron.2018}, wird die \textit{Rectified Linear Unit} (ReLU) bzw. \textit{Parametric/Leaky Rectified Linear Unit} (PReLU/LRelU) Aktivierungsfunktion bevorzugt (siehe Abbildung \ref{relu}). 
+Da diese allerdings anfällig für das Problem \textit{schwindender Gradienten} sind \cite{AurelienGeron.2018}, wird die \textit{Rectified Linear Unit} (ReLU) bzw. \textit{Parametric/Leaky Rectified Linear Unit} (PReLU/LRelU) Aktivierungsfunktion bevorzugt (siehe Abbildung \ref{relu}). 
 
 \begin{figure}[ht]
 	\subfigure[RELU]{\includegraphics[width=7.5cm]{Bilder/relu.png}} 
@@ -97,16 +89,17 @@ Da diese allerdings anfällig für das Problem \textit{schwindender Gradienten} 
 	\label{relu}
 \end{figure} 
 
-Bei ReLU kann es während des Trainingsprozesses dazu kommen, dass LTUs nach dem Gradientenabstieg einen negativen Wert aufweisen, weshalb sie nicht weiter aktiviert werden und für den Rest der Trainingsdauer \glqq tot\grqq{} sind. Um dies zu verhindern wurde \textit{LReLU} dazu genutzt, um eine Reaktivierung zu ermöglichen, da auch für negative LTU Werte ein Gradient der Aktivierungsfunktion bestimmt werden kann. Bei \textit{LReLU} ist die Steigung der Funktion im zweiten Quadranten statisch gewählt, während sie bei \textit{PReLU} dynamisch von neuronalen Netz während des Trainingsprozesses selbst gelernt werden kann. \cite[S. 280 f.]{AurelienGeron.2018}
+Bei ReLU kann es während des Trainingsprozesses dazu kommen, dass LTUs nach dem Gradientenabstieg einen negativen Wert aufweisen, weshalb sie nicht weiter aktiviert werden und für den Rest der Trainingsdauer \glqq tot\grqq{} sind. Um dies zu verhindern, wurde \textit{LReLU} dazu genutzt, um eine Reaktivierung zu ermöglichen, da auch für negative LTU Werte ein Gradient der Aktivierungsfunktion bestimmt werden kann. Bei \textit{LReLU} ist die Steigung der Funktion im zweiten Quadranten statisch gewählt, während sie bei \textit{PReLU} dynamisch von neuronalen Netz während des Trainingsprozesses selbst gelernt werden kann. \cite{AurelienGeron.2018}
 
 Eine letzte Variante der Aktivierungsfunktionen beschreibt die \textit{ELU} Funktion (siehe Abbildung \ref{elu}).
 
 \begin{figure}[ht]
 	\begin{center}
-		\includegraphics[width=15cm]{Bilder/elu.png} 
+		\includegraphics[width=12cm]{Bilder/elu.png} 
 		\caption[ELU]{ELU \cite{DanqingLiu.20171130}}
 		\label{elu}
 	\end{center}
 \end{figure}
 
-Sie besitzt nicht nur die Eigenschaft schwindende Gradienten und tote LTUs zu verhindern, sondern ist im gesamten Definitionsbereich ebenso eine stetig differenzierbare Funktion, was das Gradientenverfahren beschleunigt. Als Standardwert für $\alpha$ wird oft Eins verwendet. Nachteil der \textit{ELU} Funktion ist der erhöhte Rechenaufwand, was aber durch die schnellere Konvergenz kompensiert wird. \cite[S. 280 f.]{AurelienGeron.2018}
+Sie besitzt nicht nur die Eigenschaft schwindende Gradienten und tote LTUs zu verhindern, sondern ist im gesamten Definitionsbereich ebenso eine stetig differenzierbare Funktion, was das Gradientenverfahren beschleunigt. Als Standardwert für $\alpha$ wird oft Eins verwendet. Nachteil der \textit{ELU} Funktion ist der erhöhte Rechenaufwand, was aber durch die schnellere Konvergenz kompensiert wird. \cite{AurelienGeron.2018}
+

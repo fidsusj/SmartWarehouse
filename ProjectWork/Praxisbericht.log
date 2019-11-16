@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  11 NOV 2019 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  16 NOV 2019 18:53
 entering extended mode
 **./Praxisbericht.tex
 (Praxisbericht.tex
@@ -2134,7 +2134,7 @@ chapter 1.
 (Inhalt/05_Einleitung/Zielsetzung/zielsetzung.tex [3])
 (Inhalt/06_Forschungsstand/neuronale_netze.tex [4]
 chapter 2.
-<Bilder/perceptron.png, id=292, 486.31688pt x 455.45157pt>
+<Bilder/perceptron.png, id=291, 486.31688pt x 455.45157pt>
 File: Bilder/perceptron.png Graphic file (type png)
 <use Bilder/perceptron.png>
 Package pdftex.def Info: Bilder/perceptron.png  used on input line 15.
@@ -2160,167 +2160,154 @@ Package pdftex.def Info: Bilder/neural_network.png  used on input line 53.
                                                   \fi \fi 
 l.62 
       <./Bilder/neural_network.png>] [8])
-(Inhalt/06_Forschungsstand/hyperparameter.tex [9] [10]
-<Bilder/gradient_descent.png, id=383, 911.405pt x 451.6875pt>
+(Inhalt/06_Forschungsstand/hyperparameter.tex [9] [10] [11]
+<Bilder/gradient_descent.png, id=395, 911.405pt x 451.6875pt>
 File: Bilder/gradient_descent.png Graphic file (type png)
 <use Bilder/gradient_descent.png>
-Package pdftex.def Info: Bilder/gradient_descent.png  used on input line 33.
+Package pdftex.def Info: Bilder/gradient_descent.png  used on input line 59.
 (pdftex.def)             Requested size: 426.79134pt x 211.52122pt.
- [11pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+ [12]
+<Bilder/sigmoid.png, id=408, 651.6345pt x 404.712pt>
+File: Bilder/sigmoid.png Graphic file (type png)
+<use Bilder/sigmoid.png>
+Package pdftex.def Info: Bilder/sigmoid.png  used on input line 77.
+(pdftex.def)             Requested size: 426.79134pt x 265.06668pt.
+<Bilder/relu.png, id=413, 1029.8475pt x 468.75125pt>
+File: Bilder/relu.png Graphic file (type png)
+<use Bilder/relu.png>
+Package pdftex.def Info: Bilder/relu.png  used on input line 86.
+(pdftex.def)             Requested size: 213.39566pt x 97.12459pt.
+<Bilder/prelu.png, id=414, 1028.84375pt x 551.05875pt>
+File: Bilder/prelu.png Graphic file (type png)
+<use Bilder/prelu.png>
+Package pdftex.def Info: Bilder/prelu.png  used on input line 87.
+(pdftex.def)             Requested size: 213.39566pt x 114.29631pt.
+ [13pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.42 
+l.93 
       <./Bilder/gradient_descent.png (PNG copy)>]
-<Bilder/learning_rate.png, id=399, 793.96625pt x 663.47874pt>
-File: Bilder/learning_rate.png Graphic file (type png)
-<use Bilder/learning_rate.png>
-Package pdftex.def Info: Bilder/learning_rate.png  used on input line 53.
-(pdftex.def)             Requested size: 312.9803pt x 261.54985pt.
- [12] [13pdfTeX warning (ext4): destination with the same identifier (name{figu
-re.2.4}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.78 
-      <./Bilder/learning_rate.png>]
-<Bilder/sigmoid.jpg, id=418, 903.375pt x 501.875pt>
-File: Bilder/sigmoid.jpg Graphic file (type jpg)
-<use Bilder/sigmoid.jpg>
-Package pdftex.def Info: Bilder/sigmoid.jpg  used on input line 85.
-(pdftex.def)             Requested size: 426.79134pt x 237.10655pt.
-<Bilder/relu.png, id=423, 1029.8475pt x 468.75125pt>
-File: Bilder/relu.png Graphic file (type png)
-<use Bilder/relu.png>
-Package pdftex.def Info: Bilder/relu.png  used on input line 94.
-(pdftex.def)             Requested size: 213.39566pt x 97.12459pt.
-<Bilder/prelu.png, id=424, 1028.84375pt x 551.05875pt>
-File: Bilder/prelu.png Graphic file (type png)
-<use Bilder/prelu.png>
-Package pdftex.def Info: Bilder/prelu.png  used on input line 95.
-(pdftex.def)             Requested size: 213.39566pt x 114.29631pt.
- [14pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-5}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.101 
-       <./Bilder/sigmoid.jpg>]
-<Bilder/elu.png, id=436, 1023.825pt x 528.97626pt>
+<Bilder/elu.png, id=425, 1023.825pt x 528.97626pt>
 File: Bilder/elu.png Graphic file (type png)
 <use Bilder/elu.png>
-Package pdftex.def Info: Bilder/elu.png  used on input line 106.
-(pdftex.def)             Requested size: 426.79134pt x 220.50577pt.
-) (Inhalt/06_Forschungsstand/faltungsnetze.tex
-[15pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6
+Package pdftex.def Info: Bilder/elu.png  used on input line 98.
+(pdftex.def)             Requested size: 341.43306pt x 176.403pt.
+)
+(Inhalt/06_Forschungsstand/faltungsnetze.tex [14pdfTeX warning (ext4): destinat
+ion with the same identifier (name{figure.2.4}) has been already used, duplicat
+e ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.9 E
+     in Convolutional Layer zeichnen sich unter anderem dadurch aus, dass je...
+ <./Bilder/sigmoid.png>] [15pdfTeX warning (ext4): destination with the same id
+entifier (name{figure.2.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.10 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.2
+.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.10 
+      <./Bilder/relu.png> <./Bilder/prelu.png> <./Bilder/elu.png>]
+<Bilder/convolutional_layer.png, id=451, 680.5425pt x 463.7325pt>
+File: Bilder/convolutional_layer.png Graphic file (type png)
+<use Bilder/convolutional_layer.png>
+Package pdftex.def Info: Bilder/convolutional_layer.png  used on input line 17.
+
+(pdftex.def)             Requested size: 247.2559pt x 168.48613pt.
+<Bilder/zero_padding.png, id=454, 298.86656pt x 259.7203pt>
+File: Bilder/zero_padding.png Graphic file (type png)
+<use Bilder/zero_padding.png>
+Package pdftex.def Info: Bilder/zero_padding.png  used on input line 23.
+(pdftex.def)             Requested size: 179.81873pt x 156.26535pt.
+
+Overfull \hbox (2.61046pt too wide) in paragraph at lines 16--27
+[][]  [] 
+ []
+
+[16pdfTeX warning (ext4): destination with the same identifier (name{figure.2.7
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1 \section
-            {Objektdetektoren}pdfTeX warning (ext4): destination with the same 
-identifier (name{figure.2.7}) has been already used, duplicate ignored
+l.32 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.2
+.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1 \section
-            {Objektdetektoren} <./Bilder/relu.png> <./Bilder/prelu.png> <./Bild
-er/elu.png>]
-<Bilder/convolutional_layer.png, id=455, 680.5425pt x 463.7325pt>
-File: Bilder/convolutional_layer.png Graphic file (type png)
-<use Bilder/convolutional_layer.png>
-Package pdftex.def Info: Bilder/convolutional_layer.png  used on input line 15.
-
-(pdftex.def)             Requested size: 341.43306pt x 232.65817pt.
- [16]
-<Bilder/zero_padding.png, id=465, 298.86656pt x 259.7203pt>
-File: Bilder/zero_padding.png Graphic file (type png)
-<use Bilder/zero_padding.png>
-Package pdftex.def Info: Bilder/zero_padding.png  used on input line 25.
-(pdftex.def)             Requested size: 199.16928pt x 173.08435pt.
- [17pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-8}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.34 
-      <./Bilder/convolutional_layer.png (PNG copy)>]
-<Bilder/feature_maps.jpeg, id=476, 306.06345pt x 262.70145pt>
+l.32 
+      <./Bilder/convolutional_layer.png (PNG copy)> <./Bilder/zero_padding.png>
+]
+<Bilder/feature_maps.jpeg, id=468, 306.06345pt x 262.70145pt>
 File: Bilder/feature_maps.jpeg Graphic file (type jpg)
 <use Bilder/feature_maps.jpeg>
 Package pdftex.def Info: Bilder/feature_maps.jpeg  used on input line 37.
 (pdftex.def)             Requested size: 312.9803pt x 268.63737pt.
-<Bilder/pooling_layer.png, id=483, 999.735pt x 292.09125pt>
+ [17pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.44 
+      <./Bilder/feature_maps.jpeg>]
+<Bilder/pooling_layer.png, id=479, 999.735pt x 292.09125pt>
 File: Bilder/pooling_layer.png Graphic file (type png)
 <use Bilder/pooling_layer.png>
 Package pdftex.def Info: Bilder/pooling_layer.png  used on input line 51.
 (pdftex.def)             Requested size: 426.79134pt x 124.69647pt.
  [18pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-9}) has been already used, duplicate ignored
+10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.58 
-      <./Bilder/zero_padding.png>])
-(Inhalt/06_Forschungsstand/forschungsstand.tex [19pdfTeX warning (ext4): destin
-ation with the same identifier (name{figure.2.10}) has been already used, dupli
-cate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1 \subsection
-               {Mask Regional Convolutional Neural Network} <./Bilder/feature_m
-aps.jpeg>]) (Inhalt/06_Forschungsstand/ssd.tex
-<Bilder/ssd_framework.png, id=499, 1270.7475pt x 475.7775pt>
+l.62 
+      <./Bilder/pooling_layer.png>])
+(Inhalt/06_Forschungsstand/forschungsstand.tex)
+(Inhalt/06_Forschungsstand/ssd.tex
+<Bilder/ssd_framework.png, id=492, 1270.7475pt x 475.7775pt>
 File: Bilder/ssd_framework.png Graphic file (type png)
 <use Bilder/ssd_framework.png>
 Package pdftex.def Info: Bilder/ssd_framework.png  used on input line 7.
 (pdftex.def)             Requested size: 426.79134pt x 159.7948pt.
+<Bilder/bounding_boxes.png, id=498, 288.3272pt x 289.08pt>
+File: Bilder/bounding_boxes.png Graphic file (type png)
+<use Bilder/bounding_boxes.png>
+Package pdftex.def Info: Bilder/bounding_boxes.png  used on input line 17.
+(pdftex.def)             Requested size: 199.16928pt x 199.69478pt.
+ [19]
+<Bilder/ssd_architecture.png, id=511, 1114.1625pt x 329.23pt>
+File: Bilder/ssd_architecture.png Graphic file (type png)
+<use Bilder/ssd_architecture.png>
+Package pdftex.def Info: Bilder/ssd_architecture.png  used on input line 40.
+(pdftex.def)             Requested size: 426.79134pt x 126.11342pt.
  [20pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.14 
-      <./Bilder/pooling_layer.png>]
-<Bilder/bounding_boxes.png, id=514, 288.3272pt x 289.08pt>
-File: Bilder/bounding_boxes.png Graphic file (type png)
-<use Bilder/bounding_boxes.png>
-Package pdftex.def Info: Bilder/bounding_boxes.png  used on input line 17.
-(pdftex.def)             Requested size: 199.16928pt x 199.69478pt.
+l.47 
+      <./Bilder/ssd_framework.png (PNG copy)>]
+<Bilder/iou_equation.png, id=524, 602.25pt x 469.755pt>
+File: Bilder/iou_equation.png Graphic file (type png)
+<use Bilder/iou_equation.png>
+Package pdftex.def Info: Bilder/iou_equation.png  used on input line 50.
+(pdftex.def)             Requested size: 227.62204pt x 177.54826pt.
  [21pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
 12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.26 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.2
-.13}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.26 
-      <./Bilder/ssd_framework.png (PNG copy)> <./Bilder/bounding_boxes.png>]
-<Bilder/ssd_architecture.png, id=527, 1114.1625pt x 329.23pt>
-File: Bilder/ssd_architecture.png Graphic file (type png)
-<use Bilder/ssd_architecture.png>
-Package pdftex.def Info: Bilder/ssd_architecture.png  used on input line 40.
-(pdftex.def)             Requested size: 426.79134pt x 126.11342pt.
-
-[22pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
-4}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.47 
-      <./Bilder/ssd_architecture.png (PNG copy)>]
-<Bilder/iou_equation.png, id=540, 602.25pt x 469.755pt>
-File: Bilder/iou_equation.png Graphic file (type png)
-<use Bilder/iou_equation.png>
-Package pdftex.def Info: Bilder/iou_equation.png  used on input line 50.
-(pdftex.def)             Requested size: 227.62204pt x 177.54826pt.
-<Bilder/ssd_results.png, id=547, 948.54375pt x 276.43275pt>
+l.61 
+      <./Bilder/bounding_boxes.png>]
+<Bilder/ssd_results.png, id=538, 948.54375pt x 276.43275pt>
 File: Bilder/ssd_results.png Graphic file (type png)
 <use Bilder/ssd_results.png>
 Package pdftex.def Info: Bilder/ssd_results.png  used on input line 64.
@@ -2330,15 +2317,22 @@ Overfull \hbox (5.69037pt too wide) in paragraph at lines 64--65
  [] 
  []
 
-[23pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
-5}) has been already used, duplicate ignored
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.71 
-      <./Bilder/iou_equation.png>]) (Inhalt/06_Forschungsstand/yolo.tex
-[24pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
-6}) has been already used, duplicate ignored
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.2
+.14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.71 
+      <./Bilder/ssd_architecture.png (PNG copy)> <./Bilder/iou_equation.png>])
+(Inhalt/06_Forschungsstand/yolo.tex [23pdfTeX warning (ext4): destination with 
+the same identifier (name{figure.2.15}) has been already used, duplicate ignore
+d
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -2349,40 +2343,40 @@ Overfull \hbox (0.99748pt too wide) in paragraph at lines 7--8
 l-fe ei-nes fest-ge-leg-ten Schwell-
  []
 
-<Bilder/yolo_model.png, id=569, 862.72313pt x 553.31718pt>
+<Bilder/yolo_model.png, id=560, 862.72313pt x 553.31718pt>
 File: Bilder/yolo_model.png Graphic file (type png)
 <use Bilder/yolo_model.png>
 Package pdftex.def Info: Bilder/yolo_model.png  used on input line 11.
 (pdftex.def)             Requested size: 426.79134pt x 273.71977pt.
-) (Inhalt/06_Forschungsstand/bibliotheken.tex [25pdfTeX warning (ext4): destina
-tion with the same identifier (name{figure.2.17}) has been already used, duplic
+) (Inhalt/06_Forschungsstand/bibliotheken.tex [24pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.2.16}) has been already used, duplic
 ate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.15 	\item L
              iteraturrecherche <./Bilder/yolo_model.png>])
-(Inhalt/07_Konzeption/bewertungskriterien.tex [26]
+(Inhalt/07_Konzeption/bewertungskriterien.tex [25]
 chapter 3.
 ) (Inhalt/07_Konzeption/vergleich.tex)
 (Inhalt/07_Konzeption/echtzeitumgebung.tex)
-(Inhalt/08_Realisierung/realisierung.tex [27
+(Inhalt/08_Realisierung/realisierung.tex [26
 
 ]
 chapter 4.
-) (Inhalt/09_Ergebnisse/ergebnisse.tex [28
+) (Inhalt/09_Ergebnisse/ergebnisse.tex [27
 
 ]
 chapter 5.
-) (Inhalt/10_Bewertung/bewertung.tex [29
+) (Inhalt/10_Bewertung/bewertung.tex [28
 
 ]
 chapter 6.
-) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [30
+) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [29
 
 ]
 chapter 7.
-) [31
+) [30
 
 ]
 chapter without number
@@ -2452,13 +2446,13 @@ Package logreq Info: Writing requests to 'Praxisbericht.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 162.
  ) 
 Here is how much of TeX's memory you used:
- 45882 strings out of 492946
- 908696 string characters out of 3125377
- 1449493 words of memory out of 3000000
- 48837 multiletter control sequences out of 15000+200000
- 564881 words of font info for 109 fonts, out of 3000000 for 9000
+ 45923 strings out of 492946
+ 909251 string characters out of 3125377
+ 1450406 words of memory out of 3000000
+ 48857 multiletter control sequences out of 15000+200000
+ 572443 words of font info for 133 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
- 80i,23n,79p,9184b,2458s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 80i,23n,77p,9184b,2458s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
 0\eccc1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
 pen\ec\dpi600\tcrm1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\
@@ -2489,12 +2483,13 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/D070497/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/D070
 497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
 <C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmr12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Praxisbericht.pdf (44 pages, 2785562 bytes).
+/cm/cmmib10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/D070497/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Praxisbericht.pdf (43 pages, 2876984 bytes).
 PDF statistics:
- 1360 PDF objects out of 1440 (max. 8388607)
- 151 named destinations out of 1000 (max. 500000)
- 332 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1354 PDF objects out of 1440 (max. 8388607)
+ 150 named destinations out of 1000 (max. 500000)
+ 327 words of extra memory for PDF output out of 10000 (max. 10000000)
 

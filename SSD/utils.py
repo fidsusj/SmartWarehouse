@@ -8,13 +8,14 @@ import torchvision.transforms.functional as FT
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Label map
-voc_labels = ('saskia',)
+voc_labels = ('saskia wasser groß', 'saskia wasser klein', 'pepsi cola groß', 'pepsi cola klein', 'ace', 'iso', 'stenger johannisbeerschorle', 'stenger apfelsaftschorle', 'vitamalz malzbier')
 label_map = {k: v + 1 for v, k in enumerate(voc_labels)}
 label_map['background'] = 0
 rev_label_map = {v: k for k, v in label_map.items()}  # Inverse mapping
 
 # Color map for bounding boxes of detected objects from https://sashat.me/2017/01/11/list-of-20-simple-distinct-colors/
-distinct_colors = ['#e6194b', '#3cb44b']
+distinct_colors = ['#e6194b', '#3cb44b', '#ffe119', '#0082c8', '#f58231', '#911eb4', '#46f0f0', '#f032e6',
+                   '#d2f53c', '#fabebe']
 label_color_map = {k: distinct_colors[i] for i, k in enumerate(label_map.keys())}
 
 

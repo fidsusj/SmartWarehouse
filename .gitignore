@@ -1,3 +1,5 @@
 .idea/
 venv/
 SSD/data/
+BEST_checkpoint_ssd300.pth.tar
+checkpoint_ssd300.pth.tar

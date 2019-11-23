@@ -293,38 +293,6 @@
       \verb https://towardsdatascience.com/gradient-descent-algorithm-and-its-variants-10f652806a3
       \endverb
     \endentry
-    \entry{SebastianHeinz.2018}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=ba633050784441fd9066fefd9e345112}{%
-           family={{Sebastian Heinz}},
-           familyi={S\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {STATWORX Blog}%
-      }
-      \strng{namehash}{ba633050784441fd9066fefd9e345112}
-      \strng{fullhash}{ba633050784441fd9066fefd9e345112}
-      \strng{bibnamehash}{ba633050784441fd9066fefd9e345112}
-      \strng{authorbibnamehash}{ba633050784441fd9066fefd9e345112}
-      \strng{authornamehash}{ba633050784441fd9066fefd9e345112}
-      \strng{authorfullhash}{ba633050784441fd9066fefd9e345112}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Wie lernen neuronale Netze?}
-      \field{urlday}{26}
-      \field{urlmonth}{10}
-      \field{urlyear}{2019}
-      \field{year}{2018}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.statworx.com/de/blog/wie-lernen-neuronale-netze/
-      \endverb
-      \verb{url}
-      \verb https://www.statworx.com/de/blog/wie-lernen-neuronale-netze/
-      \endverb
-    \endentry
     \entry{RonnyRestrepo.20170816}{misc}{}
       \name{author}{1}{}{%
         {{hash=8c3b5196b697c2999b6a25f561a38809}{%

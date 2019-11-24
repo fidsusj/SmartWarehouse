@@ -102,7 +102,7 @@ if __name__ == '__main__':
     # original_image = Image.open(img_path, mode='r')
 
     cv2.namedWindow("preview")
-    vc = cv2.VideoCapture(0)
+    vc = cv2.VideoCapture("data/videos/warehouse2.mp4")
 
     if vc.isOpened():
         rval, frame = vc.read()

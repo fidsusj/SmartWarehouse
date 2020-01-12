@@ -1,0 +1,1 @@
+mklink /D <folder that links to real folder, not existent yet> <actual folder>

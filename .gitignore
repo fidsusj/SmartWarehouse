@@ -2,3 +2,6 @@
 venv/
 SSD/data/
 SSD/checkpoint/
+detectron/datasets/
+FasterRCNN2/checkpoints/
+*.pth

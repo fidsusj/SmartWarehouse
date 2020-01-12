@@ -76,13 +76,18 @@ def evaluate(test_loader, model):
             true_difficulties.extend(difficulties)
 
         # Calculate mAP
-        APs, mAP = calculate_mAP(det_boxes, det_labels, det_scores, true_boxes, true_labels, true_difficulties)
+        APs, ARs, mAP, mAR, f1 = calculate_mAP(det_boxes, det_labels, det_scores, true_boxes, true_labels, true_difficulties)
 
     # Print AP for each class
+    print('\nAverage Precision (AP):')
     pp.pprint(APs)
+    print('\nAverage Recall (AP):')
+    pp.pprint(ARs)
 
     print('\nMean Average Precision (mAP): %.3f' % mAP)
+    print('\nMean Average Recall (mAR): %.3f' % mAR)
 
+    print('\nF1 Score: %.3f' % f1)
 
 if __name__ == '__main__':
     evaluate(test_loader, model)

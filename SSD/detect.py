@@ -4,6 +4,7 @@ from torchvision import transforms
 from SSD.utils import *
 from PIL import Image, ImageDraw, ImageFont
 import cv2
+import time
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -106,6 +107,9 @@ if __name__ == '__main__':
 
     cv2.namedWindow("preview")
     vc = cv2.VideoCapture("data/videos/warehouse2.mp4")
+    start = time.time()
+    framesCaptured = 0
+    maxFPS = 0
 
     if vc.isOpened():
         rval, frame = vc.read()
@@ -121,6 +125,15 @@ if __name__ == '__main__':
 
             # update frame
             rval, frame = vc.read()
+            framesCaptured += 1
+            if framesCaptured == 120:
+                fps = (framesCaptured / (time.time() - start))
+                if fps > maxFPS:
+                    maxFPS = fps
+                    print('New Max FPS: %.3f' % maxFPS)
+                framesCaptured = 0
+                start = time.time()
+
             key = cv2.waitKey(20)
             if key == 27:  # exit on ESC
                 break

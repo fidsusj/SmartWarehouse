@@ -21,7 +21,7 @@ checkpoint = './checkpoint/BEST_checkpoint_ssd300.pth.tar' # path to model check
 # checkpoint = None # path to model checkpoint, None if none
 batch_size = 16  # batch size
 start_epoch = 0  # start at this epoch
-epochs = 1  # number of epochs to run without early-stopping
+epochs = 500  # number of epochs to run without early-stopping
 k_fold = 5
 epochs_since_improvement = 0  # number of epochs since there was an improvement in the validation metric
 best_loss = 100.  # assume a high loss at first
@@ -73,10 +73,11 @@ def main():
     folds = k_fold_cross_validation(k_fold)
 
     for i in range(k_fold):
-        test = folds[i]
-        folds_without_test = folds.copy().remove(test)
-        train = [val for sublist in folds_without_test for val in sublist]
-        specify_train_test_data(train, test)
+        test_fold = folds[i]
+        folds_without_test = folds.copy()
+        folds_without_test.remove(test_fold)
+        train_fold = [val for sublist in folds_without_test for val in sublist]
+        specify_train_test_data(train_fold, test_fold)
 
         # Custom dataloaders
         train_dataset = PascalVOCDataset(data_folder,

@@ -14,7 +14,7 @@ def k_fold_cross_validation(k_fold):
     random.shuffle(files)
     folds = []
 
-    for i in range(folds):
+    for i in range(k_fold):
         folds.append([])
 
     for index, file in enumerate(files):
@@ -31,9 +31,9 @@ def specify_train_test_data(train_images, test_images):
     test_file_text = ''
 
     for index, train_image in enumerate(train_images):
-        trainval_file_text += ''.join(os.path.basename(train_image.name))
+        trainval_file_text += ''.join(train_image.replace(".jpg","")) + "\n"
     for index, test_image in enumerate(test_images):
-        test_file_text += ''.join(os.path.basename(test_image.name))
+        test_file_text += ''.join(test_image.replace(".jpg","")) + "\n"
 
     trainval.write(trainval_file_text)
     trainval.close()

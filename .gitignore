@@ -2,3 +2,4 @@
 venv/
 SSD/data/
 SSD/checkpoint/
+YOLO/data/

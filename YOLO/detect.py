@@ -1,9 +1,16 @@
 import argparse
+import os
 from sys import platform
 
+import torch
 from models import *  # set ONNX_EXPORT in models.py
 from utils.datasets import *
 from utils.utils import *
+
+from YOLO.models import ONNX_EXPORT, Darknet, attempt_download, load_darknet_weights
+from YOLO.utils import torch_utils
+from YOLO.utils.datasets import LoadImages, LoadStreams
+from YOLO.utils.utils import load_classes, non_max_suppression, apply_classifier, plot_one_box, scale_coords
 
 
 def detect(save_img=False):

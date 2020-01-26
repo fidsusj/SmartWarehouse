@@ -7,6 +7,9 @@ import torchvision.transforms.functional as FT
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+# dataset_path = 'D:/Workspaces/Datensätze/SmartWarehouseSSD/'
+dataset_path = '/floyd/input/ssd/'
+
 # Label map
 voc_labels = ('saskia wasser groß', 'saskia wasser klein', 'pepsi cola groß', 'pepsi cola klein', 'ace', 'iso', 'stenger johannisbeerschorle', 'stenger apfelsaftschorle', 'vitamalz malzbier')
 label_map = {k: v + 1 for v, k in enumerate(voc_labels)}
@@ -61,7 +64,7 @@ def create_data_lists(smartwarehouse_path, output_folder):
 
     # Training data
     # Find IDs of images in training data
-    with open(os.path.join(smartwarehouse_path, 'ImageSets/Main/trainval.txt')) as f:
+    with open(os.path.join(smartwarehouse_path, dataset_path + 'ImageSets/Main/trainval.txt')) as f:
         ids = f.read().splitlines()
 
     for id in ids:
@@ -92,7 +95,7 @@ def create_data_lists(smartwarehouse_path, output_folder):
     n_objects = 0
 
     # Find IDs of images in validation data
-    with open(os.path.join(smartwarehouse_path, 'ImageSets/Main/test.txt')) as f:
+    with open(os.path.join(smartwarehouse_path, dataset_path + 'ImageSets/Main/test.txt')) as f:
         ids = f.read().splitlines()
 
     for id in ids:

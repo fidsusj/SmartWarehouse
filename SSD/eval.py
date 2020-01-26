@@ -8,7 +8,7 @@ from pprint import PrettyPrinter
 pp = PrettyPrinter()
 
 # Parameters
-data_folder = './data/Output'
+data_folder = './data/output'
 keep_difficult = True  # difficult ground truth objects must always be considered in mAP calculation, because these objects DO exist!
 batch_size = 48
 workers = 4

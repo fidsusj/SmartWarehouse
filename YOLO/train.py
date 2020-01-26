@@ -1,6 +1,11 @@
 import argparse
+import glob
+import math
 import os
+import random
+from datetime import time
 
+import cv2
 import torch
 import torch.distributed as dist
 import torch.optim as optim
@@ -8,7 +13,10 @@ import torch.optim.lr_scheduler as lr_scheduler
 
 import test  # import test.py to get mAP after each epoch
 from models import *
+from networkx.algorithms.assortativity.tests.test_correlation import np
 from torch import nn
+from torch.nn.functional import interpolate
+from tqdm import tqdm
 from utils.datasets import *
 from utils.utils import *
 
@@ -16,6 +24,7 @@ from YOLO.models import Darknet, attempt_download, load_darknet_weights
 from YOLO.utils import torch_utils
 from YOLO.utils.datasets import LoadImagesAndLabels
 from YOLO.utils.parse_config import parse_data_cfg
+from YOLO.utils.torch_utils import init_seeds
 from YOLO.utils.utils import labels_to_class_weights, print_model_biases, labels_to_image_weights, plot_images, \
     compute_loss, plot_results, fitness, print_mutation
 
@@ -261,7 +270,7 @@ def train():
                 sf = img_size / max(imgs.shape[2:])  # scale factor
                 if sf != 1:
                     ns = [math.ceil(x * sf / 32.) * 32 for x in imgs.shape[2:]]  # new shape (stretched to 32-multiple)
-                    imgs = F.interpolate(imgs, size=ns, mode='bilinear', align_corners=False)
+                    imgs = interpolate(imgs, size=ns, mode='bilinear', align_corners=False)
 
             # Plot images with bounding boxes
             if ni == 0:

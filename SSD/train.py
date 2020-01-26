@@ -2,10 +2,10 @@ import time
 import torch.backends.cudnn as cudnn
 import torch.optim
 import torch.utils.data
-from SSD.model import SSD300, MultiBoxLoss
-from SSD.datasets import PascalVOCDataset
-from SSD.utils import *
-from SSD.data_preprocessing import *
+from model import SSD300, MultiBoxLoss
+from datasets import PascalVOCDataset
+from utils import *
+from data_preprocessing import *
 
 # Data parameters
 data_folder = 'output'  # folder with data files
@@ -76,7 +76,7 @@ def main():
         folds_without_test = folds.copy()
         folds_without_test.remove(test_fold)
         train_fold = [val for sublist in folds_without_test for val in sublist]
-        specify_train_test_data(train_fold, test_fold)
+        # specify_train_test_data(train_fold, test_fold)
 
         # Custom dataloaders
         train_dataset = PascalVOCDataset(data_folder,

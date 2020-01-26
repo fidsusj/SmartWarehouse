@@ -1,6 +1,6 @@
 import torch
-from SSD.utils import *
-from SSD.datasets import PascalVOCDataset
+from utils import *
+from datasets import PascalVOCDataset
 from tqdm import tqdm
 from pprint import PrettyPrinter
 

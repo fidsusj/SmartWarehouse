@@ -1,7 +1,7 @@
 import numpy
 import torch.backends.cudnn as cudnn
 from torchvision import transforms
-from SSD.utils import *
+from utils import *
 from PIL import Image, ImageDraw, ImageFont
 import cv2
 import time

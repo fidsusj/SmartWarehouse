@@ -1,6 +1,6 @@
 import os
 import random
-from SSD.utils import create_data_lists
+from utils import create_data_lists
 
 # dataset_path = 'D:/Workspaces/Datensätze/SmartWarehouseSSD/'
 dataset_path = '/floyd/input/ssd/'

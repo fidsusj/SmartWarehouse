@@ -613,6 +613,67 @@
       \verb https://arxiv.org/pdf/1506.02640.pdf
       \endverb
     \endentry
+    \entry{RenuKhandelwal.2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7dde6ac3b1ee1a22278d5590ed6bd748}{%
+           family={{Renu Khandelwal}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Towards Data Science}%
+      }
+      \strng{namehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
+      \strng{fullhash}{7dde6ac3b1ee1a22278d5590ed6bd748}
+      \strng{bibnamehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
+      \strng{authorbibnamehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
+      \strng{authornamehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
+      \strng{authorfullhash}{7dde6ac3b1ee1a22278d5590ed6bd748}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{COCO and Pascal VOC data format for Object detection}
+      \field{urlday}{2}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/coco-data-format-for-object-detection-a4c5eaf518c5
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/coco-data-format-for-object-detection-a4c5eaf518c5
+      \endverb
+    \endentry
+    \entry{ArunPonnusamy.20191006}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e02e4ab9426c449a54c6faa243eadf3b}{%
+           family={{Arun Ponnusamy}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e02e4ab9426c449a54c6faa243eadf3b}
+      \strng{fullhash}{e02e4ab9426c449a54c6faa243eadf3b}
+      \strng{bibnamehash}{e02e4ab9426c449a54c6faa243eadf3b}
+      \strng{authorbibnamehash}{e02e4ab9426c449a54c6faa243eadf3b}
+      \strng{authornamehash}{e02e4ab9426c449a54c6faa243eadf3b}
+      \strng{authorfullhash}{e02e4ab9426c449a54c6faa243eadf3b}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Preparing Custom Dataset for Training YOLO Object Detector}
+      \field{urlday}{2}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.arunponnusamy.com/preparing-custom-dataset-for-training-yolo-object-detector.html
+      \endverb
+      \verb{url}
+      \verb https://www.arunponnusamy.com/preparing-custom-dataset-for-training-yolo-object-detector.html
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

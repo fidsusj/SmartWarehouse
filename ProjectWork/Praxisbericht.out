@@ -11,18 +11,20 @@
 \BOOKMARK [1][-]{section.2.1}{Neuronale Netze}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.2}{Hyperparameter}{chapter.2}% 12
 \BOOKMARK [1][-]{section.2.3}{Objektdetektoren}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.4}{Verwendete Bibliotheken}{chapter.2}% 14
-\BOOKMARK [1][-]{section.2.5}{Compute Unified Device Architecture}{chapter.2}% 15
-\BOOKMARK [0][-]{chapter.3}{Konzeption}{}% 16
-\BOOKMARK [1][-]{section.3.1}{Bewertungskriterien}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.2}{Initialer Vergleich der Objektdetektoren}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.3}{Echtzeitumgebung}{chapter.3}% 19
-\BOOKMARK [0][-]{chapter.4}{Realisierung}{}% 20
-\BOOKMARK [1][-]{section.4.1}{Trainieren der Objektdetektoren}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.2}{Drohnen Anbindung}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.3}{Dashboard Entwicklung}{chapter.4}% 23
-\BOOKMARK [0][-]{chapter.5}{Ergebnisse}{}% 24
-\BOOKMARK [0][-]{chapter.6}{Bewertung}{}% 25
-\BOOKMARK [0][-]{chapter.7}{Zusammenfassung und Ausblick}{}% 26
-\BOOKMARK [0][-]{chapter*.15}{Literaturverzeichnis}{}% 27
-\BOOKMARK [0][-]{appendix.A}{Anhang}{}% 28
+\BOOKMARK [1][-]{section.2.4}{Datensatzlehre}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.5}{Cloud Infrastruktur}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.6}{Cumpute Unified Device Architecture}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.7}{PyTorch}{chapter.2}% 17
+\BOOKMARK [0][-]{chapter.3}{Konzeption}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Bewertungskriterien}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{Initialer Vergleich der Objektdetektoren}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{Echtzeitumgebung}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{Realisierung}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Trainieren der Objektdetektoren}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{Drohnen Anbindung}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.3}{Dashboard Entwicklung}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{Ergebnisse}{}% 26
+\BOOKMARK [0][-]{chapter.6}{Bewertung}{}% 27
+\BOOKMARK [0][-]{chapter.7}{Zusammenfassung und Ausblick}{}% 28
+\BOOKMARK [0][-]{chapter*.15}{Literaturverzeichnis}{}% 29
+\BOOKMARK [0][-]{appendix.A}{Anhang}{}% 30

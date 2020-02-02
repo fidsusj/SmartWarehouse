@@ -1,0 +1,26 @@
+\section{Datensatzlehre}
+
+\subsection{Datensatzformate}
+
+Basierend darauf welcher Objektdetektor trainiert werden soll, muss der zum Training verwendete Datensatz in einem bestimmten Format vorliegen. Zum Trainieren des \textit{SSDs} wird das sogenannte \textit{Pascal Visual Object Classes} (PascalVOC) Format benötigt. 
+
+Es definiert eine Unterteilung in \textit{Annotations}, \textit{ImageSets} und \textit{JPEGImages}. Während in dem Ordner \textit{JPEGImages} alle Bilder des Datensatzes vorhanden sind, befindet sich unter anderem die Information über die vorhandenen Objekte in dem Bild im Ordner \textit{Annotations}. Für jedes Bild des Datensatzes werden die Informationen in einer gleichnamigen XML-Datei abgelegt. 
+
+\lstset{language=XML}
+\lstinputlisting[
+label=pascalvoc:PascalVOC,
+caption=pascalVOC Bildannotation,
+captionpos=b,
+firstline=1,
+lastline=26
+]{Quellcode/annotation.xml}
+
+Neben allgemeinen Metainformationen über das Bild befindet sich hier ebenso eine Liste aller markierten Objekte. Pro Objekt wird die Klassifikationskategorie, die Ausrichtung (z.B. \glqq Frontal \grqq{}), die Information über vollständiges Erscheinen im Bild, die Information über schwere Erkennbarkeit und die Bounding Box angegeben. Im Ordner \textit{ImageSets/Main} wird eine Unterteilung in Trainings- und Testdatensatz durch zwei Textdateien realisiert, die die Dateinamen der Bilddateien als Auflistung enthalten. \cite{RenuKhandelwal.2019}
+
+Das \textit{YOLO} Format definiert in einer \textit{.names}-Datei alle im Datensatz vorhandenen Kategorien durch simple Auflistung der Bezeichner. Die Bilder werden zusammen mit ihren Annotationen in einem separaten Ordner abgelegt. Die Annotationen folgen hier dem Format:
+
+$<Kategorie-ID>\:<Zentrum-X>\:<Zentrum-Y>\:<Breite>\:<Hoehe>$
+
+Die Unterteilung in Trainings- und Testdatensatz erfolgt durch Referenzierung der Bildpfade in zwei getrennten Textdateien. Schließlich wird in einer \textit{.data}-Datei der Pfad zu den beiden Textdateien und zur \textit{.names}-Datei sowie die Anzahl an Kategorien gespeichert. \cite{ArunPonnusamy.20191006}
+
+

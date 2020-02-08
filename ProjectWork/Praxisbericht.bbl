@@ -40,8 +40,8 @@
       \strng{authorbibnamehash}{b9ef41b5f253b9e68202e6419fe33e44}
       \strng{authornamehash}{b9ef41b5f253b9e68202e6419fe33e44}
       \strng{authorfullhash}{b9ef41b5f253b9e68202e6419fe33e44}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -65,8 +65,8 @@
       \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Deep Learning: Drei Dinge, die Sie wissen sollten}
@@ -97,8 +97,8 @@
       \strng{authorbibnamehash}{c731f02d37d80d1cc6e3c60eaeba3782}
       \strng{authornamehash}{c731f02d37d80d1cc6e3c60eaeba3782}
       \strng{authorfullhash}{c731f02d37d80d1cc6e3c60eaeba3782}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{inventAIRyX}
@@ -129,8 +129,8 @@
       \strng{authorbibnamehash}{93625a27fb7fd8d08b27352ef7193af6}
       \strng{authornamehash}{93625a27fb7fd8d08b27352ef7193af6}
       \strng{authorfullhash}{93625a27fb7fd8d08b27352ef7193af6}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Simplest perceptron update rules demonstration}
@@ -204,8 +204,8 @@
       \strng{editorbibnamehash}{e04f9b2c674d821557c879de74d91812}
       \strng{editornamehash}{e04f9b2c674d821557c879de74d91812}
       \strng{editorfullhash}{e04f9b2c674d821557c879de74d91812}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{9}
@@ -276,8 +276,8 @@
       \strng{authorbibnamehash}{2493f2af3b7725dc7e894326a0369612}
       \strng{authornamehash}{2493f2af3b7725dc7e894326a0369612}
       \strng{authorfullhash}{2493f2af3b7725dc7e894326a0369612}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Gradient Descent Algorithm and Its Variants}
@@ -628,8 +628,8 @@
       \strng{authorbibnamehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
       \strng{authornamehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
       \strng{authorfullhash}{7dde6ac3b1ee1a22278d5590ed6bd748}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{COCO and Pascal VOC data format for Object detection}
@@ -651,14 +651,17 @@
            family={{Arun Ponnusamy}},
            familyi={A\bibinitperiod}}}%
       }
+      \list{location}{1}{%
+        {Arun Ponnusamy Homepage}%
+      }
       \strng{namehash}{e02e4ab9426c449a54c6faa243eadf3b}
       \strng{fullhash}{e02e4ab9426c449a54c6faa243eadf3b}
       \strng{bibnamehash}{e02e4ab9426c449a54c6faa243eadf3b}
       \strng{authorbibnamehash}{e02e4ab9426c449a54c6faa243eadf3b}
       \strng{authornamehash}{e02e4ab9426c449a54c6faa243eadf3b}
       \strng{authorfullhash}{e02e4ab9426c449a54c6faa243eadf3b}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Preparing Custom Dataset for Training YOLO Object Detector}
@@ -672,6 +675,70 @@
       \endverb
       \verb{url}
       \verb https://www.arunponnusamy.com/preparing-custom-dataset-for-training-yolo-object-detector.html
+      \endverb
+    \endentry
+    \entry{MarkEveringham.20070607}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d3cad0dfea5ac04733fc99a53227ac5d}{%
+           family={{Mark Everingham}},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima Winn},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{fullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{bibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authorbibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authornamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authorfullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The PASCAL Visual Object Classes Challenge 2007 (VOC2007) Development Kit}
+      \field{urlday}{8}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2007/htmldoc/voc.html#SECTION00030000000000000000
+      \endverb
+      \verb{url}
+      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2007/htmldoc/voc.html#SECTION00030000000000000000
+      \endverb
+    \endentry
+    \entry{MarkEveringham.20120521}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d3cad0dfea5ac04733fc99a53227ac5d}{%
+           family={{Mark Everingham}},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima Winn},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{fullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{bibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authorbibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authornamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authorfullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The PASCAL Visual Object Classes Challenge 2012 (VOC2012) Development Kit}
+      \field{urlday}{8}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/devkit_doc.html#SECTION00030000000000000000
+      \endverb
+      \verb{url}
+      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/devkit_doc.html#SECTION00030000000000000000
       \endverb
     \endentry
   \enddatalist

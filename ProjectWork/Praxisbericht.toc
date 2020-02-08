@@ -1,11 +1,11 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {ngerman}{}
-\contentsline {chapter}{Abkürzungsverzeichnis}{VI}{chapter*.4}% 
-\contentsline {chapter}{Abbildungsverzeichnis}{VII}{chapter*.4}% 
-\contentsline {chapter}{Formelverzeichnis}{VIII}{chapter*.4}% 
-\contentsline {chapter}{\nonumberline Listenverzeichnis}{IX}{chapter*.6}% 
+\contentsline {chapter}{Abk\IeC {\"u}rzungsverzeichnis}{VI}{chapter*.2}% 
+\contentsline {chapter}{Abbildungsverzeichnis}{VII}{chapter*.2}% 
+\contentsline {chapter}{Formelverzeichnis}{VIII}{chapter*.2}% 
+\contentsline {chapter}{\nonumberline Listenverzeichnis}{IX}{chapter*.3}% 
 \contentsline {chapter}{\numberline {0}Vorwort}{1}{chapter.0}% 
-\contentsline {chapter}{\numberline {1}Einführung}{2}{chapter.1}% 
+\contentsline {chapter}{\numberline {1}Einf\IeC {\"u}hrung}{2}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}Forschungsumfeld}{2}{section.1.1}% 
 \contentsline {section}{\numberline {1.2}Problemstellung und Motivation}{3}{section.1.2}% 
 \contentsline {section}{\numberline {1.3}Vorgehensweise und Zielsetzung}{3}{section.1.3}% 
@@ -16,22 +16,25 @@
 \contentsline {subsection}{\numberline {2.3.1}Convolutional Neural Networks}{16}{subsection.2.3.1}% 
 \contentsline {subsection}{\numberline {2.3.2}Single Shot MultiBox Detector}{19}{subsection.2.3.2}% 
 \contentsline {subsection}{\numberline {2.3.3}You Only Look Once}{24}{subsection.2.3.3}% 
-\contentsline {section}{\numberline {2.4}Datensatzlehre}{24}{section.2.4}% 
-\contentsline {subsection}{\numberline {2.4.1}Datensatzformate}{24}{subsection.2.4.1}% 
-\contentsline {section}{\numberline {2.5}Cloud Infrastruktur}{27}{section.2.5}% 
-\contentsline {section}{\numberline {2.6}Cumpute Unified Device Architecture}{27}{section.2.6}% 
-\contentsline {section}{\numberline {2.7}PyTorch}{27}{section.2.7}% 
-\contentsline {chapter}{\numberline {3}Konzeption}{28}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Bewertungskriterien}{28}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Initialer Vergleich der Objektdetektoren}{28}{section.3.2}% 
-\contentsline {section}{\numberline {3.3}Echtzeitumgebung}{28}{section.3.3}% 
-\contentsline {chapter}{\numberline {4}Realisierung}{29}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{29}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{29}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{29}{section.4.3}% 
-\contentsline {chapter}{\numberline {5}Ergebnisse}{30}{chapter.5}% 
-\contentsline {chapter}{\numberline {6}Bewertung}{31}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{32}{chapter.7}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.17}% 
+\contentsline {section}{\numberline {2.4}Datensatzlehre}{26}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}Datensatzformate}{26}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}Datensatzzusammensetzung}{28}{subsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.4.3}Qualit\IeC {\"a}t und Quantit\IeC {\"a}t der Daten}{29}{subsection.2.4.3}% 
+\contentsline {subsection}{\numberline {2.4.4}Techniken zur Verbesserung von Trainingsergebnissen}{29}{subsection.2.4.4}% 
+\contentsline {section}{\numberline {2.5}Cloud Infrastruktur}{30}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Cumpute Unified Device Architecture}{30}{section.2.6}% 
+\contentsline {section}{\numberline {2.7}PyTorch}{30}{section.2.7}% 
+\contentsline {chapter}{\numberline {3}Konzeption}{31}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Bewertungskriterien}{31}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Initialer Vergleich der Objektdetektoren}{31}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Echtzeitumgebung}{31}{section.3.3}% 
+\contentsline {chapter}{\numberline {4}Realisierung}{32}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{32}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{32}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{32}{section.4.3}% 
+\contentsline {chapter}{\numberline {5}Ergebnisse}{33}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}Bewertung}{34}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{35}{chapter.7}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.13}% 
 \contentsline {chapter}{\numberline {A}Anhang}{XIII}{appendix.A}% 
 \contentsfinish 

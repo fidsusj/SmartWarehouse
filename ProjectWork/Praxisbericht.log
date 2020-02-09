@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  8 FEB 2020 23:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  9 FEB 2020 23:54
 entering extended mode
 **./Praxisbericht.tex
 (Praxisbericht.tex
@@ -2001,7 +2001,15 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Praxisbericht.bbl' found.
- (Praxisbericht.bbl)
+ (Praxisbericht.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Single Precision
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 46.
 Package biblatex Info: Reference segment=0 on input line 46.
 \c@lstlisting=\count486
@@ -2034,7 +2042,7 @@ File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \openout2 = `Inhalt/01_Standard/titelseite.aux'.
 
  (Inhalt/01_Standard/titelseite.tex
-<Bilder/Logos/Logo_DHBW.pdf, id=124, 822.27202pt x 419.166pt>
+<Bilder/Logos/Logo_DHBW.pdf, id=120, 822.27202pt x 419.166pt>
 File: Bilder/Logos/Logo_DHBW.pdf Graphic file (type pdf)
 <use Bilder/Logos/Logo_DHBW.pdf>
 Package pdftex.def Info: Bilder/Logos/Logo_DHBW.pdf  used on input line 9.
@@ -2134,7 +2142,7 @@ chapter 1.
 (Inhalt/05_Einleitung/Zielsetzung/zielsetzung.tex [3])
 (Inhalt/06_Forschungsstand/neuronale_netze.tex [4]
 chapter 2.
-<Bilder/perceptron.png, id=312, 486.31688pt x 455.45157pt>
+<Bilder/perceptron.png, id=318, 486.31688pt x 455.45157pt>
 File: Bilder/perceptron.png Graphic file (type png)
 <use Bilder/perceptron.png>
 Package pdftex.def Info: Bilder/perceptron.png  used on input line 15.
@@ -2148,7 +2156,7 @@ Package pdftex.def Info: Bilder/perceptron.png  used on input line 15.
                                                   \fi \fi 
 l.48 
       <./Bilder/perceptron.png>]
-<Bilder/neural_network.png, id=351, 544.434pt x 214.401pt>
+<Bilder/neural_network.png, id=357, 544.434pt x 214.401pt>
 File: Bilder/neural_network.png Graphic file (type png)
 <use Bilder/neural_network.png>
 Package pdftex.def Info: Bilder/neural_network.png  used on input line 53.
@@ -2161,23 +2169,23 @@ Package pdftex.def Info: Bilder/neural_network.png  used on input line 53.
 l.62 
       <./Bilder/neural_network.png>] [8])
 (Inhalt/06_Forschungsstand/hyperparameter.tex [9] [10] [11]
-<Bilder/gradient_descent.png, id=416, 911.405pt x 451.6875pt>
+<Bilder/gradient_descent.png, id=422, 911.405pt x 451.6875pt>
 File: Bilder/gradient_descent.png Graphic file (type png)
 <use Bilder/gradient_descent.png>
 Package pdftex.def Info: Bilder/gradient_descent.png  used on input line 59.
 (pdftex.def)             Requested size: 426.79134pt x 211.52122pt.
  [12]
-<Bilder/sigmoid.png, id=429, 651.6345pt x 404.712pt>
+<Bilder/sigmoid.png, id=435, 651.6345pt x 404.712pt>
 File: Bilder/sigmoid.png Graphic file (type png)
 <use Bilder/sigmoid.png>
 Package pdftex.def Info: Bilder/sigmoid.png  used on input line 77.
 (pdftex.def)             Requested size: 426.79134pt x 265.06668pt.
-<Bilder/relu.png, id=434, 1029.8475pt x 468.75125pt>
+<Bilder/relu.png, id=440, 1029.8475pt x 468.75125pt>
 File: Bilder/relu.png Graphic file (type png)
 <use Bilder/relu.png>
 Package pdftex.def Info: Bilder/relu.png  used on input line 86.
 (pdftex.def)             Requested size: 213.39566pt x 97.12459pt.
-<Bilder/prelu.png, id=435, 1028.84375pt x 551.05875pt>
+<Bilder/prelu.png, id=441, 1028.84375pt x 551.05875pt>
 File: Bilder/prelu.png Graphic file (type png)
 <use Bilder/prelu.png>
 Package pdftex.def Info: Bilder/prelu.png  used on input line 87.
@@ -2189,7 +2197,7 @@ Package pdftex.def Info: Bilder/prelu.png  used on input line 87.
                                                   \fi \fi 
 l.93 
       <./Bilder/gradient_descent.png (PNG copy)>]
-<Bilder/elu.png, id=446, 1023.825pt x 528.97626pt>
+<Bilder/elu.png, id=452, 1023.825pt x 528.97626pt>
 File: Bilder/elu.png Graphic file (type png)
 <use Bilder/elu.png>
 Package pdftex.def Info: Bilder/elu.png  used on input line 98.
@@ -2217,13 +2225,13 @@ has been already used, duplicate ignored
 l.9 E
      in Convolutional Layer zeichnen sich unter anderem dadurch aus, dass je...
  <./Bilder/relu.png> <./Bilder/prelu.png> <./Bilder/elu.png>]
-<Bilder/convolutional_layer.png, id=471, 680.5425pt x 463.7325pt>
+<Bilder/convolutional_layer.png, id=477, 680.5425pt x 463.7325pt>
 File: Bilder/convolutional_layer.png Graphic file (type png)
 <use Bilder/convolutional_layer.png>
 Package pdftex.def Info: Bilder/convolutional_layer.png  used on input line 17.
 
 (pdftex.def)             Requested size: 247.2559pt x 168.48613pt.
-<Bilder/zero_padding.png, id=474, 298.86656pt x 259.7203pt>
+<Bilder/zero_padding.png, id=480, 298.86656pt x 259.7203pt>
 File: Bilder/zero_padding.png Graphic file (type png)
 <use Bilder/zero_padding.png>
 Package pdftex.def Info: Bilder/zero_padding.png  used on input line 23.
@@ -2234,7 +2242,7 @@ Overfull \hbox (2.61046pt too wide) in paragraph at lines 16--27
  []
 
 [16]
-<Bilder/feature_maps.jpeg, id=487, 306.06345pt x 262.70145pt>
+<Bilder/feature_maps.jpeg, id=493, 306.06345pt x 262.70145pt>
 File: Bilder/feature_maps.jpeg Graphic file (type jpg)
 <use Bilder/feature_maps.jpeg>
 Package pdftex.def Info: Bilder/feature_maps.jpeg  used on input line 37.
@@ -2253,7 +2261,7 @@ l.48
 l.48 
       <./Bilder/convolutional_layer.png (PNG copy)> <./Bilder/zero_padding.png>
 ]
-<Bilder/pooling_layer.png, id=500, 999.735pt x 292.09125pt>
+<Bilder/pooling_layer.png, id=506, 999.735pt x 292.09125pt>
 File: Bilder/pooling_layer.png Graphic file (type png)
 <use Bilder/pooling_layer.png>
 Package pdftex.def Info: Bilder/pooling_layer.png  used on input line 51.
@@ -2265,7 +2273,7 @@ Package pdftex.def Info: Bilder/pooling_layer.png  used on input line 51.
                                                   \fi \fi 
 l.62 
       <./Bilder/feature_maps.jpeg>]) (Inhalt/06_Forschungsstand/ssd.tex
-<Bilder/ssd_framework.png, id=511, 1270.7475pt x 475.7775pt>
+<Bilder/ssd_framework.png, id=517, 1270.7475pt x 475.7775pt>
 File: Bilder/ssd_framework.png Graphic file (type png)
 <use Bilder/ssd_framework.png>
 Package pdftex.def Info: Bilder/ssd_framework.png  used on input line 7.
@@ -2278,7 +2286,7 @@ Package pdftex.def Info: Bilder/ssd_framework.png  used on input line 7.
                                                   \fi \fi 
 l.14 
       <./Bilder/pooling_layer.png>]
-<Bilder/bounding_boxes.png, id=525, 288.3272pt x 289.08pt>
+<Bilder/bounding_boxes.png, id=531, 288.3272pt x 289.08pt>
 File: Bilder/bounding_boxes.png Graphic file (type png)
 <use Bilder/bounding_boxes.png>
 Package pdftex.def Info: Bilder/bounding_boxes.png  used on input line 17.
@@ -2296,7 +2304,7 @@ l.24
                                                   \fi \fi 
 l.24 
       <./Bilder/ssd_framework.png (PNG copy)> <./Bilder/bounding_boxes.png>]
-<Bilder/ssd_architecture.png, id=537, 1114.1625pt x 329.23pt>
+<Bilder/ssd_architecture.png, id=543, 1114.1625pt x 329.23pt>
 File: Bilder/ssd_architecture.png Graphic file (type png)
 <use Bilder/ssd_architecture.png>
 Package pdftex.def Info: Bilder/ssd_architecture.png  used on input line 40.
@@ -2309,7 +2317,7 @@ Package pdftex.def Info: Bilder/ssd_architecture.png  used on input line 40.
                                                   \fi \fi 
 l.47 
       <./Bilder/ssd_architecture.png (PNG copy)>]
-<Bilder/iou_equation.png, id=551, 602.25pt x 469.755pt>
+<Bilder/iou_equation.png, id=557, 602.25pt x 469.755pt>
 File: Bilder/iou_equation.png Graphic file (type png)
 <use Bilder/iou_equation.png>
 Package pdftex.def Info: Bilder/iou_equation.png  used on input line 50.
@@ -2321,7 +2329,7 @@ Package pdftex.def Info: Bilder/iou_equation.png  used on input line 50.
                                                   \fi \fi 
 l.61 
       <./Bilder/iou_equation.png>]
-<Bilder/ssd_results.png, id=567, 948.54375pt x 276.43275pt>
+<Bilder/ssd_results.png, id=573, 948.54375pt x 276.43275pt>
 File: Bilder/ssd_results.png Graphic file (type png)
 <use Bilder/ssd_results.png>
 Package pdftex.def Info: Bilder/ssd_results.png  used on input line 64.
@@ -2344,13 +2352,13 @@ Overfull \hbox (0.99748pt too wide) in paragraph at lines 7--8
 l-fe ei-nes fest-ge-leg-ten Schwell-
  []
 
-<Bilder/yolo_model.png, id=579, 862.72313pt x 553.31718pt>
+<Bilder/yolo_model.png, id=585, 862.72313pt x 553.31718pt>
 File: Bilder/yolo_model.png Graphic file (type png)
 <use Bilder/yolo_model.png>
 Package pdftex.def Info: Bilder/yolo_model.png  used on input line 11.
 (pdftex.def)             Requested size: 426.79134pt x 273.71977pt.
 [24]
-<Bilder/yolo_architecture.png, id=590, 913.16156pt x 382.42876pt>
+<Bilder/yolo_architecture.png, id=596, 913.16156pt x 382.42876pt>
 File: Bilder/yolo_architecture.png Graphic file (type png)
 <use Bilder/yolo_architecture.png>
 Package pdftex.def Info: Bilder/yolo_architecture.png  used on input line 25.
@@ -2396,42 +2404,64 @@ im Kon-text des so-ge-nann-ten \T1/cmr/m/it/12 K-Kreuzvalidierungsverfahrens\T1
  []
 
 [28]
-<Bilder/ssd_results_details.png, id=653, 1028.643pt x 258.36525pt>
+<Bilder/ssd_results_details.png, id=659, 1028.643pt x 258.36525pt>
 File: Bilder/ssd_results_details.png Graphic file (type png)
 <use Bilder/ssd_results_details.png>
 Package pdftex.def Info: Bilder/ssd_results_details.png  used on input line 42.
 
 (pdftex.def)             Requested size: 426.79134pt x 107.19592pt.
-) (Inhalt/06_Forschungsstand/cloud.tex) (Inhalt/06_Forschungsstand/cuda.tex [29
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2.18})
- has been already used, duplicate ignored
+ [29pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+18}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.55 
+      <./Bilder/ssd_results_details.png>]) (Inhalt/06_Forschungsstand/cloud.tex
+[30]
+Overfull \hbox (53.47507pt too wide) in paragraph at lines 13--23
+[][] 
+ []
+
+<Bilder/tpu_comparison.png, id=690, 804.00375pt x 477.785pt>
+File: Bilder/tpu_comparison.png Graphic file (type png)
+<use Bilder/tpu_comparison.png>
+Package pdftex.def Info: Bilder/tpu_comparison.png  used on input line 28.
+(pdftex.def)             Requested size: 398.33858pt x 236.71208pt.
+
+Overfull \hbox (11.16992pt too wide) in paragraph at lines 34--35
+[]\T1/cmr/m/n/12 Eine wei-te-re Stei-ge-rung ver-spre-chen Mi-cro-softs Field P
+ro-gram-ma-ble Ga-te Ar-rays (FPGAs),
+ []
+
+) (Inhalt/06_Forschungsstand/pytorch.tex [31pdfTeX warning (ext4): destination 
+with the same identifier (name{figure.2.19}) has been already used, duplicate i
+gnored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \section
-            {Cumpute Unified Device Architecture} <./Bilder/ssd_results_details
-.png>]) (Inhalt/06_Forschungsstand/pytorch.tex)
-(Inhalt/07_Konzeption/bewertungskriterien.tex [30]
+            {PyTorch} <./Bilder/tpu_comparison.png>])
+(Inhalt/07_Konzeption/bewertungskriterien.tex [32]
 chapter 3.
 ) (Inhalt/07_Konzeption/vergleich.tex)
 (Inhalt/07_Konzeption/echtzeitumgebung.tex)
-(Inhalt/08_Realisierung/realisierung.tex [31
+(Inhalt/08_Realisierung/realisierung.tex [33
 
 ]
 chapter 4.
-) (Inhalt/09_Ergebnisse/ergebnisse.tex [32
+) (Inhalt/09_Ergebnisse/ergebnisse.tex [34
 
 ]
 chapter 5.
-) (Inhalt/10_Bewertung/bewertung.tex [33
+) (Inhalt/10_Bewertung/bewertung.tex [35
 
 ]
 chapter 6.
-) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [34
+) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [36
 
 ]
 chapter 7.
-) [35
+) [37
 
 ]
 chapter without number
@@ -2440,7 +2470,7 @@ chapter without number
 
 
 ]
-Overfull \hbox (16.02386pt too wide) in paragraph at lines 130--130
+Overfull \hbox (16.02386pt too wide) in paragraph at lines 129--129
 \T1/cmr/m/n/12 2016-12-29.  \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : []$https : / / 
 arxiv . org / pdf / 1512 . 02325 . pdf$[] (Ein-sicht-nah-me: 02.11.2019). 
  []
@@ -2484,71 +2514,80 @@ chapter A.
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 164.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 164.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
  (Praxisbericht.aux (Inhalt/01_Standard/titelseite.aux)
 (Inhalt/01_Standard/erklaerung.aux) (Inhalt/02_Abstract/abstract-en.aux)
 (Inhalt/02_Abstract/abstract-de.aux) (Inhalt/03_Verzeichnisse/abkuerzungen.aux)
 (Inhalt/03_Verzeichnisse/abbildungen.aux) (Inhalt/03_Verzeichnisse/formeln.aux)
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 164.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 164.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
 Package rerunfilecheck Info: File `Praxisbericht.out' has not changed.
-(rerunfilecheck)             Checksum: CAB545FCF319511E5E334E2508B0F903;1848.
+(rerunfilecheck)             Checksum: B0DE777D9EFB110B4D691E7C1583BFE1;1765.
 Package logreq Info: Writing requests to 'Praxisbericht.run.xml'.
 \openout1 = `Praxisbericht.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 164.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 163.
  ) 
 Here is how much of TeX's memory you used:
- 46457 strings out of 492946
- 915857 string characters out of 3125377
- 1478457 words of memory out of 3000000
- 49327 multiletter control sequences out of 15000+200000
- 577548 words of font info for 149 fonts, out of 3000000 for 9000
+ 46508 strings out of 492946
+ 916913 string characters out of 3125377
+ 1484578 words of memory out of 3000000
+ 49356 multiletter control sequences out of 15000+200000
+ 578324 words of font info for 150 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  80i,23n,82p,9184b,3603s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\eccc1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\tcrm1200.pk>{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/f
-onts/enc/dvips/base/8r.enc} <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk
-\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\D070497\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\D070497\AppData\L
-ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk>{C:/Users/D07049
-7/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc} <C:
-\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm
-1000.pk>{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/mns
-ymbol/MnSymbolC.enc}{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/e
-nc/dvips/mnsymbol/MnSymbolD.enc}{C:/Users/D070497/AppData/Local/Programs/MiKTeX
- 2.9/fonts/enc/dvips/mnsymbol/MnSymbolF.enc} <C:\Users\D070497\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\D070497\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk> <C:\Users\
-D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
-> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecsi1095.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecrm1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\l
-jfour\jknappen\ec\dpi600\ecsi1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.
-9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1728.pk> <C:\Users\D070497\AppData\Loc
-al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk> <C:\Users\D070497
-\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1200.pk> <C:\U
-sers\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx17
-28.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
-pi600\ecsx2488.pk><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/mnsymbol/MnSymbol12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/mnsymbol/MnSymbol8.pfb><C:/Users/D070497/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/D0704
-97/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
-C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmib10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/D070497/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/D070497/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:
-/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a
-.pfb>
-Output written on Praxisbericht.pdf (49 pages, 3393503 bytes).
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+ <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+eccc1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\tcrm1200.pk>{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/enc/dvips/base/8r.enc} <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\l
+jfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\D070497\AppData\Loc
+al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk>{C:/Users/D070497/
+AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc} <C:\U
+sers\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm10
+00.pk>{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/mnsym
+bol/MnSymbolC.enc}{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc
+/dvips/mnsymbol/MnSymbolD.enc}{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2
+.9/fonts/enc/dvips/mnsymbol/MnSymbolF.enc} <C:\Users\D070497\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\D070497\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk> <C:\Users\D0
+70497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> 
+<C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+csi1095.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecrm1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecsi1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecss1728.pk> <C:\Users\D070497\AppData\Local
+\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk> <C:\Users\D070497\A
+ppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1200.pk> <C:\Use
+rs\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728
+.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
+600\ecsx2488.pk><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/mnsymbol/MnSymbol12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/mnsymbol/MnSymbol8.pfb><C:/Users/D070497/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/D070497
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:
+/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmib10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/D070497/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/D070497/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/U
+sers/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.p
+fb>
+Output written on Praxisbericht.pdf (51 pages, 3446668 bytes).
 PDF statistics:
- 1486 PDF objects out of 1728 (max. 8388607)
- 189 named destinations out of 1000 (max. 500000)
- 353 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1548 PDF objects out of 1728 (max. 8388607)
+ 212 named destinations out of 1000 (max. 500000)
+ 350 words of extra memory for PDF output out of 10000 (max. 10000000)
 

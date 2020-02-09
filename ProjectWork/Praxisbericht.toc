@@ -20,21 +20,22 @@
 \contentsline {subsection}{\numberline {2.4.1}Datensatzformate}{26}{subsection.2.4.1}% 
 \contentsline {subsection}{\numberline {2.4.2}Datensatzzusammensetzung}{28}{subsection.2.4.2}% 
 \contentsline {subsection}{\numberline {2.4.3}Qualit\IeC {\"a}t und Quantit\IeC {\"a}t der Daten}{29}{subsection.2.4.3}% 
-\contentsline {subsection}{\numberline {2.4.4}Techniken zur Verbesserung von Trainingsergebnissen}{29}{subsection.2.4.4}% 
+\contentsline {subsection}{\numberline {2.4.4}Techniken zum Trainieren bei geringen Datenmengen}{29}{subsection.2.4.4}% 
 \contentsline {section}{\numberline {2.5}Cloud Infrastruktur}{30}{section.2.5}% 
-\contentsline {section}{\numberline {2.6}Cumpute Unified Device Architecture}{30}{section.2.6}% 
-\contentsline {section}{\numberline {2.7}PyTorch}{30}{section.2.7}% 
-\contentsline {chapter}{\numberline {3}Konzeption}{31}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Bewertungskriterien}{31}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Initialer Vergleich der Objektdetektoren}{31}{section.3.2}% 
-\contentsline {section}{\numberline {3.3}Echtzeitumgebung}{31}{section.3.3}% 
-\contentsline {chapter}{\numberline {4}Realisierung}{32}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{32}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{32}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{32}{section.4.3}% 
-\contentsline {chapter}{\numberline {5}Ergebnisse}{33}{chapter.5}% 
-\contentsline {chapter}{\numberline {6}Bewertung}{34}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{35}{chapter.7}% 
+\contentsline {subsection}{\numberline {2.5.1}Trainingshardware}{30}{subsection.2.5.1}% 
+\contentsline {subsection}{\numberline {2.5.2}FloydHub}{32}{subsection.2.5.2}% 
+\contentsline {section}{\numberline {2.6}PyTorch}{32}{section.2.6}% 
+\contentsline {chapter}{\numberline {3}Konzeption}{33}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Bewertungskriterien}{33}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Initialer Vergleich der Objektdetektoren}{33}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Echtzeitumgebung}{33}{section.3.3}% 
+\contentsline {chapter}{\numberline {4}Realisierung}{34}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{34}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{34}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{34}{section.4.3}% 
+\contentsline {chapter}{\numberline {5}Ergebnisse}{35}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}Bewertung}{36}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{37}{chapter.7}% 
 \contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.13}% 
 \contentsline {chapter}{\numberline {A}Anhang}{XIII}{appendix.A}% 
 \contentsfinish 

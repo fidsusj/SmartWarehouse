@@ -2104,6 +2104,17 @@
     <bcf:citekey order="109">ssd.20161229</bcf:citekey>
     <bcf:citekey order="110">ssd.20161229</bcf:citekey>
     <bcf:citekey order="111">ssd.20161229</bcf:citekey>
+    <bcf:citekey order="112">AurelienGeron.2018</bcf:citekey>
+    <bcf:citekey order="113">AurelienGeron.2018</bcf:citekey>
+    <bcf:citekey order="114">NVIDIA.20200209</bcf:citekey>
+    <bcf:citekey order="115">PyTorch.20200209</bcf:citekey>
+    <bcf:citekey order="116">TechPowerUp.20200209</bcf:citekey>
+    <bcf:citekey order="117">Single Precision</bcf:citekey>
+    <bcf:citekey order="118">HaraldBogeholz.20170406</bcf:citekey>
+    <bcf:citekey order="119">GoogleCloud.20200209</bcf:citekey>
+    <bcf:citekey order="120">GoogleCloud.20200209b</bcf:citekey>
+    <bcf:citekey order="121">GoogleCloud.20200209b</bcf:citekey>
+    <bcf:citekey order="122">KarlFreund.20170828</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

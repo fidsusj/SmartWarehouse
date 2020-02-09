@@ -47,6 +47,10 @@ Ebenso muss ein ausreichend großer Datensatz vorliegen, um das gewünschte Abst
 
 Unter Hinzunahme des COCO \textit{trainval135k} Datensatzes erreicht der \textit{SSD} sogar das beste Ergebnis aus der ursprünglichen Veröffentlichung (siehe Abbildung \ref{amountofdata}) \cite{ssd.20161229}. 
 
-\subsection{Techniken zur Verbesserung von Trainingsergebnissen}
+\subsection{Techniken zum Trainieren bei geringen Datenmengen}
 
-Datenaugmentierung und Transfer-Learning
+Bei Betrachtung der obigen Ergebnisse wird schnell deutlich, dass für ein komplexeres \textit{Deep Learning} Modell ein umfangreicher Datensatz von Nöten ist. Allerdings gibt es zwei bekannte Techniken, wie auch mit kleineren Datenbeständen ein sehenswertes Ergebnis erzielt werden kann. 
+
+Beim sogenannten \textit{Transfer Learning} werden von einem bereits für ein ähnliches Problem trainiertes Modell die ersten Schichten des neuronalen Netzes für das neue Modell wiederverwendet. Die übernommenen Gewichtungen werden nicht mit trainiert. Neben einer kleineren Datenmenge zum Trainieren hat das \textit{Transfer Learning} ebenso den Vorteil das Training selbst zu beschleunigen. \cite{AurelienGeron.2018}
+
+Eine weitere Technik beschreibt das künstliche Vergrößern des Datensatzes durch affine Transformationen wie Translation, Rotation oder Skalierung und wird \textit{Data Augmentation} genannt. \cite{AurelienGeron.2018}

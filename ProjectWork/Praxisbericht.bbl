@@ -741,7 +741,234 @@
       \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/devkit_doc.html#SECTION00030000000000000000
       \endverb
     \endentry
+    \entry{NVIDIA.20200209}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a2fe9051fe051f819bd739ef3e340377}{%
+           family={NVIDIA},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {NVIDIA~Homepage}%
+      }
+      \strng{namehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{fullhash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{bibnamehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authorbibnamehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authornamehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authorfullhash}{a2fe9051fe051f819bd739ef3e340377}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{TRAIN MODELS FASTER}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.nvidia.com/cuda-zone
+      \endverb
+      \verb{url}
+      \verb https://developer.nvidia.com/cuda-zone
+      \endverb
+    \endentry
+    \entry{PyTorch.20200209}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=95b88f180e9eb5678e0f9ebac2cbe643}{%
+           family={PyTorch},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {PyTorch Homepage}%
+      }
+      \strng{namehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{fullhash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{bibnamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{authorbibnamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{authornamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{authorfullhash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GET STARTED}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pytorch.org/get-started/locally/
+      \endverb
+      \verb{url}
+      \verb https://pytorch.org/get-started/locally/
+      \endverb
+    \endentry
+    \entry{TechPowerUp.20200209}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c4739b0a7a5b6abe10445d77634027c7}{%
+           family={TechPowerUp},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {TechPowerUp Homepage}%
+      }
+      \strng{namehash}{c4739b0a7a5b6abe10445d77634027c7}
+      \strng{fullhash}{c4739b0a7a5b6abe10445d77634027c7}
+      \strng{bibnamehash}{c4739b0a7a5b6abe10445d77634027c7}
+      \strng{authorbibnamehash}{c4739b0a7a5b6abe10445d77634027c7}
+      \strng{authornamehash}{c4739b0a7a5b6abe10445d77634027c7}
+      \strng{authorfullhash}{c4739b0a7a5b6abe10445d77634027c7}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GPU Specs Database}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.techpowerup.com/gpu-specs/
+      \endverb
+      \verb{url}
+      \verb https://www.techpowerup.com/gpu-specs/
+      \endverb
+    \endentry
+    \entry{HaraldBogeholz.20170406}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=951c39de508e59dbdf860ed7f0e051a9}{%
+           family={{Harald B{ö}geholz}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Heise Online}%
+      }
+      \strng{namehash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{fullhash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{bibnamehash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{authorbibnamehash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{authornamehash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{authorfullhash}{951c39de508e59dbdf860ed7f0e051a9}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{K{ü}nstliche Intelligenz: Architektur und Performance von Googles KI-Chip TPU}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.heise.de/newsticker/meldung/Kuenstliche-Intelligenz-Architektur-und-Performance-von-Googles-KI-Chip-TPU-3676312.html
+      \endverb
+      \verb{url}
+      \verb https://www.heise.de/newsticker/meldung/Kuenstliche-Intelligenz-Architektur-und-Performance-von-Googles-KI-Chip-TPU-3676312.html
+      \endverb
+    \endentry
+    \entry{GoogleCloud.20200209}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=57f3af2a3d1051c172ab3c3db7d5409d}{%
+           family={{Google Cloud}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Google Cloud Dokumentation}%
+      }
+      \strng{namehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{fullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{bibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorbibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authornamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorfullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Systemarchitektur}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cloud.google.com/tpu/docs/system-architecture
+      \endverb
+      \verb{url}
+      \verb https://cloud.google.com/tpu/docs/system-architecture
+      \endverb
+    \endentry
+    \entry{GoogleCloud.20200209b}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=57f3af2a3d1051c172ab3c3db7d5409d}{%
+           family={{Google Cloud}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Google Cloud Homepage}%
+      }
+      \strng{namehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{fullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{bibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorbibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authornamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorfullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cloud TPU}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cloud.google.com/tpu/?hl=de
+      \endverb
+      \verb{url}
+      \verb https://cloud.google.com/tpu/?hl=de
+      \endverb
+    \endentry
+    \entry{KarlFreund.20170828}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=10dd89fa3eb44a399c6f4dd3e2128540}{%
+           family={{Karl Freund}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Forbes}%
+      }
+      \strng{namehash}{10dd89fa3eb44a399c6f4dd3e2128540}
+      \strng{fullhash}{10dd89fa3eb44a399c6f4dd3e2128540}
+      \strng{bibnamehash}{10dd89fa3eb44a399c6f4dd3e2128540}
+      \strng{authorbibnamehash}{10dd89fa3eb44a399c6f4dd3e2128540}
+      \strng{authornamehash}{10dd89fa3eb44a399c6f4dd3e2128540}
+      \strng{authorfullhash}{10dd89fa3eb44a399c6f4dd3e2128540}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microsoft: FPGA Wins Versus Google TPUs For AI}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.forbes.com/sites/moorinsights/2017/08/28/microsoft-fpga-wins-versus-google-tpus-for-ai/#781e2bf53904
+      \endverb
+      \verb{url}
+      \verb https://www.forbes.com/sites/moorinsights/2017/08/28/microsoft-fpga-wins-versus-google-tpus-for-ai/#781e2bf53904
+      \endverb
+    \endentry
   \enddatalist
+  \missing{Single Precision}
 \endrefsection
 \endinput
 

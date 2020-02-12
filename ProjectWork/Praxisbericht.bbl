@@ -41,7 +41,7 @@
       \strng{authornamehash}{b9ef41b5f253b9e68202e6419fe33e44}
       \strng{authorfullhash}{b9ef41b5f253b9e68202e6419fe33e44}
       \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -66,7 +66,7 @@
       \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \field{extraname}{1}
       \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Deep Learning: Drei Dinge, die Sie wissen sollten}
@@ -98,7 +98,7 @@
       \strng{authornamehash}{c731f02d37d80d1cc6e3c60eaeba3782}
       \strng{authorfullhash}{c731f02d37d80d1cc6e3c60eaeba3782}
       \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{inventAIRyX}
@@ -277,7 +277,7 @@
       \strng{authornamehash}{2493f2af3b7725dc7e894326a0369612}
       \strng{authorfullhash}{2493f2af3b7725dc7e894326a0369612}
       \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Gradient Descent Algorithm and Its Variants}
@@ -657,7 +657,7 @@
       \strng{authornamehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
       \strng{authorfullhash}{7dde6ac3b1ee1a22278d5590ed6bd748}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{COCO and Pascal VOC data format for Object detection}
@@ -689,7 +689,7 @@
       \strng{authornamehash}{e02e4ab9426c449a54c6faa243eadf3b}
       \strng{authorfullhash}{e02e4ab9426c449a54c6faa243eadf3b}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Preparing Custom Dataset for Training YOLO Object Detector}
@@ -705,7 +705,298 @@
       \verb https://www.arunponnusamy.com/preparing-custom-dataset-for-training-yolo-object-detector.html
       \endverb
     \endentry
+    \entry{MarkEveringham.20070607}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d3cad0dfea5ac04733fc99a53227ac5d}{%
+           family={{Mark Everingham}},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima Winn},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{fullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{bibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authorbibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authornamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authorfullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The PASCAL Visual Object Classes Challenge 2007 (VOC2007) Development Kit}
+      \field{urlday}{8}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2007/htmldoc/voc.html#SECTION00030000000000000000
+      \endverb
+      \verb{url}
+      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2007/htmldoc/voc.html#SECTION00030000000000000000
+      \endverb
+    \endentry
+    \entry{MarkEveringham.20120521}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d3cad0dfea5ac04733fc99a53227ac5d}{%
+           family={{Mark Everingham}},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima Winn},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{fullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{bibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authorbibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authornamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authorfullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The PASCAL Visual Object Classes Challenge 2012 (VOC2012) Development Kit}
+      \field{urlday}{8}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/devkit_doc.html#SECTION00030000000000000000
+      \endverb
+      \verb{url}
+      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/devkit_doc.html#SECTION00030000000000000000
+      \endverb
+    \endentry
+    \entry{NVIDIA.20200209}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a2fe9051fe051f819bd739ef3e340377}{%
+           family={NVIDIA},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {NVIDIA~Homepage}%
+      }
+      \strng{namehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{fullhash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{bibnamehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authorbibnamehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authornamehash}{a2fe9051fe051f819bd739ef3e340377}
+      \strng{authorfullhash}{a2fe9051fe051f819bd739ef3e340377}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{TRAIN MODELS FASTER}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.nvidia.com/cuda-zone
+      \endverb
+      \verb{url}
+      \verb https://developer.nvidia.com/cuda-zone
+      \endverb
+    \endentry
+    \entry{PyTorch.20200209}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=95b88f180e9eb5678e0f9ebac2cbe643}{%
+           family={PyTorch},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {PyTorch Homepage}%
+      }
+      \strng{namehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{fullhash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{bibnamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{authorbibnamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{authornamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{authorfullhash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GET STARTED}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://pytorch.org/get-started/locally/
+      \endverb
+      \verb{url}
+      \verb https://pytorch.org/get-started/locally/
+      \endverb
+    \endentry
+    \entry{TechPowerUp.20200209}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c4739b0a7a5b6abe10445d77634027c7}{%
+           family={TechPowerUp},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {TechPowerUp Homepage}%
+      }
+      \strng{namehash}{c4739b0a7a5b6abe10445d77634027c7}
+      \strng{fullhash}{c4739b0a7a5b6abe10445d77634027c7}
+      \strng{bibnamehash}{c4739b0a7a5b6abe10445d77634027c7}
+      \strng{authorbibnamehash}{c4739b0a7a5b6abe10445d77634027c7}
+      \strng{authornamehash}{c4739b0a7a5b6abe10445d77634027c7}
+      \strng{authorfullhash}{c4739b0a7a5b6abe10445d77634027c7}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{GPU Specs Database}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.techpowerup.com/gpu-specs/
+      \endverb
+      \verb{url}
+      \verb https://www.techpowerup.com/gpu-specs/
+      \endverb
+    \endentry
+    \entry{HaraldBogeholz.20170406}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=951c39de508e59dbdf860ed7f0e051a9}{%
+           family={{Harald B{ö}geholz}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Heise Online}%
+      }
+      \strng{namehash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{fullhash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{bibnamehash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{authorbibnamehash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{authornamehash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{authorfullhash}{951c39de508e59dbdf860ed7f0e051a9}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{K{ü}nstliche Intelligenz: Architektur und Performance von Googles KI-Chip TPU}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.heise.de/newsticker/meldung/Kuenstliche-Intelligenz-Architektur-und-Performance-von-Googles-KI-Chip-TPU-3676312.html
+      \endverb
+      \verb{url}
+      \verb https://www.heise.de/newsticker/meldung/Kuenstliche-Intelligenz-Architektur-und-Performance-von-Googles-KI-Chip-TPU-3676312.html
+      \endverb
+    \endentry
+    \entry{GoogleCloud.20200209}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=57f3af2a3d1051c172ab3c3db7d5409d}{%
+           family={{Google Cloud}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Google Cloud Dokumentation}%
+      }
+      \strng{namehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{fullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{bibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorbibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authornamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorfullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Systemarchitektur}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cloud.google.com/tpu/docs/system-architecture
+      \endverb
+      \verb{url}
+      \verb https://cloud.google.com/tpu/docs/system-architecture
+      \endverb
+    \endentry
+    \entry{GoogleCloud.20200209b}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=57f3af2a3d1051c172ab3c3db7d5409d}{%
+           family={{Google Cloud}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Google Cloud Homepage}%
+      }
+      \strng{namehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{fullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{bibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorbibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authornamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorfullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cloud TPU}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cloud.google.com/tpu/?hl=de
+      \endverb
+      \verb{url}
+      \verb https://cloud.google.com/tpu/?hl=de
+      \endverb
+    \endentry
+    \entry{KarlFreund.20170828}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=10dd89fa3eb44a399c6f4dd3e2128540}{%
+           family={{Karl Freund}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Forbes}%
+      }
+      \strng{namehash}{10dd89fa3eb44a399c6f4dd3e2128540}
+      \strng{fullhash}{10dd89fa3eb44a399c6f4dd3e2128540}
+      \strng{bibnamehash}{10dd89fa3eb44a399c6f4dd3e2128540}
+      \strng{authorbibnamehash}{10dd89fa3eb44a399c6f4dd3e2128540}
+      \strng{authornamehash}{10dd89fa3eb44a399c6f4dd3e2128540}
+      \strng{authorfullhash}{10dd89fa3eb44a399c6f4dd3e2128540}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microsoft: FPGA Wins Versus Google TPUs For AI}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.forbes.com/sites/moorinsights/2017/08/28/microsoft-fpga-wins-versus-google-tpus-for-ai/#781e2bf53904
+      \endverb
+      \verb{url}
+      \verb https://www.forbes.com/sites/moorinsights/2017/08/28/microsoft-fpga-wins-versus-google-tpus-for-ai/#781e2bf53904
+      \endverb
+    \endentry
   \enddatalist
+  \missing{Single Precision}
 \endrefsection
 \endinput
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.11.7)  2 FEB 2020 23:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.11.7)  4 FEB 2020 22:55
 entering extended mode
 **./Praxisbericht.tex
 (Praxisbericht.tex
@@ -2183,13 +2183,15 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `Praxisbericht.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-
-
-Package biblatex Warning: File 'Praxisbericht.bbl' is wrong format version - ex
-pected 3.1.
-
 Package biblatex Info: ... file 'Praxisbericht.bbl' found.
-(Praxisbericht.bbl)
+ (Praxisbericht.bbl
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'JosephRedmon.2018':
+(biblatex)                - Entry 'JosephRedmon.2018' (Inhalt/literatur.bib): I
+nvalid format '04.02.2020' of date field 'urldate' - ignoring.
+
+)
 Package biblatex Info: Reference section=0 on input line 46.
 Package biblatex Info: Reference segment=0 on input line 46.
 \c@lstlisting=\count493
@@ -2550,7 +2552,7 @@ Package pdftex.def Info: Bilder/yolo_model.png  used on input line 11.
 <Bilder/yolo_architecture.png, id=496, 913.16156pt x 382.42876pt>
 File: Bilder/yolo_architecture.png Graphic file (type png)
 <use Bilder/yolo_architecture.png>
-Package pdftex.def Info: Bilder/yolo_architecture.png  used on input line 23.
+Package pdftex.def Info: Bilder/yolo_architecture.png  used on input line 25.
 (pdftex.def)             Requested size: 426.79134pt x 178.73784pt.
 ) (Inhalt/06_Forschungsstand/datensatzlehre.tex [24]
 ("C:\Users\kuckr\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
@@ -2569,26 +2571,27 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 16
 ("C:\Users\kuckr\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\t1pcr.fd"
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-(Quellcode/annotation.xml
+(Quellcode/annotation.xml [25pdfTeX warning (ext4): destination with the same i
+dentifier (name{figure.2.16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.4 	<
+      path>D:\Workspaces\Datasets\SmartWarehouse\JPEGImages\000001.jpg</path> <
+./Bilder/yolo_model.png>]
 Overfull \hbox (73.09315pt too wide) in paragraph at lines 4--5
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[25pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
-6}) has been already used, duplicate ignored
+[26pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.12 	<
-       /size> <./Bilder/yolo_model.png>]) [26pdfTeX warning (ext4): destination
- with the same identifier (name{figure.2.17}) has been already used, duplicate 
-ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.19 
-      <./Bilder/yolo_architecture.png>]) (Inhalt/06_Forschungsstand/cloud.tex)
-(Inhalt/06_Forschungsstand/cuda.tex) (Inhalt/06_Forschungsstand/pytorch.tex)
+l.26 <
+      /annotation> <./Bilder/yolo_architecture.png>]))
+(Inhalt/06_Forschungsstand/cloud.tex) (Inhalt/06_Forschungsstand/cuda.tex)
+(Inhalt/06_Forschungsstand/pytorch.tex)
 (Inhalt/07_Konzeption/bewertungskriterien.tex [27]
 chapter 3.
 ) (Inhalt/07_Konzeption/vergleich.tex)
@@ -2679,10 +2682,10 @@ Package logreq Info: Writing requests to 'Praxisbericht.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 164.
  ) 
 Here is how much of TeX's memory you used:
- 50471 strings out of 492453
- 993728 string characters out of 3120076
- 1556289 words of memory out of 3000000
- 53736 multiletter control sequences out of 15000+200000
+ 50475 strings out of 492453
+ 993870 string characters out of 3120076
+ 1558554 words of memory out of 3000000
+ 53739 multiletter control sequences out of 15000+200000
  577548 words of font info for 149 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  81i,23n,94p,10164b,3645s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2723,9 +2726,9 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/kuckr
 Users/kuckr/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
 ls/msbm10.pfb><C:/Users/kuckr/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw
 /courier/ucrr8a.pfb>
-Output written on Praxisbericht.pdf (46 pages, 2947706 bytes).
+Output written on Praxisbericht.pdf (46 pages, 2949071 bytes).
 PDF statistics:
- 1447 PDF objects out of 1728 (max. 8388607)
- 184 named destinations out of 1000 (max. 500000)
+ 1451 PDF objects out of 1728 (max. 8388607)
+ 185 named destinations out of 1000 (max. 500000)
  348 words of extra memory for PDF output out of 10000 (max. 10000000)
 

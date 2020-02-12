@@ -16,8 +16,8 @@
 \contentsline {subsection}{\numberline {2.3.1}Convolutional Neural Networks}{16}{subsection.2.3.1}% 
 \contentsline {subsection}{\numberline {2.3.2}Single Shot MultiBox Detector}{19}{subsection.2.3.2}% 
 \contentsline {subsection}{\numberline {2.3.3}You Only Look Once}{24}{subsection.2.3.3}% 
-\contentsline {section}{\numberline {2.4}Datensatzlehre}{24}{section.2.4}% 
-\contentsline {subsection}{\numberline {2.4.1}Datensatzformate}{24}{subsection.2.4.1}% 
+\contentsline {section}{\numberline {2.4}Datensatzlehre}{25}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}Datensatzformate}{25}{subsection.2.4.1}% 
 \contentsline {section}{\numberline {2.5}Cloud Infrastruktur}{27}{section.2.5}% 
 \contentsline {section}{\numberline {2.6}Cumpute Unified Device Architecture}{27}{section.2.6}% 
 \contentsline {section}{\numberline {2.7}PyTorch}{27}{section.2.7}% 

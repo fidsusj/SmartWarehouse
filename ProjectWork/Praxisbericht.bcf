@@ -2227,8 +2227,9 @@
     <bcf:citekey order="98">JosephRedmon.2016</bcf:citekey>
     <bcf:citekey order="99">JosephRedmon.2016</bcf:citekey>
     <bcf:citekey order="100">JosephRedmon.2016</bcf:citekey>
-    <bcf:citekey order="101">RenuKhandelwal.2019</bcf:citekey>
-    <bcf:citekey order="102">ArunPonnusamy.20191006</bcf:citekey>
+    <bcf:citekey order="101">JosephRedmon.2018</bcf:citekey>
+    <bcf:citekey order="102">RenuKhandelwal.2019</bcf:citekey>
+    <bcf:citekey order="103">ArunPonnusamy.20191006</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

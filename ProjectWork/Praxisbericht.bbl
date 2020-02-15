@@ -1027,6 +1027,70 @@
       \verb https://docs.floydhub.com/
       \endverb
     \endentry
+    \entry{JonathanHui.20180307}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2d9e4466d619dff7f2ba6315a0fb3a81}{%
+           family={{Jonathan Hui}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Medium}%
+      }
+      \strng{namehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{fullhash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{bibnamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{authorbibnamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{authornamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{authorfullhash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{mAP (mean Average Precision) for Object Detection}
+      \field{urlday}{15}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
+      \endverb
+    \endentry
+    \entry{TarangShah.20180127}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d9f2398681aa389f6d337da08a6beef4}{%
+           family={{Tarang Shah}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Tarang Shahs Blog}%
+      }
+      \strng{namehash}{d9f2398681aa389f6d337da08a6beef4}
+      \strng{fullhash}{d9f2398681aa389f6d337da08a6beef4}
+      \strng{bibnamehash}{d9f2398681aa389f6d337da08a6beef4}
+      \strng{authorbibnamehash}{d9f2398681aa389f6d337da08a6beef4}
+      \strng{authornamehash}{d9f2398681aa389f6d337da08a6beef4}
+      \strng{authorfullhash}{d9f2398681aa389f6d337da08a6beef4}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Measuring Object Detection models - mAP - What is Mean Average Precision?}
+      \field{urlday}{15}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tarangshah.com/blog/2018-01-27/what-is-map-understanding-the-statistic-of-choice-for-comparing-object-detection-models/
+      \endverb
+      \verb{url}
+      \verb https://tarangshah.com/blog/2018-01-27/what-is-map-understanding-the-statistic-of-choice-for-comparing-object-detection-models/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

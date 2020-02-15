@@ -18,15 +18,15 @@
 \contentsline {section}{\numberline {2.6}PyTorch}{33}{section.2.6}% 
 \contentsline {chapter}{\numberline {3}Konzeption}{34}{chapter.3}% 
 \contentsline {section}{\numberline {3.1}Bewertungskriterien}{34}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Initialer Vergleich der Objektdetektoren}{34}{section.3.2}% 
-\contentsline {section}{\numberline {3.3}Echtzeitumgebung}{34}{section.3.3}% 
-\contentsline {chapter}{\numberline {4}Realisierung}{35}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{35}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{35}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{35}{section.4.3}% 
-\contentsline {chapter}{\numberline {5}Ergebnisse}{36}{chapter.5}% 
-\contentsline {chapter}{\numberline {6}Bewertung}{37}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{38}{chapter.7}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.41}% 
+\contentsline {section}{\numberline {3.2}Initialer Vergleich der Objektdetektoren}{35}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Echtzeitumgebung}{36}{section.3.3}% 
+\contentsline {chapter}{\numberline {4}Realisierung}{37}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{37}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{37}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{37}{section.4.3}% 
+\contentsline {chapter}{\numberline {5}Ergebnisse}{38}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}Bewertung}{39}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{40}{chapter.7}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{X}{chapter*.47}% 
 \contentsline {chapter}{\numberline {A}Anhang}{XIV}{appendix.A}% 
 \contentsfinish 

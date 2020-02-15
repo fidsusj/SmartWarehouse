@@ -1,6 +1,6 @@
 \section{Datensatzlehre}
 
-\subsection{Datensatzformate}
+\subsection*{Datensatzformate}
 
 Basierend darauf welcher Objektdetektor trainiert werden soll, muss der zum Training verwendete Datensatz in einem bestimmten Format vorliegen. Zum Trainieren des \textit{SSDs} wird das sogenannte \textit{Pascal Visual Object Classes} (PascalVOC) Format benötigt. 
 
@@ -9,7 +9,7 @@ Es definiert eine Unterteilung in \textit{Annotations}, \textit{ImageSets} und \
 \lstset{language=XML}
 \lstinputlisting[
 label=pascalvoc:PascalVOC,
-caption=pascalVOC Bildannotation,
+caption=PascalVOC Bildannotation,
 captionpos=b,
 firstline=1,
 lastline=26
@@ -23,7 +23,7 @@ $<Kategorie-ID>\:<Zentrum-X>\:<Zentrum-Y>\:<Breite>\:<Hoehe>$
 
 Die Unterteilung in Trainings- und Testdatensatz erfolgt durch Referenzierung der Bildpfade in zwei getrennten Textdateien. Schließlich wird in einer \textit{.data}-Datei der Pfad zu den beiden Textdateien und zur \textit{.names}-Datei sowie die Anzahl an Kategorien gespeichert. \cite{ArunPonnusamy.20191006}
 
-\subsection{Datensatzzusammensetzung}
+\subsection*{Datensatzzusammensetzung}
 
 Zum Erstellen und Auswählen eines \textit{Deep Learning} Modells wird der Datenbestand in der Regel in drei Kategorien unterteilt. Ein Datensatz wird für das Training des Modells verwendet. Durch das anschließende Anwenden des Modells auf zuvor ungesehene Daten, den Testdaten, wird der \textit{Verallgemeinerungsfehler} gemessen, der möglichst niedrig ausfallen sollte. Fällt der allgemeine Fehler während des Trainings niedrig aus, der \textit{Verallgemeinerungsfehler} während des Testdurchlaufs allerdings hoch, so liegt klassisches \textit{Overfitting} vor, die Trainingsdaten wurden auswendig gelernt. \cite{AurelienGeron.2018}
 
@@ -31,7 +31,7 @@ Anschließend werden in mehreren Durchläufen die Hyperparameter des Trainingspr
 
 Oft wird der Trainingsdatensatz mit dem Validierungsdatensatz zum sogenannten \textit{Trainval} Datensatz zusammengeführt. Dies steht im Kontext des sogenannten \textit{K-Kreuzvalidierungsverfahrens}. Dabei wird der \textit{Trainval} Datensatz in K gleich große, komplementäre Untermengen unterteilt. Eine dieser Untermengen dient anschließend als Validierungsdatensatz. Für jedes zu trainierende Modell mit unterschiedlichen Hyperparametern wird eine andere Untermenge als Validierungsdatensatz ausgewählt. Hierdurch steigt die Aussagekraft des Abstraktionsvermögens nach der Validierung und zudem müssen keine Trainingsdaten dauerhaft für die Validierung zurück gelegt werden. In der Regel werden 80\% der Gesamtdaten als \textit{Trainval} Datensatz verwendet. \cite{AurelienGeron.2018}
 
-\subsection{Qualität und Quantität der Daten}
+\subsection*{Qualität und Quantität der Daten}
 
 Um ein funktionsfähiges Modell zu trainieren muss der Datensatz einem gewissen Standard nachkommen. Demnach müssen die zu klassifizierenden Objekte vollständig im Bild enthalten und gut erkennbar sein. Zwar gibt es gerade im \textit{PascalVOC} Datensatzformat ebenso die Möglichkeit Objekte als \glqq schwierig erkennbar\grqq{} zu markieren, dennoch sollten solche Objekte nicht die Mehrheit im gesamten Datensatz ausmachen. Auch die Aufnahme von Objekten in unterschiedlichen Umgebungen, Entfernungen und Blicklagen fördert langfristig das Abstraktionsvermögen des Modells. 
 
@@ -47,7 +47,7 @@ Ebenso muss ein ausreichend großer Datensatz vorliegen, um das gewünschte Abst
 
 Unter Hinzunahme des COCO \textit{trainval135k} Datensatzes erreicht der \textit{SSD} sogar das beste Ergebnis aus der ursprünglichen Veröffentlichung (siehe Abbildung \ref{amountofdata}) \cite{ssd.20161229}. 
 
-\subsection{Techniken zum Trainieren bei geringen Datenmengen}
+\subsection*{Techniken zum Trainieren bei geringen Datenmengen}
 
 Bei Betrachtung der obigen Ergebnisse wird schnell deutlich, dass für ein komplexeres \textit{Deep Learning} Modell ein umfangreicher Datensatz von Nöten ist. Allerdings gibt es zwei bekannte Techniken, wie auch mit kleineren Datenbeständen ein sehenswertes Ergebnis erzielt werden kann. 
 

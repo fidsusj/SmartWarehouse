@@ -2093,29 +2093,29 @@
     <bcf:citekey order="98">JosephRedmon.2016</bcf:citekey>
     <bcf:citekey order="99">JosephRedmon.2016</bcf:citekey>
     <bcf:citekey order="100">JosephRedmon.2016</bcf:citekey>
-
-    <bcf:citekey order="101">RenuKhandelwal.2019</bcf:citekey>
-    <bcf:citekey order="102">ArunPonnusamy.20191006</bcf:citekey>
-    <bcf:citekey order="103">AurelienGeron.2018</bcf:citekey>
+    <bcf:citekey order="101">JosephRedmon.2018</bcf:citekey>
+    <bcf:citekey order="102">RenuKhandelwal.2019</bcf:citekey>
+    <bcf:citekey order="103">ArunPonnusamy.20191006</bcf:citekey>
     <bcf:citekey order="104">AurelienGeron.2018</bcf:citekey>
     <bcf:citekey order="105">AurelienGeron.2018</bcf:citekey>
-    <bcf:citekey order="106">ssd.20161229</bcf:citekey>
-    <bcf:citekey order="107">MarkEveringham.20070607</bcf:citekey>
-    <bcf:citekey order="108">MarkEveringham.20120521</bcf:citekey>
-    <bcf:citekey order="109">ssd.20161229</bcf:citekey>
+    <bcf:citekey order="106">AurelienGeron.2018</bcf:citekey>
+    <bcf:citekey order="107">ssd.20161229</bcf:citekey>
+    <bcf:citekey order="108">MarkEveringham.20070607</bcf:citekey>
+    <bcf:citekey order="109">MarkEveringham.20120521</bcf:citekey>
     <bcf:citekey order="110">ssd.20161229</bcf:citekey>
     <bcf:citekey order="111">ssd.20161229</bcf:citekey>
-    <bcf:citekey order="112">AurelienGeron.2018</bcf:citekey>
+    <bcf:citekey order="112">ssd.20161229</bcf:citekey>
     <bcf:citekey order="113">AurelienGeron.2018</bcf:citekey>
-    <bcf:citekey order="114">NVIDIA.20200209</bcf:citekey>
-    <bcf:citekey order="115">PyTorch.20200209</bcf:citekey>
-    <bcf:citekey order="116">TechPowerUp.20200209</bcf:citekey>
-    <bcf:citekey order="117">Single Precision</bcf:citekey>
+    <bcf:citekey order="114">AurelienGeron.2018</bcf:citekey>
+    <bcf:citekey order="115">NVIDIA.20200209</bcf:citekey>
+    <bcf:citekey order="116">PyTorch.20200209</bcf:citekey>
+    <bcf:citekey order="117">TechPowerUp.20200209</bcf:citekey>
     <bcf:citekey order="118">HaraldBogeholz.20170406</bcf:citekey>
     <bcf:citekey order="119">GoogleCloud.20200209</bcf:citekey>
     <bcf:citekey order="120">GoogleCloud.20200209b</bcf:citekey>
     <bcf:citekey order="121">GoogleCloud.20200209b</bcf:citekey>
     <bcf:citekey order="122">KarlFreund.20170828</bcf:citekey>
+    <bcf:citekey order="123">FloydHub.20200215</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

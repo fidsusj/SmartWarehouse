@@ -601,7 +601,7 @@
       \field{urlday}{10}
       \field{urlmonth}{11}
       \field{urlyear}{2019}
-      \field{year}{2019-11-10}
+      \field{year}{2019}
       \field{urldateera}{ce}
       \verb{file}
       \verb http://arxiv.org/abs/1506.02640
@@ -632,14 +632,17 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{YOLOv3: An Incremental Improvement}
+      \field{urlday}{4}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
       \field{year}{2018}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://pjreddie.com/media/files/papers/YOLOv3.pdf
       \endverb
       \verb{url}
       \verb https://pjreddie.com/media/files/papers/YOLOv3.pdf
       \endverb
-      \warn{\item Entry 'JosephRedmon.2018' (Inhalt/literatur.bib): Invalid format '04.02.2020' of date field 'urldate' - ignoring}
     \endentry
     \entry{RenuKhandelwal.2019}{misc}{}
       \name{author}{1}{}{%
@@ -1078,7 +1081,7 @@
       \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Measuring Object Detection models - mAP - What is Mean Average Precision?}
+      \field{title}{Measuring Object Detection models - mAP - What is Mean Average Precision?}
       \field{urlday}{15}
       \field{urlmonth}{2}
       \field{urlyear}{2020}

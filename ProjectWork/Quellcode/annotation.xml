@@ -1,7 +1,7 @@
 <annotation>
 	<folder>JPEGImages</folder>
 	<filename>000001.jpg</filename>
-	<path>D:\Workspaces\Datasets\SmartWarehouse\JPEGImages\000001.jpg</path>
+	<path>..\JPEGImages\000001.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>

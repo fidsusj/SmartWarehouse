@@ -16,9 +16,7 @@ Aus der Menge an Bounding Boxen werden schließlich mit Hilfe eines festgelegten
 
 \newpage
 
-Die vorhergesagten Werte werden in einem $S \times S \times (B * 5 + C)$ Tensor kodiert, wobei $S$ und $B$ wie zuvor beschrieben durch das Gitter und die Bounding Boxen festgelegt sind und $C$ die Anzahl der Klassen definiert. Abbildung \ref{yolo_architecture} zeigt den Aufbau des CNN von \textit{YOLO} für die Detektion. Es besteht aus 24 Convolutional Layern gefolgt von 2 Fully-connected Layern. Für die Genauigkeit bei der Detektion wird die Auflösung des Bildes verdoppelt \cite{JosephRedmon.2016}. 
-
-//TODO erkläre layer
+Die vorhergesagten Werte werden in einem $S \times S \times (B * 5 + C)$ Tensor kodiert, wobei $S$ und $B$ wie zuvor beschrieben durch das Gitter und die Bounding Boxen festgelegt sind und $C$ die Anzahl der Klassen beschreibt. Abbildung \ref{yolo_architecture} zeigt den Aufbau des CNN von \textit{YOLO} für die Detektion. Es besteht aus 24 Convolutional Layern gefolgt von 2 Fully-connected Layern. Für die Genauigkeit bei der Detektion wird die Auflösung des Eingangsbildes verdoppelt \cite{JosephRedmon.2016}. 
 
 In dem Netzwerk in Abbildung \ref{yolo_architecture} wird ein Bild mit einer Auflösung von $224 \times 224$ Pixeln verwendet und die vorhergesagten Werte im $7 \times 7 \times 30$ Tensor ausgegeben.
 
@@ -32,8 +30,7 @@ In dem Netzwerk in Abbildung \ref{yolo_architecture} wird ein Bild mit einer Auf
 
 Die mittlerweile dritte und aktuelle Version von \textit{YOLO} weist enorme Verbesserungen auf, gerade im Bezug auf die Erkennung von sehr kleinen Objekten wie zum Beispiel einzelne Vögel in einem Schwarm \cite{JosephRedmon.2018}.
 
-TODO Veränderung im Netz: https://www.cyberailab.com/home/a-closer-look-at-yolov3
-
+TODO Yolo v3: Veränderung neuronales Netz
 
 
 

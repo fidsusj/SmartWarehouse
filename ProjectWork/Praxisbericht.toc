@@ -13,12 +13,12 @@
 \contentsline {section}{\numberline {2.1}Neuronale Netze}{5}{section.2.1}% 
 \contentsline {section}{\numberline {2.2}Hyperparameter}{9}{section.2.2}% 
 \contentsline {section}{\numberline {2.3}Objektdetektoren}{15}{section.2.3}% 
-\contentsline {section}{\numberline {2.4}Datensatzlehre}{25}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}Cloud Infrastruktur}{29}{section.2.5}% 
+\contentsline {section}{\numberline {2.4}Datensatzlehre}{26}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Cloud Infrastruktur}{30}{section.2.5}% 
 \contentsline {chapter}{\numberline {3}Konzeption}{34}{chapter.3}% 
 \contentsline {section}{\numberline {3.1}Bewertungskriterien}{34}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Initialer Vergleich der Objektdetektoren}{36}{section.3.2}% 
-\contentsline {section}{\numberline {3.3}Echtzeitumgebung}{36}{section.3.3}% 
+\contentsline {section}{\numberline {3.2}Vergleich der Objektdetektoren}{36}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Echtzeitumgebung}{37}{section.3.3}% 
 \contentsline {chapter}{\numberline {4}Realisierung}{39}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{39}{section.4.1}% 
 \contentsline {section}{\numberline {4.2}Drohnen Anbindung}{39}{section.4.2}% 

@@ -1,9 +1,9 @@
 import os
 import random
-from utils import create_data_lists
+from SSD.utils import create_data_lists
 
-# dataset_path = 'D:/Workspaces/Datensätze/SmartWarehouseSSD/'
-dataset_path = '/floyd/input/ssd/'
+dataset_path = 'D:/Workspaces/PyCharmProjects/SmartWarehouse/SSD/data/SmartWarehouseSSD/'
+# dataset_path = '/floyd/input/ssd/'
 image_directory = dataset_path + 'JPEGImages'
 trainval_file = dataset_path + 'ImageSets/Main/trainval.txt'
 test_file = dataset_path + 'ImageSets/Main/test.txt'
@@ -11,6 +11,7 @@ test_file = dataset_path + 'ImageSets/Main/test.txt'
 
 def read_data_files():
     return os.listdir(image_directory)
+
 
 def k_fold_cross_validation(k_fold):
     files = read_data_files()
@@ -24,6 +25,7 @@ def k_fold_cross_validation(k_fold):
         folds[index % k_fold].append(file)
 
     return folds
+
 
 def specify_train_test_data(train_images, test_images):
     global trainval_file
@@ -44,8 +46,10 @@ def specify_train_test_data(train_images, test_images):
     test.write(test_file_text)
     test.close()
 
-    create_data_lists(smartwarehouse_path=dataset_path, output_folder='output')
+    create_data_lists(smartwarehouse_path=dataset_path, output_folder='data/Output')
+
 
 if __name__ == '__main__':
     for index, file in enumerate(read_data_files()):
-        os.rename(os.path.join(image_directory, file), os.path.join(image_directory, ''.join([str(index + 1).zfill(6), '.jpg'])))
+        os.rename(os.path.join(image_directory, file),
+                  os.path.join(image_directory, ''.join([str(index + 1).zfill(6), '.jpg'])))

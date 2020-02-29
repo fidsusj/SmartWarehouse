@@ -2,13 +2,13 @@ import time
 import torch.backends.cudnn as cudnn
 import torch.optim
 import torch.utils.data
-from model import SSD300, MultiBoxLoss
-from datasets import PascalVOCDataset
-from utils import *
-from data_preprocessing import *
+from SSD.model import SSD300, MultiBoxLoss
+from SSD.datasets import PascalVOCDataset
+from SSD.utils import *
+from SSD.data_preprocessing import *
 
 # Data parameters
-data_folder = 'output'  # folder with data files
+data_folder = 'data/Output'  # folder with data files
 keep_difficult = True  # use objects considered difficult to detect?
 
 # Model parameters
@@ -17,8 +17,8 @@ n_classes = len(label_map)  # number of different types of objects
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Learning parameters
-# checkpoint = 'checkpoint/BEST_checkpoint_ssd300.pth.tar'  # path to model checkpoint, None if none
-checkpoint = None  # path to model checkpoint, None if none
+checkpoint = 'checkpoint/BEST_checkpoint_ssd300.pth.tar'  # path to model checkpoint, None if none
+# checkpoint = None  # path to model checkpoint, None if none
 batch_size = 16  # batch size
 start_epoch = 0  # start at this epoch
 epochs = 500  # number of epochs to run without early-stopping
@@ -76,7 +76,7 @@ def main():
         folds_without_test = folds.copy()
         folds_without_test.remove(test_fold)
         train_fold = [val for sublist in folds_without_test for val in sublist]
-        # specify_train_test_data(train_fold, test_fold)
+        specify_train_test_data(train_fold, test_fold)
 
         # Custom dataloaders
         train_dataset = PascalVOCDataset(data_folder,

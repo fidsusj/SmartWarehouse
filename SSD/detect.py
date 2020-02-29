@@ -1,7 +1,7 @@
 import numpy
 import torch.backends.cudnn as cudnn
 from torchvision import transforms
-from utils import *
+from SSD.utils import *
 from PIL import Image, ImageDraw, ImageFont
 import cv2
 import time
@@ -17,8 +17,8 @@ print('\nLoaded checkpoint from epoch %d. Best loss so far is %.3f.\n' % (start_
 model = checkpoint['model']
 model = model.to(device)
 model.eval()
-cudnn.benchmark = True;
-cudnn.enabled = True;
+cudnn.benchmark = True
+cudnn.enabled = True
 
 # Transforms
 resize = transforms.Resize((300, 300))

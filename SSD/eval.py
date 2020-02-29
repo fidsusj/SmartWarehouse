@@ -1,6 +1,5 @@
-import torch
-from utils import *
-from datasets import PascalVOCDataset
+from SSD.utils import *
+from SSD.datasets import PascalVOCDataset
 from tqdm import tqdm
 from pprint import PrettyPrinter
 
@@ -76,18 +75,10 @@ def evaluate(test_loader, model):
             true_difficulties.extend(difficulties)
 
         # Calculate mAP
-        APs, ARs, mAP, mAR, f1 = calculate_mAP(det_boxes, det_labels, det_scores, true_boxes, true_labels, true_difficulties)
+        APs, mAP = calculate_mAP(det_boxes, det_labels, det_scores, true_boxes, true_labels, true_difficulties)
 
-    # Print AP for each class
-    print('\nAverage Precision (AP):')
     pp.pprint(APs)
-    print('\nAverage Recall (AP):')
-    pp.pprint(ARs)
-
     print('\nMean Average Precision (mAP): %.3f' % mAP)
-    print('\nMean Average Recall (mAR): %.3f' % mAR)
-
-    print('\nF1 Score: %.3f' % f1)
 
 if __name__ == '__main__':
     evaluate(test_loader, model)

@@ -1,5 +1,8 @@
+from threading import Thread
 import numpy
 import torch.backends.cudnn as cudnn
+from imutils.video import FPS
+from queue import Queue
 from torchvision import transforms
 from SSD.utils import *
 from PIL import Image, ImageDraw, ImageFont
@@ -101,40 +104,63 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
     return annotated_image
 
 
+class FileVideoStream:
+    def __init__(self, path, queueSize=20000):
+        self.stream = cv2.VideoCapture(path)
+        self.stopped = False
+        self.Q = Queue(maxsize=queueSize)
+
+    def start(self):
+        # start a thread to read frames from the file video stream
+        t = Thread(target=self.update, args=())
+        t.daemon = True
+        t.start()
+        return self
+
+    def stop(self):
+        self.stopped = True
+
+    def update(self):
+        while True:
+            if self.stopped:
+                return
+            if not self.Q.full():
+                (grabbed, frame) = self.stream.read()
+                if not grabbed:
+                    self.stop()
+                    return
+                self.Q.put(frame)
+
+    def read(self):
+        return self.Q.get()
+
+    def more(self):
+        return self.Q.qsize() > 0
+
+
 if __name__ == '__main__':
-    # img_path = '/media/ssd/ssd data/VOC2007/JPEGImages/000001.jpg'
-    # original_image = Image.open(img_path, mode='r')
+    cv2.namedWindow("SmartWarehouse")
+    fvs = FileVideoStream("data/videos/warehouse2.mp4").start()
+    time.sleep(1.0)
+    fps = FPS().start()
 
-    cv2.namedWindow("preview")
-    vc = cv2.VideoCapture("data/videos/warehouse2.mp4")
-    start = time.time()
-    framesCaptured = 0
-    maxFPS = 0
+    while fvs.more():
+        # Read new frame
+        frame = fvs.read()
 
-    if vc.isOpened():
-        rval, frame = vc.read()
-        while rval:
-            # Interfere with model
-            cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            pil_image = Image.fromarray(cv2_image)
-            pil_image = detect(pil_image, min_score=0.7, max_overlap=0.4, top_k=1)
-            cv2_image = numpy.array(pil_image)
-            cv2_image = cv2_image[:, :, ::-1].copy()
-            cv2.imshow("preview", cv2_image)
+        # Interfere with model
+        cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        pil_image = Image.fromarray(cv2_image)
+        pil_image = detect(pil_image, min_score=0.7, max_overlap=0.4, top_k=30)
+        cv2_image = numpy.array(pil_image)
+        cv2_image = cv2_image[:, :, ::-1].copy()
 
-            # update frame
-            rval, frame = vc.read()
-            framesCaptured += 1
-            if framesCaptured == 120:
-                fps = (framesCaptured / (time.time() - start))
-                if fps > maxFPS:
-                    maxFPS = fps
-                    print('New Max FPS: %.3f' % maxFPS)
-                framesCaptured = 0
-                start = time.time()
+        # Display frame
+        cv2.imshow("SmartWarehouse", cv2_image)
+        cv2.waitKey(1)
+        fps.update()
 
-            key = cv2.waitKey(20)
-            if key == 27:  # exit on ESC
-                break
-
-    cv2.destroyWindow("preview")
+    fps.stop()
+    print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
+    cv2.destroyAllWindows()
+    fvs.stop()

@@ -105,7 +105,7 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
 
 
 class FileVideoStream:
-    def __init__(self, path, queueSize=20000):
+    def __init__(self, path, queueSize):
         self.stream = cv2.VideoCapture(path)
         self.stopped = False
         self.Q = Queue(maxsize=queueSize)
@@ -140,7 +140,7 @@ class FileVideoStream:
 
 if __name__ == '__main__':
     cv2.namedWindow("SmartWarehouse")
-    fvs = FileVideoStream("data/videos/warehouse2.mp4").start()
+    fvs = FileVideoStream("data/videos/30FPS_1080p.mp4", 1000000).start()
     time.sleep(1.0)
     fps = FPS().start()
 
@@ -151,7 +151,7 @@ if __name__ == '__main__':
         # Interfere with model
         cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         pil_image = Image.fromarray(cv2_image)
-        pil_image = detect(pil_image, min_score=0.7, max_overlap=0.4, top_k=30)
+        pil_image = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000)
         cv2_image = numpy.array(pil_image)
         cv2_image = cv2_image[:, :, ::-1].copy()
 

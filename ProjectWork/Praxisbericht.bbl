@@ -114,6 +114,70 @@
       \verb https://www.doks-innovation.com/inventairy-x/
       \endverb
     \endentry
+    \entry{RavindraParmar.20180902}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=af845845909cf12c69b3a46719505e0b}{%
+           family={{Ravindra Parmar}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Towards Data Science}%
+      }
+      \strng{namehash}{af845845909cf12c69b3a46719505e0b}
+      \strng{fullhash}{af845845909cf12c69b3a46719505e0b}
+      \strng{bibnamehash}{af845845909cf12c69b3a46719505e0b}
+      \strng{authorbibnamehash}{af845845909cf12c69b3a46719505e0b}
+      \strng{authornamehash}{af845845909cf12c69b3a46719505e0b}
+      \strng{authorfullhash}{af845845909cf12c69b3a46719505e0b}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Detection and Segmentation through ConvNets}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/detection-and-segmentation-through-convnets-47aa42de27ea
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/detection-and-segmentation-through-convnets-47aa42de27ea
+      \endverb
+    \endentry
+    \entry{PriyaDwivedi.20190328}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4eeb787c22066f59df3702acc177d862}{%
+           family={{Priya Dwivedi}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Towards Data Science}%
+      }
+      \strng{namehash}{4eeb787c22066f59df3702acc177d862}
+      \strng{fullhash}{4eeb787c22066f59df3702acc177d862}
+      \strng{bibnamehash}{4eeb787c22066f59df3702acc177d862}
+      \strng{authorbibnamehash}{4eeb787c22066f59df3702acc177d862}
+      \strng{authornamehash}{4eeb787c22066f59df3702acc177d862}
+      \strng{authorfullhash}{4eeb787c22066f59df3702acc177d862}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Semantic Segmentation --- Popular Architectures}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/semantic-segmentation-popular-architectures-dff0a75f39d0
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/semantic-segmentation-popular-architectures-dff0a75f39d0
+      \endverb
+    \endentry
     \entry{PhilippeLucidarme.2017}{misc}{}
       \name{author}{1}{}{%
         {{hash=93625a27fb7fd8d08b27352ef7193af6}{%
@@ -129,8 +193,8 @@
       \strng{authorbibnamehash}{93625a27fb7fd8d08b27352ef7193af6}
       \strng{authornamehash}{93625a27fb7fd8d08b27352ef7193af6}
       \strng{authorfullhash}{93625a27fb7fd8d08b27352ef7193af6}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Simplest perceptron update rules demonstration}
@@ -161,8 +225,8 @@
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Deep Learning}
@@ -291,38 +355,6 @@
       \endverb
       \verb{url}
       \verb https://towardsdatascience.com/gradient-descent-algorithm-and-its-variants-10f652806a3
-      \endverb
-    \endentry
-    \entry{RonnyRestrepo.20170816}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=8c3b5196b697c2999b6a25f561a38809}{%
-           family={{Ronny Restrepo}},
-           familyi={R\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Ronny Restrepo Homepage}%
-      }
-      \strng{namehash}{8c3b5196b697c2999b6a25f561a38809}
-      \strng{fullhash}{8c3b5196b697c2999b6a25f561a38809}
-      \strng{bibnamehash}{8c3b5196b697c2999b6a25f561a38809}
-      \strng{authorbibnamehash}{8c3b5196b697c2999b6a25f561a38809}
-      \strng{authornamehash}{8c3b5196b697c2999b6a25f561a38809}
-      \strng{authorfullhash}{8c3b5196b697c2999b6a25f561a38809}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Calculating the derivative of Tanh: step by step}
-      \field{urlday}{26}
-      \field{urlmonth}{10}
-      \field{urlyear}{2019}
-      \field{year}{2017}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://ronny.rest/media/blog/2017/2017_08_16_tanh/tanh_v_sigmoid.jpg
-      \endverb
-      \verb{url}
-      \verb http://ronny.rest/media/blog/2017/2017_08_16_tanh/tanh_v_sigmoid.jpg
       \endverb
     \endentry
     \entry{DanqingLiu.20171130}{misc}{}

@@ -1,5 +1,7 @@
 \chapter{Konzeption}
 
+% Vorgehensweise oben anpassen
+
 Um den \textit{SSD} und den \textit{YOLO} Objektdetektor miteinander vergleichbar zu machen und um deren Potential zum industriellen Einsatz zu bewerten, müssen konkrete Bewertungskriterien eingeführt werden. Mit Hilfe dieser Metriken werden die beiden Objektdetektoren anhand eines Benchmark Datensatzes initial verglichen, bevor der eigentliche Datensatz eingeführt wird. Dieser spiegelt Verhältnisse der Echtzeitumgebung wider. 
 
 \section{Bewertungskriterien}
@@ -27,7 +29,7 @@ Die Klassifikation, ob eine Region das gewünschte Objekt enthält und demnach e
 	\label{map}
 \end{figure} 
 
-Im Graphen ist meist ein klassisches \glqq Zick-Zack\grqq{} Muster zu erkennen (siehe Abbildung \ref{map}). Dieses Muster wird geglättet, indem nach jedem Einbruch für jeden \textit{Recall} Wert der maximale \textit{Precision} Wert rechts des aktuellen \textit{Recalls} übernommen wird. Bildet man anschließend das diskrete Integral über alle \textit{Recall} Werte, so ergibt sich der \textit{Average Precision} Wert für eine zu klassifizierende Kategorie. Der Mittelwert der  \textit{Average Precisions} über alle Klassifikationskategorien hinweg ergibt letztendlich den \textit{mAP} Wert \cite{JonathanHui.20180307}. 
+Im Graphen ist meist ein klassisches \glqq Zick-Zack\grqq{} Muster zu erkennen (siehe Abbildung \ref{map}). Dieses Muster wird geglättet, indem nach jedem Einbruch für jeden \textit{Recall} Wert der maximale \textit{Precision} Wert rechts des aktuellen \textit{Recalls} übernommen wird. Wird anschließend das diskrete Integral über alle \textit{Recall} Werte gebildet, so ergibt sich der \textit{Average Precision} Wert für eine zu klassifizierende Kategorie. Der Mittelwert der  \textit{Average Precisions} über alle Klassifikationskategorien hinweg ergibt letztendlich den \textit{mAP} Wert \cite{JonathanHui.20180307}. 
 
 \subsection*{Reaktionsvermögen}
 

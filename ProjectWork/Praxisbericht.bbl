@@ -19,6 +19,38 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{JonathanHui.20180307}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2d9e4466d619dff7f2ba6315a0fb3a81}{%
+           family={{Jonathan Hui}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Medium}%
+      }
+      \strng{namehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{fullhash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{bibnamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{authorbibnamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{authornamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{authorfullhash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{mAP (mean Average Precision) for Object Detection}
+      \field{urlday}{15}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
+      \endverb
+    \endentry
     \entry{AurelienGeron.2018}{book}{}
       \name{author}{1}{}{%
         {{hash=b9ef41b5f253b9e68202e6419fe33e44}{%
@@ -40,8 +72,8 @@
       \strng{authorbibnamehash}{b9ef41b5f253b9e68202e6419fe33e44}
       \strng{authornamehash}{b9ef41b5f253b9e68202e6419fe33e44}
       \strng{authorfullhash}{b9ef41b5f253b9e68202e6419fe33e44}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -65,8 +97,8 @@
       \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Deep Learning: Drei Dinge, die Sie wissen sollten}
@@ -97,8 +129,8 @@
       \strng{authorbibnamehash}{c731f02d37d80d1cc6e3c60eaeba3782}
       \strng{authornamehash}{c731f02d37d80d1cc6e3c60eaeba3782}
       \strng{authorfullhash}{c731f02d37d80d1cc6e3c60eaeba3782}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{inventAIRyX}
@@ -129,8 +161,8 @@
       \strng{authorbibnamehash}{af845845909cf12c69b3a46719505e0b}
       \strng{authornamehash}{af845845909cf12c69b3a46719505e0b}
       \strng{authorfullhash}{af845845909cf12c69b3a46719505e0b}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Detection and Segmentation through ConvNets}
@@ -161,8 +193,8 @@
       \strng{authorbibnamehash}{4eeb787c22066f59df3702acc177d862}
       \strng{authornamehash}{4eeb787c22066f59df3702acc177d862}
       \strng{authorfullhash}{4eeb787c22066f59df3702acc177d862}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Semantic Segmentation --- Popular Architectures}
@@ -389,6 +421,164 @@
       \verb https://medium.com/@danqing/a-practical-guide-to-relu-b83ca804f1f7
       \endverb
     \endentry
+    \entry{RenuKhandelwal.2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7dde6ac3b1ee1a22278d5590ed6bd748}{%
+           family={{Renu Khandelwal}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Towards Data Science}%
+      }
+      \strng{namehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
+      \strng{fullhash}{7dde6ac3b1ee1a22278d5590ed6bd748}
+      \strng{bibnamehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
+      \strng{authorbibnamehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
+      \strng{authornamehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
+      \strng{authorfullhash}{7dde6ac3b1ee1a22278d5590ed6bd748}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{COCO and Pascal VOC data format for Object detection}
+      \field{urlday}{2}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/coco-data-format-for-object-detection-a4c5eaf518c5
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/coco-data-format-for-object-detection-a4c5eaf518c5
+      \endverb
+    \endentry
+    \entry{ArunPonnusamy.20191006}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e02e4ab9426c449a54c6faa243eadf3b}{%
+           family={{Arun Ponnusamy}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Arun Ponnusamy Homepage}%
+      }
+      \strng{namehash}{e02e4ab9426c449a54c6faa243eadf3b}
+      \strng{fullhash}{e02e4ab9426c449a54c6faa243eadf3b}
+      \strng{bibnamehash}{e02e4ab9426c449a54c6faa243eadf3b}
+      \strng{authorbibnamehash}{e02e4ab9426c449a54c6faa243eadf3b}
+      \strng{authornamehash}{e02e4ab9426c449a54c6faa243eadf3b}
+      \strng{authorfullhash}{e02e4ab9426c449a54c6faa243eadf3b}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Preparing Custom Dataset for Training YOLO Object Detector}
+      \field{urlday}{2}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.arunponnusamy.com/preparing-custom-dataset-for-training-yolo-object-detector.html
+      \endverb
+      \verb{url}
+      \verb https://www.arunponnusamy.com/preparing-custom-dataset-for-training-yolo-object-detector.html
+      \endverb
+    \endentry
+    \entry{ssd.20161229}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=8a42699672c27d229b4f4ca9b960093a}{%
+           family={{Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed, Chang-Yang Fu, Alexander C. Berg}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a42699672c27d229b4f4ca9b960093a}
+      \strng{fullhash}{8a42699672c27d229b4f4ca9b960093a}
+      \strng{bibnamehash}{8a42699672c27d229b4f4ca9b960093a}
+      \strng{authorbibnamehash}{8a42699672c27d229b4f4ca9b960093a}
+      \strng{authornamehash}{8a42699672c27d229b4f4ca9b960093a}
+      \strng{authorfullhash}{8a42699672c27d229b4f4ca9b960093a}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SSD:~Single Shot MultiBox Detector}
+      \field{type}{phdthesis}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2019}
+      \field{year}{2016-12-29}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1512.02325.pdf
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1512.02325.pdf
+      \endverb
+    \endentry
+    \entry{MarkEveringham.20070607}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d3cad0dfea5ac04733fc99a53227ac5d}{%
+           family={{Mark Everingham}},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima Winn},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{fullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{bibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authorbibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authornamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authorfullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The PASCAL Visual Object Classes Challenge 2007 (VOC2007) Development Kit}
+      \field{urlday}{8}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2007/htmldoc/voc.html#SECTION00030000000000000000
+      \endverb
+      \verb{url}
+      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2007/htmldoc/voc.html#SECTION00030000000000000000
+      \endverb
+    \endentry
+    \entry{MarkEveringham.20120521}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d3cad0dfea5ac04733fc99a53227ac5d}{%
+           family={{Mark Everingham}},
+           familyi={M\bibinitperiod},
+           given={John\bibnamedelima Winn},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{fullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{bibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authorbibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authornamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \strng{authorfullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The PASCAL Visual Object Classes Challenge 2012 (VOC2012) Development Kit}
+      \field{urlday}{8}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/devkit_doc.html#SECTION00030000000000000000
+      \endverb
+      \verb{url}
+      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/devkit_doc.html#SECTION00030000000000000000
+      \endverb
+    \endentry
     \entry{DaphneCornelisse.20180424}{misc}{}
       \name{author}{1}{}{%
         {{hash=dbaff04488b1a921cecf6bd5411238b2}{%
@@ -404,8 +594,8 @@
       \strng{authorbibnamehash}{dbaff04488b1a921cecf6bd5411238b2}
       \strng{authornamehash}{dbaff04488b1a921cecf6bd5411238b2}
       \strng{authorfullhash}{dbaff04488b1a921cecf6bd5411238b2}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{An intuitive guide to Convolutional Neural Networks}
@@ -436,8 +626,8 @@
       \strng{authorbibnamehash}{a058957318f1d66489c53794afae6df7}
       \strng{authornamehash}{a058957318f1d66489c53794afae6df7}
       \strng{authorfullhash}{a058957318f1d66489c53794afae6df7}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Convolutional Neural Networks (CNNs): An Illustrated Explanation}
@@ -468,8 +658,8 @@
       \strng{authorbibnamehash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
       \strng{authornamehash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
       \strng{authorfullhash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Pooling Layer: Introduction}
@@ -483,6 +673,70 @@
       \endverb
       \verb{url}
       \verb https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/pooling_layer.html
+      \endverb
+    \endentry
+    \entry{TarangShah.20180127}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d9f2398681aa389f6d337da08a6beef4}{%
+           family={{Tarang Shah}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Tarang Shahs Blog}%
+      }
+      \strng{namehash}{d9f2398681aa389f6d337da08a6beef4}
+      \strng{fullhash}{d9f2398681aa389f6d337da08a6beef4}
+      \strng{bibnamehash}{d9f2398681aa389f6d337da08a6beef4}
+      \strng{authorbibnamehash}{d9f2398681aa389f6d337da08a6beef4}
+      \strng{authornamehash}{d9f2398681aa389f6d337da08a6beef4}
+      \strng{authorfullhash}{d9f2398681aa389f6d337da08a6beef4}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Measuring Object Detection models - mAP - What is Mean Average Precision?}
+      \field{urlday}{15}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://tarangshah.com/blog/2018-01-27/what-is-map-understanding-the-statistic-of-choice-for-comparing-object-detection-models/
+      \endverb
+      \verb{url}
+      \verb https://tarangshah.com/blog/2018-01-27/what-is-map-understanding-the-statistic-of-choice-for-comparing-object-detection-models/
+      \endverb
+    \endentry
+    \entry{AdrianRosebrock.20161107}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c52e90b74259d63a2c1722d285674df3}{%
+           family={{Adrian Rosebrock}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {pyimagesearch}%
+      }
+      \strng{namehash}{c52e90b74259d63a2c1722d285674df3}
+      \strng{fullhash}{c52e90b74259d63a2c1722d285674df3}
+      \strng{bibnamehash}{c52e90b74259d63a2c1722d285674df3}
+      \strng{authorbibnamehash}{c52e90b74259d63a2c1722d285674df3}
+      \strng{authornamehash}{c52e90b74259d63a2c1722d285674df3}
+      \strng{authorfullhash}{c52e90b74259d63a2c1722d285674df3}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Intersection over Union (IoU) for object detection}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2019}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/
+      \endverb
+      \verb{url}
+      \verb https://www.pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/
       \endverb
     \endentry
     \entry{RohithGandhi.20180709}{misc}{}
@@ -500,8 +754,8 @@
       \strng{authorbibnamehash}{0798cf54a098516fae0010302bbd0983}
       \strng{authornamehash}{0798cf54a098516fae0010302bbd0983}
       \strng{authorfullhash}{0798cf54a098516fae0010302bbd0983}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{R-CNN, Fast R-CNN, Faster R-CNN, YOLO --- Object Detection Algorithms}
@@ -532,8 +786,8 @@
       \strng{authorbibnamehash}{0d787314a54a9511545866f24d382afd}
       \strng{authornamehash}{0d787314a54a9511545866f24d382afd}
       \strng{authorfullhash}{0d787314a54a9511545866f24d382afd}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{From R-CNN to Mask R-CNN}
@@ -564,51 +818,21 @@
       \strng{authorbibnamehash}{8ccecd7653e8600614fb6f9a33b54fb6}
       \strng{authornamehash}{8ccecd7653e8600614fb6f9a33b54fb6}
       \strng{authorfullhash}{8ccecd7653e8600614fb6f9a33b54fb6}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Brief History of CNNs in Image Segmentation: From R-CNN to Mask R-CNN}
       \field{urlday}{8}
       \field{urlmonth}{3}
       \field{urlyear}{2020}
-      \field{year}{2017-04-22}
+      \field{year}{2017}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://blog.athelas.com/a-brief-history-of-cnns-in-image-segmentation-from-r-cnn-to-mask-r-cnn-34ea83205de4
       \endverb
       \verb{url}
       \verb https://blog.athelas.com/a-brief-history-of-cnns-in-image-segmentation-from-r-cnn-to-mask-r-cnn-34ea83205de4
-      \endverb
-    \endentry
-    \entry{ssd.20161229}{thesis}{}
-      \name{author}{1}{}{%
-        {{hash=8a42699672c27d229b4f4ca9b960093a}{%
-           family={{Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed, Chang-Yang Fu, Alexander C. Berg}},
-           familyi={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{8a42699672c27d229b4f4ca9b960093a}
-      \strng{fullhash}{8a42699672c27d229b4f4ca9b960093a}
-      \strng{bibnamehash}{8a42699672c27d229b4f4ca9b960093a}
-      \strng{authorbibnamehash}{8a42699672c27d229b4f4ca9b960093a}
-      \strng{authornamehash}{8a42699672c27d229b4f4ca9b960093a}
-      \strng{authorfullhash}{8a42699672c27d229b4f4ca9b960093a}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{SSD:~Single Shot MultiBox Detector}
-      \field{type}{phdthesis}
-      \field{urlday}{2}
-      \field{urlmonth}{11}
-      \field{urlyear}{2019}
-      \field{year}{2016-12-29}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://arxiv.org/pdf/1512.02325.pdf
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/pdf/1512.02325.pdf
       \endverb
     \endentry
     \entry{AndrewNg.2019}{misc}{}
@@ -626,8 +850,8 @@
       \strng{authorbibnamehash}{8556a28e66cf2bee56cc69085e7141c3}
       \strng{authornamehash}{8556a28e66cf2bee56cc69085e7141c3}
       \strng{authorfullhash}{8556a28e66cf2bee56cc69085e7141c3}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Anchor Boxes}
@@ -659,8 +883,8 @@
       \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{vgg16}
@@ -674,38 +898,6 @@
       \endverb
       \verb{url}
       \verb https://de.mathworks.com/help/deeplearning/ref/vgg16.html;jsessionid=bf0fea41a0c7700184672711881f
-      \endverb
-    \endentry
-    \entry{AdrianRosebrock.20161107}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=c52e90b74259d63a2c1722d285674df3}{%
-           family={{Adrian Rosebrock}},
-           familyi={A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {pyimagesearch}%
-      }
-      \strng{namehash}{c52e90b74259d63a2c1722d285674df3}
-      \strng{fullhash}{c52e90b74259d63a2c1722d285674df3}
-      \strng{bibnamehash}{c52e90b74259d63a2c1722d285674df3}
-      \strng{authorbibnamehash}{c52e90b74259d63a2c1722d285674df3}
-      \strng{authornamehash}{c52e90b74259d63a2c1722d285674df3}
-      \strng{authorfullhash}{c52e90b74259d63a2c1722d285674df3}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Intersection over Union (IoU) for object detection}
-      \field{urlday}{2}
-      \field{urlmonth}{11}
-      \field{urlyear}{2019}
-      \field{year}{2016}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/
-      \endverb
-      \verb{url}
-      \verb https://www.pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/
       \endverb
     \endentry
     \entry{JosephRedmon.2016}{thesis}{}
@@ -770,134 +962,6 @@
       \endverb
       \verb{url}
       \verb https://pjreddie.com/media/files/papers/YOLOv3.pdf
-      \endverb
-    \endentry
-    \entry{RenuKhandelwal.2019}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=7dde6ac3b1ee1a22278d5590ed6bd748}{%
-           family={{Renu Khandelwal}},
-           familyi={R\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Towards Data Science}%
-      }
-      \strng{namehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
-      \strng{fullhash}{7dde6ac3b1ee1a22278d5590ed6bd748}
-      \strng{bibnamehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
-      \strng{authorbibnamehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
-      \strng{authornamehash}{7dde6ac3b1ee1a22278d5590ed6bd748}
-      \strng{authorfullhash}{7dde6ac3b1ee1a22278d5590ed6bd748}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{COCO and Pascal VOC data format for Object detection}
-      \field{urlday}{2}
-      \field{urlmonth}{2}
-      \field{urlyear}{2020}
-      \field{year}{2019}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://towardsdatascience.com/coco-data-format-for-object-detection-a4c5eaf518c5
-      \endverb
-      \verb{url}
-      \verb https://towardsdatascience.com/coco-data-format-for-object-detection-a4c5eaf518c5
-      \endverb
-    \endentry
-    \entry{ArunPonnusamy.20191006}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=e02e4ab9426c449a54c6faa243eadf3b}{%
-           family={{Arun Ponnusamy}},
-           familyi={A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Arun Ponnusamy Homepage}%
-      }
-      \strng{namehash}{e02e4ab9426c449a54c6faa243eadf3b}
-      \strng{fullhash}{e02e4ab9426c449a54c6faa243eadf3b}
-      \strng{bibnamehash}{e02e4ab9426c449a54c6faa243eadf3b}
-      \strng{authorbibnamehash}{e02e4ab9426c449a54c6faa243eadf3b}
-      \strng{authornamehash}{e02e4ab9426c449a54c6faa243eadf3b}
-      \strng{authorfullhash}{e02e4ab9426c449a54c6faa243eadf3b}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Preparing Custom Dataset for Training YOLO Object Detector}
-      \field{urlday}{2}
-      \field{urlmonth}{2}
-      \field{urlyear}{2020}
-      \field{year}{2019}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.arunponnusamy.com/preparing-custom-dataset-for-training-yolo-object-detector.html
-      \endverb
-      \verb{url}
-      \verb https://www.arunponnusamy.com/preparing-custom-dataset-for-training-yolo-object-detector.html
-      \endverb
-    \endentry
-    \entry{MarkEveringham.20070607}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=d3cad0dfea5ac04733fc99a53227ac5d}{%
-           family={{Mark Everingham}},
-           familyi={M\bibinitperiod},
-           given={John\bibnamedelima Winn},
-           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-      }
-      \strng{namehash}{d3cad0dfea5ac04733fc99a53227ac5d}
-      \strng{fullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
-      \strng{bibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
-      \strng{authorbibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
-      \strng{authornamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
-      \strng{authorfullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
-      \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{The PASCAL Visual Object Classes Challenge 2007 (VOC2007) Development Kit}
-      \field{urlday}{8}
-      \field{urlmonth}{2}
-      \field{urlyear}{2020}
-      \field{year}{2007}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2007/htmldoc/voc.html#SECTION00030000000000000000
-      \endverb
-      \verb{url}
-      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2007/htmldoc/voc.html#SECTION00030000000000000000
-      \endverb
-    \endentry
-    \entry{MarkEveringham.20120521}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=d3cad0dfea5ac04733fc99a53227ac5d}{%
-           family={{Mark Everingham}},
-           familyi={M\bibinitperiod},
-           given={John\bibnamedelima Winn},
-           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-      }
-      \strng{namehash}{d3cad0dfea5ac04733fc99a53227ac5d}
-      \strng{fullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
-      \strng{bibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
-      \strng{authorbibnamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
-      \strng{authornamehash}{d3cad0dfea5ac04733fc99a53227ac5d}
-      \strng{authorfullhash}{d3cad0dfea5ac04733fc99a53227ac5d}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{The PASCAL Visual Object Classes Challenge 2012 (VOC2012) Development Kit}
-      \field{urlday}{8}
-      \field{urlmonth}{2}
-      \field{urlyear}{2020}
-      \field{year}{2012}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/devkit_doc.html#SECTION00030000000000000000
-      \endverb
-      \verb{url}
-      \verb http://host.robots.ox.ac.uk/pascal/VOC/voc2012/htmldoc/devkit_doc.html#SECTION00030000000000000000
       \endverb
     \endentry
     \entry{NVIDIA.20200209}{misc}{}
@@ -1156,70 +1220,6 @@
       \endverb
       \verb{url}
       \verb https://docs.floydhub.com/
-      \endverb
-    \endentry
-    \entry{JonathanHui.20180307}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=2d9e4466d619dff7f2ba6315a0fb3a81}{%
-           family={{Jonathan Hui}},
-           familyi={J\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Medium}%
-      }
-      \strng{namehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
-      \strng{fullhash}{2d9e4466d619dff7f2ba6315a0fb3a81}
-      \strng{bibnamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
-      \strng{authorbibnamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
-      \strng{authornamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
-      \strng{authorfullhash}{2d9e4466d619dff7f2ba6315a0fb3a81}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{mAP (mean Average Precision) for Object Detection}
-      \field{urlday}{15}
-      \field{urlmonth}{2}
-      \field{urlyear}{2020}
-      \field{year}{2018}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
-      \endverb
-      \verb{url}
-      \verb https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
-      \endverb
-    \endentry
-    \entry{TarangShah.20180127}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=d9f2398681aa389f6d337da08a6beef4}{%
-           family={{Tarang Shah}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Tarang Shahs Blog}%
-      }
-      \strng{namehash}{d9f2398681aa389f6d337da08a6beef4}
-      \strng{fullhash}{d9f2398681aa389f6d337da08a6beef4}
-      \strng{bibnamehash}{d9f2398681aa389f6d337da08a6beef4}
-      \strng{authorbibnamehash}{d9f2398681aa389f6d337da08a6beef4}
-      \strng{authornamehash}{d9f2398681aa389f6d337da08a6beef4}
-      \strng{authorfullhash}{d9f2398681aa389f6d337da08a6beef4}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Measuring Object Detection models - mAP - What is Mean Average Precision?}
-      \field{urlday}{15}
-      \field{urlmonth}{2}
-      \field{urlyear}{2020}
-      \field{year}{2018}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://tarangshah.com/blog/2018-01-27/what-is-map-understanding-the-statistic-of-choice-for-comparing-object-detection-models/
-      \endverb
-      \verb{url}
-      \verb https://tarangshah.com/blog/2018-01-27/what-is-map-understanding-the-statistic-of-choice-for-comparing-object-detection-models/
       \endverb
     \endentry
   \enddatalist

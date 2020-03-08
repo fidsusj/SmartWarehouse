@@ -13,11 +13,11 @@
 \contentsline {section}{\numberline {2.1}Deep Learning zur Bildverarbeitung}{5}{section.2.1}% 
 \contentsline {section}{\numberline {2.2}Neuronale Netze}{7}{section.2.2}% 
 \contentsline {section}{\numberline {2.3}Hyperparameter}{12}{section.2.3}% 
-\contentsline {section}{\numberline {2.4}Objektdetektoren}{17}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}Datensatzlehre}{30}{section.2.5}% 
-\contentsline {section}{\numberline {2.6}Cloud Infrastruktur}{34}{section.2.6}% 
-\contentsline {chapter}{\numberline {3}Konzeption}{38}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Bewertungskriterien}{38}{section.3.1}% 
+\contentsline {section}{\numberline {2.4}Datensatzlehre}{17}{section.2.4}% 
+\contentsline {section}{\numberline {2.5}Objektdetektoren}{21}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Cloud Infrastruktur}{35}{section.2.6}% 
+\contentsline {chapter}{\numberline {3}Konzeption}{39}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Bewertungskriterien}{39}{section.3.1}% 
 \contentsline {section}{\numberline {3.2}Vergleich der Objektdetektoren}{40}{section.3.2}% 
 \contentsline {section}{\numberline {3.3}Echtzeitumgebung}{41}{section.3.3}% 
 \contentsline {chapter}{\numberline {4}Realisierung}{43}{chapter.4}% 
@@ -27,6 +27,6 @@
 \contentsline {chapter}{\numberline {5}Ergebnisse}{45}{chapter.5}% 
 \contentsline {chapter}{\numberline {6}Bewertung}{46}{chapter.6}% 
 \contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{47}{chapter.7}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{XI}{chapter*.28}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{XI}{chapter*.29}% 
 \contentsline {chapter}{\numberline {A}Anhang}{XV}{appendix.A}% 
 \contentsfinish 

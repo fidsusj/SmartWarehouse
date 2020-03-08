@@ -1,6 +1,6 @@
 \section{Echtzeitumgebung}
 
-Das \textit{Smart Warehouse} lehnt sich an ein großes Warenhaus an, bei dem Produkte nicht in Kartons verpackt sondern als ganzes auf Regalen angeordnet sind, ähnlich wie bei \textit{Baumarkt} oder \textit{Selgros}. Im Rahmen des Projektes wurde sich exemplarisch auf Flaschen konzentriert, dabei wurden neun Kategorien bestimmt (siehe Abbildung \ref{categories}). 
+Das \textit{Smart Warehouse} lehnt sich an ein großes Warenhaus an, bei dem Produkte nicht in Kartons verpackt, sondern als ganzes auf Regalen angeordnet sind, ähnlich wie bei \textit{Baumarkt} oder \textit{Selgros}. Im Rahmen des Projektes wurde sich exemplarisch auf Flaschen konzentriert, dabei wurden neun Kategorien bestimmt (siehe Abbildung \ref{categories}). 
 
 \begin{figure}[htb]
 	\subfigure[Saskia Wasser Klein]{\includegraphics[width=0.32\textwidth]{Bilder/wasser_klein.jpg}}
@@ -16,7 +16,7 @@ Das \textit{Smart Warehouse} lehnt sich an ein großes Warenhaus an, bei dem Pro
 	\label{categories}
 \end{figure}
 
-Der Datensatz besteht aus 1000 annotierten Bildern. Die Bilder besitzen eine Auflösung von 2112x4608 Pixels mit einer Farbtiefe von 24 Bit. Alle neuen Kategorien sind nahezu gleichverteilt im Datensatz vorhanden. 
+Der Datensatz besteht aus 1000 annotierten Bildern. Die Bilder besitzen eine Auflösung von 2112x4608 Pixels mit einer Farbtiefe von 24 Bit. Alle neuen Kategorien sind nahezu gleich häufig im Datensatz vorhanden. 
 
 Im initialen Datensatz sind auf 75\% der Bilder die Objekte der jeweiligen Kategorien einzeln und klar erkennbar abgebildet. Hierdurch wird erhofft, dass Modell zunächst auf die Muster der jeweiligen Objekte zu trainieren. In 12,5\% der Bilder sind die Objekte der jeweiligen Kategorien ebenso einzeln, allerdings mit unterschiedlichen Hintergründen, Beleuchtungsverhältnissen, Blickwinkeln und Entfernungen abgebildet. Je nach Umgebung wurden Bilder dieses Anteils als schwer erkennbar markiert. Um das Warenhaus zu simulieren, sind in den letzten 12,5\% der Bilder die Objekte auf Regalen angeordnet, jeweils hintereinander oder in Getränkekästen (siehe Abbildung \ref{regal}). 
 

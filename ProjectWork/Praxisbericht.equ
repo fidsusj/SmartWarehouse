@@ -2,7 +2,7 @@
 \contentsline {equations}{\numberline {2.2}Die Softmax-Funktion}{8}{equation.2.2.2}% 
 \contentsline {equations}{\numberline {2.3}Die RMSE-Funktion}{10}{equation.2.2.3}% 
 \contentsline {equations}{\numberline {2.4}Neuberechnung der Gewichtungsmatrix durch partielle Differentiation}{11}{equation.2.2.4}% 
-\contentsline {equations}{\numberline {2.5}Superpositionsprinzip anhand der Varianz}{12}{equation.2.3.5}% 
+\contentsline {equations}{\numberline {2.5}Superpositionsprinzip anhand der Varianz}{13}{equation.2.3.5}% 
 \contentsline {equations}{\numberline {2.6}Standardverteilung nach Xavier Initialisierung}{13}{equation.2.3.6}% 
 \contentsline {equations}{\numberline {2.7}Momentum Optimierung}{14}{equation.2.3.7}% 
-\contentsline {equations}{\numberline {2.8}Die Smooth L1 Funktion}{23}{equation.2.4.8}% 
+\contentsline {equations}{\numberline {2.8}Die Smooth L1 Funktion}{25}{equation.2.4.8}% 

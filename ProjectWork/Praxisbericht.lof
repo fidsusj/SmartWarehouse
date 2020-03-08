@@ -15,29 +15,31 @@
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Zero-Padding}}{19}{figure.2.8}% 
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Feature Maps}}{20}{figure.2.9}% 
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Pooling Layer}}{21}{figure.2.10}% 
-\contentsline {figure}{\numberline {2.11}{\ignorespaces SSD Grundprinzip}}{22}{figure.2.11}% 
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Bounding Boxes}}{22}{figure.2.12}% 
-\contentsline {figure}{\numberline {2.13}{\ignorespaces SSD Architektur}}{23}{figure.2.13}% 
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Intersection over Union}}{24}{figure.2.14}% 
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Vergleich SSD}}{25}{figure.2.15}% 
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Vereinfachte Darstellung der Objekterkennung mit dem YOLO Algorithmus \cite {JosephRedmon.2016}\relax }}{26}{figure.2.16}% 
-\contentsline {figure}{\numberline {2.17}{\ignorespaces \textit {YOLO} Architektur \cite {JosephRedmon.2016}\relax }}{27}{figure.2.17}% 
-\contentsline {figure}{\numberline {2.18}{\ignorespaces SSD Grundprinzip}}{31}{figure.2.18}% 
-\contentsline {figure}{\numberline {2.19}{\ignorespaces Vergleich V100 - TPU Pod}}{33}{figure.2.19}% 
+\contentsline {figure}{\numberline {2.11}{\ignorespaces R-CNN}}{22}{figure.2.11}% 
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Faster R-CNN}}{23}{figure.2.12}% 
+\contentsline {figure}{\numberline {2.13}{\ignorespaces SSD Grundprinzip}}{24}{figure.2.13}% 
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Bounding Boxes}}{25}{figure.2.14}% 
+\contentsline {figure}{\numberline {2.15}{\ignorespaces SSD Architektur}}{26}{figure.2.15}% 
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Intersection over Union}}{27}{figure.2.16}% 
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Vergleich SSD}}{27}{figure.2.17}% 
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Vereinfachte Darstellung der Objekterkennung mit dem YOLO Algorithmus \cite {JosephRedmon.2016}\relax }}{29}{figure.2.18}% 
+\contentsline {figure}{\numberline {2.19}{\ignorespaces \textit {YOLO} Architektur \cite {JosephRedmon.2016}\relax }}{30}{figure.2.19}% 
+\contentsline {figure}{\numberline {2.20}{\ignorespaces SSD Grundprinzip}}{33}{figure.2.20}% 
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Vergleich V100 - TPU Pod}}{36}{figure.2.21}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Precision und Recall Metrik}}{36}{figure.3.1}% 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Berechnung mAP}}{37}{figure.3.2}% 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Die neun Kategorien\relax }}{39}{figure.3.3}% 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Saskia Wasser Klein}}}{39}{figure.3.3}% 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Saskia Wasser Gro\IeC {\ss }}}}{39}{figure.3.3}% 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Pepsi Cola Klein}}}{39}{figure.3.3}% 
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Pepsi Cola Gro\IeC {\ss }}}}{39}{figure.3.3}% 
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {ISO}}}{39}{figure.3.3}% 
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {ACE}}}{39}{figure.3.3}% 
-\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Stenger Johannisbeerschorle}}}{39}{figure.3.3}% 
-\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {Stenger Apfelsaftschorle}}}{39}{figure.3.3}% 
-\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {Vitamalz Malzbier}}}{39}{figure.3.3}% 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Smart Warehouse Regal}}{40}{figure.3.4}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Precision und Recall Metrik}}{38}{figure.3.1}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Berechnung mAP}}{39}{figure.3.2}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Die neun Kategorien\relax }}{41}{figure.3.3}% 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Saskia Wasser Klein}}}{41}{figure.3.3}% 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Saskia Wasser Gro\IeC {\ss }}}}{41}{figure.3.3}% 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Pepsi Cola Klein}}}{41}{figure.3.3}% 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Pepsi Cola Gro\IeC {\ss }}}}{41}{figure.3.3}% 
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {ISO}}}{41}{figure.3.3}% 
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {ACE}}}{41}{figure.3.3}% 
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Stenger Johannisbeerschorle}}}{41}{figure.3.3}% 
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {Stenger Apfelsaftschorle}}}{41}{figure.3.3}% 
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {Vitamalz Malzbier}}}{41}{figure.3.3}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Smart Warehouse Regal}}{42}{figure.3.4}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

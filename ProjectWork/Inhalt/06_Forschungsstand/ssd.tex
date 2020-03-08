@@ -5,12 +5,12 @@ Zwar liefern die oben genannten Objektdetektoren akkurate Ergebnisse, allerdings
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/ssd_framework.png} 
-		\caption[SSD Grundprinzip]{SSD Grundprinzip \cite{ssd.20161229}}
+		\caption[SSD Bounding Box Proposals]{SSD Bounding Box Proposals \cite{ssd.20161229}}
 		\label{framework}
 	\end{center}
 \end{figure}
 
-Die Architektur des \textit{SSD} zielt zunächst darauf ab, ein Bild in mehrere unterschiedliche Gitterstrukturen zu unterteilen, die sich nach ihrer Skalierung unterscheiden. Dadurch ist es möglich Objekte unterschiedlicher Größe zu erkennen. Jede Lokation im Gitter besitzt eine gleiche Anzahl an festen, vordefinierten Bounding Boxen, die unterschiedliche Seitenverhältnisse aufweisen (siehe Abbildung \ref{framework}). So wird sichergestellt, dass sowohl horizontal als auch vertikal ausgeprägte Objekte in der selben Lokation gleichzeitig erkannt werden können (siehe Abbildung \ref{boundingboxes}) \cite{ssd.20161229}.
+Die Architektur des \textit{SSD} zielt zunächst darauf ab, ein Bild in mehrere unterschiedliche Gitterstrukturen zu unterteilen, die sich nach ihrer Skalierung unterscheiden. Dadurch ist es möglich, Objekte unterschiedlicher Größe zu erkennen. Jede Lokation im Gitter besitzt eine gleiche Anzahl an festen, vordefinierten Bounding Boxen, die unterschiedliche Seitenverhältnisse aufweisen (siehe Abbildung \ref{framework}). So wird sichergestellt, dass sowohl horizontal als auch vertikal ausgeprägte Objekte in der selben Lokation gleichzeitig erkannt werden können (siehe Abbildung \ref{boundingboxes}) \cite{ssd.20161229}.
 
 \begin{figure}[ht]
 	\begin{center}

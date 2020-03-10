@@ -16,16 +16,14 @@ def connect():
 def fly():
     tello = Tello()
     res = tello.send_command('takeoff')
-    res = tello.send_command('right 120')
-    tello.send_command('up 80')
-    tello.send_command('forward 20')
-    res = tello.send_command('right 40')
+    # tello.send_command('up 20')
+    # tello.send_command('forward 20')
+    # res = tello.send_command('right 40')
     tello.save_frame()
-    tello.send_command('left 150')
+    # tello.send_command('left 150')
     tello.send_command('land')
     ans = tello.get_saved_boxes()
     return ans
-
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
@@ -34,7 +32,6 @@ def home():
     time.sleep(5)
     src = 'C:\\Users\\I518134\\work\\drone\\Tello-Python3\\Simple-tello-control-GUI\\static\\video-0.jpg'
     return render_template('res_html.html', count=boxes, src=src)
-
 
 if __name__ == "__main__":
     app.run(debug=True)

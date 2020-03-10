@@ -1,6 +1,8 @@
 import socket
 import threading
 import time
+import numpy
+from SSD import detection, utils
 from stats import Stats
 import cv2
 from PIL import Image
@@ -29,12 +31,12 @@ class Tello:
         self.tello_port = 8889
         self.tello_adderss = (self.tello_ip, self.tello_port)
         self.log = []
-        config_path  = 'config.json'
-        with open(config_path) as config_buffer:    
-            self.config = json.load(config_buffer)
-        clear_session()
-        self.infer_model = load_model(self.config['train']['saved_weights_name'],compile=False)
-        self.infer_model._make_predict_function()
+        # config_path  = 'config.json'
+        # with open(config_path) as config_buffer:
+        #    self.config = json.load(config_buffer)
+        # clear_session()
+        # self.infer_model = load_model(self.config['train']['saved_weights_name'],compile=False)
+        # self.infer_model._make_predict_function()
         self.net_h, self.net_w = 416, 416 # a multiple of 32, the smaller the faster
         self.obj_thresh, self.nms_thresh = 0.5, 0.45
         self.MAX_TIME_OUT = 10.0
@@ -56,11 +58,10 @@ class Tello:
         #self.bytIO = BytesIO()
         self.cap = cv2.VideoCapture('udp://127.0.0.1:11111')
         
-        # thread for receiving video
+        # thread for infere video
         self.receive_video_thread = threading.Thread(target=self._receive_video_thread)
         self.receive_video_thread.daemon = True
         self.receive_video_thread.start()
-        
         
     def get_boxes(self):
         batch_size  = 1
@@ -193,17 +194,36 @@ class Tello:
         Runs as a thread, sets self.frame to the most recent frame Tello captured.
 
         """
-        
-        while(self.cap.isOpened()):
-          # Capture frame-by-frame
-          ret, frame = self.cap.read()
-          self.frame = frame
-          
-          if ret == True:
-              cv2.imshow('original', frame)
-              if cv2.waitKey(1) == 27:
-                cv2.destroyAllWindows()
-                break  # esc to quit
+        start = time.time()
+        framesCaptured = 0
+        maxFPS = 0
+
+        if self.cap.isOpened():
+            rval, frame = self.cap.read()
+
+            while rval:
+                # Interfere with model
+                cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                pil_image = Image.fromarray(cv2_image)
+                pil_image = pil_image.convert('RGB')
+                pil_image = detection.detect(pil_image, min_score=0.2, max_overlap=0.5, top_k=200)
+                cv2_image = numpy.array(pil_image)
+                cv2_image = cv2_image[:, :, ::-1].copy()
+                cv2.imshow("preview", cv2_image)
+
+                # update frame
+                rval, frame = self.cap.read()
+                framesCaptured += 1
+                if framesCaptured == 120:
+                    fps = (framesCaptured / (time.time() - start))
+                    if fps > maxFPS:
+                        maxFPS = fps
+                        print('New Max FPS: %.3f' % maxFPS)
+                    framesCaptured = 0
+                    start = time.time()
+                key = cv2.waitKey(20)
+                if key == 27:  # exit on ESC
+                    break
               
         
                 

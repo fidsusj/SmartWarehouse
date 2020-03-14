@@ -1,8 +1,6 @@
-\chapter{Konzeption}
+\section{Einführen von Bewertungskriterien}
 
-Um den \textit{SSD} und den \textit{YOLO} Objektdetektor miteinander vergleichbar zu machen und um deren Potential zum industriellen Einsatz zu bewerten, müssen konkrete Bewertungskriterien eingeführt werden. Mit Hilfe dieser Metriken werden die beiden Objektdetektoren anhand eines Benchmark Datensatzes initial verglichen, bevor der eigentliche Datensatz eingeführt wird. Dieser spiegelt Verhältnisse der Echtzeitumgebung wider. 
-
-\section{Bewertungskriterien}
+Um Objektdetektoren miteinander vergleichbar zu machen und um deren Potential zum industriellen Einsatz zu bewerten, müssen konkrete Bewertungskriterien eingeführt werden.
 
 \subsection*{Präzision}
 
@@ -10,12 +8,12 @@ Zur Messung der Präzision wird die Metrik \textit{mAP} verwendet. Dies garantie
 
 \subsection*{Reaktionsvermögen}
 
-Um eine Verarbeitung in Echtzeit zu ermöglichen muss gewährleistet sein, dass die Interferenz mit dem Modell mit der eingehenden Bildrate einhergeht. Als Maßstab dafür dient die \textit{Frames Per Second} (FPS) Zahl. Echtzeitfähigkeit im Projekt ist so definiert, dass die Bildrate der erzeugten Bilder mit den eingezeichneten Bounding Boxen nach der Interferenz mindestens so hoch sein muss wie die des eingehenden Bildstroms. 
+Um eine Verarbeitung in Echtzeit zu ermöglichen muss gewährleistet sein, dass die Inferenzgeschwindigkeit mit dem Modell mit der eingehenden Bildrate einhergeht. Als Maßstab dafür dient die \textit{Frames Per Second} (FPS) Zahl. Echtzeitfähigkeit in der Machbarkeitsstudie ist so definiert, dass die Inferenz mit dem Modell mindestens so schnell ablaufen muss, dass Änderungen in der Umgebung rechtzeitig von Objektdetektor noch wahrgenommen werden können. 
 
 \subsection*{Trainingsverhalten}
 
 Unter dem Punkt Trainingsverhalten wird zusammengefasst, wie schnell sich die einzelnen Modelle mit den unterschiedlichen Objektdetektoren trainieren lassen. Hierbei wird besonderer Fokus darauf gelegt, wie viele Trainingsepochen notwendig sind, bis die Fehlerfunktion des neuronalen Netzes konvergiert. Es soll aber auch betrachtet werden, wie mit doppelt erkannten Objekten während des Trainingsprozesses umgegangen wird. 
 
-\subsection*{Interaktionsverhalten}
+\subsection*{Inferenzverhalten}
 
-Im Zuge der Evaluation des Interaktionsverhalten werden drei Kriterien betrachtet. Darunter fällt, wie die Objektdetektoren bei besonderen Beleuchtungsverhältnissen abschneiden. Dies beinhaltet sowohl unterbeleuchtete als auch überbeleuchtete Gegenden. Daneben sollen ebenso extreme Blicklagen ein Faktor sein, um zu evaluieren, wie gut sich die trainierten Objektdetektoren für den industriellen Einsatz eignen. Dies umfasst sowohl unter welcher Entfernung die Objekte betrachtet werden, als auch unter welchen Winkel. Zuletzt muss bewertet werden, wie gut Objekte erkannt werden können, die nicht vollständig zu erkennen sind. Dies ist der Fall, wenn Objekte hintereinander angeordnet sind oder durch andere Beilagen verdeckt sind. 
+Im Zuge der Evaluation des Inferenzverhaltens werden drei Kriterien betrachtet. Darunter fällt, wie die Objektdetektoren bei besonderen Beleuchtungsverhältnissen abschneiden. Dies beinhaltet sowohl unterbeleuchtete als auch überbeleuchtete Gegenden. Daneben sollen ebenso extreme Blicklagen ein Faktor sein, um zu evaluieren, wie gut sich die trainierten Objektdetektoren für den industriellen Einsatz eignen. Dies umfasst sowohl unter welcher Entfernung die Objekte betrachtet werden, als auch unter welchen Winkel. Zuletzt muss bewertet werden, wie gut Objekte erkannt werden können, die nicht vollständig zu erkennen sind. Dies ist der Fall, wenn Objekte hintereinander angeordnet sind oder durch andere Beilagen verdeckt sind. 

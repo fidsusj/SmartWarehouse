@@ -15,15 +15,18 @@
 \BOOKMARK [1][-]{section.2.5}{Objektdetektoren}{chapter.2}% 15
 \BOOKMARK [1][-]{section.2.6}{Cloud Infrastruktur}{chapter.2}% 16
 \BOOKMARK [0][-]{chapter.3}{Konzeption}{}% 17
-\BOOKMARK [1][-]{section.3.1}{Bewertungskriterien}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.2}{Vergleich der Objektdetektoren}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.3}{Echtzeitumgebung}{chapter.3}% 20
-\BOOKMARK [0][-]{chapter.4}{Realisierung}{}% 21
-\BOOKMARK [1][-]{section.4.1}{Trainieren der Objektdetektoren}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.2}{Drohnen Anbindung}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.3}{Dashboard Entwicklung}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{Ergebnisse}{}% 25
-\BOOKMARK [0][-]{chapter.6}{Bewertung}{}% 26
-\BOOKMARK [0][-]{chapter.7}{Zusammenfassung und Ausblick}{}% 27
-\BOOKMARK [0][-]{chapter*.29}{Literaturverzeichnis}{}% 28
-\BOOKMARK [0][-]{appendix.A}{Anhang}{}% 29
+\BOOKMARK [1][-]{section.3.1}{Erstellen eines Traininsdatensatzes}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.2}{Einf\374hren von Bewertungskriterien}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{Auswahl der Objektdetektoren}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.4}{Auswahl der Trainingsinfrastruktur}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.5}{Auswahl einer Drohne}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.6}{Spezifikation der Inventursoftware}{chapter.3}% 23
+\BOOKMARK [0][-]{chapter.4}{Realisierung}{}% 24
+\BOOKMARK [1][-]{section.4.1}{Trainieren der Objektdetektoren}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.2}{Drohnen Anbindung}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.3}{Dashboard Entwicklung}{chapter.4}% 27
+\BOOKMARK [0][-]{chapter.5}{Ergebnisse}{}% 28
+\BOOKMARK [0][-]{chapter.6}{Bewertung}{}% 29
+\BOOKMARK [0][-]{chapter.7}{Zusammenfassung und Ausblick}{}% 30
+\BOOKMARK [0][-]{chapter*.33}{Literaturverzeichnis}{}% 31
+\BOOKMARK [0][-]{appendix.A}{Anhang}{}% 32

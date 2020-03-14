@@ -43,4 +43,4 @@
 
 - Kein train your own model
 
-**Anmerkung**: Google Colab bietet eine kostenlose Tesla K80 GPU oder eine FPU zum trainieren, für unlimitierte Zeit!
+**Anmerkung**: Google Colab bietet eine kostenlose Tesla K80 GPU oder eine TPU zum trainieren!

@@ -6,37 +6,35 @@ Abhilfe bieten Software-as-a-Service (SaaS) bzw. Platform-as-a-Service (PaaS) An
 
 \subsection*{Trainingshardware}
 
-Gerade GPUs bieten sich aufgrund ihres hohen Parallelisierungsvermögens gegenüber herkömmlichen CPUs an. Insbesondere \textit{NVIDIA} nimmt hierbei eine Vorreiterrolle in der Produktion von Server-GPUs ein. Die \textit{Compute Unified Device Architecture} (CUDA) von \textit{NVIDIA} ermöglicht als Programmiermodel und parallele Computing Plattform das Auslagern von Rechenprozessen auf GPUs. Das \textit{CUDA} Toolkit beinhaltet GPU beschleunigte Bibliotheken, einen Compiler, Entwicklungswerkzeuge sowie die eigentliche \textit{CUDA} Laufzeit und wird von vielen \textit{Deep Learning} Bibliotheken genutzt, wie z.B. \textit{PyTorch} \cite{NVIDIA.20200209} \cite{PyTorch.20200209}. 
+Gerade GPUs bieten sich aufgrund ihres hohen Parallelisierungsvermögens gegenüber herkömmlichen CPUs an. Insbesondere \textit{NVIDIA} nimmt hierbei eine Vorreiterrolle in der Produktion von Server-GPUs ein. Die \textit{Compute Unified Device Architecture} (CUDA) von \textit{NVIDIA} ermöglicht als Programmiermodel und parallele Computing Plattform das Auslagern von Rechenprozessen auf GPUs. Das \textit{CUDA} Toolkit beinhaltet GPU beschleunigte Bibliotheken, einen Compiler, Entwicklungswerkzeuge sowie die eigentliche \textit{CUDA} Laufzeit und wird von vielen \textit{Deep Learning} Bibliotheken genutzt, wie z.B. \textit{PyTorch} \cite{NVIDIA.20200209} \cite{PyTorch.20200209}. Hauptvergleichskriterien zwischen GPUs sind hierbei der Grad der möglichen Parallelisierung und die reine Rechenleistung im Verhältnis zum Stromverbrauch.
 
-Werden gängige Tesla GPUs, die Kunden als PaaS-Angebot zur Verfügung gestellt werden, nach ihrer Rechenleistung verglichen, so ergibt sich Tabelle \ref{gpus} \cite{TechPowerUp.20200209}.
-
-\begin{center}
-	\begin{tabular}[h]{l|c|c|c|c|c|c}
-		& K80 & P100 & T4 & V100 & GTX 1080 & TITAN RTX \\
-		\hline
-		CUDA Cores & 2496 & 3584 & 2560 & 5120 & 2560 & 4608 \\
-		Tensor Cores & / & / & 320 & 640 & / & 576 \\
-		TeraFLOPS (Single Precision) & 4,113 & 9,526 & 8,141 & 14,13 & 8,873 & 16,31 \\
-		Memory Bandwidth (in GB/sec) & 240,6 & 732,2 & 320 & 897 & 320,3 & 672 \\
-		Suggested Power Supply Unit & 700 & 600 & 350 & 600 & 450 & 600
-		\label{gpus}
-	\end{tabular}
-	\captionof{table}{Vergleich von GPUs nach Rechenleistung}
-\end{center}
-
-Auch wurden die Desktop-Grafikkarten \textit{GeForce GTX 1080} sowie die \textit{Titan RTX} in den Vergleich mit aufgenommen. Der Vergleich dient später dazu, um eine begründete Kosten-Nutzen Abwägung zwischen einem Trainieren der Modelle auf der Cloud oder lokal vollziehen zu können. Hauptentscheidungskriterien sind hierbei der Grad der möglichen Parallelisierung und die reine Rechenleistung im Verhältnis zum Stromverbrauch.
-
-Neben GPUs existieren seit 2015 die von Google entwickelten \textit{Tensor Processing Units} (TPUs). Diese Art von Spezialhardware erreicht pro TPU-Kern eine Rechenleistung von bis zu 92 TOPS \cite{HaraldBogeholz.20170406}. Werden 2048 solcher TPU-Kerne zu einem TPU-Pod zusammen geschlossen, so ergibt sich eine Rechenleistung von über 100 PetaFLOPS \cite{GoogleCloud.20200209}. Zudem ist die größere Rechenleistung gleichzeitig effizienter als herkömmliche GPUs (siehe Abbildung \ref{tpu})
-
-\begin{figure}[ht]
-	\begin{center}
-		\includegraphics[width=14cm]{Bilder/tpu_comparison.png} 
-		\caption[Vergleich V100 - TPU Pod]{Vergleich V100 - TPU Pod \cite{GoogleCloud.20200209b}}
-		\label{tpu}
-	\end{center}
-\end{figure}
+Neben GPUs existieren seit 2015 die von Google entwickelten \textit{Tensor Processing Units} (TPUs). Diese sind speziell entwickelte, anwendungsspezifische integrierte Schaltung (engl.: \textit{Application-Specific Integrated Circuit}) (ASIC) für Arbeitslasten im maschinellen Lernen \cite{GoogleCloud.20200209b}.
 
 Eine weitere Steigerung versprechen Microsofts Field Programmable Gate Arrays (FPGAs), die allerdings nicht weiter im Rahmen dieser Arbeit betrachtet werden sollen \cite{KarlFreund.20170828}.
+
+\subsection*{Amazon Web Services SageMaker}
+
+\textit{Amazon Web Services} (AWS) bietet mit \textit{SageMaker} eine integrierte Plattform zum Trainieren und Bereitstellen von \textit{Deep Learning} Modellen. Zentrales Alleinstellungsmerkmal ist das einheitliche Toolset, in dem alle Arbeitsprozesse rund um ein \textit{Deep Learning} Modell integriert abgebildet werden können. Es ist somit nicht mehr nötig, unterschiedliche Tools und Arbeitsabläufe zusammenfügen, was zuvor zeitaufwändig und fehleranfällig war \cite{AmazonWebServices.20200314}.
+
+Außerdem bietet \textit{AWS SageMaker} die ersten vollständig integrierte Entwicklungsumgebung für Machine Learning, \glqq Amazon SageMaker Studio\grqq{}. Zum Erstellen der \textit{Deep Learning} Modellen werden sogenannte \textit{Amazon Sagemaker Notebooks} genutzt, eine Ableitung klassischer \textit{Jupyter Notebooks}. Unterstützte Frameworks sind TensorFlow, PyTorch, Apache MXNet, Chainer, Keras, Gluon, Horovod, Scikit-Learn und Deep Graph Library \cite{AmazonWebServices.20200314}. 
+
+\textit{AWS SageMaker} bietet verschiedene Instanztypen an, die sich je nach Anzahl an vCPUs und GPUs unterscheiden. Auch der vorhandene Arbeitsspeicher, Grafikkartenspeicher und die Netzwerkleistung kann durch die Vielzahl an angebotenen Instanzen nach individuellen Bedürfnissen gewählt werden \cite{AmazonWebServices.20200314b}.
+
+\subsection*{Google Cloud Platform AI Platform}
+
+\textit{AI Platform} ist das Konkurrenzprodukt zu \textit{AWS SageMaker} von der \textit{Google Cloud Platform} (GCP). Die Plattform bietet ebenso verschiedene Komponenten für das \textit{Deep Learning} an. Hierzu gehören \textit{AI Platform Notebooks}, ein Dienst mit einer integrierten JupyterLab-Umgebung, \textit{Deep Learning} Virtual Machines (VM) mit vorinstalierten \textit{Deep Learning} Frameworks, verteiltes Training mit automatischer Hyperparameter-Abstimmung durch den \textit{AI Platform Training} Dienst oder \textit{AI Platform Prediction} zum Bereitstellen trainierter Modelle \cite{GoogleCloudPlatform.20200314}. 
+
+Hervorzuheben sind allerdings Googles TPU Hardwarebeschleuniger, die für Projekte im \textit{TensorFlow} Framework für jede Instanz mobilisiert werden können. Sie sind darauf ausgelegt ein optimales Preis-/Leistungsverhältnis beim Trainingen von \textit{Deep Leaning} Modellen zu erreichen \cite{GoogleCloudPlatform.20200314}.
+
+\subsection*{Google Colab}
+
+\textit{Google Colaboratory}, kurz \textit{Google Colab}, ist eine kostenfreie, cloudbasierte \textit{Jupyter Notebook} Umgebung von Google. Dokumente, die in Google Colab erstellt werden, werden automatisch mit \textit{Google Drive} synchronisiert. Die Laufzeit ist frei konfigurierbar zwischen Python 2 und 3 bzw. zwischen einfachem CPU, GPU oder TPU Computing. Nachteil an dem kostenfreien \textit{Google Colab} ist, dass zugewiesene Hardwareresourcen mit weiteren Nutzern geteilt werden müssen und so nicht die volle Rechenleistung für den individuellen Entwickler zur Verfügung stehen \cite{GoogleColaboratory.20200314}. 
+
+Auch können keine längerfristigen Trainingsjobs ausgeführt werden, ohne dass nach 90 Minuten der Client von dem zugewiesenen Server getrennt wird \cite{GoogleCloud.20200314}.
+
+\subsection*{Azure}
+
+\textit{Microsoft Azures} Angebot für \textit{Deep Learning} in der Cloud ist zunächst wenig transparent. Sie bieten ebenso wie Amazon und Google das Trainieren und Bereitstellen von \textit{Deep Learning} Modellen an und zudem eine einige DevOps Landschaft für solche Arbeitsprozesse. Auch werden Frameworks wie \textit{TensorFlow} oder \textit{PyTorch} unterstützt sowie das Programmieren in \textit{Jupyter Noteboks} \cite{MicrosoftAzure.20200314}.
 
 \subsection*{FloydHub}
 
@@ -59,4 +57,5 @@ Dieser Datensatz wird separat hochgeladen, da sich dieser im Gegensatz zum Progr
 
 Mit dem CLI Befehl \textit{floyd run} wird der Programm Code auf die Plattform hochgeladen und der in der Konfigurationsdatei angegebene Befehl ausgeführt. Daraufhin wird ein Job erstellt, versioniert und ausgeführt. Während der Job ausgeführt wird, wird dem Nutzer ein Einblick in die Konsolenausgabe gewährt sowie in Metriken zur Hardwareauslastung. In der Jobhistorie kann im Nachhinein jeder Job mit dem damals aktuellen Programmcode und Datensatz eingesehen werden. Auch Datensätze werden versioniert. Schreibrechte sind auf das Verzeichnis \textit{/floyd/home} begrenzt, hier können Zwischenspeicherpunkte des Modells abgelegt werden. 
 
-FloydHub betreibt ein zeitbasiertes Zahlungsmodell. So kosten 10 Stunden Laufzeit auf einer K80 12\$, auf einer V100 bereits 42\$. Zusätzlich werden monatliche Account-Gebühren berechnet. Je nach Account kann eine unterschiedliche Anzahl an Projekten erstellt und Speicherplatz verwendet werden. Die \textit{Beginner} Ausstattung von einem Projekt und 10 GB Speicher ist allerdings kostenfrei. 
+Neben klassischen Trainingsjobs können \textit{Deep Learning} Modelle auch ganz einfach in \textit{Jupyter Notebooks} erstellt werden. Hierzu muss in einem Projekt ein Workspace angelegt werden.
+

@@ -1174,6 +1174,7 @@
       \strng{authorbibnamehash}{7d7c3946f10d6b3e9bcb95c0673a1a8c}
       \strng{authornamehash}{7d7c3946f10d6b3e9bcb95c0673a1a8c}
       \strng{authorfullhash}{7d7c3946f10d6b3e9bcb95c0673a1a8c}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
@@ -1247,7 +1248,7 @@
       \field{urlday}{14}
       \field{urlmonth}{3}
       \field{urlyear}{2020}
-      \field{year}{2020-03-14}
+      \field{year}{2020}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://cloud.google.com/automl-tables/docs/notebooks
@@ -1271,6 +1272,7 @@
       \strng{authorbibnamehash}{be6393db779330b1a4d4255cde1ccf56}
       \strng{authornamehash}{be6393db779330b1a4d4255cde1ccf56}
       \strng{authorfullhash}{be6393db779330b1a4d4255cde1ccf56}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
@@ -1303,6 +1305,7 @@
       \strng{authorbibnamehash}{8a4f76c26a6e41fac836e48e1d39ab65}
       \strng{authornamehash}{8a4f76c26a6e41fac836e48e1d39ab65}
       \strng{authorfullhash}{8a4f76c26a6e41fac836e48e1d39ab65}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
@@ -1350,6 +1353,168 @@
       \endverb
       \verb{url}
       \verb https://www.matse.itc.rwth-aachen.de/dienste/public/show_document.php?id=18753
+      \endverb
+    \endentry
+    \entry{AmazonWebServices.2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=3eb2c1a57a8160029f036e3dcbf84bf1}{%
+           family={{Amazon Web Services}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {AWS Homepage}%
+      }
+      \strng{namehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{fullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{bibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorbibnamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authornamehash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \strng{authorfullhash}{3eb2c1a57a8160029f036e3dcbf84bf1}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Kostenloses Kontingent f{ü}r AWS}
+      \field{urlday}{14}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://aws.amazon.com/de/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc
+      \endverb
+      \verb{url}
+      \verb https://aws.amazon.com/de/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc
+      \endverb
+    \endentry
+    \entry{GoogleCloudPlatform.20200314b}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7d7c3946f10d6b3e9bcb95c0673a1a8c}{%
+           family={{Google Cloud Platform}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {GCP~Homepage}%
+      }
+      \strng{namehash}{7d7c3946f10d6b3e9bcb95c0673a1a8c}
+      \strng{fullhash}{7d7c3946f10d6b3e9bcb95c0673a1a8c}
+      \strng{bibnamehash}{7d7c3946f10d6b3e9bcb95c0673a1a8c}
+      \strng{authorbibnamehash}{7d7c3946f10d6b3e9bcb95c0673a1a8c}
+      \strng{authornamehash}{7d7c3946f10d6b3e9bcb95c0673a1a8c}
+      \strng{authorfullhash}{7d7c3946f10d6b3e9bcb95c0673a1a8c}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Kostenlose Stufe der Google Cloud Platform}
+      \field{urlday}{14}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cloud.google.com/free
+      \endverb
+      \verb{url}
+      \verb https://cloud.google.com/free
+      \endverb
+    \endentry
+    \entry{MicrosoftAzure.2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=be6393db779330b1a4d4255cde1ccf56}{%
+           family={{Microsoft Azure}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Microsoft Azure Homepage}%
+      }
+      \strng{namehash}{be6393db779330b1a4d4255cde1ccf56}
+      \strng{fullhash}{be6393db779330b1a4d4255cde1ccf56}
+      \strng{bibnamehash}{be6393db779330b1a4d4255cde1ccf56}
+      \strng{authorbibnamehash}{be6393db779330b1a4d4255cde1ccf56}
+      \strng{authornamehash}{be6393db779330b1a4d4255cde1ccf56}
+      \strng{authorfullhash}{be6393db779330b1a4d4255cde1ccf56}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Create your Azure free account today: Get started with 12 months of free services}
+      \field{urlday}{14}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://azure.microsoft.com/en-us/free/
+      \endverb
+      \verb{url}
+      \verb https://azure.microsoft.com/en-us/free/
+      \endverb
+    \endentry
+    \entry{MicrosoftAzure.202003124}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=be6393db779330b1a4d4255cde1ccf56}{%
+           family={{Microsoft Azure}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Microsoft Azure Homepage}%
+      }
+      \strng{namehash}{be6393db779330b1a4d4255cde1ccf56}
+      \strng{fullhash}{be6393db779330b1a4d4255cde1ccf56}
+      \strng{bibnamehash}{be6393db779330b1a4d4255cde1ccf56}
+      \strng{authorbibnamehash}{be6393db779330b1a4d4255cde1ccf56}
+      \strng{authornamehash}{be6393db779330b1a4d4255cde1ccf56}
+      \strng{authorfullhash}{be6393db779330b1a4d4255cde1ccf56}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Virtuelle Windows-Computer -- Preise}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://azure.microsoft.com/de-de/pricing/details/virtual-machines/windows/
+      \endverb
+      \verb{url}
+      \verb https://azure.microsoft.com/de-de/pricing/details/virtual-machines/windows/
+      \endverb
+      \warn{\item Entry 'MicrosoftAzure.202003124' (Inhalt/literatur.bib): Invalid format '2020-03-124' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{FloydHub.2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8a4f76c26a6e41fac836e48e1d39ab65}{%
+           family={FloydHub},
+           familyi={F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {FloydHub Documentation}%
+      }
+      \strng{namehash}{8a4f76c26a6e41fac836e48e1d39ab65}
+      \strng{fullhash}{8a4f76c26a6e41fac836e48e1d39ab65}
+      \strng{bibnamehash}{8a4f76c26a6e41fac836e48e1d39ab65}
+      \strng{authorbibnamehash}{8a4f76c26a6e41fac836e48e1d39ab65}
+      \strng{authornamehash}{8a4f76c26a6e41fac836e48e1d39ab65}
+      \strng{authorfullhash}{8a4f76c26a6e41fac836e48e1d39ab65}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Plans}
+      \field{urlday}{25}
+      \field{urlmonth}{1}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.floydhub.com/faqs/plans/#what-is-in-the-trial-plan
+      \endverb
+      \verb{url}
+      \verb https://docs.floydhub.com/faqs/plans/#what-is-in-the-trial-plan
       \endverb
     \endentry
     \entry{TechPowerUp.20200209}{misc}{}

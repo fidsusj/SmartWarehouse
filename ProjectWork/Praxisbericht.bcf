@@ -2132,11 +2132,17 @@
     <bcf:citekey order="137">ssd.20161229</bcf:citekey>
     <bcf:citekey order="138">ssd.20161229</bcf:citekey>
     <bcf:citekey order="139">IntanPurnamasar.20181215</bcf:citekey>
-    <bcf:citekey order="140">TechPowerUp.20200209</bcf:citekey>
-    <bcf:citekey order="141">HaraldBogeholz.20170406</bcf:citekey>
-    <bcf:citekey order="142">GoogleCloud.20200209</bcf:citekey>
-    <bcf:citekey order="143">GoogleCloud.20200209b</bcf:citekey>
-    <bcf:citekey order="144">GoogleCloud.20200209b</bcf:citekey>
+    <bcf:citekey order="140">AmazonWebServices.2020</bcf:citekey>
+    <bcf:citekey order="141">AmazonWebServices.20200314b</bcf:citekey>
+    <bcf:citekey order="142">GoogleCloudPlatform.20200314b</bcf:citekey>
+    <bcf:citekey order="143">MicrosoftAzure.2020</bcf:citekey>
+    <bcf:citekey order="144">MicrosoftAzure.202003124</bcf:citekey>
+    <bcf:citekey order="145">FloydHub.2020</bcf:citekey>
+    <bcf:citekey order="146">TechPowerUp.20200209</bcf:citekey>
+    <bcf:citekey order="147">HaraldBogeholz.20170406</bcf:citekey>
+    <bcf:citekey order="148">GoogleCloud.20200209</bcf:citekey>
+    <bcf:citekey order="149">GoogleCloud.20200209b</bcf:citekey>
+    <bcf:citekey order="150">GoogleCloud.20200209b</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  14 MAR 2020 18:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  14 MAR 2020 23:01
 entering extended mode
 **./Praxisbericht.tex
 (Praxisbericht.tex
@@ -2027,7 +2027,14 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Praxisbericht.bbl' found.
- (Praxisbericht.bbl)
+ (Praxisbericht.bbl
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'MicrosoftAzure.202003124':
+(biblatex)                - Entry 'MicrosoftAzure.202003124' (Inhalt/literatur.
+bib): Invalid format '2020-03-124' of date field 'urldate' - ignoring.
+
+)
 Package biblatex Info: Reference section=0 on input line 46.
 Package biblatex Info: Reference segment=0 on input line 46.
 \c@lstlisting=\count488
@@ -2428,34 +2435,34 @@ File: Bilder/ssd_results.png Graphic file (type png)
 Package pdftex.def Info: Bilder/ssd_results.png  used on input line 7.
 (pdftex.def)             Requested size: 341.43306pt x 99.50305pt.
  [42] [43 <./Bilder/ssd_results.png>]) (Inhalt/07_Konzeption/trainingsinfrastru
-ktur.tex
-Overfull \hbox (32.69113pt too wide) in paragraph at lines 9--19
+ktur.tex [44]
+Overfull \hbox (32.69113pt too wide) in paragraph at lines 16--26
  [] 
  []
 
-[44]
-<Bilder/tpu_comparison.png, id=885, 804.00375pt x 477.785pt>
+[45]
+<Bilder/tpu_comparison.png, id=901, 804.00375pt x 477.785pt>
 File: Bilder/tpu_comparison.png Graphic file (type png)
 <use Bilder/tpu_comparison.png>
-Package pdftex.def Info: Bilder/tpu_comparison.png  used on input line 28.
+Package pdftex.def Info: Bilder/tpu_comparison.png  used on input line 35.
 (pdftex.def)             Requested size: 398.33858pt x 236.71208pt.
 ) (Inhalt/07_Konzeption/drohne.tex) (Inhalt/07_Konzeption/software.tex)
-(Inhalt/08_Realisierung/realisierung.tex [45 <./Bilder/tpu_comparison.png>]
-[46]
+(Inhalt/08_Realisierung/realisierung.tex [46] [47 <./Bilder/tpu_comparison.png>
+]
 chapter 4.
-[47
+[48
 
-]) (Inhalt/09_Ergebnisse/ergebnisse.tex [48]
+]) (Inhalt/09_Ergebnisse/ergebnisse.tex [49]
 chapter 5.
-) (Inhalt/10_Bewertung/bewertung.tex [49
+) (Inhalt/10_Bewertung/bewertung.tex [50
 
 ]
 chapter 6.
-) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [50
+) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [51
 
 ]
 chapter 7.
-) [51
+) [52
 
 ]
 chapter without number
@@ -2469,7 +2476,13 @@ Overfull \hbox (16.02386pt too wide) in paragraph at lines 134--134
 arxiv . org / pdf / 1512 . 02325 . pdf$[] (Ein-sicht-nah-me: 02.11.2019). 
  []
 
-[12] [13] [14] [15]
+[12] [13]
+Overfull \hbox (24.59178pt too wide) in paragraph at lines 134--134
+[]$\T1/cmr/m/n/12 https : / / cloud . google . com / automl -[] tables / docs /
+ notebooks$[] (Ein-sicht-nah-me: 14.03.2020). 
+ []
+
+[14] [15]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -2529,10 +2542,10 @@ Package logreq Info: Writing requests to 'Praxisbericht.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
  ) 
 Here is how much of TeX's memory you used:
- 47742 strings out of 492946
- 941511 string characters out of 3125377
- 1512788 words of memory out of 3000000
- 50468 multiletter control sequences out of 15000+200000
+ 47759 strings out of 492946
+ 942215 string characters out of 3125377
+ 1518924 words of memory out of 3000000
+ 50478 multiletter control sequences out of 15000+200000
  579010 words of font info for 151 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  80i,23n,82p,9184b,3585s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2576,9 +2589,9 @@ Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/D0
 ><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/urw/courier/ucrr8a.pfb>
-Output written on Praxisbericht.pdf (68 pages, 23098528 bytes).
+Output written on Praxisbericht.pdf (69 pages, 23110554 bytes).
 PDF statistics:
- 1837 PDF objects out of 2073 (max. 8388607)
- 296 named destinations out of 1000 (max. 500000)
+ 1871 PDF objects out of 2073 (max. 8388607)
+ 303 named destinations out of 1000 (max. 500000)
  444 words of extra memory for PDF output out of 10000 (max. 10000000)
 

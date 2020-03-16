@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  14 MAR 2020 23:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  14 MAR 2020 23:11
 entering extended mode
 **./Praxisbericht.tex
 (Praxisbericht.tex
@@ -2350,53 +2350,56 @@ ro-gram-ma-ble Ga-te Ar-rays (FPGAs),
 [35] [36] (Quellcode/floyd.yml [37]))
 (Inhalt/07_Konzeption/trainingsdatensatz.tex [38]
 chapter 3.
-<Bilder/blockdiagramm.png, id=817, 744.7825pt x 122.4575pt>
+<Bilder/blockdiagramm.png, id=817, 804.00375pt x 241.90375pt>
 File: Bilder/blockdiagramm.png Graphic file (type png)
 <use Bilder/blockdiagramm.png>
 Package pdftex.def Info: Bilder/blockdiagramm.png  used on input line 7.
-(pdftex.def)             Requested size: 426.79134pt x 70.17519pt.
-<Bilder/wasser_klein.jpg, id=819, 4625.28pt x 2119.92pt>
+(pdftex.def)             Requested size: 426.79134pt x 128.40768pt.
+[39
+
+ <./Bilder/blockdiagramm.png>]
+<Bilder/wasser_klein.jpg, id=824, 4625.28pt x 2119.92pt>
 File: Bilder/wasser_klein.jpg Graphic file (type jpg)
 <use Bilder/wasser_klein.jpg>
 Package pdftex.def Info: Bilder/wasser_klein.jpg  used on input line 20.
 (pdftex.def)             Requested size: 143.86047pt x 65.92386pt.
-<Bilder/wasser_gross.jpg, id=820, 4625.28pt x 2119.92pt>
+<Bilder/wasser_gross.jpg, id=825, 4625.28pt x 2119.92pt>
 File: Bilder/wasser_gross.jpg Graphic file (type jpg)
 <use Bilder/wasser_gross.jpg>
 Package pdftex.def Info: Bilder/wasser_gross.jpg  used on input line 21.
 (pdftex.def)             Requested size: 143.86047pt x 65.92386pt.
-<Bilder/cola_klein.jpg, id=821, 4625.28pt x 2119.92pt>
+<Bilder/cola_klein.jpg, id=826, 4625.28pt x 2119.92pt>
 File: Bilder/cola_klein.jpg Graphic file (type jpg)
 <use Bilder/cola_klein.jpg>
 Package pdftex.def Info: Bilder/cola_klein.jpg  used on input line 22.
 (pdftex.def)             Requested size: 143.86047pt x 65.92386pt.
-<Bilder/cola_gross.jpg, id=822, 4625.28pt x 2119.92pt>
+<Bilder/cola_gross.jpg, id=827, 4625.28pt x 2119.92pt>
 File: Bilder/cola_gross.jpg Graphic file (type jpg)
 <use Bilder/cola_gross.jpg>
 Package pdftex.def Info: Bilder/cola_gross.jpg  used on input line 23.
 (pdftex.def)             Requested size: 143.86047pt x 65.92386pt.
-<Bilder/iso.jpg, id=823, 4625.28pt x 2119.92pt>
+<Bilder/iso.jpg, id=828, 4625.28pt x 2119.92pt>
 File: Bilder/iso.jpg Graphic file (type jpg)
 <use Bilder/iso.jpg>
 Package pdftex.def Info: Bilder/iso.jpg  used on input line 24.
 (pdftex.def)             Requested size: 143.86047pt x 65.92386pt.
-<Bilder/ace.jpg, id=824, 4625.28pt x 2119.92pt>
+<Bilder/ace.jpg, id=829, 4625.28pt x 2119.92pt>
 File: Bilder/ace.jpg Graphic file (type jpg)
 <use Bilder/ace.jpg>
 Package pdftex.def Info: Bilder/ace.jpg  used on input line 25.
 (pdftex.def)             Requested size: 143.86047pt x 65.92386pt.
-<Bilder/johannisbeerschorle.jpg, id=825, 4625.28pt x 2119.92pt>
+<Bilder/johannisbeerschorle.jpg, id=830, 4625.28pt x 2119.92pt>
 File: Bilder/johannisbeerschorle.jpg Graphic file (type jpg)
 <use Bilder/johannisbeerschorle.jpg>
 Package pdftex.def Info: Bilder/johannisbeerschorle.jpg  used on input line 26.
 
 (pdftex.def)             Requested size: 143.86047pt x 65.92386pt.
-<Bilder/apfelsaftschorle.jpg, id=826, 4625.28pt x 2119.92pt>
+<Bilder/apfelsaftschorle.jpg, id=831, 4625.28pt x 2119.92pt>
 File: Bilder/apfelsaftschorle.jpg Graphic file (type jpg)
 <use Bilder/apfelsaftschorle.jpg>
 Package pdftex.def Info: Bilder/apfelsaftschorle.jpg  used on input line 27.
 (pdftex.def)             Requested size: 143.86047pt x 65.92386pt.
-<Bilder/malzbier.jpg, id=827, 4625.28pt x 2119.92pt>
+<Bilder/malzbier.jpg, id=832, 4625.28pt x 2119.92pt>
 File: Bilder/malzbier.jpg Graphic file (type jpg)
 <use Bilder/malzbier.jpg>
 Package pdftex.def Info: Bilder/malzbier.jpg  used on input line 28.
@@ -2411,9 +2414,6 @@ Underfull \hbox (badness 1735) in paragraph at lines 20--29
 [][] [][] [][]
  []
 
-[39
-
- <./Bilder/blockdiagramm.png>]
 <Bilder/regal.jpg, id=834, 4625.28pt x 2119.92pt>
 File: Bilder/regal.jpg Graphic file (type jpg)
 <use Bilder/regal.jpg>
@@ -2589,7 +2589,7 @@ Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/D0
 ><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/urw/courier/ucrr8a.pfb>
-Output written on Praxisbericht.pdf (69 pages, 23110554 bytes).
+Output written on Praxisbericht.pdf (69 pages, 23112901 bytes).
 PDF statistics:
  1871 PDF objects out of 2073 (max. 8388607)
  303 named destinations out of 1000 (max. 500000)

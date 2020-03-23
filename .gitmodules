@@ -1,0 +1,3 @@
+[submodule "Drone/darknet"]
+	path = Drone/darknet
+	url = https://github.com/Kucki99/darknet.git

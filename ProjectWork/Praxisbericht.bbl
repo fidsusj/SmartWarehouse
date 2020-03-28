@@ -1614,6 +1614,99 @@
       \verb https://cloud.google.com/tpu/docs/system-architecture
       \endverb
     \endentry
+    \entry{EASA.2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e7a864088ca5cfac83bba94004eeb6e1}{%
+           family={EASA},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {EASA~Homepage}%
+      }
+      \strng{namehash}{e7a864088ca5cfac83bba94004eeb6e1}
+      \strng{fullhash}{e7a864088ca5cfac83bba94004eeb6e1}
+      \strng{bibnamehash}{e7a864088ca5cfac83bba94004eeb6e1}
+      \strng{authorbibnamehash}{e7a864088ca5cfac83bba94004eeb6e1}
+      \strng{authornamehash}{e7a864088ca5cfac83bba94004eeb6e1}
+      \strng{authorfullhash}{e7a864088ca5cfac83bba94004eeb6e1}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{EU wide rules on drones published}
+      \field{urlday}{28}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.easa.europa.eu/newsroom-and-events/press-releases/eu-wide-rules-drones-published
+      \endverb
+      \verb{url}
+      \verb https://www.easa.europa.eu/newsroom-and-events/press-releases/eu-wide-rules-drones-published
+      \endverb
+    \endentry
+    \entry{Drohnen.de.2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a977fb0ab219766b38a9d086d46ad70c}{%
+           family={Drohnen.de},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Drohnen.de Homepage}%
+      }
+      \strng{namehash}{a977fb0ab219766b38a9d086d46ad70c}
+      \strng{fullhash}{a977fb0ab219766b38a9d086d46ad70c}
+      \strng{bibnamehash}{a977fb0ab219766b38a9d086d46ad70c}
+      \strng{authorbibnamehash}{a977fb0ab219766b38a9d086d46ad70c}
+      \strng{authornamehash}{a977fb0ab219766b38a9d086d46ad70c}
+      \strng{authorfullhash}{a977fb0ab219766b38a9d086d46ad70c}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Vorschriften, Genehmigungen f{ü}r die Nutzung von Drohnen und Multicoptern}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.drohnen.de/vorschriften-genehigungen-fuer-die-nutzung-von-drohnen-und-multicoptern/
+      \endverb
+      \verb{url}
+      \verb https://www.drohnen.de/vorschriften-genehigungen-fuer-die-nutzung-von-drohnen-und-multicoptern/
+      \endverb
+      \warn{\item Entry 'Drohnen.de.2020' (Inhalt/literatur.bib): Invalid format '2020-{ß}3-28' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{RyzeRobotics.2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4febe38643b9fbdae73f3b35057efd71}{%
+           family={RyzeRobotics},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {RyzeRobotics Homepage}%
+      }
+      \strng{namehash}{4febe38643b9fbdae73f3b35057efd71}
+      \strng{fullhash}{4febe38643b9fbdae73f3b35057efd71}
+      \strng{bibnamehash}{4febe38643b9fbdae73f3b35057efd71}
+      \strng{authorbibnamehash}{4febe38643b9fbdae73f3b35057efd71}
+      \strng{authornamehash}{4febe38643b9fbdae73f3b35057efd71}
+      \strng{authorfullhash}{4febe38643b9fbdae73f3b35057efd71}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tello EDU}
+      \field{urlday}{28}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ryzerobotics.com/de/tello-edu?from=store-product-page
+      \endverb
+      \verb{url}
+      \verb https://www.ryzerobotics.com/de/tello-edu?from=store-product-page
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

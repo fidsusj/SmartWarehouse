@@ -2143,6 +2143,9 @@
     <bcf:citekey order="148">GoogleCloud.20200209</bcf:citekey>
     <bcf:citekey order="149">GoogleCloud.20200209b</bcf:citekey>
     <bcf:citekey order="150">GoogleCloud.20200209b</bcf:citekey>
+    <bcf:citekey order="151">EASA.2019</bcf:citekey>
+    <bcf:citekey order="152">Drohnen.de.2020</bcf:citekey>
+    <bcf:citekey order="153">RyzeRobotics.2020</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

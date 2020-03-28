@@ -1475,14 +1475,17 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Virtuelle Windows-Computer -- Preise}
+      \field{urlday}{12}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://azure.microsoft.com/de-de/pricing/details/virtual-machines/windows/
       \endverb
       \verb{url}
       \verb https://azure.microsoft.com/de-de/pricing/details/virtual-machines/windows/
       \endverb
-      \warn{\item Entry 'MicrosoftAzure.202003124' (Inhalt/literatur.bib): Invalid format '2020-03-124' of date field 'urldate' - ignoring}
     \endentry
     \entry{FloydHub.2020}{misc}{}
       \name{author}{1}{}{%
@@ -1666,14 +1669,17 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Vorschriften, Genehmigungen f{ü}r die Nutzung von Drohnen und Multicoptern}
+      \field{urlday}{28}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
       \field{year}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.drohnen.de/vorschriften-genehigungen-fuer-die-nutzung-von-drohnen-und-multicoptern/
       \endverb
       \verb{url}
       \verb https://www.drohnen.de/vorschriften-genehigungen-fuer-die-nutzung-von-drohnen-und-multicoptern/
       \endverb
-      \warn{\item Entry 'Drohnen.de.2020' (Inhalt/literatur.bib): Invalid format '2020-{ß}3-28' of date field 'urldate' - ignoring}
     \endentry
     \entry{RyzeRobotics.2020}{misc}{}
       \name{author}{1}{}{%

@@ -3,25 +3,9 @@
 \section{Trainieren der Objektdetektoren}
 
 \begin{itemize}
-	\item Auswahl Cloud oder lokales Trainieren?
-	\begin{itemize}
-		\item Amazon, Azure, etc. zu teuer
-		\item GCP erlaubt keine Quota
-		\item FloydHub ist zum Training ungeeignet (Unterstützt kein Darknet und auf die Dauer zu teuer)
-		\item Höchstens V100, aber den Aufwand nicht wert (Kosten/Nutzen Abwägung aus Zeit- und Geldgründen)
-	\end{itemize}
-	\item Datensatz: Aus Zeitgründen nicht größer
 	\item Bilder mit Labeln in der Arbeit
-	\item Was liefert die Arbeit, was bisher noch nicht bekannt war (Mehrwert, auch wenn etwas nicht geht)?
 	\item Soll beweisen, dass etwas entstanden ist (Krassen Eindruck vermitteln)
-	\item Keine Ergebnisse evaluieren
-	\item conv -> Feature Vektor für fully connected layer classification
-	\item down sampling -> pool layer
-	\item komplett durchlesen (dopplungen, alles zur richtigen zeit eingeführt)
-	\item Warum nur die drei detektoren, warum keine segmentierung?
-	\item Auswahl detektor, low fps rcnn
-		\item Variantendiskussion (Welches Verfahren eignet sich hinsichtlich Bewertungskriterien am besten)
-	\item Keine Bewertung der Detektoren!
+	\item Keine Ergebnisse evaluieren, keine Detektoren bewerten
 \end{itemize}
 
 \section{Drohnen Anbindung}

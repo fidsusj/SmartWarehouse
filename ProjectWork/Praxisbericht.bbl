@@ -19,38 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{JonathanHui.20180307}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=2d9e4466d619dff7f2ba6315a0fb3a81}{%
-           family={{Jonathan Hui}},
-           familyi={J\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Medium}%
-      }
-      \strng{namehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
-      \strng{fullhash}{2d9e4466d619dff7f2ba6315a0fb3a81}
-      \strng{bibnamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
-      \strng{authorbibnamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
-      \strng{authornamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
-      \strng{authorfullhash}{2d9e4466d619dff7f2ba6315a0fb3a81}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{mAP (mean Average Precision) for Object Detection}
-      \field{urlday}{15}
-      \field{urlmonth}{2}
-      \field{urlyear}{2020}
-      \field{year}{2018}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
-      \endverb
-      \verb{url}
-      \verb https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
-      \endverb
-    \endentry
     \entry{AurelienGeron.2018}{book}{}
       \name{author}{1}{}{%
         {{hash=b9ef41b5f253b9e68202e6419fe33e44}{%
@@ -72,8 +40,8 @@
       \strng{authorbibnamehash}{b9ef41b5f253b9e68202e6419fe33e44}
       \strng{authornamehash}{b9ef41b5f253b9e68202e6419fe33e44}
       \strng{authorfullhash}{b9ef41b5f253b9e68202e6419fe33e44}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1}
@@ -97,8 +65,8 @@
       \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Deep Learning: Drei Dinge, die Sie wissen sollten}
@@ -129,8 +97,8 @@
       \strng{authorbibnamehash}{c731f02d37d80d1cc6e3c60eaeba3782}
       \strng{authornamehash}{c731f02d37d80d1cc6e3c60eaeba3782}
       \strng{authorfullhash}{c731f02d37d80d1cc6e3c60eaeba3782}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{inventAIRyX}
@@ -161,8 +129,8 @@
       \strng{authorbibnamehash}{af845845909cf12c69b3a46719505e0b}
       \strng{authornamehash}{af845845909cf12c69b3a46719505e0b}
       \strng{authorfullhash}{af845845909cf12c69b3a46719505e0b}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Detection and Segmentation through ConvNets}
@@ -193,8 +161,8 @@
       \strng{authorbibnamehash}{4eeb787c22066f59df3702acc177d862}
       \strng{authornamehash}{4eeb787c22066f59df3702acc177d862}
       \strng{authorfullhash}{4eeb787c22066f59df3702acc177d862}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Semantic Segmentation --- Popular Architectures}
@@ -225,8 +193,8 @@
       \strng{authorbibnamehash}{93625a27fb7fd8d08b27352ef7193af6}
       \strng{authornamehash}{93625a27fb7fd8d08b27352ef7193af6}
       \strng{authorfullhash}{93625a27fb7fd8d08b27352ef7193af6}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Simplest perceptron update rules demonstration}
@@ -257,8 +225,8 @@
       \strng{authorbibnamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authornamehash}{9c677286866aad38f8e9b660f5411814}
       \strng{authorfullhash}{9c677286866aad38f8e9b660f5411814}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Deep Learning}
@@ -339,8 +307,8 @@
       \strng{authorbibnamehash}{8837ff919f7bf3e2380b52960f977c8b}
       \strng{authornamehash}{8837ff919f7bf3e2380b52960f977c8b}
       \strng{authorfullhash}{8837ff919f7bf3e2380b52960f977c8b}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Understanding the difficulty of training deep feedforward neural networks}
@@ -404,8 +372,8 @@
       \strng{authorbibnamehash}{53f28a98efa452fd6b20b25853ca4bb7}
       \strng{authornamehash}{53f28a98efa452fd6b20b25853ca4bb7}
       \strng{authorfullhash}{53f28a98efa452fd6b20b25853ca4bb7}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Practical Guide to ReLU}
@@ -497,8 +465,8 @@
       \strng{authorbibnamehash}{8a42699672c27d229b4f4ca9b960093a}
       \strng{authornamehash}{8a42699672c27d229b4f4ca9b960093a}
       \strng{authorfullhash}{8a42699672c27d229b4f4ca9b960093a}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{SSD:~Single Shot MultiBox Detector}
@@ -594,8 +562,8 @@
       \strng{authorbibnamehash}{dbaff04488b1a921cecf6bd5411238b2}
       \strng{authornamehash}{dbaff04488b1a921cecf6bd5411238b2}
       \strng{authorfullhash}{dbaff04488b1a921cecf6bd5411238b2}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{An intuitive guide to Convolutional Neural Networks}
@@ -626,8 +594,8 @@
       \strng{authorbibnamehash}{a058957318f1d66489c53794afae6df7}
       \strng{authornamehash}{a058957318f1d66489c53794afae6df7}
       \strng{authorfullhash}{a058957318f1d66489c53794afae6df7}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Convolutional Neural Networks (CNNs): An Illustrated Explanation}
@@ -658,8 +626,8 @@
       \strng{authorbibnamehash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
       \strng{authornamehash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
       \strng{authorfullhash}{3a32e1c0f0a3111dd46ccd4f658c7ebd}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Pooling Layer: Introduction}
@@ -673,6 +641,38 @@
       \endverb
       \verb{url}
       \verb https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/pooling_layer.html
+      \endverb
+    \endentry
+    \entry{JonathanHui.20180307}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2d9e4466d619dff7f2ba6315a0fb3a81}{%
+           family={{Jonathan Hui}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Medium}%
+      }
+      \strng{namehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{fullhash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{bibnamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{authorbibnamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{authornamehash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \strng{authorfullhash}{2d9e4466d619dff7f2ba6315a0fb3a81}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{mAP (mean Average Precision) for Object Detection}
+      \field{urlday}{15}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
       \endverb
     \endentry
     \entry{TarangShah.20180127}{misc}{}
@@ -786,8 +786,8 @@
       \strng{authorbibnamehash}{0d787314a54a9511545866f24d382afd}
       \strng{authornamehash}{0d787314a54a9511545866f24d382afd}
       \strng{authorfullhash}{0d787314a54a9511545866f24d382afd}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{From R-CNN to Mask R-CNN}
@@ -818,8 +818,8 @@
       \strng{authorbibnamehash}{8ccecd7653e8600614fb6f9a33b54fb6}
       \strng{authornamehash}{8ccecd7653e8600614fb6f9a33b54fb6}
       \strng{authorfullhash}{8ccecd7653e8600614fb6f9a33b54fb6}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{A Brief History of CNNs in Image Segmentation: From R-CNN to Mask R-CNN}

@@ -1,6 +1,6 @@
 \subsection*{Mean Average Precision}
 
-Um die Genauigkeit von Objektdetektoren zu messen, wird oft die Metrik \textit{mean Average Precision} (mAP) gewählt. Diese setzt sich aus zwei grundlegenden Größen zusammen (siehe Formel \ref{precisionandrecall}). 
+Um die Genauigkeit von Objektdetektoren zu messen, wird oft die Metrik \textit{mean Average Precision} (mAP) gewählt. Diese setzt sich aus zwei grundlegenden Größen zusammen (siehe Formel \ref{precisionandrecall} \cite{JonathanHui.20180307}). 
 
 \begin{equation} \label{precisionandrecall}
 \begin{split}
@@ -9,7 +9,7 @@ Precision = \frac{True Positive}{True Positive + False Positive} \\
 Recall = \frac{True Positive}{True Positive + False Negative}
 \end{split}
 \end{equation}
-\equations{Precision und Recall \cite{JonathanHui.20180307}}
+\equations{Precision und Recall}
 
 \textit{Precision} sagt also etwas über die Verlässlichkeit einer Klassifikation aus während \textit{Recall} Aussagen über die Erkennungsfähigkeit eines Objektdetektors trifft. Wichtig ist es hierbei anzumerken, dass mehrfach detektierte Objekte nur einmal als positiver Befund aufgefasst werden, die restlichen Detektionen gehen als \textit{False Positives} \cite{TarangShah.20180127}.
 

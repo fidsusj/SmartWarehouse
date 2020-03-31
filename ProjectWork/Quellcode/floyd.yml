@@ -1,0 +1,9 @@
+machine: gpu2
+env: pytorch-1.4
+input:
+  - destination: input
+    source: <username>/datasets/smartwarehousessd/3
+  - <username>/datasets/smartwarehousessd/3:ssd
+description: Job to train the SSD
+max_runtime: 3600
+command: python train.py

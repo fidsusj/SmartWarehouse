@@ -7,6 +7,9 @@ import torchvision.transforms.functional as FT
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+dataset_path = 'D:/Workspaces/PyCharmProjects/SmartWarehouse/SSD/data/SmartWarehouseSSD/'
+# dataset_path = '/floyd/input/ssd/'
+
 # Label map
 voc_labels = ('saskia wasser groß', 'saskia wasser klein', 'pepsi cola groß', 'pepsi cola klein', 'ace', 'iso', 'stenger johannisbeerschorle', 'stenger apfelsaftschorle', 'vitamalz malzbier')
 label_map = {k: v + 1 for v, k in enumerate(voc_labels)}
@@ -61,7 +64,7 @@ def create_data_lists(smartwarehouse_path, output_folder):
 
     # Training data
     # Find IDs of images in training data
-    with open(os.path.join(smartwarehouse_path, 'ImageSets/Main/trainval.txt')) as f:
+    with open(os.path.join(smartwarehouse_path, dataset_path + 'ImageSets/Main/trainval.txt')) as f:
         ids = f.read().splitlines()
 
     for id in ids:
@@ -92,7 +95,7 @@ def create_data_lists(smartwarehouse_path, output_folder):
     n_objects = 0
 
     # Find IDs of images in validation data
-    with open(os.path.join(smartwarehouse_path, 'ImageSets/Main/test.txt')) as f:
+    with open(os.path.join(smartwarehouse_path, dataset_path + 'ImageSets/Main/test.txt')) as f:
         ids = f.read().splitlines()
 
     for id in ids:
@@ -175,7 +178,6 @@ def calculate_mAP(det_boxes, det_labels, det_scores, true_boxes, true_labels, tr
 
     # Calculate APs for each class (except background)
     average_precisions = torch.zeros((n_classes - 1), dtype=torch.float)  # (n_classes - 1)
-    average_recalls = torch.zeros((n_classes - 1), dtype=torch.float)  # (n_classes - 1)
     for c in range(1, n_classes):
         # Extract only objects with this class
         true_class_images = true_images[true_labels == c]  # (n_class_objects)
@@ -250,30 +252,21 @@ def calculate_mAP(det_boxes, det_labels, det_scores, true_boxes, true_labels, tr
         # Find the mean of the maximum of the precisions corresponding to recalls above the threshold 't'
         recall_thresholds = torch.arange(start=0, end=1.1, step=.1).tolist()  # (11)
         precisions = torch.zeros((len(recall_thresholds)), dtype=torch.float).to(device)  # (11)
-        recalls = torch.zeros((len(recall_thresholds)), dtype=torch.float).to(device)  # (11)
         for i, t in enumerate(recall_thresholds):
             recalls_above_t = cumul_recall >= t
             if recalls_above_t.any():
                 precisions[i] = cumul_precision[recalls_above_t].max()
-                recalls[i] = cumul_recall[recalls_above_t].max()
             else:
                 precisions[i] = 0.
-                recalls[i] = 0.
         average_precisions[c - 1] = precisions.mean()  # c is in [1, n_classes - 1]
-        average_recalls[c - 1] = recalls.mean()  # c is in [1, n_classes - 1]
 
     # Calculate Mean Average Precision (mAP)
     mean_average_precision = average_precisions.mean().item()
-    mean_average_recall = average_recalls.mean().item()
 
     # Keep class-wise average precisions in a dictionary
     average_precisions = {rev_label_map[c + 1]: v for c, v in enumerate(average_precisions.tolist())}
-    average_recalls = {rev_label_map[c + 1]: v for c, v in enumerate(average_recalls.tolist())}
 
-    f1 = 2*((mean_average_precision * mean_average_recall) / (mean_average_precision + mean_average_recall))
-
-    return average_precisions, average_recalls, mean_average_precision, mean_average_recall, f1
-
+    return average_precisions, mean_average_precision
 
 def xy_to_cxcy(xy):
     """

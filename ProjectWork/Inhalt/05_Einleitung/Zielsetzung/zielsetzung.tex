@@ -1,17 +1,17 @@
 \section{Vorgehensweise und Zielsetzung}
 
-% Auf die Kapitel verweisen!!!
+Im Grundlagenkapitel II muss sich mit den theoretischen Grundlagen von CNNs und Objektdetektoren auseinander gesetzt werden. Hierzu ist zunächst eine Einführung in Deep Learning zur Bildverarbeitung und neuronale Netz erforderlich, darunter zu Perzeptronen, dem Gradientenverfahren, dem Backpropagation Algorithmus und Hyperparametern zum Trainieren eines neuronalen Netzes (siehe Kapitel 2.1, 2.2 und 2.3). 
 
-Zunächst muss sich mit den theoretischen Grundlagen von CNNs und Objektdetektoren auseinander gesetzt werden. Hierzu ist zunächst eine Einführung in neuronale Netz erforderlich, darunter zu Perzeptronen, dem Gradientenverfahren, dem Backpropagation Algorithmus und Hyperparametern zum Trainieren eines neuronalen Netzes. 
+Um weitere Grundlagen zum Training von neuronalen Netzen einzuführen, wird anschließend über die Anforderungen eines Datensatzes gesprochen (siehe Kapitel 2.4), bevor die eigentlichen Objektdetektoren eingeführt werden (siehe Kapitel 2.5). 
 
-Nachdem kurz auf den Grundbaustein moderner Objektdetektoren eingegangen wird, den CNNs, können anschließend die Funktionsweisen und Architekturen der drei miteinander verglichenen Objektdetektoren \textit{YOLO}, \textit{SSD} und Detektoren der \textit{R-CNN} Familie erläutert werden. Hier ist zu bemerken, dass unterschiedliche Evolutionsstufen der drei Detektoren zu betrachten sind. 
+Nachdem kurz auf den Grundbaustein moderner Objektdetektoren eingegangen wird, den CNNs, können anschließend die Funktionsweisen und Architekturen der drei miteinander verglichenen Objektdetektoren der \textit{R-CNN} Familie, \textit{YOLO} und des \textit{SSDs} erläutert werden. Bei \textit{R-CNN} und \textit{YOLO} ist zu bemerken, dass unterschiedliche Evolutionsstufen der Detektoren zu betrachten sind.
 
-Auch bisherige industrielle Einsatzfelder von Objektdetektoren sollen betrachtet werden, bevor technische Grundlagen zum Aufsetzen und Trainieren der drei Modelle näher betrachtet werden. 
+Schließlich werden verschiedene Cloud Anbieter für das Trainieren von \textit{Deep Learning} Modellen aufgezeigt (siehe Kapitel 2.6).
 
-In der Konzeptionsphase sollen zunächst die Vergleichskriterien eingeführt werden und deren Metriken anschließend für initiale Benchmarkdatensätze für jeden Objektdetektor ermittelt werden. Hierzu wird auf die Datensätze \textit{Pascal Visual Object Classes} (PascalVOC), \textit{Common Objects in Context} (COCO) und ImageNet zurückgegriffen. Anschließend wird der Datensatz für das \textit{Smart Warehouse} Szenario eingeführt. 
+In Kapitel III werden chronologisch Teilziele der Konzeption beschrieben, darunter das Erstellen eines Trainingsdatensatzes (siehe Kapitel 3.1), dem Einführen von Bewertungskriterien (siehe Kapitel 3.2), der Auswahl von Objektdetektoren, der Trainingsinfrastruktur und der Drohne (siehe Kapitel 3.3, 3.4, 3.4) und die Spezifikation der Inventursoftware (siehe Kapitel 3.6).
 
 In der Realisierung werden die Herausforderungen zur Steuerung und Anbindung der Drohne betrachtet und zudem die Objektdetektoren auf die realen Datensätze trainiert. Auch die Entwicklung der Webapplikation zur Visualisierung des Live-Bildes und der erkannten Objekte wird Bestandteil dieses Kapitels sein. Die Ergebnisse der Realisierungsphase werden im folgenden Kapitel dargestellt. 
 
-Ziel der Arbeit ist es Aussagen über die Fähigkeit von Objektdetektoren zum Einsatz in der Industrie zu treffen, indem eine Bewertung der Verhaltensweisen der Objektdetektoren nach den eingeführten Bewertungskriterien durchgeführt wird. Auch wirtschaftliche Gesichtspunkte werden in diesem Kapitel nicht außer Acht gelassen. 
+Ziel der Arbeit ist es Aussagen über die Fähigkeit von Objektdetektoren zum Einsatz in der Industrie zu treffen, indem eine Bewertung der Verhaltensweisen der Objektdetektoren nach den eingeführten Bewertungskriterien durchgeführt wird. Dies soll mit Hilfe der Umsetzung des \textit{SmartWarehouse} Szenarios bewiesen werden.
 
 Zuletzt wird das Wesen der Arbeit nochmals kurz zusammengefasst und anschließend auf mögliche Verbesserungen und Ausblicke in die Zukunft aufmerksam gemacht. 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  4 APR 2020 11:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  4 APR 2020 15:14
 entering extended mode
 **./Praxisbericht.tex
 (Praxisbericht.tex
@@ -2341,116 +2341,115 @@ ro-gram-ma-ble Ga-te Ar-rays (FPGAs),
 [35] [36] (Quellcode/floyd.yml [37]) [38])
 (Inhalt/07_Konzeption/trainingsdatensatz.tex [39]
 chapter 3.
-<Bilder/blockdiagramm.png, id=834, 804.00375pt x 241.90375pt>
+<Bilder/blockdiagramm.png, id=834, 814.04124pt x 241.90375pt>
 File: Bilder/blockdiagramm.png Graphic file (type png)
 <use Bilder/blockdiagramm.png>
 Package pdftex.def Info: Bilder/blockdiagramm.png  used on input line 7.
-(pdftex.def)             Requested size: 426.79134pt x 128.40768pt.
+(pdftex.def)             Requested size: 426.79134pt x 126.82788pt.
 [40
 
  <./Bilder/blockdiagramm.png>]
-<Bilder/wasser_klein.jpg, id=841, 481.8pt x 1050.92625pt>
+<Bilder/wasser_klein.jpg, id=841, 1050.92625pt x 481.04718pt>
 File: Bilder/wasser_klein.jpg Graphic file (type jpg)
 <use Bilder/wasser_klein.jpg>
-Package pdftex.def Info: Bilder/wasser_klein.jpg  used on input line 20.
-(pdftex.def)             Requested size: 481.79881pt x 1050.9237pt.
-<Bilder/wasser_gross.jpg, id=842, 481.8pt x 1050.92625pt>
+Package pdftex.def Info: Bilder/wasser_klein.jpg  used on input line 24.
+(pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
+<Bilder/wasser_gross.jpg, id=842, 1050.92625pt x 481.04718pt>
 File: Bilder/wasser_gross.jpg Graphic file (type jpg)
 <use Bilder/wasser_gross.jpg>
-Package pdftex.def Info: Bilder/wasser_gross.jpg  used on input line 21.
-(pdftex.def)             Requested size: 481.79881pt x 1050.9237pt.
-<Bilder/cola_klein.jpg, id=843, 481.8pt x 1050.92625pt>
+Package pdftex.def Info: Bilder/wasser_gross.jpg  used on input line 25.
+(pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
+<Bilder/cola_klein.jpg, id=843, 1050.92625pt x 481.04718pt>
 File: Bilder/cola_klein.jpg Graphic file (type jpg)
 <use Bilder/cola_klein.jpg>
-Package pdftex.def Info: Bilder/cola_klein.jpg  used on input line 22.
-(pdftex.def)             Requested size: 481.79881pt x 1050.9237pt.
-<Bilder/cola_gross.jpg, id=844, 481.8pt x 1050.92625pt>
+Package pdftex.def Info: Bilder/cola_klein.jpg  used on input line 26.
+(pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
+<Bilder/cola_gross.jpg, id=844, 1050.92625pt x 481.04718pt>
 File: Bilder/cola_gross.jpg Graphic file (type jpg)
 <use Bilder/cola_gross.jpg>
-Package pdftex.def Info: Bilder/cola_gross.jpg  used on input line 23.
-(pdftex.def)             Requested size: 481.79881pt x 1050.9237pt.
-<Bilder/iso.jpg, id=845, 481.8pt x 1050.92625pt>
+Package pdftex.def Info: Bilder/cola_gross.jpg  used on input line 27.
+(pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
+<Bilder/iso.jpg, id=845, 1050.92625pt x 481.04718pt>
 File: Bilder/iso.jpg Graphic file (type jpg)
 <use Bilder/iso.jpg>
-Package pdftex.def Info: Bilder/iso.jpg  used on input line 24.
-(pdftex.def)             Requested size: 481.79881pt x 1050.9237pt.
-<Bilder/ace.jpg, id=846, 481.8pt x 1050.92625pt>
+Package pdftex.def Info: Bilder/iso.jpg  used on input line 28.
+(pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
+<Bilder/ace.jpg, id=846, 1050.92625pt x 481.04718pt>
 File: Bilder/ace.jpg Graphic file (type jpg)
 <use Bilder/ace.jpg>
-Package pdftex.def Info: Bilder/ace.jpg  used on input line 25.
-(pdftex.def)             Requested size: 481.79881pt x 1050.9237pt.
-<Bilder/johannisbeerschorle.jpg, id=847, 481.8pt x 1050.92625pt>
+Package pdftex.def Info: Bilder/ace.jpg  used on input line 29.
+(pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
+<Bilder/johannisbeerschorle.jpg, id=847, 1050.92625pt x 481.04718pt>
 File: Bilder/johannisbeerschorle.jpg Graphic file (type jpg)
 <use Bilder/johannisbeerschorle.jpg>
-Package pdftex.def Info: Bilder/johannisbeerschorle.jpg  used on input line 26.
+Package pdftex.def Info: Bilder/johannisbeerschorle.jpg  used on input line 30.
 
-(pdftex.def)             Requested size: 481.79881pt x 1050.9237pt.
-<Bilder/apfelsaftschorle.jpg, id=848, 481.8pt x 1050.92625pt>
+(pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
+<Bilder/apfelsaftschorle.jpg, id=848, 1050.92625pt x 481.04718pt>
 File: Bilder/apfelsaftschorle.jpg Graphic file (type jpg)
 <use Bilder/apfelsaftschorle.jpg>
-Package pdftex.def Info: Bilder/apfelsaftschorle.jpg  used on input line 27.
-(pdftex.def)             Requested size: 481.79881pt x 1050.9237pt.
-<Bilder/malzbier.jpg, id=849, 481.8pt x 1050.92625pt>
+Package pdftex.def Info: Bilder/apfelsaftschorle.jpg  used on input line 31.
+(pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
+<Bilder/malzbier.jpg, id=849, 1050.92625pt x 481.04718pt>
 File: Bilder/malzbier.jpg Graphic file (type jpg)
 <use Bilder/malzbier.jpg>
-Package pdftex.def Info: Bilder/malzbier.jpg  used on input line 28.
-(pdftex.def)             Requested size: 481.79881pt x 1050.9237pt.
- [41 <./Bilder/wasser_klein.jpg> <./Bilder/wasser_gross.jpg> <./Bilder/cola_kle
-in.jpg> <./Bilder/cola_gross.jpg> <./Bilder/iso.jpg> <./Bilder/ace.jpg> <./Bild
-er/johannisbeerschorle.jpg> <./Bilder/apfelsaftschorle.jpg> <./Bilder/malzbier.
-jpg>]
-<Bilder/regal.jpg, id=864, 4625.28pt x 2119.92pt>
+Package pdftex.def Info: Bilder/malzbier.jpg  used on input line 32.
+(pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
+<Bilder/regal.jpg, id=851, 4625.28pt x 2119.92pt>
 File: Bilder/regal.jpg Graphic file (type jpg)
 <use Bilder/regal.jpg>
-Package pdftex.def Info: Bilder/regal.jpg  used on input line 37.
+Package pdftex.def Info: Bilder/regal.jpg  used on input line 41.
 (pdftex.def)             Requested size: 455.24408pt x 208.64029pt.
 
-Overfull \hbox (5.69037pt too wide) in paragraph at lines 37--38
+Overfull \hbox (5.69037pt too wide) in paragraph at lines 41--42
  [] 
  []
 
-) (Inhalt/07_Konzeption/bewertungskriterien.tex [42 <./Bilder/regal.jpg>])
-(Inhalt/07_Konzeption/objektdetektoren.tex [43]
-<Bilder/ssd_results.png, id=877, 948.54375pt x 276.43275pt>
+) (Inhalt/07_Konzeption/bewertungskriterien.tex [41] [42 <./Bilder/wasser_klein
+.jpg> <./Bilder/wasser_gross.jpg> <./Bilder/cola_klein.jpg> <./Bilder/cola_gros
+s.jpg> <./Bilder/iso.jpg> <./Bilder/ace.jpg> <./Bilder/johannisbeerschorle.jpg>
+ <./Bilder/apfelsaftschorle.jpg> <./Bilder/malzbier.jpg>] [43 <./Bilder/regal.j
+pg>]) (Inhalt/07_Konzeption/objektdetektoren.tex
+<Bilder/ssd_results.png, id=878, 948.54375pt x 276.43275pt>
 File: Bilder/ssd_results.png Graphic file (type png)
 <use Bilder/ssd_results.png>
 Package pdftex.def Info: Bilder/ssd_results.png  used on input line 7.
 (pdftex.def)             Requested size: 341.43306pt x 99.50305pt.
- [44 <./Bilder/ssd_results.png>]) (Inhalt/07_Konzeption/trainingsinfrastruktur.
-tex [45] [46]
-Overfull \hbox (20.53712pt too wide) in paragraph at lines 16--25
+ [44 <./Bilder/ssd_results.png>] [45]) (Inhalt/07_Konzeption/trainingsinfrastru
+ktur.tex [46]
+Overfull \hbox (20.53712pt too wide) in paragraph at lines 36--45
  [] 
  []
 
 [47]
-<Bilder/tpu_comparison.png, id=924, 804.00375pt x 477.785pt>
+<Bilder/tpu_comparison.png, id=926, 804.00375pt x 477.785pt>
 File: Bilder/tpu_comparison.png Graphic file (type png)
 <use Bilder/tpu_comparison.png>
-Package pdftex.def Info: Bilder/tpu_comparison.png  used on input line 35.
+Package pdftex.def Info: Bilder/tpu_comparison.png  used on input line 55.
 (pdftex.def)             Requested size: 398.33858pt x 236.71208pt.
-) (Inhalt/07_Konzeption/drohne.tex [48 <./Bilder/tpu_comparison.png>])
-(Inhalt/07_Konzeption/software.tex [49]
-<Bilder/UI.png, id=944, 976.64874pt x 418.56375pt>
+) (Inhalt/07_Konzeption/drohne.tex [48] [49 <./Bilder/tpu_comparison.png>]) (In
+halt/07_Konzeption/software.tex
+<Bilder/UI.png, id=945, 976.64874pt x 418.56375pt>
 File: Bilder/UI.png Graphic file (type png)
 <use Bilder/UI.png>
 Package pdftex.def Info: Bilder/UI.png  used on input line 7.
 (pdftex.def)             Requested size: 426.79134pt x 182.91042pt.
-)
-(Inhalt/08_Realisierung/realisierung.tex [50 <./Bilder/UI.png>]
+) [50]
+(Inhalt/08_Realisierung/realisierung.tex [51 <./Bilder/UI.png>]
 chapter 4.
-) (Inhalt/09_Ergebnisse/ergebnisse.tex [51
+) (Inhalt/09_Ergebnisse/ergebnisse.tex [52
 
 ]
 chapter 5.
-) (Inhalt/10_Bewertung/bewertung.tex [52
+) (Inhalt/10_Bewertung/bewertung.tex [53
 
 ]
 chapter 6.
-) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [53
+) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [54
 
 ]
 chapter 7.
-) [54
+) [55
 
 ]
 chapter without number
@@ -2526,13 +2525,13 @@ Package logreq Info: Writing requests to 'Praxisbericht.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
- 47790 strings out of 492946
- 942973 string characters out of 3125377
- 1522566 words of memory out of 3000000
- 50494 multiletter control sequences out of 15000+200000
+ 47793 strings out of 492946
+ 943007 string characters out of 3125377
+ 1523652 words of memory out of 3000000
+ 50495 multiletter control sequences out of 15000+200000
  578234 words of font info for 150 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
- 80i,23n,82p,9184b,3591s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 80i,23n,86p,9184b,3591s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
 0\eccc1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
 pen\ec\dpi600\tcrm1200.pk>{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/f
@@ -2572,9 +2571,9 @@ a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/D
 070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/co
 urier/ucrr8a.pfb>
-Output written on Praxisbericht.pdf (72 pages, 5096529 bytes).
+Output written on Praxisbericht.pdf (73 pages, 5290789 bytes).
 PDF statistics:
- 1908 PDF objects out of 2073 (max. 8388607)
- 315 named destinations out of 1000 (max. 500000)
+ 1917 PDF objects out of 2073 (max. 8388607)
+ 317 named destinations out of 1000 (max. 500000)
  465 words of extra memory for PDF output out of 10000 (max. 10000000)
 

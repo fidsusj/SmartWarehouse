@@ -14,22 +14,24 @@
 \contentsline {section}{\numberline {2.2}Neuronale Netze}{6}{section.2.2}% 
 \contentsline {section}{\numberline {2.3}Hyperparameter}{12}{section.2.3}% 
 \contentsline {section}{\numberline {2.4}Datensatzlehre}{17}{section.2.4}% 
-\contentsline {section}{\numberline {2.5}Objektdetektoren}{21}{section.2.5}% 
-\contentsline {section}{\numberline {2.6}Cloud Infrastruktur}{34}{section.2.6}% 
-\contentsline {chapter}{\numberline {3}Konzeption}{39}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Erstellen eines Trainingsdatensatzes}{39}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Einf\IeC {\"u}hren von Bewertungskriterien}{41}{section.3.2}% 
-\contentsline {section}{\numberline {3.3}Auswahl der Objektdetektoren}{43}{section.3.3}% 
-\contentsline {section}{\numberline {3.4}Auswahl der Trainingsinfrastruktur}{44}{section.3.4}% 
-\contentsline {section}{\numberline {3.5}Auswahl einer Drohne}{47}{section.3.5}% 
-\contentsline {section}{\numberline {3.6}Spezifikation der Inventursoftware}{48}{section.3.6}% 
-\contentsline {chapter}{\numberline {4}Realisierung}{50}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{50}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{50}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{50}{section.4.3}% 
-\contentsline {chapter}{\numberline {5}Ergebnisse}{51}{chapter.5}% 
-\contentsline {chapter}{\numberline {6}Bewertung}{52}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{53}{chapter.7}% 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{XI}{chapter*.33}% 
+\contentsline {section}{\numberline {2.5}Grundlagen zu Objektdetektoren}{19}{section.2.5}% 
+\contentsline {section}{\numberline {2.6}Objektdetektoren}{24}{section.2.6}% 
+\contentsline {section}{\numberline {2.7}Datensatzformate}{33}{section.2.7}% 
+\contentsline {section}{\numberline {2.8}Cloud Infrastruktur}{35}{section.2.8}% 
+\contentsline {chapter}{\numberline {3}Konzeption}{40}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Erstellen eines Trainingsdatensatzes}{40}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Einf\IeC {\"u}hren von Bewertungskriterien}{42}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Auswahl der Objektdetektoren}{44}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Auswahl der Trainingsinfrastruktur}{45}{section.3.4}% 
+\contentsline {section}{\numberline {3.5}Auswahl einer Drohne}{48}{section.3.5}% 
+\contentsline {section}{\numberline {3.6}Spezifikation der Inventursoftware}{49}{section.3.6}% 
+\contentsline {chapter}{\numberline {4}Realisierung}{51}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Trainieren der Objektdetektoren}{51}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{51}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{51}{section.4.3}% 
+\contentsline {chapter}{\numberline {5}Ergebnisse}{52}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}Bewertung}{53}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{54}{chapter.7}% 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{XI}{chapter*.32}% 
 \contentsline {chapter}{\numberline {A}Anhang}{XVII}{appendix.A}% 
 \contentsfinish 

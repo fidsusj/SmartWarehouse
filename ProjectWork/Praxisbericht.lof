@@ -11,35 +11,35 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {RELU}}}{16}{figure.2.5}% 
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {PReLU/LReLU}}}{16}{figure.2.5}% 
 \contentsline {figure}{\numberline {2.6}{\ignorespaces ELU-Aktivierungsfunktion}}{17}{figure.2.6}% 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Convolutional Layer}}{22}{figure.2.7}% 
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Zero-Padding}}{22}{figure.2.8}% 
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Veranschaulichung von Feature Maps}}{23}{figure.2.9}% 
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Pooling Layer}}{24}{figure.2.10}% 
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Intersection over Union}}{25}{figure.2.11}% 
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Berechnung mAP}}{26}{figure.2.12}% 
-\contentsline {figure}{\numberline {2.13}{\ignorespaces R-CNN Architektur}}{27}{figure.2.13}% 
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Faster R-CNN Architektur}}{28}{figure.2.14}% 
-\contentsline {figure}{\numberline {2.15}{\ignorespaces SSD Bounding Box Proposals}}{30}{figure.2.15}% 
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Bounding Boxes}}{30}{figure.2.16}% 
-\contentsline {figure}{\numberline {2.17}{\ignorespaces SSD Architektur}}{31}{figure.2.17}% 
-\contentsline {figure}{\numberline {2.18}{\ignorespaces Vereinfachte Darstellung des YOLO Algorithmus}}{33}{figure.2.18}% 
-\contentsline {figure}{\numberline {2.19}{\ignorespaces YOLO Architektur}}{34}{figure.2.19}% 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Convolutional Layer}}{20}{figure.2.7}% 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Zero-Padding}}{20}{figure.2.8}% 
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Veranschaulichung von Feature Maps}}{22}{figure.2.9}% 
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Pooling Layer}}{23}{figure.2.10}% 
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Intersection over Union}}{24}{figure.2.11}% 
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Berechnung mAP}}{25}{figure.2.12}% 
+\contentsline {figure}{\numberline {2.13}{\ignorespaces R-CNN Architektur}}{26}{figure.2.13}% 
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Faster R-CNN Architektur}}{27}{figure.2.14}% 
+\contentsline {figure}{\numberline {2.15}{\ignorespaces SSD Bounding Box Proposals}}{28}{figure.2.15}% 
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Bounding Boxes}}{29}{figure.2.16}% 
+\contentsline {figure}{\numberline {2.17}{\ignorespaces SSD Architektur}}{30}{figure.2.17}% 
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Vereinfachte Darstellung des YOLO Algorithmus}}{32}{figure.2.18}% 
+\contentsline {figure}{\numberline {2.19}{\ignorespaces YOLO Architektur}}{33}{figure.2.19}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Konzeptionelle Schritte}}{39}{figure.3.1}% 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Die neun Datensatz-Kategorien\relax }}{40}{figure.3.2}% 
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Saskia Wasser Klein}}}{40}{figure.3.2}% 
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Saskia Wasser Gro\IeC {\ss }}}}{40}{figure.3.2}% 
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Pepsi Cola Klein}}}{40}{figure.3.2}% 
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Pepsi Cola Gro\IeC {\ss }}}}{40}{figure.3.2}% 
-\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {ISO}}}{40}{figure.3.2}% 
-\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {ACE}}}{40}{figure.3.2}% 
-\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Stenger Johannisbeerschorle}}}{40}{figure.3.2}% 
-\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {Stenger Apfelsaftschorle}}}{40}{figure.3.2}% 
-\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {Vitamalz Malzbier}}}{40}{figure.3.2}% 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Smart Warehouse Regal}}{41}{figure.3.3}% 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Vergleich SSD auf PascalVOC}}{43}{figure.3.4}% 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Vergleich V100 - TPU Pod}}{47}{figure.3.5}% 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces SmartWarehouse User Interface}}{49}{figure.3.6}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Konzeptionelle Schritte}}{40}{figure.3.1}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Die neun Datensatz-Kategorien\relax }}{41}{figure.3.2}% 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Saskia Wasser Klein}}}{41}{figure.3.2}% 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Saskia Wasser Gro\IeC {\ss }}}}{41}{figure.3.2}% 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Pepsi Cola Klein}}}{41}{figure.3.2}% 
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Pepsi Cola Gro\IeC {\ss }}}}{41}{figure.3.2}% 
+\contentsline {subfigure}{\numberline {(e)}{\ignorespaces {ISO}}}{41}{figure.3.2}% 
+\contentsline {subfigure}{\numberline {(f)}{\ignorespaces {ACE}}}{41}{figure.3.2}% 
+\contentsline {subfigure}{\numberline {(g)}{\ignorespaces {Stenger Johannisbeerschorle}}}{41}{figure.3.2}% 
+\contentsline {subfigure}{\numberline {(h)}{\ignorespaces {Stenger Apfelsaftschorle}}}{41}{figure.3.2}% 
+\contentsline {subfigure}{\numberline {(i)}{\ignorespaces {Vitamalz Malzbier}}}{41}{figure.3.2}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Smart Warehouse Regal}}{42}{figure.3.3}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Vergleich SSD auf PascalVOC}}{44}{figure.3.4}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Vergleich V100 - TPU Pod}}{48}{figure.3.5}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces SmartWarehouse User Interface}}{50}{figure.3.6}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

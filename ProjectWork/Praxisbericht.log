@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  4 APR 2020 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  4 APR 2020 19:21
 entering extended mode
 **./Praxisbericht.tex
 (Praxisbericht.tex
@@ -2437,19 +2437,19 @@ Package pdftex.def Info: Bilder/UI.png  used on input line 7.
 ) [50]
 (Inhalt/08_Realisierung/realisierung.tex [51 <./Bilder/UI.png>]
 chapter 4.
-) (Inhalt/09_Ergebnisse/ergebnisse.tex [52
+[52
 
-]
+] [53]) (Inhalt/09_Ergebnisse/ergebnisse.tex [54]
 chapter 5.
-) (Inhalt/10_Bewertung/bewertung.tex [53
+) (Inhalt/10_Bewertung/bewertung.tex [55
 
 ]
 chapter 6.
-) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [54
+) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [56
 
 ]
 chapter 7.
-) [55
+) [57
 
 ]
 chapter without number
@@ -2518,15 +2518,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `Praxisbericht.out' has not changed.
-(rerunfilecheck)             Checksum: 60D6130F6829DD0170BE69FE9DA03820;2191.
+(rerunfilecheck)             Checksum: 657A3396F06B1AE4BCD4D71927FEE91E;2190.
 Package logreq Info: Writing requests to 'Praxisbericht.run.xml'.
 \openout1 = `Praxisbericht.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
- 47793 strings out of 492946
- 943007 string characters out of 3125377
+ 47798 strings out of 492946
+ 943054 string characters out of 3125377
  1523652 words of memory out of 3000000
  50495 multiletter control sequences out of 15000+200000
  578234 words of font info for 150 fonts, out of 3000000 for 9000
@@ -2571,9 +2571,9 @@ a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/D
 070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/co
 urier/ucrr8a.pfb>
-Output written on Praxisbericht.pdf (73 pages, 5290789 bytes).
+Output written on Praxisbericht.pdf (75 pages, 5297575 bytes).
 PDF statistics:
- 1917 PDF objects out of 2073 (max. 8388607)
- 317 named destinations out of 1000 (max. 500000)
+ 1930 PDF objects out of 2073 (max. 8388607)
+ 322 named destinations out of 1000 (max. 500000)
  465 words of extra memory for PDF output out of 10000 (max. 10000000)
 

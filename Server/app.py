@@ -1,9 +1,9 @@
+import json
 import time
 import cv2
 import torch
 import torch.backends.cudnn as cudnn
 from imutils.video import FPS
-from torchvision import transforms
 from flask import Flask, render_template, Response
 from SSD.detect import infere
 from SSD.fileVideoStream import FileVideoStream
@@ -48,7 +48,7 @@ def gen():
         _, encodedImage = cv2.imencode('.jpg', image)
         fps.update()
         fps.stop()
-        print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
+        # print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + bytearray(encodedImage) + b'\r\n')
 
@@ -58,5 +58,10 @@ def video_feed():
     return Response(gen(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
+@app.route('/getObjects', methods=['GET'])
+def getObjects():
+    return Response(json.dumps(counter), mimetype='application/json')
+
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', threaded=True, debug=True)
+    app.run(host='0.0.0.0', threaded=True)

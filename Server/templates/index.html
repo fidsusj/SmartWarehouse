@@ -23,23 +23,46 @@
                 Detected Objects
               </div>
               <div class="card-body">
-                <h5 class="card-title">Saksia Wasser Groß: 2</h5>
-                <h5 class="card-title">Saksia Wasser Klein: 2</h5>
-                <h5 class="card-title">Coca Cola Groß: 2</h5>
-                <h5 class="card-title">Coca Cola Klein: 2</h5>
-                <h5 class="card-title">ISO: 2</h5>
-                <h5 class="card-title">ACE: 2</h5>
-                <h5 class="card-title">Stenger Johannisbeerschorle: 2</h5>
-                <h5 class="card-title">Stenger Apfelsaftschorle: 2</h5>
-                <h5 class="card-title">Vitamalz Malzbier: 2</h5>
+                <h5 id="1" class="card-title">Saksia Wasser Groß: 0</h5>
+                <h5 id="2" class="card-title">Saksia Wasser Klein: 0</h5>
+                <h5 id="3" class="card-title">Coca Cola Groß: 0</h5>
+                <h5 id="4" class="card-title">Coca Cola Klein: 0</h5>
+                <h5 id="5" class="card-title">ISO: 0</h5>
+                <h5 id="6" class="card-title">ACE: 0</h5>
+                <h5 id="7" class="card-title">Stenger Johannisbeerschorle: 0</h5>
+                <h5 id="8" class="card-title">Stenger Apfelsaftschorle: 0</h5>
+                <h5 id="9" class="card-title">Vitamalz Malzbier: 0</h5>
               </div>
             </div>
         </div>
       </div>
+      <button type="button" class="btn btn-primary" onclick="updateCounter()">Primary</button>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        function updateCounter() {
+            fetch("{{ url_for('getObjects') }}", {
+                method: 'GET'
+            }).then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                $("#1").text("Saksia Wasser Groß: " + data["saskia wasser groß"]);
+                $("#2").text("Saksia Wasser Klein: " + data["saskia wasser klein"]);
+                $("#3").text("Coca Cola Groß: " + data["coca cola groß"]);
+                $("#4").text("Coca Cola Klein: " + data["coca cola klein"]);
+                $("#5").text("ACE: " + data["ace"]);
+                $("#6").text("ISO: " + data["iso"]);
+                $("#7").text("Stenger Johannisbeerschorle: " + data["stenger johannisbeerschorle"]);
+                $("#8").text("Stenger Apfelsaftschorle: " + data["stenger apfelsaftschorle"]);
+                $("#9").text("Vitamalz Malzbier: " + data["vitamalz malzbier"]);
+            });
+        }
+    </script>
+
 </body>
 </html>

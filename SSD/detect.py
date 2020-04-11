@@ -108,5 +108,4 @@ def infere(frame, object_counter, last_detected_objects, model):
         if not found:
             object_counter[det_object["label"]] += 1
 
-    print("Test")
     return cv2_image, det_objects, object_counter

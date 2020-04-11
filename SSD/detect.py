@@ -58,8 +58,7 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
     det_boxes = det_boxes[0].to('cpu')
 
     # Transform to original image dimensions
-    original_dims = torch.FloatTensor(
-        [original_image.width, original_image.height, original_image.width, original_image.height]).unsqueeze(0)
+    original_dims = torch.FloatTensor([original_image.width, original_image.height, original_image.width, original_image.height]).unsqueeze(0)
     det_boxes = det_boxes * original_dims
 
     # Decode class integer labels
@@ -74,6 +73,9 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
     annotated_image = original_image
     draw = ImageDraw.Draw(annotated_image)
     font = ImageFont.truetype("./calibril.ttf", 15)
+
+    # Detected objects dictionary
+    det_objects = []
 
     # Suppress specific classes, if needed
     for i in range(det_boxes.size(0)):
@@ -91,6 +93,9 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
         # draw.rectangle(xy=[l + 3. for l in box_location], outline=label_color_map[
         #     det_labels[i]])  # a fourth rectangle at an offset of 1 pixel to increase line thickness
 
+        # Fill detected objects dictionary
+        det_objects.append({"label": det_labels[i], "location": box_location})
+
         # Text
         text_size = font.getsize(det_labels[i].upper())
         text_location = [box_location[0] + 2., box_location[1] - text_size[1]]
@@ -101,7 +106,7 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
                   font=font)
     del draw
 
-    return annotated_image
+    return annotated_image, det_objects
 
 
 class FileVideoStream:
@@ -144,6 +149,12 @@ if __name__ == '__main__':
     time.sleep(1.0)
     fps = FPS().start()
 
+    object_counter = {}
+    for label in voc_labels:
+        object_counter[label] = 0
+
+    last_detected_objects = []
+
     while fvs.more():
         # Read new frame
         frame = fvs.read()
@@ -151,9 +162,23 @@ if __name__ == '__main__':
         # Interfere with model
         cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         pil_image = Image.fromarray(cv2_image)
-        pil_image = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000)
+        pil_image, det_objects = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000)
         cv2_image = numpy.array(pil_image)
         cv2_image = cv2_image[:, :, ::-1].copy()
+
+        # Count objects
+        for det_object in det_objects:
+            found = False
+            for last_detected_object in last_detected_objects:
+                if det_object["label"] == last_detected_object["label"]:
+                    if abs(sum(det_object["location"]) - sum(last_detected_object["location"])) <= 100:
+                        found = True
+
+            if not found:
+                object_counter[det_object["label"]] += 1
+
+        last_detected_objects = det_objects
+        print(object_counter)
 
         # Display frame
         cv2.imshow("SmartWarehouse", cv2_image)

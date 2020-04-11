@@ -1,6 +1,26 @@
 \section{Auswahl der Trainingsinfrastruktur}
 
-Bei der Auswahl der Trainingsinfrastruktur wurden zunächst die Cloud PaaS-Angebote in Betrachtung gezogen. Diese ermöglichen meist eine weit bessere Performance als lokales Training. Wichtig bei der Auswahl war hierbei möglichst niedrige Betriebskosten, ein diverses Angebot an Hardware-Beschleunigern und ein einfaches Aufsetzen der Trainingsinfrastruktur. Insbesondere sollten die Testversionen der jeweiligen Angebote zu Nutze gemacht werden. 
+Bei der Auswahl der Trainingsinfrastruktur wurden zunächst die Cloud PaaS-Angebote in Betrachtung gezogen. Diese ermöglichen meist eine weit bessere Performance als lokales Training. Wichtig bei der Auswahl war hierbei 
+
+\begin{itemize}
+	\item möglichst niedrige Betriebskosten,
+	\item ein diverses Angebot an Hardware-Beschleunigern und
+	\item ein einfaches Aufsetzen der Trainingsinfrastruktur.
+\end{itemize}
+
+Insbesondere sollten die Testversionen der jeweiligen Angebote zu Nutze gemacht werden, um niedrige Betriebskosten zu erreichen. In Tabelle \ref{table:comparison} sind die Ergebnisse der Untersuchung dargestellt. 
+
+\begin{center}
+	\begin{tabular}[h]{l|c|c|c|c|c}
+		& AWS & GCP & Azure & FloydHub & Colab \\
+		\hline
+		Nutzungsrahmen & 50 Std. & 300\$ & 200\$ & 2 Std. & Kostenlos \\
+		Hardware-Beschleuniger & Nein & Ja & Ja & Ja & Ja \\
+		Setup-Komplexität & Hoch & Mittel & Mittel & Einfach & Einfach \\
+	\end{tabular}
+	\captionof{table}{Vergleich der SaaS-Angebote der Cloud Anbieter}
+	\label{table:comparison}
+\end{center}
 
 \textit{Amazon SageMaker} bietet hierbei für 50 Stunden eine \textit{ml.m4.xlarge} Instanz für Modelltrainingszwecke an \cite{AmazonWebServices.2020}. Da diese allerdings nur 4 vCPUs und 16 GiB Arbeitsspeicher umfasst, also keinerlei Cloud GPU als Hardwarebeschleuniger angeboten wird, wurde das Angebot wieder verworfen \cite{AmazonWebServices.20200314b}.
 
@@ -26,7 +46,7 @@ Während des Trainings mit der \textit{NVIDIA Tesla K80} fiel allerdings auf, da
 	\label{table:hardware}
 \end{center}
 
-Hierbei fällt auf, dass im Grad der Parallelisierung eine \textit{NVIDIA Tesla K80} zwar mit den vorhandenen lokalen Grafikkarten mithalten kann, in der Anzahl an Rechenoperationen pro Sekunden allerdings weit schlechter abschneidet. Damit sich das Training in der Cloud nach Performance lohnt, muss demnach mindestens eine \textit{NVIDIA Tesla V100} verwendet werden. Da diese allerdings mit 42\$ für zehn Stunden mehr als dreimal so teuer wie eine \textit{NVIDIA Tesla K80} für 12\$ ist und zusätzlich zu den GPU Kosten noch monatliche Account-Gebühren berechnet werden\footnote{Je nach Account kann eine unterschiedliche Anzahl an Projekten erstellt und Speicherplatz verwendet werden. Die \textit{Beginner} Ausstattung von einem Projekt und 10 GB Speicher ist allerdings kostenfrei.}, wurde sich nach nun nach Kosten-Nutzen Abwägung letzten Endes auf lokales Training festgelegt. Dies ist ebenso hinsichtlich des Trainings des \textit{YOLO} Objektdetektors besser, da das sehr spezifische \textit{Darknet} Framework, das in der Implementierung genutzt wird, bisher von noch keinem Cloud Anbieter unterstützt wurde. Dies hätte eine Umentscheidung auf eine Alternativ-Implementierung in beispielsweise \textit{TensorFlow} oder \textit{PyTorch} nötig gemacht. Bezieht man noch andere Anpassungen in der Programmlogik mit ein, z.B. dass ein Zugriff auf das Dateisystem beim Erstellen von Dateien in der \textit{SSD} Implementierung in der Cloud Umgebung nicht möglich ist, so kommen zusätzlich zeitliche Bedenken mit auf. Ein lokales Trainieren bietet unter den genannten Voraussetzungen somit eine weitaus bessere Umgebung.
+Hierbei fällt auf, dass im Grad der Parallelisierung eine \textit{NVIDIA Tesla K80} zwar mit den vorhandenen lokalen Grafikkarten mithalten kann, in der Anzahl an Rechenoperationen pro Sekunden allerdings weit schlechter abschneidet. Damit sich das Training in der Cloud nach Performance lohnt, muss demnach mindestens eine \textit{NVIDIA Tesla V100} verwendet werden. Da diese allerdings mit 42\$ für zehn Stunden mehr als dreimal so teuer als eine \textit{NVIDIA Tesla K80} für 12\$ ist und zusätzlich zu den GPU Kosten noch monatliche Account-Gebühren berechnet werden\footnote{Je nach Account kann eine unterschiedliche Anzahl an Projekten erstellt und Speicherplatz verwendet werden. Die \textit{Beginner} Ausstattung von einem Projekt und 10 GB Speicher ist allerdings kostenfrei.}, wurde sich nach nun nach Kosten-Nutzen Abwägung letzten Endes auf lokales Training festgelegt. Dies ist ebenso hinsichtlich des Trainings des \textit{YOLO} Objektdetektors besser, da das sehr spezifische \textit{Darknet} Framework, das in der Implementierung genutzt wird, bisher von noch keinem Cloud Anbieter unterstützt wurde. Das Trainieren des \textit{YOLO} Objektdetektors in der Cloud hätte demnach eine Umentscheidung auf eine Alternativ-Implementierung in beispielsweise \textit{TensorFlow} oder \textit{PyTorch} nötig gemacht. Werden noch andere Anpassungen in der Programmlogik mit einbezogen, z.B. dass ein Zugriff auf das Dateisystem beim Erstellen von Dateien in der \textit{SSD} Implementierung in der Cloud Umgebung nicht möglich ist, so kommen zusätzlich zeitliche Bedenken mit auf. Ein lokales Trainieren bietet unter den genannten Voraussetzungen somit eine weitaus bessere Umgebung.
 
 Auch wurden Überlegungen zum Training in \textit{Google Colab} unternommen, da diese einfach ein Training mit TPUs ermöglichen. Diese Art von Spezialhardware erreicht pro TPU-Kern eine Rechenleistung von bis zu 92 TOPS \cite{HaraldBogeholz.20170406}. Werden 2048 solcher TPU-Kerne zu einem TPU-Pod zusammen geschlossen, so ergibt sich eine Rechenleistung von über 100 PetaFLOPS \cite{GoogleCloud.20200209}. Zudem ist die größere Rechenleistung gleichzeitig effizienter als herkömmliche GPUs (siehe Abbildung \ref{tpu}).
 

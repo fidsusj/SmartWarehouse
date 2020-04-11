@@ -14,12 +14,12 @@ class PascalVOCDataset(Dataset):
     def __init__(self, data_folder, split, keep_difficult=False):
         """
         :param data_folder: folder where data files are stored
-        :param split: split, one of 'TRAIN' or 'TEST'
+        :param split: split, one of 'TRAIN', 'TEST' or 'VALIDATION'
         :param keep_difficult: keep or discard objects that are considered difficult to detect?
         """
         self.split = split.upper()
 
-        assert self.split in {'TRAIN', 'TEST'}
+        assert self.split in {'TRAIN', 'TEST', 'VALIDATION'}
 
         self.data_folder = data_folder
         self.keep_difficult = keep_difficult

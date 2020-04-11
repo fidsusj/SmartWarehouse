@@ -70,9 +70,9 @@ def create_data_lists(smartwarehouse_path, output_folder):
     for id in ids:
         # Parse annotation's XML file
         objects = parse_annotation(os.path.join(smartwarehouse_path, 'Annotations', id + '.xml'))
-        if len(objects) == 0:
+        if len(objects["labels"]) == 0:
             continue
-        n_objects += len(objects)
+        n_objects += len(objects["labels"])
         train_objects.append(objects)
         train_images.append(os.path.join(smartwarehouse_path, 'JPEGImages', id + '.jpg'))
 
@@ -101,10 +101,10 @@ def create_data_lists(smartwarehouse_path, output_folder):
     for id in ids:
         # Parse annotation's XML file
         objects = parse_annotation(os.path.join(smartwarehouse_path, 'Annotations', id + '.xml'))
-        if len(objects) == 0:
+        if len(objects["labels"]) == 0:
             continue
         test_objects.append(objects)
-        n_objects += len(objects)
+        n_objects += len(objects["labels"])
         test_images.append(os.path.join(smartwarehouse_path, 'JPEGImages', id + '.jpg'))
 
     assert len(test_objects) == len(test_images)
@@ -123,17 +123,17 @@ def create_data_lists(smartwarehouse_path, output_folder):
     validation_objects = list()
     n_objects = 0
 
-    # Find IDs of images in test data
+    # Find IDs of images in validation data
     with open(os.path.join(smartwarehouse_path, dataset_path + 'ImageSets/Main/validation.txt')) as f:
         ids = f.read().splitlines()
 
     for id in ids:
         # Parse annotation's XML file
         objects = parse_annotation(os.path.join(smartwarehouse_path, 'Annotations', id + '.xml'))
-        if len(objects) == 0:
+        if len(objects["labels"]) == 0:
             continue
         validation_objects.append(objects)
-        n_objects += len(objects)
+        n_objects += len(objects["labels"])
         validation_images.append(os.path.join(smartwarehouse_path, 'JPEGImages', id + '.jpg'))
 
     assert len(validation_objects) == len(validation_images)
@@ -588,10 +588,10 @@ def transform(image, boxes, labels, difficulties, split):
     :param boxes: bounding boxes in boundary coordinates, a tensor of dimensions (n_objects, 4)
     :param labels: labels of objects, a tensor of dimensions (n_objects)
     :param difficulties: difficulties of detection of these objects, a tensor of dimensions (n_objects)
-    :param split: one of 'TRAIN' or 'TEST', since different sets of transformations are applied
+    :param split: one of 'TRAIN', 'TEST' or 'VALIDATION', since different sets of transformations are applied
     :return: transformed image, transformed bounding box coordinates, transformed labels, transformed difficulties
     """
-    assert split in {'TRAIN', 'TEST'}
+    assert split in {'TRAIN', 'TEST', 'VALIDATION'}
 
     # Mean and standard deviation of ImageNet data that our base VGG from torchvision was trained on
     # see: https://pytorch.org/docs/stable/torchvision/models.html

@@ -1,9 +1,0 @@
-machine: gpu
-env: pytorch-1.1
-input:
-  - destination: input
-    source: fidsusj/datasets/smartwarehousessd/3
-  - fidsusj/datasets/smartwarehousessd/3:ssd
-description: Job to train the SSD
-max_runtime: 3600
-command: python train.py

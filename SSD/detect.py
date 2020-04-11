@@ -1,36 +1,11 @@
-from threading import Thread
 import numpy
-import torch.backends.cudnn as cudnn
-from imutils.video import FPS
-from queue import Queue
-from torchvision import transforms
-from SSD.utils import *
-from PIL import Image, ImageDraw, ImageFont
 import cv2
-import time
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-# Load model checkpoint
-checkpoint = 'checkpoint/BEST_checkpoint_ssd300.pth.tar'
-checkpoint = torch.load(checkpoint)  # Use map_location=torch.device('cpu') as 2nd parameter on laptop
-start_epoch = checkpoint['epoch'] + 1
-best_loss = checkpoint['best_loss']
-print('\nLoaded checkpoint from epoch %d. Best loss so far is %.3f.\n' % (start_epoch, best_loss))
-model = checkpoint['model']
-model = model.to(device)
-model.eval()
-cudnn.benchmark = True
-cudnn.enabled = True
-
-# Transforms
-resize = transforms.Resize((300, 300))
-to_tensor = transforms.ToTensor()
-normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                                 std=[0.229, 0.224, 0.225])
+from PIL import Image, ImageDraw, ImageFont
+from SSD.utils import *
+from torchvision import transforms
 
 
-def detect(original_image, min_score, max_overlap, top_k, suppress=None):
+def detect(original_image, min_score, max_overlap, top_k, model, suppress=None):
     """
     Detect objects in an image with a trained SSD300, and visualize the results.
     :param original_image: image, a PIL Image
@@ -40,6 +15,11 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
     :param suppress: classes that you know for sure cannot be in the image or you do not want in the image, a list
     :return: annotated image, a PIL Image
     """
+
+    resize = transforms.Resize((300, 300))
+    to_tensor = transforms.ToTensor()
+    normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                     std=[0.229, 0.224, 0.225])
 
     # Transform
     image = normalize(to_tensor(resize(original_image)))
@@ -64,18 +44,18 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
     # Decode class integer labels
     det_labels = [rev_label_map[l] for l in det_labels[0].to('cpu').tolist()]
 
+    # Detected objects dictionary
+    det_objects = []
+
     # If no objects found, the detected labels will be set to ['0.'], i.e. ['background'] in SSD300.detect_objects() in model.py
     if det_labels == ['background']:
         # Just return original image
-        return original_image
+        return original_image, det_objects
 
     # Annotate
     annotated_image = original_image
     draw = ImageDraw.Draw(annotated_image)
     font = ImageFont.truetype("./calibril.ttf", 15)
-
-    # Detected objects dictionary
-    det_objects = []
 
     # Suppress specific classes, if needed
     for i in range(det_boxes.size(0)):
@@ -109,83 +89,24 @@ def detect(original_image, min_score, max_overlap, top_k, suppress=None):
     return annotated_image, det_objects
 
 
-class FileVideoStream:
-    def __init__(self, path, queueSize):
-        self.stream = cv2.VideoCapture(path)
-        self.stopped = False
-        self.Q = Queue(maxsize=queueSize)
+def infere(frame, object_counter, last_detected_objects, model):
+    # Interfere with model
+    cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    pil_image = Image.fromarray(cv2_image)
+    pil_image, det_objects = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000, model=model)
+    cv2_image = numpy.array(pil_image)
+    cv2_image = cv2_image[:, :, ::-1].copy()
 
-    def start(self):
-        # start a thread to read frames from the file video stream
-        t = Thread(target=self.update, args=())
-        t.daemon = True
-        t.start()
-        return self
+    # Count objects
+    for det_object in det_objects:
+        found = False
+        for last_detected_object in last_detected_objects:
+            if det_object["label"] == last_detected_object["label"]:
+                if abs(sum(det_object["location"]) - sum(last_detected_object["location"])) <= 100:
+                    found = True
+                    break
 
-    def stop(self):
-        self.stopped = True
+        if not found:
+            object_counter[det_object["label"]] += 1
 
-    def update(self):
-        while True:
-            if self.stopped:
-                return
-            if not self.Q.full():
-                (grabbed, frame) = self.stream.read()
-                if not grabbed:
-                    self.stop()
-                    return
-                self.Q.put(frame)
-
-    def read(self):
-        return self.Q.get()
-
-    def more(self):
-        return self.Q.qsize() > 0
-
-
-if __name__ == '__main__':
-    cv2.namedWindow("SmartWarehouse")
-    fvs = FileVideoStream("data/videos/30FPS_1080p.mp4", 1000000).start()
-    time.sleep(1.0)
-    fps = FPS().start()
-
-    object_counter = {}
-    for label in voc_labels:
-        object_counter[label] = 0
-
-    last_detected_objects = []
-
-    while fvs.more():
-        # Read new frame
-        frame = fvs.read()
-
-        # Interfere with model
-        cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        pil_image = Image.fromarray(cv2_image)
-        pil_image, det_objects = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000)
-        cv2_image = numpy.array(pil_image)
-        cv2_image = cv2_image[:, :, ::-1].copy()
-
-        # Count objects
-        for det_object in det_objects:
-            found = False
-            for last_detected_object in last_detected_objects:
-                if det_object["label"] == last_detected_object["label"]:
-                    if abs(sum(det_object["location"]) - sum(last_detected_object["location"])) <= 100:
-                        found = True
-
-            if not found:
-                object_counter[det_object["label"]] += 1
-
-        last_detected_objects = det_objects
-        print(object_counter)
-
-        # Display frame
-        cv2.imshow("SmartWarehouse", cv2_image)
-        cv2.waitKey(1)
-        fps.update()
-
-    fps.stop()
-    print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
-    cv2.destroyAllWindows()
-    fvs.stop()
+    return cv2_image, det_objects, object_counter

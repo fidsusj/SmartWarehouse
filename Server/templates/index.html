@@ -20,19 +20,47 @@
         <div class="col-lg-4">
             <div class="card text-center">
               <div class="card-header">
-                Detected Objects
+                  <h5 style="float: left">Detected Objects</h5>
+                  <button type="button" class="btn btn-dark" style="float: right" onclick="updateCounter()">Update</button>
               </div>
-              <div class="card-body">
-                <h5 class="card-title">Saksia Wasser Groß: 2</h5>
-                <h5 class="card-title">Saksia Wasser Klein: 2</h5>
-                <h5 class="card-title">Coca Cola Groß: 2</h5>
-                <h5 class="card-title">Coca Cola Klein: 2</h5>
-                <h5 class="card-title">ISO: 2</h5>
-                <h5 class="card-title">ACE: 2</h5>
-                <h5 class="card-title">Stenger Johannisbeerschorle: 2</h5>
-                <h5 class="card-title">Stenger Apfelsaftschorle: 2</h5>
-                <h5 class="card-title">Vitamalz Malzbier: 2</h5>
-              </div>
+                <ul class="list-group">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Saksia Wasser Groß
+                    <span id="1" class="badge badge-primary badge-pill">0</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Saksia Wasser Klein
+                    <span id="2" class="badge badge-primary badge-pill">0</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Pepsi Cola Groß
+                    <span id="3" class="badge badge-primary badge-pill">0</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Pepsi Cola Klein
+                    <span id="4" class="badge badge-primary badge-pill">0</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    ACE
+                    <span id="5" class="badge badge-primary badge-pill">0</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    ISO
+                    <span id="6" class="badge badge-primary badge-pill">0</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Stenger Johannisbeerschorle
+                    <span id="7" class="badge badge-primary badge-pill">0</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Stenger Apfelsaftschorle
+                    <span id="8" class="badge badge-primary badge-pill">0</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Vitamalz Malzbier
+                    <span id="9" class="badge badge-primary badge-pill">0</span>
+                  </li>
+                </ul>
             </div>
         </div>
       </div>
@@ -41,5 +69,39 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        function updateCounter() {
+            fetch("{{ url_for('getObjects') }}", {
+                method: 'GET'
+            }).then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                $("#1").text(data["saskia wasser groß"]);
+                $("#2").text(data["saskia wasser klein"]);
+                $("#3").text(data["pepsi cola groß"]);
+                $("#4").text(data["pepsi cola klein"]);
+                $("#5").text(data["ace"]);
+                $("#6").text(data["iso"]);
+                $("#7").text(data["stenger johannisbeerschorle"]);
+                $("#8").text(data["stenger apfelsaftschorle"]);
+                $("#9").text(data["vitamalz malzbier"]);
+            });
+        }
+    </script>
+
+    <style>
+        body {
+            background-image: url('/static/background.jpg')
+        }
+        .jumbotron {
+          opacity: 0.75;
+        }
+        .card {
+          opacity: 0.95;
+        }
+    </style>
+
 </body>
 </html>

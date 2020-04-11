@@ -104,6 +104,7 @@ def infere(frame, object_counter, last_detected_objects, model):
             if det_object["label"] == last_detected_object["label"]:
                 if abs(sum(det_object["location"]) - sum(last_detected_object["location"])) <= 100:
                     found = True
+                    break
 
         if not found:
             object_counter[det_object["label"]] += 1

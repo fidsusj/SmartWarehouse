@@ -33,12 +33,6 @@ model.eval()
 cudnn.benchmark = True
 cudnn.enabled = True
 
-# Transforms
-resize = transforms.Resize((300, 300))
-to_tensor = transforms.ToTensor()
-normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                                 std=[0.229, 0.224, 0.225])
-
 
 @app.route('/')
 def index():
@@ -50,7 +44,7 @@ def gen():
     while True:
         fps = FPS().start()
         frame = fvs.read()
-        image, detected_objects, counter = infere(frame, counter, detected_objects, normalize, to_tensor, model)
+        image, detected_objects, counter = infere(frame, counter, detected_objects, model)
         _, encodedImage = cv2.imencode('.jpg', image)
         fps.update()
         fps.stop()

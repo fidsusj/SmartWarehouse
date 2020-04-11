@@ -2,9 +2,10 @@ import numpy
 import cv2
 from PIL import Image, ImageDraw, ImageFont
 from SSD.utils import *
+from torchvision import transforms
 
 
-def detect(original_image, min_score, max_overlap, top_k, normalize, to_tensor, model, suppress=None):
+def detect(original_image, min_score, max_overlap, top_k, model, suppress=None):
     """
     Detect objects in an image with a trained SSD300, and visualize the results.
     :param original_image: image, a PIL Image
@@ -14,6 +15,11 @@ def detect(original_image, min_score, max_overlap, top_k, normalize, to_tensor, 
     :param suppress: classes that you know for sure cannot be in the image or you do not want in the image, a list
     :return: annotated image, a PIL Image
     """
+
+    resize = transforms.Resize((300, 300))
+    to_tensor = transforms.ToTensor()
+    normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
+                                     std=[0.229, 0.224, 0.225])
 
     # Transform
     image = normalize(to_tensor(resize(original_image)))
@@ -32,25 +38,24 @@ def detect(original_image, min_score, max_overlap, top_k, normalize, to_tensor, 
     det_boxes = det_boxes[0].to('cpu')
 
     # Transform to original image dimensions
-    original_dims = torch.FloatTensor(
-        [original_image.width, original_image.height, original_image.width, original_image.height]).unsqueeze(0)
+    original_dims = torch.FloatTensor([original_image.width, original_image.height, original_image.width, original_image.height]).unsqueeze(0)
     det_boxes = det_boxes * original_dims
 
     # Decode class integer labels
     det_labels = [rev_label_map[l] for l in det_labels[0].to('cpu').tolist()]
 
+    # Detected objects dictionary
+    det_objects = []
+
     # If no objects found, the detected labels will be set to ['0.'], i.e. ['background'] in SSD300.detect_objects() in model.py
     if det_labels == ['background']:
         # Just return original image
-        return original_image
+        return original_image, det_objects
 
     # Annotate
     annotated_image = original_image
     draw = ImageDraw.Draw(annotated_image)
     font = ImageFont.truetype("./calibril.ttf", 15)
-
-    # Detected objects dictionary
-    det_objects = []
 
     # Suppress specific classes, if needed
     for i in range(det_boxes.size(0)):
@@ -84,12 +89,11 @@ def detect(original_image, min_score, max_overlap, top_k, normalize, to_tensor, 
     return annotated_image, det_objects
 
 
-def infere(frame, object_counter, last_detected_objects, normalize, to_tensor, model):
+def infere(frame, object_counter, last_detected_objects, model):
     # Interfere with model
     cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     pil_image = Image.fromarray(cv2_image)
-    pil_image, det_objects = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000, normalize=normalize,
-                                    to_tensor=to_tensor, model=model)
+    pil_image, det_objects = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000, model=model)
     cv2_image = numpy.array(pil_image)
     cv2_image = cv2_image[:, :, ::-1].copy()
 
@@ -104,4 +108,5 @@ def infere(frame, object_counter, last_detected_objects, normalize, to_tensor, m
         if not found:
             object_counter[det_object["label"]] += 1
 
+    print("Test")
     return cv2_image, det_objects, object_counter

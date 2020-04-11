@@ -22,18 +22,18 @@ model = model.to(device)
 # Switch to eval mode
 model.eval()
 
-# Load test data
-test_dataset = PascalVOCDataset(data_folder,
-                                split='test',
+# Load validation data
+validation_dataset = PascalVOCDataset(data_folder,
+                                split='validation',
                                 keep_difficult=keep_difficult)
-test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size, shuffle=False,
-                                          collate_fn=test_dataset.collate_fn, num_workers=workers, pin_memory=True)
+validation_loader = torch.utils.data.DataLoader(validation_dataset, batch_size=batch_size, shuffle=False,
+                                          collate_fn=validation_dataset.collate_fn, num_workers=workers, pin_memory=True)
 
 
-def evaluate(test_loader, model):
+def evaluate(validation_loader, model):
     """
     Evaluate.
-    :param test_loader: DataLoader for test data
+    :param validation_loader: DataLoader for validation data
     :param model: model
     """
 
@@ -50,7 +50,7 @@ def evaluate(test_loader, model):
 
     with torch.no_grad():
         # Batches
-        for i, (images, boxes, labels, difficulties) in enumerate(tqdm(test_loader, desc='Evaluating')):
+        for i, (images, boxes, labels, difficulties) in enumerate(tqdm(validation_loader, desc='Evaluating')):
             images = images.to(device)  # (N, 3, 300, 300)
 
             # Forward prop.
@@ -82,4 +82,4 @@ def evaluate(test_loader, model):
 
 
 if __name__ == '__main__':
-    evaluate(test_loader, model)
+    evaluate(validation_loader, model)

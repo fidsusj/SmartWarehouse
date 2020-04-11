@@ -3,10 +3,10 @@ import random
 from SSD.utils import create_data_lists
 
 dataset_path = 'D:/Workspaces/PyCharmProjects/SmartWarehouse/SSD/data/SmartWarehouseSSD/'
-# dataset_path = '/floyd/input/ssd/'
 image_directory = dataset_path + 'JPEGImages'
-trainval_file = dataset_path + 'ImageSets/Main/trainval.txt'
+train_file = dataset_path + 'ImageSets/Main/train.txt'
 test_file = dataset_path + 'ImageSets/Main/test.txt'
+validation_file = dataset_path + 'ImageSets/Main/validation.txt'
 
 
 def read_data_files():
@@ -27,24 +27,32 @@ def k_fold_cross_validation(k_fold):
     return folds
 
 
-def specify_train_test_data(train_images, test_images):
-    global trainval_file
+def specify_train_test_validation_data(train_images, test_images, validation_images):
+    global train_file
     global test_file
-    trainval = open(trainval_file, "w")
+    global validation_file
+    train = open(train_file, "w")
     test = open(test_file, "w")
-    trainval_file_text = ''
+    validation = open(validation_file, "w")
+    train_file_text = ''
     test_file_text = ''
+    validation_file_text = ''
 
-    for index, train_image in enumerate(train_images):
-        trainval_file_text += ''.join(train_image.replace(".jpg", "")) + "\n"
-    for index, test_image in enumerate(test_images):
+    for _, train_image in enumerate(train_images):
+        train_file_text += ''.join(train_image.replace(".jpg", "")) + "\n"
+    for _, test_image in enumerate(test_images):
         test_file_text += ''.join(test_image.replace(".jpg", "")) + "\n"
+    for _, validation_image in enumerate(validation_images):
+        validation_file_text += ''.join(validation_image.replace(".jpg", "")) + "\n"
 
-    trainval.write(trainval_file_text)
-    trainval.close()
+    train.write(train_file_text)
+    train.close()
 
     test.write(test_file_text)
     test.close()
+
+    validation.write(validation_file_text)
+    validation.close()
 
     create_data_lists(smartwarehouse_path=dataset_path, output_folder='data/Output')
 

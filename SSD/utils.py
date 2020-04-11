@@ -64,7 +64,7 @@ def create_data_lists(smartwarehouse_path, output_folder):
 
     # Training data
     # Find IDs of images in training data
-    with open(os.path.join(smartwarehouse_path, dataset_path + 'ImageSets/Main/trainval.txt')) as f:
+    with open(os.path.join(smartwarehouse_path, dataset_path + 'ImageSets/Main/train.txt')) as f:
         ids = f.read().splitlines()
 
     for id in ids:
@@ -89,12 +89,12 @@ def create_data_lists(smartwarehouse_path, output_folder):
     print('\nThere are %d training images containing a total of %d objects. Files have been saved to %s.' % (
         len(train_images), n_objects, os.path.abspath(output_folder)))
 
-    # Validation data
+    # Test data
     test_images = list()
     test_objects = list()
     n_objects = 0
 
-    # Find IDs of images in validation data
+    # Find IDs of images in test data
     with open(os.path.join(smartwarehouse_path, dataset_path + 'ImageSets/Main/test.txt')) as f:
         ids = f.read().splitlines()
 
@@ -115,8 +115,37 @@ def create_data_lists(smartwarehouse_path, output_folder):
     with open(os.path.join(output_folder, 'TEST_objects.json'), 'w') as j:
         json.dump(test_objects, j)
 
-    print('\nThere are %d validation images containing a total of %d objects. Files have been saved to %s.' % (
+    print('\nThere are %d test images containing a total of %d objects. Files have been saved to %s.' % (
         len(test_images), n_objects, os.path.abspath(output_folder)))
+
+    # Validation data
+    validation_images = list()
+    validation_objects = list()
+    n_objects = 0
+
+    # Find IDs of images in test data
+    with open(os.path.join(smartwarehouse_path, dataset_path + 'ImageSets/Main/validation.txt')) as f:
+        ids = f.read().splitlines()
+
+    for id in ids:
+        # Parse annotation's XML file
+        objects = parse_annotation(os.path.join(smartwarehouse_path, 'Annotations', id + '.xml'))
+        if len(objects) == 0:
+            continue
+        validation_objects.append(objects)
+        n_objects += len(objects)
+        validation_images.append(os.path.join(smartwarehouse_path, 'JPEGImages', id + '.jpg'))
+
+    assert len(validation_objects) == len(validation_images)
+
+    # Save to file
+    with open(os.path.join(output_folder, 'VALIDATION_images.json'), 'w') as j:
+        json.dump(validation_images, j)
+    with open(os.path.join(output_folder, 'VALIDATION_objects.json'), 'w') as j:
+        json.dump(validation_objects, j)
+
+    print('\nThere are %d validation images containing a total of %d objects. Files have been saved to %s.' % (
+        len(validation_images), n_objects, os.path.abspath(output_folder)))
 
 
 def decimate(tensor, m):

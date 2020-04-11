@@ -1,18 +1,18 @@
 import json
-import time
 import cv2
 import torch
 import torch.backends.cudnn as cudnn
 from imutils.video import FPS
 from flask import Flask, render_template, Response
+from waitress import serve
+
 from SSD.detect import infere
 from SSD.fileVideoStream import FileVideoStream
 from SSD.utils import voc_labels
 
 # Config
 app = Flask(__name__)
-fvs = FileVideoStream(0, 1000000).start()
-time.sleep(1.0)
+fvs = FileVideoStream(0).start()
 fps = FPS().start()
 
 counter = {}
@@ -64,4 +64,4 @@ def getObjects():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', threaded=True)
+    serve(app, host='0.0.0.0', port=80)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  4 APR 2020 19:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  12 APR 2020 11:45
 entering extended mode
 **./Praxisbericht.tex
 (Praxisbericht.tex
@@ -2062,7 +2062,7 @@ File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 \openout2 = `Inhalt/01_Standard/titelseite.aux'.
 
  (Inhalt/01_Standard/titelseite.tex
-<Bilder/Logos/Logo_DHBW.pdf, id=140, 822.27202pt x 419.166pt>
+<Bilder/Logos/Logo_DHBW.pdf, id=144, 822.27202pt x 419.166pt>
 File: Bilder/Logos/Logo_DHBW.pdf Graphic file (type pdf)
 <use Bilder/Logos/Logo_DHBW.pdf>
 Package pdftex.def Info: Bilder/Logos/Logo_DHBW.pdf  used on input line 9.
@@ -2165,44 +2165,44 @@ chapter 2.
 [5
 
 ]
-<Bilder/applications.png, id=379, 550.055pt x 424.58624pt>
+<Bilder/applications.png, id=390, 550.055pt x 424.58624pt>
 File: Bilder/applications.png Graphic file (type png)
 <use Bilder/applications.png>
 Package pdftex.def Info: Bilder/applications.png  used on input line 17.
 (pdftex.def)             Requested size: 341.43306pt x 263.5582pt.
 ) (Inhalt/06_Forschungsstand/neuronale_netze.tex [6 <./Bilder/applications.png 
 (PNG copy)>]
-<Bilder/perceptron.png, id=390, 486.31688pt x 455.45157pt>
+<Bilder/perceptron.png, id=401, 486.31688pt x 455.45157pt>
 File: Bilder/perceptron.png Graphic file (type png)
 <use Bilder/perceptron.png>
 Package pdftex.def Info: Bilder/perceptron.png  used on input line 11.
 (pdftex.def)             Requested size: 256.0748pt x 239.81757pt.
  [7 <./Bilder/perceptron.png>] [8]
-<Bilder/neural_network.png, id=428, 544.434pt x 214.401pt>
+<Bilder/neural_network.png, id=439, 544.434pt x 214.401pt>
 File: Bilder/neural_network.png Graphic file (type png)
 <use Bilder/neural_network.png>
 Package pdftex.def Info: Bilder/neural_network.png  used on input line 54.
 (pdftex.def)             Requested size: 341.43306pt x 134.46156pt.
  [9 <./Bilder/neural_network.png>] [10]) (Inhalt/06_Forschungsstand/hyperparame
 ter.tex [11] [12] [13]
-<Bilder/gradient_descent.png, id=489, 911.405pt x 451.6875pt>
+<Bilder/gradient_descent.png, id=500, 911.405pt x 451.6875pt>
 File: Bilder/gradient_descent.png Graphic file (type png)
 <use Bilder/gradient_descent.png>
 Package pdftex.def Info: Bilder/gradient_descent.png  used on input line 63.
 (pdftex.def)             Requested size: 426.79134pt x 211.52122pt.
 
 [14] [15 <./Bilder/gradient_descent.png (PNG copy)>]
-<Bilder/relu.png, id=509, 1029.8475pt x 468.75125pt>
+<Bilder/relu.png, id=520, 1029.8475pt x 468.75125pt>
 File: Bilder/relu.png Graphic file (type png)
 <use Bilder/relu.png>
 Package pdftex.def Info: Bilder/relu.png  used on input line 80.
 (pdftex.def)             Requested size: 213.39566pt x 97.12459pt.
-<Bilder/prelu.png, id=510, 1028.84375pt x 551.05875pt>
+<Bilder/prelu.png, id=521, 1028.84375pt x 551.05875pt>
 File: Bilder/prelu.png Graphic file (type png)
 <use Bilder/prelu.png>
 Package pdftex.def Info: Bilder/prelu.png  used on input line 81.
 (pdftex.def)             Requested size: 213.39566pt x 114.29631pt.
-<Bilder/elu.png, id=515, 1023.825pt x 528.97626pt>
+<Bilder/elu.png, id=526, 1023.825pt x 528.97626pt>
 File: Bilder/elu.png Graphic file (type png)
 <use Bilder/elu.png>
 Package pdftex.def Info: Bilder/elu.png  used on input line 92.
@@ -2216,13 +2216,13 @@ im Kon-text des so-ge-nann-ten \T1/cmr/m/it/12 K-Kreuzvalidier-
  []
 
 [18]) (Inhalt/06_Forschungsstand/faltungsnetze.tex [19]
-<Bilder/convolutional_layer.png, id=563, 680.5425pt x 463.7325pt>
+<Bilder/convolutional_layer.png, id=574, 680.5425pt x 463.7325pt>
 File: Bilder/convolutional_layer.png Graphic file (type png)
 <use Bilder/convolutional_layer.png>
 Package pdftex.def Info: Bilder/convolutional_layer.png  used on input line 17.
 
 (pdftex.def)             Requested size: 247.2559pt x 168.48613pt.
-<Bilder/zero_padding.png, id=566, 298.86656pt x 259.7203pt>
+<Bilder/zero_padding.png, id=577, 298.86656pt x 259.7203pt>
 File: Bilder/zero_padding.png Graphic file (type png)
 <use Bilder/zero_padding.png>
 Package pdftex.def Info: Bilder/zero_padding.png  used on input line 23.
@@ -2233,31 +2233,31 @@ Overfull \hbox (2.61046pt too wide) in paragraph at lines 16--27
  []
 
 [20 <./Bilder/convolutional_layer.png (PNG copy)> <./Bilder/zero_padding.png>]
-<Bilder/feature_maps.jpeg, id=581, 306.06345pt x 262.70145pt>
+<Bilder/feature_maps.jpeg, id=592, 306.06345pt x 262.70145pt>
 File: Bilder/feature_maps.jpeg Graphic file (type jpg)
 <use Bilder/feature_maps.jpeg>
 Package pdftex.def Info: Bilder/feature_maps.jpeg  used on input line 37.
 (pdftex.def)             Requested size: 312.9803pt x 268.63737pt.
-<Bilder/pooling_layer.png, id=587, 999.735pt x 292.09125pt>
+<Bilder/pooling_layer.png, id=598, 999.735pt x 292.09125pt>
 File: Bilder/pooling_layer.png Graphic file (type png)
 <use Bilder/pooling_layer.png>
 Package pdftex.def Info: Bilder/pooling_layer.png  used on input line 49.
 (pdftex.def)             Requested size: 426.79134pt x 124.69647pt.
 
 [21]) (Inhalt/06_Forschungsstand/map.tex [22 <./Bilder/feature_maps.jpeg>]
-<Bilder/iou_equation.png, id=603, 602.25pt x 469.755pt>
+<Bilder/iou_equation.png, id=614, 602.25pt x 469.755pt>
 File: Bilder/iou_equation.png Graphic file (type png)
 <use Bilder/iou_equation.png>
 Package pdftex.def Info: Bilder/iou_equation.png  used on input line 18.
 (pdftex.def)             Requested size: 227.62204pt x 177.54826pt.
 
 [23 <./Bilder/pooling_layer.png>]
-<Bilder/map_graph1.png, id=617, 1606.0pt x 747.79375pt>
+<Bilder/map_graph1.png, id=628, 1606.0pt x 747.79375pt>
 File: Bilder/map_graph1.png Graphic file (type png)
 <use Bilder/map_graph1.png>
 Package pdftex.def Info: Bilder/map_graph1.png  used on input line 27.
 (pdftex.def)             Requested size: 341.43306pt x 158.98108pt.
-<Bilder/map_graph2.png, id=618, 2007.5pt x 747.79375pt>
+<Bilder/map_graph2.png, id=629, 2007.5pt x 747.79375pt>
 File: Bilder/map_graph2.png Graphic file (type png)
 <use Bilder/map_graph2.png>
 Package pdftex.def Info: Bilder/map_graph2.png  used on input line 28.
@@ -2268,31 +2268,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--29
  []
 
 ) (Inhalt/06_Forschungsstand/rcnn.tex [24 <./Bilder/iou_equation.png>]
-<Bilder/rcnn.png, id=629, 558.085pt x 499.8675pt>
+<Bilder/rcnn.png, id=640, 558.085pt x 499.8675pt>
 File: Bilder/rcnn.png Graphic file (type png)
 <use Bilder/rcnn.png>
 Package pdftex.def Info: Bilder/rcnn.png  used on input line 11.
 (pdftex.def)             Requested size: 227.62204pt x 203.87917pt.
  [25 <./Bilder/map_graph1.png> <./Bilder/map_graph2.png>]
-<Bilder/fasterrcnn.png, id=643, 973.6375pt x 981.6675pt>
+<Bilder/fasterrcnn.png, id=654, 973.6375pt x 981.6675pt>
 File: Bilder/fasterrcnn.png Graphic file (type png)
 <use Bilder/fasterrcnn.png>
 Package pdftex.def Info: Bilder/fasterrcnn.png  used on input line 23.
 (pdftex.def)             Requested size: 227.62204pt x 229.49356pt.
  [26 <./Bilder/rcnn.png (PNG copy)>]) (Inhalt/06_Forschungsstand/ssd.tex [27 <.
 /Bilder/fasterrcnn.png (PNG copy)>]
-<Bilder/ssd_framework.png, id=662, 1270.7475pt x 475.7775pt>
+<Bilder/ssd_framework.png, id=673, 1270.7475pt x 475.7775pt>
 File: Bilder/ssd_framework.png Graphic file (type png)
 <use Bilder/ssd_framework.png>
 Package pdftex.def Info: Bilder/ssd_framework.png  used on input line 7.
 (pdftex.def)             Requested size: 426.79134pt x 159.7948pt.
  [28 <./Bilder/ssd_framework.png (PNG copy)>]
-<Bilder/bounding_boxes.png, id=673, 288.3272pt x 289.08pt>
+<Bilder/bounding_boxes.png, id=684, 288.3272pt x 289.08pt>
 File: Bilder/bounding_boxes.png Graphic file (type png)
 <use Bilder/bounding_boxes.png>
 Package pdftex.def Info: Bilder/bounding_boxes.png  used on input line 17.
 (pdftex.def)             Requested size: 199.16928pt x 199.69478pt.
-<Bilder/ssd_architecture.png, id=678, 1114.1625pt x 329.23pt>
+<Bilder/ssd_architecture.png, id=689, 1114.1625pt x 329.23pt>
 File: Bilder/ssd_architecture.png Graphic file (type png)
 <use Bilder/ssd_architecture.png>
 Package pdftex.def Info: Bilder/ssd_architecture.png  used on input line 38.
@@ -2304,13 +2304,13 @@ Overfull \hbox (0.99748pt too wide) in paragraph at lines 7--8
 l-fe ei-nes fest-ge-leg-ten Schwell-
  []
 
-<Bilder/yolo_model.png, id=707, 862.72313pt x 553.31718pt>
+<Bilder/yolo_model.png, id=718, 862.72313pt x 553.31718pt>
 File: Bilder/yolo_model.png Graphic file (type png)
 <use Bilder/yolo_model.png>
 Package pdftex.def Info: Bilder/yolo_model.png  used on input line 11.
 (pdftex.def)             Requested size: 426.79134pt x 273.71977pt.
 [31]
-<Bilder/yolo_architecture.png, id=719, 913.16156pt x 382.42876pt>
+<Bilder/yolo_architecture.png, id=730, 913.16156pt x 382.42876pt>
 File: Bilder/yolo_architecture.png Graphic file (type png)
 <use Bilder/yolo_architecture.png>
 Package pdftex.def Info: Bilder/yolo_architecture.png  used on input line 25.
@@ -2341,7 +2341,7 @@ ro-gram-ma-ble Ga-te Ar-rays (FPGAs),
 [35] [36] (Quellcode/floyd.yml [37]) [38])
 (Inhalt/07_Konzeption/trainingsdatensatz.tex [39]
 chapter 3.
-<Bilder/blockdiagramm.png, id=834, 814.04124pt x 241.90375pt>
+<Bilder/blockdiagramm.png, id=845, 814.04124pt x 241.90375pt>
 File: Bilder/blockdiagramm.png Graphic file (type png)
 <use Bilder/blockdiagramm.png>
 Package pdftex.def Info: Bilder/blockdiagramm.png  used on input line 7.
@@ -2349,53 +2349,53 @@ Package pdftex.def Info: Bilder/blockdiagramm.png  used on input line 7.
 [40
 
  <./Bilder/blockdiagramm.png>]
-<Bilder/wasser_klein.jpg, id=841, 1050.92625pt x 481.04718pt>
+<Bilder/wasser_klein.jpg, id=852, 1050.92625pt x 481.04718pt>
 File: Bilder/wasser_klein.jpg Graphic file (type jpg)
 <use Bilder/wasser_klein.jpg>
 Package pdftex.def Info: Bilder/wasser_klein.jpg  used on input line 24.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/wasser_gross.jpg, id=842, 1050.92625pt x 481.04718pt>
+<Bilder/wasser_gross.jpg, id=853, 1050.92625pt x 481.04718pt>
 File: Bilder/wasser_gross.jpg Graphic file (type jpg)
 <use Bilder/wasser_gross.jpg>
 Package pdftex.def Info: Bilder/wasser_gross.jpg  used on input line 25.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/cola_klein.jpg, id=843, 1050.92625pt x 481.04718pt>
+<Bilder/cola_klein.jpg, id=854, 1050.92625pt x 481.04718pt>
 File: Bilder/cola_klein.jpg Graphic file (type jpg)
 <use Bilder/cola_klein.jpg>
 Package pdftex.def Info: Bilder/cola_klein.jpg  used on input line 26.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/cola_gross.jpg, id=844, 1050.92625pt x 481.04718pt>
+<Bilder/cola_gross.jpg, id=855, 1050.92625pt x 481.04718pt>
 File: Bilder/cola_gross.jpg Graphic file (type jpg)
 <use Bilder/cola_gross.jpg>
 Package pdftex.def Info: Bilder/cola_gross.jpg  used on input line 27.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/iso.jpg, id=845, 1050.92625pt x 481.04718pt>
+<Bilder/iso.jpg, id=856, 1050.92625pt x 481.04718pt>
 File: Bilder/iso.jpg Graphic file (type jpg)
 <use Bilder/iso.jpg>
 Package pdftex.def Info: Bilder/iso.jpg  used on input line 28.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/ace.jpg, id=846, 1050.92625pt x 481.04718pt>
+<Bilder/ace.jpg, id=857, 1050.92625pt x 481.04718pt>
 File: Bilder/ace.jpg Graphic file (type jpg)
 <use Bilder/ace.jpg>
 Package pdftex.def Info: Bilder/ace.jpg  used on input line 29.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/johannisbeerschorle.jpg, id=847, 1050.92625pt x 481.04718pt>
+<Bilder/johannisbeerschorle.jpg, id=858, 1050.92625pt x 481.04718pt>
 File: Bilder/johannisbeerschorle.jpg Graphic file (type jpg)
 <use Bilder/johannisbeerschorle.jpg>
 Package pdftex.def Info: Bilder/johannisbeerschorle.jpg  used on input line 30.
 
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/apfelsaftschorle.jpg, id=848, 1050.92625pt x 481.04718pt>
+<Bilder/apfelsaftschorle.jpg, id=859, 1050.92625pt x 481.04718pt>
 File: Bilder/apfelsaftschorle.jpg Graphic file (type jpg)
 <use Bilder/apfelsaftschorle.jpg>
 Package pdftex.def Info: Bilder/apfelsaftschorle.jpg  used on input line 31.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/malzbier.jpg, id=849, 1050.92625pt x 481.04718pt>
+<Bilder/malzbier.jpg, id=860, 1050.92625pt x 481.04718pt>
 File: Bilder/malzbier.jpg Graphic file (type jpg)
 <use Bilder/malzbier.jpg>
 Package pdftex.def Info: Bilder/malzbier.jpg  used on input line 32.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/regal.jpg, id=851, 4625.28pt x 2119.92pt>
+<Bilder/regal.jpg, id=862, 4625.28pt x 2119.92pt>
 File: Bilder/regal.jpg Graphic file (type jpg)
 <use Bilder/regal.jpg>
 Package pdftex.def Info: Bilder/regal.jpg  used on input line 41.
@@ -2410,7 +2410,7 @@ Overfull \hbox (5.69037pt too wide) in paragraph at lines 41--42
 s.jpg> <./Bilder/iso.jpg> <./Bilder/ace.jpg> <./Bilder/johannisbeerschorle.jpg>
  <./Bilder/apfelsaftschorle.jpg> <./Bilder/malzbier.jpg>] [43 <./Bilder/regal.j
 pg>]) (Inhalt/07_Konzeption/objektdetektoren.tex
-<Bilder/ssd_results.png, id=878, 948.54375pt x 276.43275pt>
+<Bilder/ssd_results.png, id=889, 948.54375pt x 276.43275pt>
 File: Bilder/ssd_results.png Graphic file (type png)
 <use Bilder/ssd_results.png>
 Package pdftex.def Info: Bilder/ssd_results.png  used on input line 7.
@@ -2422,14 +2422,14 @@ Overfull \hbox (20.53712pt too wide) in paragraph at lines 36--45
  []
 
 [47]
-<Bilder/tpu_comparison.png, id=926, 804.00375pt x 477.785pt>
+<Bilder/tpu_comparison.png, id=937, 804.00375pt x 477.785pt>
 File: Bilder/tpu_comparison.png Graphic file (type png)
 <use Bilder/tpu_comparison.png>
 Package pdftex.def Info: Bilder/tpu_comparison.png  used on input line 55.
 (pdftex.def)             Requested size: 398.33858pt x 236.71208pt.
 ) (Inhalt/07_Konzeption/drohne.tex [48] [49 <./Bilder/tpu_comparison.png>]) (In
 halt/07_Konzeption/software.tex
-<Bilder/UI.png, id=945, 976.64874pt x 418.56375pt>
+<Bilder/UI.png, id=956, 976.64874pt x 418.56375pt>
 File: Bilder/UI.png Graphic file (type png)
 <use Bilder/UI.png>
 Package pdftex.def Info: Bilder/UI.png  used on input line 7.
@@ -2439,17 +2439,49 @@ Package pdftex.def Info: Bilder/UI.png  used on input line 7.
 chapter 4.
 [52
 
-] [53]) (Inhalt/09_Ergebnisse/ergebnisse.tex [54]
+]
+<Bilder/double.jpeg, id=974, 642.4pt x 481.8pt>
+File: Bilder/double.jpeg Graphic file (type jpg)
+<use Bilder/double.jpeg>
+Package pdftex.def Info: Bilder/double.jpeg  used on input line 38.
+(pdftex.def)             Requested size: 199.16928pt x 149.37851pt.
+
+Overfull \hbox (8.30086pt too wide) in paragraph at lines 36--49
+[][]  [] 
+ []
+
+<Bilder/near.jpeg, id=976, 642.4pt x 481.8pt>
+File: Bilder/near.jpeg Graphic file (type jpg)
+<use Bilder/near.jpeg>
+Package pdftex.def Info: Bilder/near.jpeg  used on input line 53.
+(pdftex.def)             Requested size: 202.29779pt x 151.72368pt.
+<Bilder/far.jpeg, id=977, 642.4pt x 481.8pt>
+File: Bilder/far.jpeg Graphic file (type jpg)
+<use Bilder/far.jpeg>
+Package pdftex.def Info: Bilder/far.jpeg  used on input line 58.
+(pdftex.def)             Requested size: 202.29779pt x 151.72368pt.
+
+Underfull \hbox (badness 6995) in paragraph at lines 59--59
+[][][]|[]\T1/cmr/m/n/12 Detektion ei-ner ent-
+ []
+
+
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 52--61
+[][]  [] 
+ []
+
+[53] [54 <./Bilder/double.jpeg> <./Bilder/near.jpeg> <./Bilder/far.jpeg>])
+(Inhalt/09_Ergebnisse/ergebnisse.tex [55] [56]
 chapter 5.
-) (Inhalt/10_Bewertung/bewertung.tex [55
+) (Inhalt/10_Bewertung/bewertung.tex [57
 
 ]
 chapter 6.
-) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [56
+) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [58
 
 ]
 chapter 7.
-) [57
+) [59
 
 ]
 chapter without number
@@ -2518,17 +2550,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `Praxisbericht.out' has not changed.
-(rerunfilecheck)             Checksum: 657A3396F06B1AE4BCD4D71927FEE91E;2190.
+(rerunfilecheck)             Checksum: 78D6DB5EF6EFAC2AD4F22E84E3BAAE68;2256.
 Package logreq Info: Writing requests to 'Praxisbericht.run.xml'.
 \openout1 = `Praxisbericht.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
- 47798 strings out of 492946
- 943054 string characters out of 3125377
- 1523652 words of memory out of 3000000
- 50495 multiletter control sequences out of 15000+200000
+ 47822 strings out of 492946
+ 943419 string characters out of 3125377
+ 1523712 words of memory out of 3000000
+ 50509 multiletter control sequences out of 15000+200000
  578234 words of font info for 150 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  80i,23n,86p,9184b,3591s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2571,9 +2603,9 @@ a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/D
 070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/co
 urier/ucrr8a.pfb>
-Output written on Praxisbericht.pdf (75 pages, 5297575 bytes).
+Output written on Praxisbericht.pdf (77 pages, 5510631 bytes).
 PDF statistics:
- 1930 PDF objects out of 2073 (max. 8388607)
- 322 named destinations out of 1000 (max. 500000)
- 465 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1958 PDF objects out of 2073 (max. 8388607)
+ 329 named destinations out of 1000 (max. 500000)
+ 488 words of extra memory for PDF output out of 10000 (max. 10000000)
 

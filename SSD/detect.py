@@ -1,3 +1,4 @@
+import keyboard as keyboard
 import numpy
 import cv2
 import torch.backends.cudnn as cudnn
@@ -129,14 +130,27 @@ if __name__ == '__main__':
     cudnn.benchmark = True
     cudnn.enabled = True
 
-    # Interfere with model
-    cv2_image = cv2.cvtColor(cv2.imread('C:\\Users\Felix\\OneDrive\\Desktop\\nahe.jpeg'), cv2.COLOR_BGR2RGB)
-    pil_image = Image.fromarray(cv2_image)
-    pil_image, det_objects = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000, model=model)
-    cv2_image = numpy.array(pil_image)
-    cv2_image = cv2_image[:, :, ::-1].copy()
+    vc = cv2.VideoCapture(0)
 
-    # Display frame
-    cv2.imshow("SmartWarehouse", cv2_image)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    while True:
+        _, image = vc.read()
+
+        # Interfere with model
+        cv2_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        pil_image = Image.fromarray(cv2_image)
+        pil_image, det_objects = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000, model=model)
+        cv2_image = numpy.array(pil_image)
+        cv2_image = cv2_image[:, :, ::-1].copy()
+
+        # Display frame
+        cv2.imshow("SmartWarehouse", cv2_image)
+        cv2.waitKey(1)
+
+        # Save image on key down
+        if keyboard.is_pressed('s'):
+            os.chdir("C:\\Users\\Felix\\OneDrive\\Desktop\\Saved")
+            cv2.imwrite("single.jpeg", cv2_image)
+
+        if keyboard.is_pressed('d'):
+            os.chdir("C:\\Users\\Felix\\OneDrive\\Desktop\\Saved")
+            cv2.imwrite("double.jpeg", cv2_image)

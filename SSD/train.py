@@ -76,7 +76,7 @@ def main():
         folds_without_test = folds.copy()
         folds_without_test.remove(test_fold)
         train_fold = [val for sublist in folds_without_test for val in sublist]
-        specify_train_test_data(train_fold, test_fold)
+        specify_train_test_validation_data(train_fold, test_fold)
 
         # Custom dataloaders
         train_dataset = PascalVOCDataset(data_folder,

@@ -44,7 +44,9 @@ def gen():
     while True:
         fps = FPS().start()
         frame = fvs.read()
-        image, detected_objects, counter = infere(frame, counter, detected_objects, model)
+        image, new_detected_objects, counter = infere(frame, counter, detected_objects, model)
+        if len(new_detected_objects) != 0:
+            detected_objects = new_detected_objects
         _, encodedImage = cv2.imencode('.jpg', image)
         fps.update()
         fps.stop()

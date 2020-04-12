@@ -11,8 +11,8 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {RELU}}}{16}{figure.2.5}% 
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {PReLU/LReLU}}}{16}{figure.2.5}% 
 \contentsline {figure}{\numberline {2.6}{\ignorespaces ELU-Aktivierungsfunktion}}{17}{figure.2.6}% 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Convolutional Layer}}{20}{figure.2.7}% 
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Zero-Padding}}{20}{figure.2.8}% 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Convolutional Layer}}{21}{figure.2.7}% 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Zero-Padding}}{21}{figure.2.8}% 
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Veranschaulichung von Feature Maps}}{22}{figure.2.9}% 
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Pooling Layer}}{23}{figure.2.10}% 
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Intersection over Union}}{24}{figure.2.11}% 
@@ -24,6 +24,7 @@
 \contentsline {figure}{\numberline {2.17}{\ignorespaces SSD Architektur}}{30}{figure.2.17}% 
 \contentsline {figure}{\numberline {2.18}{\ignorespaces Vereinfachte Darstellung des YOLO Algorithmus}}{32}{figure.2.18}% 
 \contentsline {figure}{\numberline {2.19}{\ignorespaces YOLO Architektur}}{33}{figure.2.19}% 
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Vergleich V100 - TPU Pod}}{37}{figure.2.20}% 
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Konzeptionelle Schritte}}{40}{figure.3.1}% 
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Die neun Datensatz-Kategorien\relax }}{42}{figure.3.2}% 
@@ -38,9 +39,20 @@
 \contentsline {subfigure}{\numberline {(i)}{\ignorespaces {Vitamalz Malzbier}}}{42}{figure.3.2}% 
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Smart Warehouse Regal}}{43}{figure.3.3}% 
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Vergleich SSD auf PascalVOC}}{44}{figure.3.4}% 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Vergleich V100 - TPU Pod}}{49}{figure.3.5}% 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces SmartWarehouse User Interface}}{51}{figure.3.6}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces SmartWarehouse User Interface}}{50}{figure.3.5}% 
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Detektionsverhalten bei extremen Blicklagen\relax }}{53}{figure.4.1}% 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {verdeckt}}}{53}{figure.4.1}% 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {winkel}}}{53}{figure.4.1}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Detektionsverhalten bei unterschiedlichen Entfernungen\relax }}{54}{figure.4.2}% 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {1 Meter}}}{54}{figure.4.2}% 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {2 Meter}}}{54}{figure.4.2}% 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {3 Meter}}}{54}{figure.4.2}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Detektionsverhalten bei unterschiedlichen Beleuchtungsverh\IeC {\"a}ltnissen\relax }}{55}{figure.4.3}% 
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {\IeC {\"u}berbeleuchtet}}}{55}{figure.4.3}% 
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {normal}}}{55}{figure.4.3}% 
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {unterbeleuchtet}}}{55}{figure.4.3}% 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Webapp SmartWarehouse}}{57}{figure.4.4}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

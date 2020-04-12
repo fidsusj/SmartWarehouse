@@ -1,11 +1,11 @@
 definiere zähleNeueObjekte(Zähler, zuletzt detektierte Objekte):
-	Für alle detektierten Objekte:
+	Für alle detektierten Objekte o_neu:
 		Gefunden = falsch
-		Für alle zuletzt detektierten Objekte:
-			Wenn Label des detektiertes Objekts dem Label des zuletzt detektierten Objekts entspricht UND
-				 Abstand der Bounding Boxen unter Schwellwert:
-					Gefunden = wahr
-					Abbruch
+		Für alle zuletzt detektierten Objekte o_alt:
+			Wenn Label(o_neu) gleich Label(o_alt) UND
+			Abstand der Bounding Boxen unter Schwellwert:
+				Gefunden = wahr
+				Abbruch
 		
 		Wenn nicht gefunden:
 			Erhöhe Zähler für detektiertes Objekt

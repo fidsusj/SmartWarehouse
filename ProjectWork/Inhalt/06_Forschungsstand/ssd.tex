@@ -20,18 +20,7 @@ Die Architektur des \textit{SSD} zielt darauf ab, durch unterschiedlich große \
 	\end{center}
 \end{figure}
 
-Für jede dieser Bounding Boxen bestimmt der \textit{SSD} Wahrscheinlichkeiten für Klassenzugehörigkeiten als auch Verschiebungen der vordefinierten Bounding Box zur wahren Bounding Box des Objekts für jede Klasse. Die Kostenfunktion ist durch die gewichtete Summe des Lokalisationsverlustes und des Klassifikationsverlustes bestimmt. Während der Klassifikationverlust durch eine Softmax-Funktion bestimmt werden kann, wird der Lokalisationsverlust über die \textit{Smooth L1} Funktion (\ref{smooth}) bestimmt. Der Parameter $l$ beschreibt die vorhergesagte Bounding Box, der Parameter $g$ die originale Bounding Box nach den Trainingsdaten \cite{ssd.20161229}.
-
-\begin{equation}\label{smooth}
-\begin{split}
-L_{loc}(l^j,g) = \sum\limits_{j \in Pos}^{n} \sum\limits_{i \in (x,y,w,h)}^{m} SM_{L1}(l^j_i - g_i) \\
-SM_{L1}(l^j_i - g_i) = \begin{cases}
-							0.5x^2      & \text{wenn } |x| < 1\\
-							|x| - 0.5   & \text{sonst}
-						   \end{cases}
-\end{split}
-\end{equation}
-\equations{Die Smooth L1 Funktion}
+Für jede dieser Bounding Boxen bestimmt der \textit{SSD} Wahrscheinlichkeiten für Klassenzugehörigkeiten als auch Verschiebungen der vordefinierten Bounding Box zur wahren Bounding Box des Objekts für jede Klasse. Die Kostenfunktion ist durch die gewichtete Summe des Lokalisationsverlustes und des Klassifikationsverlustes bestimmt. Während der Klassifikationverlust durch eine Softmax-Funktion (\ref{softmax}) bestimmt werden kann, wird der Lokalisationsverlust über die Smooth L1 Funktion (\ref{smooth}) bestimmt \cite{ssd.20161229}.
 
 \begin{figure}[ht]
 	\begin{center}

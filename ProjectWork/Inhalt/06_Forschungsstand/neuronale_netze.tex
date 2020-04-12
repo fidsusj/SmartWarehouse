@@ -74,11 +74,21 @@ Um zu verstehen, wie ein neuronales Netz durch überwachtes Lernen \glqq lernt\g
 Eine oft genutzte Kostenfunktion ist die \textit{Root Mean Squared Error Funktion} (RMSE) \cite{AurelienGeron.2018}:
 
 \begin{equation} \label{mse}
-E(\boldsymbol{z},\boldsymbol{o}) = \sqrt{\frac{1}{n}\sum_{k=0}^n \lVert{z_k-o_k}\rVert^2} = \sqrt{\frac{1}{n}\sum_{k=0}^n (z_k-o_k)^2}.
+E(\boldsymbol{z},\boldsymbol{o}) = \sqrt{\frac{1}{n}\sum_{k=0}^n (z_k-o_k)^2}.
 \end{equation}
 \equations{Die RMSE-Funktion}
 
-Hierbei ist $z$ der erwartete Ausgabevektor des Perzeptrons beim überwachten Lernen, während $o$ die momentane Ausgabe darstellt. Den Fehler der Abweichung dieser beiden Werte gilt es nun schrittweise zu minimieren. Um dies zu erreichen können die drei Parameter
+Eine weitere Kostenfunktion für das \textit{überwachte Lernen} ist die \textit{Smooth L1} Funktion:
+
+\begin{equation} \label{smooth}
+SM_{L1}(\boldsymbol{z},\boldsymbol{o}) = \begin{cases}
+\sum_{k=0}^n 0.5(z_k-o_k)^2      & \text{wenn } |x| < 1\\
+\sum_{k=0}^n |z_k-o_k| - 0.5   & \text{sonst}
+\end{cases}
+\end{equation}
+\equations{Die Smooth L1 Funktion}
+
+Bei beiden ist $z$ der erwartete Ausgabevektor des Perzeptrons, während $o$ die momentane Ausgabe darstellt. Den Fehler der Abweichung dieser beiden Werte gilt es nun schrittweise zu minimieren. Um dies zu erreichen können die drei Parameter
 
 \begin{enumerate}
 	\item Gewichtung der Verbindungen zum Perzeptron

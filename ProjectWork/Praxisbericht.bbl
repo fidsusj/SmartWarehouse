@@ -410,7 +410,7 @@
       \field{urlday}{2}
       \field{urlmonth}{11}
       \field{urlyear}{2019}
-      \field{year}{2016-12-29}
+      \field{year}{2016}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://arxiv.org/pdf/1512.02325.pdf
@@ -1192,6 +1192,71 @@
       \verb https://cloud.google.com/products/ai
       \endverb
     \endentry
+    \entry{HaraldBogeholz.20170406}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=951c39de508e59dbdf860ed7f0e051a9}{%
+           family={{Harald B{ö}geholz}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Heise Online}%
+      }
+      \strng{namehash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{fullhash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{bibnamehash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{authorbibnamehash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{authornamehash}{951c39de508e59dbdf860ed7f0e051a9}
+      \strng{authorfullhash}{951c39de508e59dbdf860ed7f0e051a9}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{K{ü}nstliche Intelligenz: Architektur und Performance von Googles KI-Chip TPU}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.heise.de/newsticker/meldung/Kuenstliche-Intelligenz-Architektur-und-Performance-von-Googles-KI-Chip-TPU-3676312.html
+      \endverb
+      \verb{url}
+      \verb https://www.heise.de/newsticker/meldung/Kuenstliche-Intelligenz-Architektur-und-Performance-von-Googles-KI-Chip-TPU-3676312.html
+      \endverb
+    \endentry
+    \entry{GoogleCloud.20200209}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=57f3af2a3d1051c172ab3c3db7d5409d}{%
+           family={{Google Cloud}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Google Cloud Dokumentation}%
+      }
+      \strng{namehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{fullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{bibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorbibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authornamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorfullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Systemarchitektur}
+      \field{urlday}{9}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cloud.google.com/tpu/docs/system-architecture
+      \endverb
+      \verb{url}
+      \verb https://cloud.google.com/tpu/docs/system-architecture
+      \endverb
+    \endentry
     \entry{GoogleColaboratory.20200314}{misc}{}
       \name{author}{1}{}{%
         {{hash=28309eb514664bec67ccb556c3cad93e}{%
@@ -1239,7 +1304,7 @@
       \strng{authorbibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
       \strng{authornamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
       \strng{authorfullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{1}
       \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
@@ -1321,6 +1386,36 @@
       \endverb
       \verb{url}
       \verb https://docs.floydhub.com/
+      \endverb
+    \endentry
+    \entry{KaimingHeGeorgiaGkioxariPiotrDollarRossGirshick.20180224}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=5c4599b4d3fcdcc8950549cb9bdaaf25}{%
+           family={{Kaiming He, Georgia Gkioxari, Piotr Dollar, Ross Girshick}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c4599b4d3fcdcc8950549cb9bdaaf25}
+      \strng{fullhash}{5c4599b4d3fcdcc8950549cb9bdaaf25}
+      \strng{bibnamehash}{5c4599b4d3fcdcc8950549cb9bdaaf25}
+      \strng{authorbibnamehash}{5c4599b4d3fcdcc8950549cb9bdaaf25}
+      \strng{authornamehash}{5c4599b4d3fcdcc8950549cb9bdaaf25}
+      \strng{authorfullhash}{5c4599b4d3fcdcc8950549cb9bdaaf25}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mask R-CNN}
+      \field{type}{phdthesis}
+      \field{urlday}{24}
+      \field{urlmonth}{2}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1703.06870.pdf
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1703.06870.pdf
       \endverb
     \endentry
     \entry{IntanPurnamasar.20181215}{misc}{}
@@ -1550,71 +1645,6 @@
       \endverb
       \verb{url}
       \verb https://www.techpowerup.com/gpu-specs/
-      \endverb
-    \endentry
-    \entry{HaraldBogeholz.20170406}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=951c39de508e59dbdf860ed7f0e051a9}{%
-           family={{Harald B{ö}geholz}},
-           familyi={H\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Heise Online}%
-      }
-      \strng{namehash}{951c39de508e59dbdf860ed7f0e051a9}
-      \strng{fullhash}{951c39de508e59dbdf860ed7f0e051a9}
-      \strng{bibnamehash}{951c39de508e59dbdf860ed7f0e051a9}
-      \strng{authorbibnamehash}{951c39de508e59dbdf860ed7f0e051a9}
-      \strng{authornamehash}{951c39de508e59dbdf860ed7f0e051a9}
-      \strng{authorfullhash}{951c39de508e59dbdf860ed7f0e051a9}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{K{ü}nstliche Intelligenz: Architektur und Performance von Googles KI-Chip TPU}
-      \field{urlday}{9}
-      \field{urlmonth}{2}
-      \field{urlyear}{2020}
-      \field{year}{2017}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.heise.de/newsticker/meldung/Kuenstliche-Intelligenz-Architektur-und-Performance-von-Googles-KI-Chip-TPU-3676312.html
-      \endverb
-      \verb{url}
-      \verb https://www.heise.de/newsticker/meldung/Kuenstliche-Intelligenz-Architektur-und-Performance-von-Googles-KI-Chip-TPU-3676312.html
-      \endverb
-    \endentry
-    \entry{GoogleCloud.20200209}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=57f3af2a3d1051c172ab3c3db7d5409d}{%
-           family={{Google Cloud}},
-           familyi={G\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Google Cloud Dokumentation}%
-      }
-      \strng{namehash}{57f3af2a3d1051c172ab3c3db7d5409d}
-      \strng{fullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
-      \strng{bibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
-      \strng{authorbibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
-      \strng{authornamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
-      \strng{authorfullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
-      \field{extraname}{3}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Systemarchitektur}
-      \field{urlday}{9}
-      \field{urlmonth}{2}
-      \field{urlyear}{2020}
-      \field{year}{2020}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://cloud.google.com/tpu/docs/system-architecture
-      \endverb
-      \verb{url}
-      \verb https://cloud.google.com/tpu/docs/system-architecture
       \endverb
     \endentry
     \entry{EASA.2019}{misc}{}

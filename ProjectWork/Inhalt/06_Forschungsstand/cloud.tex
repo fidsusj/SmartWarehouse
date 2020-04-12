@@ -24,7 +24,17 @@ Außerdem bietet \textit{AWS SageMaker} die ersten vollständig integrierte Entw
 
 \textit{AI Platform} ist das Konkurrenzprodukt zu \textit{AWS SageMaker} von der \textit{Google Cloud Platform} (GCP). Die Plattform bietet ebenso verschiedene Komponenten für das \textit{Deep Learning} an. Hierzu gehören \textit{AI Platform Notebooks}, ein Dienst mit einer integrierten JupyterLab-Umgebung, \textit{Deep Learning} Virtual Machines (VM) mit vorinstalierten \textit{Deep Learning} Frameworks, verteiltes Training mit automatischer Hyperparameter-Abstimmung durch den \textit{AI Platform Training} Dienst oder \textit{AI Platform Prediction} zum Bereitstellen trainierter Modelle \cite{GoogleCloudPlatform.20200314}. 
 
-Hervorzuheben sind allerdings Googles TPU Hardwarebeschleuniger, die für Projekte im \textit{TensorFlow} Framework für jede Instanz mobilisiert werden können. Sie sind darauf ausgelegt ein optimales Preis-/Leistungsverhältnis beim Trainingen von \textit{Deep Leaning} Modellen zu erreichen \cite{GoogleCloudPlatform.20200314}.
+Hervorzuheben sind allerdings Googles TPU Hardwarebeschleuniger, die für Projekte im \textit{TensorFlow} Framework für jede Instanz mobilisiert werden können. Diese Art von Spezialhardware erreicht pro TPU-Kern eine Rechenleistung von bis zu 92 TOPS \cite{HaraldBogeholz.20170406}. Werden 2048 solcher TPU-Kerne zu einem TPU-Pod zusammen geschlossen, so ergibt sich eine Rechenleistung von über 100 PetaFLOPS \cite{GoogleCloud.20200209}. Zudem ist die größere Rechenleistung gleichzeitig effizienter als herkömmliche GPUs (siehe Abbildung \ref{tpu}).
+
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[width=14cm]{Bilder/tpu_comparison.png} 
+		\caption[Vergleich V100 - TPU Pod]{Vergleich V100 - TPU Pod \cite{GoogleCloud.20200209b}}
+		\label{tpu}
+	\end{center}
+\end{figure}
+
+TPUs sind also darauf ausgelegt, ein optimales Preis-/Leistungsverhältnis beim Trainieren von \textit{Deep Leaning} Modellen zu erreichen \cite{GoogleCloudPlatform.20200314}.
 
 \subsection*{Google Colab}
 

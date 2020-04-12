@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  12 APR 2020 19:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.12.27)  12 APR 2020 22:53
 entering extended mode
 **./Praxisbericht.tex
 (Praxisbericht.tex
@@ -2183,15 +2183,15 @@ File: Bilder/neural_network.png Graphic file (type png)
 <use Bilder/neural_network.png>
 Package pdftex.def Info: Bilder/neural_network.png  used on input line 54.
 (pdftex.def)             Requested size: 341.43306pt x 134.46156pt.
- [9 <./Bilder/neural_network.png>] [10]) (Inhalt/06_Forschungsstand/hyperparame
-ter.tex [11] [12] [13]
-<Bilder/gradient_descent.png, id=504, 911.405pt x 451.6875pt>
+ [9 <./Bilder/neural_network.png>] [10] [11]) (Inhalt/06_Forschungsstand/hyperp
+arameter.tex [12] [13]
+[14]
+<Bilder/gradient_descent.png, id=510, 911.405pt x 451.6875pt>
 File: Bilder/gradient_descent.png Graphic file (type png)
 <use Bilder/gradient_descent.png>
 Package pdftex.def Info: Bilder/gradient_descent.png  used on input line 63.
 (pdftex.def)             Requested size: 426.79134pt x 211.52122pt.
-
-[14] [15 <./Bilder/gradient_descent.png (PNG copy)>]
+ [15 <./Bilder/gradient_descent.png (PNG copy)>]
 <Bilder/relu.png, id=524, 1029.8475pt x 468.75125pt>
 File: Bilder/relu.png Graphic file (type png)
 <use Bilder/relu.png>
@@ -2202,27 +2202,26 @@ File: Bilder/prelu.png Graphic file (type png)
 <use Bilder/prelu.png>
 Package pdftex.def Info: Bilder/prelu.png  used on input line 81.
 (pdftex.def)             Requested size: 213.39566pt x 114.29631pt.
-<Bilder/elu.png, id=530, 1023.825pt x 528.97626pt>
+ [16 <./Bilder/relu.png> <./Bilder/prelu.png>]
+<Bilder/elu.png, id=541, 1023.825pt x 528.97626pt>
 File: Bilder/elu.png Graphic file (type png)
 <use Bilder/elu.png>
 Package pdftex.def Info: Bilder/elu.png  used on input line 92.
 (pdftex.def)             Requested size: 341.43306pt x 176.403pt.
-)
-(Inhalt/06_Forschungsstand/datensatzlehre.tex [16 <./Bilder/relu.png> <./Bilder
-/prelu.png>] [17 <./Bilder/elu.png>]
+) (Inhalt/06_Forschungsstand/datensatzlehre.tex [17 <./Bilder/elu.png>]
 Overfull \hbox (1.17879pt too wide) in paragraph at lines 9--10
 \T1/cmr/m/it/12 val \T1/cmr/m/n/12 Da-ten-satz zu-sam-men-ge-führt. Dies steht 
 im Kon-text des so-ge-nann-ten \T1/cmr/m/it/12 K-Kreuzvalidier-
  []
 
 [18]) (Inhalt/06_Forschungsstand/faltungsnetze.tex [19]
-<Bilder/convolutional_layer.png, id=578, 680.5425pt x 463.7325pt>
+<Bilder/convolutional_layer.png, id=577, 680.5425pt x 463.7325pt>
 File: Bilder/convolutional_layer.png Graphic file (type png)
 <use Bilder/convolutional_layer.png>
 Package pdftex.def Info: Bilder/convolutional_layer.png  used on input line 17.
 
 (pdftex.def)             Requested size: 247.2559pt x 168.48613pt.
-<Bilder/zero_padding.png, id=581, 298.86656pt x 259.7203pt>
+<Bilder/zero_padding.png, id=580, 298.86656pt x 259.7203pt>
 File: Bilder/zero_padding.png Graphic file (type png)
 <use Bilder/zero_padding.png>
 Package pdftex.def Info: Bilder/zero_padding.png  used on input line 23.
@@ -2232,32 +2231,31 @@ Overfull \hbox (2.61046pt too wide) in paragraph at lines 16--27
 [][]  [] 
  []
 
-[20 <./Bilder/convolutional_layer.png (PNG copy)> <./Bilder/zero_padding.png>]
-<Bilder/feature_maps.jpeg, id=596, 306.06345pt x 262.70145pt>
+[20]
+<Bilder/feature_maps.jpeg, id=594, 306.06345pt x 262.70145pt>
 File: Bilder/feature_maps.jpeg Graphic file (type jpg)
 <use Bilder/feature_maps.jpeg>
 Package pdftex.def Info: Bilder/feature_maps.jpeg  used on input line 37.
 (pdftex.def)             Requested size: 312.9803pt x 268.63737pt.
-<Bilder/pooling_layer.png, id=602, 999.735pt x 292.09125pt>
+ [21 <./Bilder/convolutional_layer.png (PNG copy)> <./Bilder/zero_padding.png>]
+<Bilder/pooling_layer.png, id=606, 999.735pt x 292.09125pt>
 File: Bilder/pooling_layer.png Graphic file (type png)
 <use Bilder/pooling_layer.png>
 Package pdftex.def Info: Bilder/pooling_layer.png  used on input line 49.
 (pdftex.def)             Requested size: 426.79134pt x 124.69647pt.
-
-[21]) (Inhalt/06_Forschungsstand/map.tex [22 <./Bilder/feature_maps.jpeg>]
-<Bilder/iou_equation.png, id=618, 602.25pt x 469.755pt>
+ [22 <./Bilder/feature_maps.jpeg>]) (Inhalt/06_Forschungsstand/map.tex
+[23 <./Bilder/pooling_layer.png>]
+<Bilder/iou_equation.png, id=626, 602.25pt x 469.755pt>
 File: Bilder/iou_equation.png Graphic file (type png)
 <use Bilder/iou_equation.png>
 Package pdftex.def Info: Bilder/iou_equation.png  used on input line 18.
 (pdftex.def)             Requested size: 227.62204pt x 177.54826pt.
-
-[23 <./Bilder/pooling_layer.png>]
-<Bilder/map_graph1.png, id=632, 1606.0pt x 747.79375pt>
+<Bilder/map_graph1.png, id=631, 1606.0pt x 747.79375pt>
 File: Bilder/map_graph1.png Graphic file (type png)
 <use Bilder/map_graph1.png>
 Package pdftex.def Info: Bilder/map_graph1.png  used on input line 27.
 (pdftex.def)             Requested size: 341.43306pt x 158.98108pt.
-<Bilder/map_graph2.png, id=633, 2007.5pt x 747.79375pt>
+<Bilder/map_graph2.png, id=632, 2007.5pt x 747.79375pt>
 File: Bilder/map_graph2.png Graphic file (type png)
 <use Bilder/map_graph2.png>
 Package pdftex.def Info: Bilder/map_graph2.png  used on input line 28.
@@ -2274,14 +2272,14 @@ File: Bilder/rcnn.png Graphic file (type png)
 Package pdftex.def Info: Bilder/rcnn.png  used on input line 11.
 (pdftex.def)             Requested size: 227.62204pt x 203.87917pt.
  [25 <./Bilder/map_graph1.png> <./Bilder/map_graph2.png>]
-<Bilder/fasterrcnn.png, id=658, 973.6375pt x 981.6675pt>
+<Bilder/fasterrcnn.png, id=657, 973.6375pt x 981.6675pt>
 File: Bilder/fasterrcnn.png Graphic file (type png)
 <use Bilder/fasterrcnn.png>
 Package pdftex.def Info: Bilder/fasterrcnn.png  used on input line 23.
 (pdftex.def)             Requested size: 227.62204pt x 229.49356pt.
  [26 <./Bilder/rcnn.png (PNG copy)>]) (Inhalt/06_Forschungsstand/ssd.tex [27 <.
 /Bilder/fasterrcnn.png (PNG copy)>]
-<Bilder/ssd_framework.png, id=677, 1270.7475pt x 475.7775pt>
+<Bilder/ssd_framework.png, id=676, 1270.7475pt x 475.7775pt>
 File: Bilder/ssd_framework.png Graphic file (type png)
 <use Bilder/ssd_framework.png>
 Package pdftex.def Info: Bilder/ssd_framework.png  used on input line 7.
@@ -2292,10 +2290,10 @@ File: Bilder/bounding_boxes.png Graphic file (type png)
 <use Bilder/bounding_boxes.png>
 Package pdftex.def Info: Bilder/bounding_boxes.png  used on input line 17.
 (pdftex.def)             Requested size: 199.16928pt x 199.69478pt.
-<Bilder/ssd_architecture.png, id=693, 1114.1625pt x 329.23pt>
+<Bilder/ssd_architecture.png, id=694, 1114.1625pt x 329.23pt>
 File: Bilder/ssd_architecture.png Graphic file (type png)
 <use Bilder/ssd_architecture.png>
-Package pdftex.def Info: Bilder/ssd_architecture.png  used on input line 38.
+Package pdftex.def Info: Bilder/ssd_architecture.png  used on input line 27.
 (pdftex.def)             Requested size: 426.79134pt x 126.11342pt.
  [29 <./Bilder/bounding_boxes.png>]) (Inhalt/06_Forschungsstand/yolo.tex [30 <.
 /Bilder/ssd_architecture.png (PNG copy)>]
@@ -2338,10 +2336,16 @@ Overfull \hbox (11.16992pt too wide) in paragraph at lines 13--14
 ro-gram-ma-ble Ga-te Ar-rays (FPGAs),
  []
 
-[35] [36] (Quellcode/floyd.yml [37]) [38])
+[35] [36]
+<Bilder/tpu_comparison.png, id=817, 804.00375pt x 477.785pt>
+File: Bilder/tpu_comparison.png Graphic file (type png)
+<use Bilder/tpu_comparison.png>
+Package pdftex.def Info: Bilder/tpu_comparison.png  used on input line 31.
+(pdftex.def)             Requested size: 398.33858pt x 236.71208pt.
+ [37 <./Bilder/tpu_comparison.png>] (Quellcode/floyd.yml) [38])
 (Inhalt/07_Konzeption/trainingsdatensatz.tex [39]
 chapter 3.
-<Bilder/blockdiagramm.png, id=849, 814.04124pt x 241.90375pt>
+<Bilder/blockdiagramm.png, id=858, 814.04124pt x 241.90375pt>
 File: Bilder/blockdiagramm.png Graphic file (type png)
 <use Bilder/blockdiagramm.png>
 Package pdftex.def Info: Bilder/blockdiagramm.png  used on input line 7.
@@ -2349,53 +2353,53 @@ Package pdftex.def Info: Bilder/blockdiagramm.png  used on input line 7.
 [40
 
  <./Bilder/blockdiagramm.png>]
-<Bilder/wasser_klein.jpg, id=856, 1050.92625pt x 481.04718pt>
+<Bilder/wasser_klein.jpg, id=865, 1050.92625pt x 481.04718pt>
 File: Bilder/wasser_klein.jpg Graphic file (type jpg)
 <use Bilder/wasser_klein.jpg>
 Package pdftex.def Info: Bilder/wasser_klein.jpg  used on input line 24.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/wasser_gross.jpg, id=857, 1050.92625pt x 481.04718pt>
+<Bilder/wasser_gross.jpg, id=866, 1050.92625pt x 481.04718pt>
 File: Bilder/wasser_gross.jpg Graphic file (type jpg)
 <use Bilder/wasser_gross.jpg>
 Package pdftex.def Info: Bilder/wasser_gross.jpg  used on input line 25.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/cola_klein.jpg, id=858, 1050.92625pt x 481.04718pt>
+<Bilder/cola_klein.jpg, id=867, 1050.92625pt x 481.04718pt>
 File: Bilder/cola_klein.jpg Graphic file (type jpg)
 <use Bilder/cola_klein.jpg>
 Package pdftex.def Info: Bilder/cola_klein.jpg  used on input line 26.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/cola_gross.jpg, id=859, 1050.92625pt x 481.04718pt>
+<Bilder/cola_gross.jpg, id=868, 1050.92625pt x 481.04718pt>
 File: Bilder/cola_gross.jpg Graphic file (type jpg)
 <use Bilder/cola_gross.jpg>
 Package pdftex.def Info: Bilder/cola_gross.jpg  used on input line 27.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/iso.jpg, id=860, 1050.92625pt x 481.04718pt>
+<Bilder/iso.jpg, id=869, 1050.92625pt x 481.04718pt>
 File: Bilder/iso.jpg Graphic file (type jpg)
 <use Bilder/iso.jpg>
 Package pdftex.def Info: Bilder/iso.jpg  used on input line 28.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/ace.jpg, id=861, 1050.92625pt x 481.04718pt>
+<Bilder/ace.jpg, id=870, 1050.92625pt x 481.04718pt>
 File: Bilder/ace.jpg Graphic file (type jpg)
 <use Bilder/ace.jpg>
 Package pdftex.def Info: Bilder/ace.jpg  used on input line 29.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/johannisbeerschorle.jpg, id=862, 1050.92625pt x 481.04718pt>
+<Bilder/johannisbeerschorle.jpg, id=871, 1050.92625pt x 481.04718pt>
 File: Bilder/johannisbeerschorle.jpg Graphic file (type jpg)
 <use Bilder/johannisbeerschorle.jpg>
 Package pdftex.def Info: Bilder/johannisbeerschorle.jpg  used on input line 30.
 
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/apfelsaftschorle.jpg, id=863, 1050.92625pt x 481.04718pt>
+<Bilder/apfelsaftschorle.jpg, id=872, 1050.92625pt x 481.04718pt>
 File: Bilder/apfelsaftschorle.jpg Graphic file (type jpg)
 <use Bilder/apfelsaftschorle.jpg>
 Package pdftex.def Info: Bilder/apfelsaftschorle.jpg  used on input line 31.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/malzbier.jpg, id=864, 1050.92625pt x 481.04718pt>
+<Bilder/malzbier.jpg, id=873, 1050.92625pt x 481.04718pt>
 File: Bilder/malzbier.jpg Graphic file (type jpg)
 <use Bilder/malzbier.jpg>
 Package pdftex.def Info: Bilder/malzbier.jpg  used on input line 32.
 (pdftex.def)             Requested size: 134.86748pt x 61.7309pt.
-<Bilder/regal.jpg, id=866, 4625.28pt x 2119.92pt>
+<Bilder/regal.jpg, id=875, 4625.28pt x 2119.92pt>
 File: Bilder/regal.jpg Graphic file (type jpg)
 <use Bilder/regal.jpg>
 Package pdftex.def Info: Bilder/regal.jpg  used on input line 41.
@@ -2410,7 +2414,7 @@ Overfull \hbox (5.69037pt too wide) in paragraph at lines 41--42
 s.jpg> <./Bilder/iso.jpg> <./Bilder/ace.jpg> <./Bilder/johannisbeerschorle.jpg>
  <./Bilder/apfelsaftschorle.jpg> <./Bilder/malzbier.jpg>] [43 <./Bilder/regal.j
 pg>]) (Inhalt/07_Konzeption/objektdetektoren.tex
-<Bilder/ssd_results.png, id=893, 948.54375pt x 276.43275pt>
+<Bilder/ssd_results.png, id=902, 948.54375pt x 276.43275pt>
 File: Bilder/ssd_results.png Graphic file (type png)
 <use Bilder/ssd_results.png>
 Package pdftex.def Info: Bilder/ssd_results.png  used on input line 7.
@@ -2421,86 +2425,80 @@ Overfull \hbox (20.53712pt too wide) in paragraph at lines 36--45
  [] 
  []
 
-[47]
-<Bilder/tpu_comparison.png, id=941, 804.00375pt x 477.785pt>
-File: Bilder/tpu_comparison.png Graphic file (type png)
-<use Bilder/tpu_comparison.png>
-Package pdftex.def Info: Bilder/tpu_comparison.png  used on input line 55.
-(pdftex.def)             Requested size: 398.33858pt x 236.71208pt.
-) (Inhalt/07_Konzeption/drohne.tex [48] [49 <./Bilder/tpu_comparison.png>]) (In
-halt/07_Konzeption/software.tex
-<Bilder/UI.png, id=960, 976.64874pt x 418.56375pt>
+[47]) (Inhalt/07_Konzeption/drohne.tex [48] [49])
+(Inhalt/07_Konzeption/software.tex
+<Bilder/UI.png, id=963, 976.64874pt x 418.56375pt>
 File: Bilder/UI.png Graphic file (type png)
 <use Bilder/UI.png>
 Package pdftex.def Info: Bilder/UI.png  used on input line 7.
 (pdftex.def)             Requested size: 426.79134pt x 182.91042pt.
-) [50]
-(Inhalt/08_Realisierung/realisierung.tex [51 <./Bilder/UI.png>]
+) (Inhalt/08_Realisierung/realisierung.tex
+[50 <./Bilder/UI.png>]
 chapter 4.
-[52
+[51
 
-] [53]
-<Bilder/verdeckt.jpeg, id=984, 220.57407pt x 481.8pt>
+] [52]
+<Bilder/verdeckt.jpeg, id=982, 220.57407pt x 481.8pt>
 File: Bilder/verdeckt.jpeg Graphic file (type jpg)
 <use Bilder/verdeckt.jpeg>
 Package pdftex.def Info: Bilder/verdeckt.jpeg  used on input line 55.
 (pdftex.def)             Requested size: 134.86748pt x 294.60332pt.
-<Bilder/winkel.jpeg, id=985, 220.57407pt x 481.8pt>
+<Bilder/winkel.jpeg, id=983, 220.57407pt x 481.8pt>
 File: Bilder/winkel.jpeg Graphic file (type jpg)
 <use Bilder/winkel.jpeg>
 Package pdftex.def Info: Bilder/winkel.jpeg  used on input line 57.
 (pdftex.def)             Requested size: 134.86748pt x 294.60332pt.
-<Bilder/einmeter.jpeg, id=987, 220.57407pt x 481.8pt>
+<Bilder/einmeter.jpeg, id=985, 220.57407pt x 481.8pt>
 File: Bilder/einmeter.jpeg Graphic file (type jpg)
 <use Bilder/einmeter.jpeg>
 Package pdftex.def Info: Bilder/einmeter.jpeg  used on input line 65.
 (pdftex.def)             Requested size: 134.86748pt x 294.60332pt.
-<Bilder/zweimeter.jpeg, id=988, 220.57407pt x 481.8pt>
+<Bilder/zweimeter.jpeg, id=986, 220.57407pt x 481.8pt>
 File: Bilder/zweimeter.jpeg Graphic file (type jpg)
 <use Bilder/zweimeter.jpeg>
 Package pdftex.def Info: Bilder/zweimeter.jpeg  used on input line 66.
 (pdftex.def)             Requested size: 134.86748pt x 294.60332pt.
-<Bilder/dreimeter.jpeg, id=989, 220.57407pt x 481.8pt>
+<Bilder/dreimeter.jpeg, id=987, 220.57407pt x 481.8pt>
 File: Bilder/dreimeter.jpeg Graphic file (type jpg)
 <use Bilder/dreimeter.jpeg>
 Package pdftex.def Info: Bilder/dreimeter.jpeg  used on input line 67.
 (pdftex.def)             Requested size: 134.86748pt x 294.60332pt.
- [54 <./Bilder/verdeckt.jpeg> <./Bilder/winkel.jpeg>]
-<Bilder/ueberbeleuchtet.jpeg, id=997, 220.57407pt x 481.8pt>
+ [53 <./Bilder/verdeckt.jpeg> <./Bilder/winkel.jpeg>]
+<Bilder/ueberbeleuchtet.jpeg, id=995, 220.57407pt x 481.8pt>
 File: Bilder/ueberbeleuchtet.jpeg Graphic file (type jpg)
 <use Bilder/ueberbeleuchtet.jpeg>
 Package pdftex.def Info: Bilder/ueberbeleuchtet.jpeg  used on input line 75.
 (pdftex.def)             Requested size: 134.86748pt x 294.60332pt.
-<Bilder/normalbeleuchtet.jpeg, id=998, 220.57407pt x 481.8pt>
+<Bilder/normalbeleuchtet.jpeg, id=996, 220.57407pt x 481.8pt>
 File: Bilder/normalbeleuchtet.jpeg Graphic file (type jpg)
 <use Bilder/normalbeleuchtet.jpeg>
 Package pdftex.def Info: Bilder/normalbeleuchtet.jpeg  used on input line 76.
 (pdftex.def)             Requested size: 134.86748pt x 294.60332pt.
-<Bilder/unterbeleuchtet.jpeg, id=999, 220.57407pt x 481.8pt>
+<Bilder/unterbeleuchtet.jpeg, id=997, 220.57407pt x 481.8pt>
 File: Bilder/unterbeleuchtet.jpeg Graphic file (type jpg)
 <use Bilder/unterbeleuchtet.jpeg>
 Package pdftex.def Info: Bilder/unterbeleuchtet.jpeg  used on input line 77.
 (pdftex.def)             Requested size: 134.86748pt x 294.60332pt.
- [55 <./Bilder/einmeter.jpeg> <./Bilder/zweimeter.jpeg> <./Bilder/dreimeter.jpe
-g>] [56 <./Bilder/ueberbeleuchtet.jpeg> <./Bilder/normalbeleuchtet.jpeg> <./Bil
+ [54 <./Bilder/einmeter.jpeg> <./Bilder/zweimeter.jpeg> <./Bilder/dreimeter.jpe
+g>] [55 <./Bilder/ueberbeleuchtet.jpeg> <./Bilder/normalbeleuchtet.jpeg> <./Bil
 der/unterbeleuchtet.jpeg>]
-<Bilder/webapp.jpeg, id=1020, 1606.0pt x 779.91376pt>
+<Bilder/webapp.jpeg, id=1016, 1606.0pt x 779.91376pt>
 File: Bilder/webapp.jpeg Graphic file (type jpg)
 <use Bilder/webapp.jpeg>
 Package pdftex.def Info: Bilder/webapp.jpeg  used on input line 112.
 (pdftex.def)             Requested size: 426.79134pt x 207.2593pt.
- [57] (Quellcode/algorithmus.txt))
-(Inhalt/09_Ergebnisse/ergebnisse.tex [58 <./Bilder/webapp.jpeg>]
+ [56] (Quellcode/algorithmus.txt))
+(Inhalt/09_Ergebnisse/ergebnisse.tex [57 <./Bilder/webapp.jpeg>]
 chapter 5.
-) (Inhalt/10_Bewertung/bewertung.tex [59
+) (Inhalt/10_Bewertung/bewertung.tex [58
 
 ]
 chapter 6.
-) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [60
+) (Inhalt/11_Zusammenfassung_Ausblick/zusammenfassung_ausblick.tex [59
 
 ]
 chapter 7.
-) [61
+) [60
 
 ]
 chapter without number
@@ -2508,19 +2506,13 @@ chapter without number
 
 
 
-]
-Overfull \hbox (16.02386pt too wide) in paragraph at lines 135--135
-\T1/cmr/m/n/12 2016-12-29.  \T1/cmr/m/sc/12 url\T1/cmr/m/n/12 : []$https : / / 
-arxiv . org / pdf / 1512 . 02325 . pdf$[] (Ein-sicht-nah-me: 02.11.2019). 
- []
-
-[12] [13]
+] [12] [13] [14]
 Overfull \hbox (24.59178pt too wide) in paragraph at lines 135--135
 []$\T1/cmr/m/n/12 https : / / cloud . google . com / automl -[] tables / docs /
  notebooks$[] (Ein-sicht-nah-me: 14.03.2020). 
  []
 
-[14] [15] [16]
+[15] [16]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -2576,56 +2568,55 @@ Package logreq Info: Writing requests to 'Praxisbericht.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
- 47887 strings out of 492946
- 944834 string characters out of 3125377
- 1524086 words of memory out of 3000000
- 50540 multiletter control sequences out of 15000+200000
+ 47889 strings out of 492946
+ 945069 string characters out of 3125377
+ 1524058 words of memory out of 3000000
+ 50542 multiletter control sequences out of 15000+200000
  578855 words of font info for 152 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  80i,23n,86p,9184b,3591s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\eccc1200.pk>{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvi
-ps/mnsymbol/MnSymbolA.enc} <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\tcrm1200.pk>{C:/Users/D070497/AppData/Local/Programs/
-MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\D070497\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\D070497\AppData\L
-ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\D0704
-97\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:
+0\eccc1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\tcrm1200.pk>{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/f
+onts/enc/dvips/base/8r.enc} <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\D070497\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\D070497\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\D0704
+97\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:
 \Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm
-0800.pk>{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/mns
-ymbol/MnSymbolE.enc} <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
-\jknappen\ec\dpi600\ecrm1000.pk>{C:/Users/D070497/AppData/Local/Programs/MiKTeX
- 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Users/D070497/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Users/D070497/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolF.enc} <C:\Users\
-D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk
+1000.pk>{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/mns
+ymbol/MnSymbolC.enc}{C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/e
+nc/dvips/mnsymbol/MnSymbolD.enc}{C:/Users/D070497/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{C:/Users/D070497/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc} <C:\Users\D070497\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Users\
+D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 > <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecti1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
-en\ec\dpi600\ecsl1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\l
-jfour\jknappen\ec\dpi600\ecsi1095.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.
-9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\D070497\AppData\Loc
-al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1200.pk> <C:\Users\D070497
-\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1728.pk> <C:\U
-sers\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx12
+\ecsl1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknapp
+en\ec\dpi600\ecsi1095.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\l
+jfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsi1200.pk> <C:\Users\D070497\AppData\Loc
+al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1728.pk> <C:\Users\D070497
+\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1200.pk> <C:\U
+sers\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss12
 00.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
-pi600\ecss1200.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
-knappen\ec\dpi600\ecsx1728.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecsx2488.pk><C:/Users/D070497/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol12.pfb><C:/Users/D070497/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol8.pfb><C:/Us
-ers/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mi12.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmmi6.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/D070497/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/D070497/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/D0
-70497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
-><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/symbols/msbm10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/urw/courier/ucrr8a.pfb>
-Output written on Praxisbericht.pdf (79 pages, 5936158 bytes).
+pi600\ecsx1728.pk> <C:\Users\D070497\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
+knappen\ec\dpi600\ecsx2488.pk><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/mnsymbol/MnSymbol12.pfb><C:/Users/D070497/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol8.pfb><C:/Users/D070497/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
+/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmmi6.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/D070497/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/D070497/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/D
+070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb><C:/Users/D070497/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/co
+urier/ucrr8a.pfb>
+Output written on Praxisbericht.pdf (78 pages, 5920091 bytes).
 PDF statistics:
- 2017 PDF objects out of 2073 (max. 8388607)
+ 2011 PDF objects out of 2073 (max. 8388607)
  353 named destinations out of 1000 (max. 500000)
  518 words of extra memory for PDF output out of 10000 (max. 10000000)
 

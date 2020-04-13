@@ -2,22 +2,12 @@ import socket
 import threading
 import time
 import numpy
-from SSD import detection, utils
-from stats import Stats
+from Drone.stats import Stats
 import cv2
 from PIL import Image
-from matplotlib import pyplot as plt
-import numpy as np
-import ffmpeg
-from io import BytesIO
-import os
-import argparse
-import json
-from utils.utils import get_yolo_boxes, makedirs
-from utils.bbox import draw_boxes
-from keras.models import load_model
-from tqdm import tqdm
-from keras.backend import clear_session
+from Drone.utils.utils import get_yolo_boxes, makedirs
+from Drone.utils.bbox import draw_boxes
+from SSD.detect import detect
 import time
 
 class Tello:
@@ -206,7 +196,7 @@ class Tello:
                 cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                 pil_image = Image.fromarray(cv2_image)
                 pil_image = pil_image.convert('RGB')
-                pil_image = detection.detect(pil_image, min_score=0.2, max_overlap=0.5, top_k=200)
+                pil_image = detect(pil_image, min_score=0.2, max_overlap=0.5, top_k=200)
                 cv2_image = numpy.array(pil_image)
                 cv2_image = cv2_image[:, :, ::-1].copy()
                 cv2.imshow("preview", cv2_image)

@@ -1,8 +1,8 @@
 from flask import Flask,render_template
-from basicTello import basicTello
+from Drone.basicTello import basicTello
 from datetime import datetime
 import time
-from tello import Tello
+from Drone.tello import Tello
 import sys
 
 app = Flask(__name__)
@@ -27,8 +27,8 @@ def fly():
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    #connect()
-    boxes = fly()
+    connect()
+    #boxes = fly()
     time.sleep(5)
     src = 'C:\\Users\\I518134\\work\\drone\\Tello-Python3\\Simple-tello-control-GUI\\static\\video-0.jpg'
     return render_template('res_html.html', count=boxes, src=src)

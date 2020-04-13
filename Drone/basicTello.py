@@ -1,7 +1,7 @@
 import socket
 import threading
 import time
-from stats import Stats
+from Drone.stats import Stats
 import numpy as np
 
 

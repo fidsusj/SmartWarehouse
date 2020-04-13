@@ -85,7 +85,9 @@ Die Detektion reagierte allerdings invariant gegenüber unterschiedlichen Hinter
 
 \subsection*{YOLO}
 
-Robin
+- Verwendung weiterentwickeltes Repository von Darknet
+- Festlegung Trainingsparameter
+- 
 
 \section{Drohnen Anbindung}
 
@@ -101,7 +103,7 @@ Um dem entgegen zu wirken, wurde ein Bufferkonzept in einem parallelem Thread re
 
 Ein weiteres Problem beschreibt die initiale Latenz zwischen der Inferenz und der Bildaufnahme. Die Inferenz kann erst gestartet werden, sobald die Gewichtungen des Modells initialisiert wurden. Dies lässt sich umgehen, indem entweder der Thread zur Bildaufnahme verzögern gestartet wird oder dessen Buffer kleiner gewählt wird.
 
-+ Robin YOLO
+Da das \textit{Darknet} Framework in C implementiert ist, kann für das \textit{YOLO} Verfahren keine nahtlose Inferenz wie bei \textit{SSD} umgesetzt werden. Allerdings wird die Kompilierung einer \textit{Dynamic Link Library} (DLL) unterstützt. Eine \textit{DLL} ist eine ausführbare Datei, die Funktionen und Ressourcen als geteilte Bibliothek bereitstellt. Programme, die in verschiedenen Programmiersprachen implementiert wurden, können dadurch die gleiche DLL-Funktion aufrufen und die Inferenz kann durch das Python Programm ausgeführt werden \cite{MicrosoftCorporation.27.01.2020}.
 
 \section{Dashboard Entwicklung}
 

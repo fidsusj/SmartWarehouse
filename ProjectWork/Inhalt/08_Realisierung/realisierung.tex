@@ -85,15 +85,56 @@ Die Detektion reagierte allerdings invariant gegenüber unterschiedlichen Hinter
 
 \subsection*{YOLO}
 
-- Verwendung weiterentwickeltes Repository von Darknet
-- Festlegung Trainingsparameter
-- 
+Bei \textit{YOLO} kommt das zuvor erwähnte \textit{Darknet} Framework zum Einsatz. Vor der initialen Kompilierung müssen einige Konfigurationsschritte unternommen werden, weil auch der Betrieb auf einer normalen CPU oder einer GPU mit Tensor Kernen möglich ist. Für das Training kommt eine \textit{NVIDIA RTX 2060 SUPER} GPU zum Einsatz, deren enthaltenen Tensor Kerne mitbenutzt werden. Die benötigten Hyperparameter wurden dabei wie folgt gesetzt:
+
+\begin{itemize}
+	\item Batch Größe: 64
+	\item Subdivisions: 16
+	\item Lernrate: $1.0\cdot e^{-3}$
+	\item Momentum: 0.9
+	\item Maximale Anzahl Batches: 18000
+\end{itemize}
+
+Die Größe eines einzelnen Batches gibt die Anzahl der verarbeiteten Bilder im \textit{CNN} an, bevor die Gewichtungen angepasst werden. Da das Laden aller Bilder eines Batches in der Regel zu einem Speicherüberlauf der GPU führt, werden die Batches in sogenannte Mini-Batches aufgeteilt. Die Anzahl der Mini-Batches wird durch den Parameter \textit{Subdivisions} festgelegt, weshalb nur noch $Batches \mathbin{/} Subdivisions$ Bilder gleichzeitig in die GPU geladen werden. 
+
+Die Lernrate sowie das Momentum bleiben wie in der Dokumentation empfohlen unverändert zu den Referenzwerten.
+
+Im Gegensatz zu \textit{SSD} wird kein Maximum für die Anzahl an Epochen, sondern ein Maximalwert für die zu durchlaufenen Batches gesetzt. Dieser Wert wird abhängig von der Menge an gelabelten Klassen gesetzt und wird so in der Dokumentation vorgegeben. Er kann theoretisch beliebig gesetzt werden, jedoch würde bei einer zu kleinen Anzahl an Batches kein optimales Trainingsergebnis erzielt werden. Ein zu hoher Wert hingegen würde das Training ohne spürbare Verbesserung des Modells in die Länge ziehen. 
+
+Das Training ergab schließlich eine \textit{mAP} von 80.36\%. Abbildung \ref{yolo_result} zeigt die Verbesserung des Modells während dem Trainingsprozess. Es fällt auf, dass nach etwa 3600 Batches (umgerechnet circa 230 Epochen) bereits eine \textit{mAP} von 79\% erreicht wurde.
+
+\begin{figure}[ht]
+	\begin{center}
+		\includegraphics[width=13cm]{Bilder/yolo_result.png} 
+		\caption{Aufzeichnung des Trainingsprozess von \textit{YOLO}}
+		\label{yolo_result}
+	\end{center}
+\end{figure}
+
+\begin{center}
+	\begin{tabular}[h]{l|c}
+		Klasse & mAP \\
+		\hline
+		Saskia Wasser Groß & 76.69\% \\
+		Saskia Wasser Klein & 80.63\% \\
+		Pepsi Cola Groß & 73.14\% \\
+		Pepsi Cola Klein & 75.24\% \\
+		ISO & 90.28\% \\
+		ACE & 86.69\% \\
+		Stenger Johannisbeerschorle & 72.50\% \\
+		Stenger Apfelsaftschorle & 78.05 \% \\
+		Vitamalz Malzbier & 81.94\%
+	\end{tabular}
+	\captionof{table}{Validierungsergebnisse YOLO}
+	\label{table:yoloresults}
+\end{center}
 
 \section{Drohnen Anbindung}
 
 \subsection*{Drohnen Interface}
 
-Robin, evtl. ein Grundlagenkapitel (war auch in Markus Feedback die Rede)
+TODO
+- Abbildung Kommunikationskanäle (udp videostream, sockets für commands + responses)
 
 \subsection*{Modellinferenz}
 
@@ -103,7 +144,7 @@ Um dem entgegen zu wirken, wurde ein Bufferkonzept in einem parallelem Thread re
 
 Ein weiteres Problem beschreibt die initiale Latenz zwischen der Inferenz und der Bildaufnahme. Die Inferenz kann erst gestartet werden, sobald die Gewichtungen des Modells initialisiert wurden. Dies lässt sich umgehen, indem entweder der Thread zur Bildaufnahme verzögern gestartet wird oder dessen Buffer kleiner gewählt wird.
 
-Da das \textit{Darknet} Framework in C implementiert ist, kann für das \textit{YOLO} Verfahren keine nahtlose Inferenz wie bei \textit{SSD} umgesetzt werden. Allerdings wird die Kompilierung einer \textit{Dynamic Link Library} (DLL) unterstützt. Eine \textit{DLL} ist eine ausführbare Datei, die Funktionen und Ressourcen als geteilte Bibliothek bereitstellt. Programme, die in verschiedenen Programmiersprachen implementiert wurden, können dadurch die gleiche DLL-Funktion aufrufen und die Inferenz kann durch das Python Programm ausgeführt werden \cite{MicrosoftCorporation.27.01.2020}.
+Da das \textit{Darknet} Framework wie zuvor angemerkt in C implementiert ist, kann für das \textit{YOLO} Verfahren keine nahtlose Inferenz wie bei \textit{SSD} umgesetzt werden. Hierfür muss auf die Kompilierung einer \textit{Dynamic Link Library} (DLL) zurückgegriffen werden. Eine \textit{DLL} ist eine ausführbare Datei, die Funktionen und Ressourcen als geteilte Bibliothek bereitstellt. Programme, die in verschiedenen Programmiersprachen implementiert wurden, können dadurch die gleiche DLL-Funktion aufrufen und die Inferenz kann somit durch das Python Programm aufgerufen werden \cite{MicrosoftCorporation.27.01.2020}.
 
 \section{Dashboard Entwicklung}
 

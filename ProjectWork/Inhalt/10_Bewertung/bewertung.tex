@@ -6,6 +6,9 @@ Die Bewertung der beiden Detektoren für den industriellen Einsatz baut auf den 
 
 Hinsichtlich der Präzision fallen beide Objektdetektoren besser als die ursprünglichen Referenzergebnisse aus den wissenschaftlichen Veröffentlichungen aus. Es ist aber zu bemerken, dass die Ergebnisse nicht gut miteinander vergleichbar sind, da sie auf unterschiedlichen Daten trainiert wurden. Der Vergleichsdatensatz ist hierbei \textit{PascalVOC 2007}, der 20 Klassen besitzt und damit für das Modell komplexer zu modellieren ist, als der \textit{SmartWarehouse} Datensatz mit nur 9 Klassen. Mit 83,1\% fällt \textit{SSD300} um 8,8\% besser aus, während \textit{YOLOv3} sogar eine Verbesserung von 16.7\% verzeichnet. Dennoch lässt sich darauf schließen, dass beide Implementierungen bezüglich Präzision in einer Größenordnung skalieren, die dem Niveau der Vergleichsergebnisse aus \textit{PascalVOC 2007} nachkommt. Die leicht erhöhte Präzision von \textit{SSD300} gegenüber \textit{YOLOv3} liegt daran, dass \textit{SSD300} im Gegensatz zu \textit{YOLOv3} Bounding Box Vorschläge unterschiedlicher Seitenverhältnisse zulässt und die Unterteilung in Gitterstrukturen ebenfalls für mehrere Skalierungen durchgeführt wird.
 
+TODO:
+- unterstützt YOLOv3 unterschiedliche Seitenverhältnisse?
+
 Ein weiteres Bewertungskriterium ist das Reaktionsvermögen. Hier schneidet \textit{SSD} mit 30 FPS deutlich besser ab als \textit{YOLO} mit ?? FPS. [TBD]
 
 TODO:
@@ -16,22 +19,42 @@ Bezüglich Trainingsverhalten könnte \textit{SSD300} das Training mit leistungs
 TODO:
 - Bewertung Trainingsverhalten YOLO
 
-Zuletzt muss das Inferenzverhalten betrachtet werden. 
+Zuletzt muss das Inferenzverhalten betrachtet werden. Hierzu kann folgende Tabelle \ref{table:inference} herangezogen werden:
 
-- beleuchtung
-- blicklagen und entfernung
-- verdeckung
-- doppelt erkannt
+\begin{center}
+	\begin{tabular}[h]{l|c|c}
+		 & SSD300 & YOLOv3 \\
+		\hline
+		Beleuchtung & 0 & ? \\
+		Extreme Blicklagen & - & ? \\
+		Entfernung & 0 & ? \\
+		Verdeckung & - & ? \\
+		Doppelte Erkennung & + & ? \\
+		Hintergrund & + & ? \\
+		Bildauflösung & + & ? \\
+	\end{tabular}
+	\captionof{table}{Inferenzverhalten SSD300 und YOLOv3}
+	\label{table:inference}
+\end{center}
 
+Hinsichtlich der Beleuchtung lässt sich nur eine Hypothese aufstellen, dass gerade sehr transparente Objekte durch die starke Überbeleuchtung nur schwer durch Mustererkennung detektierbar sind. Welche Features letztendlich das neuronale Netz zur Detektion heranzieht, lässt sich nicht sagen und damit die Hypothese nicht beweisen. Bei extremen Blicklagen lässt sich allerdings feststellen, dass \textit{YOLOv3} scheinbar besser abschneidet als \textit{SSD300}. Auch scheint die Detektion ab gewissen Entfernungen und Verdeckungsgraden nur erschwert möglich zu sein. Diesem Problem könnte mit einer Ausweitung des Trainingsdatensatzes möglicherweise entgegen gewirkt werden. Im \textit{SmartWarehouse} Datensatz sind solche Fälle mit 12.5\% nur unterbesetzt abgebildet. Neben einer Erweiterung des Datensatzes wäre ebenso das Anwenden von \textit{Data Augmentation} oder \textit{Transfer Learning} eine Alternative, mit der der Generalisierungsgrad des Modells gesteigert werden könnte.
 
+TODO:
+- Bewertung Inferenzverhalten YOLO
 
+Insgesamt lässt sich schließen, dass sowohl \textit{SSD300} als auch \textit{YOLOv3} Objektdetektoren für den industriellen Einsatz darstellen. Welcher der beiden Detektoren präferiert genutzt werden soll, lässt sich generell nicht aussagen. Beide Detektoren haben ihre Stärken in unterschiedlichen Anwendungsgebieten. Hierzu müssen erst von Robin die Sachen nachgetragen werden, um dies zu beurteilen...
 
 \section{Machbarkeit des SmartWarehouse Szenarios}
 
-Auswahl YOLO SSD
+[Rahmenbedingungen SmartWarehouse erklären]
 
-\begin{itemize}
-	\item Eignet sich YOLO und SSD für die Industrie?
-	\item Ist das SmartWarehouse Szenario umsetzbar?
-\end{itemize}
+[Detektor auswählen]
+
+Mit der aufgezeigten Infrastruktur, lässt sich das \textit{SmartWarehouse} Szenario zunächst einfach realisieren. Durch die Anbindung der Drohne an den \textit{Flask} Server werden beim Ausführen der Flugsequenz kontinuierlich einzelne Bilder an der Server zur Inferenz weitergeleitet (siehe Abbildung \ref{commingsoon}). 
+
+[Bild]
+
+Problem bei der Inferenz stellt die Detektion verdeckter Objekte dar. Beispielsweise sind Flaschen in Getränkekästen nur schwer detektierbar. Die Teilmerkmale verdeckter Objekte scheinen nicht ausreichend genug für eine zuversichtliche Detektion zu sein. Bei Herabsenken des \textit{confidence scores} zur Detektion gerade solcher Objekte werden wiederrum zuvor doppelt detektierte Objekte erneut doppelt erkannt. Es lässt sich hierbei kein gutes Gleichgewicht einstellen. 
+
+Die Inferenz kann findet nach der Definition im Konzeptionskapitel in Echtzeit statt. Allerdings besitzt das \textit{SmartWarehouse} Szenario ein weiteres zentrales Problem bei der Umsetzbarkeit. Dieses Problem beruht nicht auf technischer Natur, sondern auf der Auswahl des Verfahrens. Der Zählalgorithmus kann das selbe Objekt bei größeren zeitlichen Intervallen oder bei unterschiedlichen absoluten Positionen auf dem Bild nicht als das selbe Objekt identifizieren. Demnach werden Objekte in solchen Szenarien doppelt gezählt. Solange allerdings Objekte nur durch das Bild \glqq gleiten\grqq{} und nicht erneut nach einem gewissen Intervall im Bild zu finden sind, so lassen sich Objekte präzise zählen. Das Problem der doppelten Detektion lässt sich also nicht mit dem Verfahren der Objektdetektion lösen, sondern nur auf konventionelle Verfahren mittels Scanning von Barcodes oder RFID-Chips. Das \textit{SmartWarehouse} Szenario ist somit nur begrenzt umsetzbar. 
 

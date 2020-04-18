@@ -27,12 +27,12 @@
 \contentsline {section}{\numberline {3.6}Spezifikation der Inventursoftware}{50}{section.3.6}% 
 \contentsline {chapter}{\numberline {4}Realisierung}{51}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Umsetzung der Objektdetektoren}{51}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{55}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{56}{section.4.3}% 
-\contentsline {section}{\numberline {4.4}Z\IeC {\"a}hlalgorithmus}{57}{section.4.4}% 
-\contentsline {chapter}{\numberline {5}Ergebnisse}{58}{chapter.5}% 
-\contentsline {chapter}{\numberline {6}Bewertung}{59}{chapter.6}% 
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{60}{chapter.7}% 
+\contentsline {section}{\numberline {4.2}Drohnen Anbindung}{57}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Dashboard Entwicklung}{58}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Z\IeC {\"a}hlalgorithmus}{59}{section.4.4}% 
+\contentsline {chapter}{\numberline {5}Ergebnisse}{61}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}Bewertung}{62}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{63}{chapter.7}% 
 \contentsline {chapter}{\nonumberline Literaturverzeichnis}{XI}{chapter*.36}% 
 \contentsline {chapter}{\numberline {A}Anhang}{XVII}{appendix.A}% 
 \contentsfinish 

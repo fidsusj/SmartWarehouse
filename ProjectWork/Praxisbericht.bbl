@@ -1743,6 +1743,35 @@
       \verb https://www.ryzerobotics.com/de/tello-edu?from=store-product-page
       \endverb
     \endentry
+    \entry{MicrosoftCorporation.27.01.2020}{misc}{}
+      \name{editor}{1}{}{%
+        {{hash=b9a8b868588ad4bc6b36c29936e26423}{%
+           family={{Microsoft Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9a8b868588ad4bc6b36c29936e26423}
+      \strng{fullhash}{b9a8b868588ad4bc6b36c29936e26423}
+      \strng{bibnamehash}{b9a8b868588ad4bc6b36c29936e26423}
+      \strng{editorbibnamehash}{b9a8b868588ad4bc6b36c29936e26423}
+      \strng{editornamehash}{b9a8b868588ad4bc6b36c29936e26423}
+      \strng{editorfullhash}{b9a8b868588ad4bc6b36c29936e26423}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{title}{CC++ DLLs in Visual Studio}
+      \field{urlday}{11}
+      \field{urlmonth}{4}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/de-de/cpp/build/dlls-in-visual-cpp?view=vs-2019
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/de-de/cpp/build/dlls-in-visual-cpp?view=vs-2019
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -1,4 +1,6 @@
 import time
+import matplotlib.pyplot as plt
+import numpy as np
 import torch.backends.cudnn as cudnn
 import torch.optim
 import torch.utils.data
@@ -17,16 +19,16 @@ n_classes = len(label_map)  # number of different types of objects
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Learning parameters
-checkpoint = 'checkpoint/BEST_checkpoint_ssd300.pth.tar'  # path to model checkpoint, None if none
-# checkpoint = None  # path to model checkpoint, None if none
+# checkpoint = 'checkpoint/BEST_checkpoint_ssd300.pth.tar'  # path to model checkpoint, None if none
+checkpoint = None  # path to model checkpoint, None if none
 batch_size = 16  # batch size
 start_epoch = 0  # start at this epoch
-epochs = 500  # number of epochs to run without early-stopping
+epochs = 22  # number of epochs to run without early-stopping
 k_fold = 5
-epochs_since_improvement = 0  # number of epochs since there was an improvement in the validation metric
+epochs_since_improvement = 0  # number of epochs since there was an improvement in the test metric
 best_loss = 100.  # assume a high loss at first
 workers = 4  # number of workers for loading data in the DataLoader
-print_freq = 100  # print training or validation status every __ batches
+print_freq = 100  # print training or test status every __ batches
 lr = 1e-3  # learning rate
 momentum = 0.9  # momentum
 weight_decay = 5e-4  # weight decay
@@ -37,7 +39,7 @@ cudnn.benchmark = True
 
 def main():
     """
-    Training and validation.
+    Training and testing.
     """
     global epochs_since_improvement, start_epoch, k_fold, label_map, best_loss, epoch, checkpoint
 
@@ -69,28 +71,32 @@ def main():
     model = model.to(device)
     criterion = MultiBoxLoss(priors_cxcy=model.priors_cxcy).to(device)
 
-    folds = k_fold_cross_validation(k_fold)
+    folds, validation = k_fold_cross_validation(k_fold)
+    train_losses = []
+    test_losses = []
+    train_losses.append(100.0)
+    test_losses.append(100.0)
 
     for i in range(k_fold):
         test_fold = folds[i]
         folds_without_test = folds.copy()
         folds_without_test.remove(test_fold)
         train_fold = [val for sublist in folds_without_test for val in sublist]
-        specify_train_test_validation_data(train_fold, test_fold)
+        specify_train_test_validation_data(train_fold, test_fold, validation)
 
         # Custom dataloaders
         train_dataset = PascalVOCDataset(data_folder,
                                          split='train',
                                          keep_difficult=keep_difficult)
-        val_dataset = PascalVOCDataset(data_folder,
-                                       split='test',
-                                       keep_difficult=keep_difficult)
+        test_dataset = PascalVOCDataset(data_folder,
+                                        split='test',
+                                        keep_difficult=keep_difficult)
         train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True,
                                                    collate_fn=train_dataset.collate_fn, num_workers=workers,
                                                    pin_memory=True)  # note that we're passing the collate function here
-        val_loader = torch.utils.data.DataLoader(val_dataset, batch_size=batch_size, shuffle=True,
-                                                 collate_fn=val_dataset.collate_fn, num_workers=workers,
-                                                 pin_memory=True)
+        test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size, shuffle=True,
+                                                  collate_fn=test_dataset.collate_fn, num_workers=workers,
+                                                  pin_memory=True)
         # Epochs
         for epoch in range(start_epoch, epochs):
             # Paper describes decaying the learning rate at the 80000th, 100000th, 120000th 'iteration', i.e. model update or batch
@@ -106,20 +112,20 @@ def main():
             # and have adjust_learning_rate(optimizer, 0.1) BEFORE this 'for' loop
 
             # One epoch's training
-            train(train_loader=train_loader,
-                  model=model,
-                  criterion=criterion,
-                  optimizer=optimizer,
-                  epoch=epoch)
+            train_loss = train(train_loader=train_loader,
+                               model=model,
+                               criterion=criterion,
+                               optimizer=optimizer,
+                               epoch=epoch)
 
-            # One epoch's validation
-            val_loss = validate(val_loader=val_loader,
-                                model=model,
-                                criterion=criterion)
+            # One epoch's testing
+            test_loss = test(test_loader=test_loader,
+                             model=model,
+                             criterion=criterion)
 
-            # Did validation loss improve?
-            is_best = val_loss < best_loss
-            best_loss = min(val_loss, best_loss)
+            # Did test loss improve?
+            is_best = test_loss < best_loss
+            best_loss = min(test_loss, best_loss)
 
             if not is_best:
                 epochs_since_improvement += 1
@@ -129,7 +135,25 @@ def main():
                 epochs_since_improvement = 0
 
             # Save checkpoint
-            save_checkpoint(epoch, epochs_since_improvement, model, optimizer, val_loss, best_loss, is_best)
+            save_checkpoint(epoch, epochs_since_improvement, model, optimizer, test_loss, best_loss, is_best)
+            train_losses.append(train_loss)
+            test_losses.append(test_loss)
+
+    print("-------------TRAIN LOSSES----------------")
+    print(train_losses)
+    print("-------------TEST LOSSES-----------------")
+    print(test_losses)
+
+    plt.plot(np.array(train_losses), 'r--')
+    plt.plot(np.array(test_losses), 'b-')
+    plt.xticks([0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120])
+    plt.yticks([0, 1, 2, 3, 4, 5])
+    plt.ylim(0, 5)
+    plt.xlim(1, 120)
+    plt.legend(['Training Loss', 'Test Loss'])
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.show()
 
 
 def train(train_loader, model, criterion, optimizer, epoch):
@@ -189,15 +213,16 @@ def train(train_loader, model, criterion, optimizer, epoch):
                                                                   batch_time=batch_time,
                                                                   data_time=data_time, loss=losses))
     del predicted_locs, predicted_scores, images, boxes, labels  # free some memory since their histories may be stored
+    return losses.avg
 
 
-def validate(val_loader, model, criterion):
+def test(test_loader, model, criterion):
     """
-    One epoch's validation.
-    :param val_loader: DataLoader for validation data
+    One epoch's testing.
+    :param test_loader: DataLoader for test data
     :param model: model
     :param criterion: MultiBox loss
-    :return: average validation loss
+    :return: average test loss
     """
     model.eval()  # eval mode disables dropout
 
@@ -209,7 +234,7 @@ def validate(val_loader, model, criterion):
     # Prohibit gradient computation explicity because I had some problems with memory
     with torch.no_grad():
         # Batches
-        for i, (images, boxes, labels, difficulties) in enumerate(val_loader):
+        for i, (images, boxes, labels, difficulties) in enumerate(test_loader):
 
             # Move to default device
             images = images.to(device)  # (N, 3, 300, 300)
@@ -231,7 +256,7 @@ def validate(val_loader, model, criterion):
             if i % print_freq == 0:
                 print('[{0}/{1}]\t'
                       'Batch Time {batch_time.val:.3f} ({batch_time.avg:.3f})\t'
-                      'Loss {loss.val:.4f} ({loss.avg:.4f})\t'.format(i, len(val_loader),
+                      'Loss {loss.val:.4f} ({loss.avg:.4f})\t'.format(i, len(test_loader),
                                                                       batch_time=batch_time,
                                                                       loss=losses))
 

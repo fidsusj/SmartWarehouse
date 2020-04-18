@@ -15,16 +15,18 @@ def read_data_files():
 
 def k_fold_cross_validation(k_fold):
     files = read_data_files()
-    random.shuffle(files)
+    train_test = files[:998]
+    validation = files[998:]
+    random.shuffle(train_test)
     folds = []
 
     for i in range(k_fold):
         folds.append([])
 
-    for index, file in enumerate(files):
+    for index, file in enumerate(train_test):
         folds[index % k_fold].append(file)
 
-    return folds
+    return folds, validation
 
 
 def specify_train_test_validation_data(train_images, test_images, validation_images):

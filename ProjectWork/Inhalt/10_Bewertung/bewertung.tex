@@ -1,7 +1,21 @@
 \chapter{Bewertung}
 
+\section{Einsatz der Objektdetektoren in der Industrie}
+
+Die Bewertung der beiden Detektoren für den industriellen Einsatz baut auf den in Kapitel 3.2 eingeführten Bewertungskriterien auf. 
+
+Hinsichtlich der Präzision fallen beide Objektdetektoren besser als die ursprünglichen Referenzergebnisse aus den wissenschaftlichen Veröffentlichungen aus. Es ist aber zu bemerken, dass die Ergebnisse nicht gut miteinander vergleichbar sind, da sie auf unterschiedlichen Daten trainiert wurden. Der Vergleichsdatensatz ist hierbei \textit{PascalVOC 2007}, der 20 Klassen besitzt und damit für das Modell komplexer zu modellieren ist, als der \textit{SmartWarehouse} Datensatz mit nur 9 Klassen. Mit 83,1\% fällt \textit{SSD300} um 8,8\% besser aus, während \textit{YOLO} sogar eine Verbesserung von 16.7\% verzeichnet. Dennoch lässt sich darauf schließen, dass beide Implementierungen bezüglich Präzision in einer Größenordnung skalieren, die dem Niveau der Vergleichsergebnisse aus \textit{PascalVOC 2007} nachkommt. 
+
+Ein weiteres Bewertungskriterium ist das Reaktionsvermögen. Hier schneidet \textit{SSD} mit 30 FPS deutlich besser ab als \textit{YOLO} mit ?? FPS. 
+
+
+
+\section{Machbarkeit des SmartWarehouse Szenarios}
+
+Auswahl YOLO SSD
+
 \begin{itemize}
-	\item Ergebnisse bewerten und diskutieren
 	\item Eignet sich YOLO und SSD für die Industrie?
 	\item Ist das SmartWarehouse Szenario umsetzbar?
 \end{itemize}
+

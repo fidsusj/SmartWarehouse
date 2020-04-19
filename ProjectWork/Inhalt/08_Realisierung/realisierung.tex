@@ -12,7 +12,7 @@ Die Referenzimplementierung erstellt sich des Weiteren einige Hilfsdateien, in d
 
 Um ein lokales Training auf der \textit{NVIDIA GTX 1080} GPU zu ermöglichen, wurde zudem \textit{CUDA} Version 10.1 verwendet. Trainiert wurde mit folgenden Hyperparametern:
 \begin{itemize}
-	\item Batch Größe: 16
+	\item Batchgröße: 16
 	\item Lernrate: $1.0\cdot e^{-3}$
 	\item Momentum: 0.9
 	\item Kreuzvalidierungen: 5
@@ -30,16 +30,16 @@ Die Hyperparameter sind nahezu gleich zu denen in der ursprünglichen wissenscha
 Für \textit{YOLO} wurde die neuste Version \textit{YOLOv3} implementiert. Hierbei kommt das \textit{Darknet} Framework zum Einsatz, eine Implementierung in C. Vor der initialen Kompilierung müssen einige Konfigurationsschritte unternommen werden, weil auch der Betrieb auf einer normalen CPU oder einer GPU mit Tensor Kernen möglich ist. Für das Training kommt eine \textit{NVIDIA RTX 2060 SUPER} GPU zum Einsatz, deren enthaltenen Tensor Kerne mitbenutzt werden. Die benötigten Hyperparameter wurden dabei wie folgt gesetzt:
 
 \begin{itemize}
-	\item Batch Größe: 64
+	\item Batchgröße: 64
 	\item Subdivisions: 16
 	\item Lernrate: $1.0\cdot e^{-3}$
 	\item Momentum: 0.9
 	\item Maximale Anzahl Batches: 18000
 \end{itemize}
 
-Im Unterschied zum \textit{SSD} kann \textit{YOLO} die in den GPU Speicher zu ladende Datenmenge eines Batches durch sogenannte \textit{Subdivisions} festgelegt. Hierbei werden nur noch $Batch Größe \mathbin{/} Subdivisions$ Bilder gleichzeitig in die GPU geladen werden, um einen Speicherüberlauf zu vermeiden. Bei \textit{SSD} muss immer die gesamte Batch Größe in den GPU Speicher geladen werden oder gegebenenfalls die Batch Größe wie oben reduziert werden, was hinsichtlich des Gradientenverfahren womöglich nicht gewünscht sein kann.
+Im Unterschied zum \textit{SSD} kann \textit{YOLO} die in den GPU Speicher zu ladende Datenmenge eines Batches durch sogenannte \textit{Subdivisions} festgelegt. Hierbei werden nur noch \(Batchgroesse \mathbin{/} Subdivisions\) Bilder gleichzeitig in die GPU geladen, um einen Speicherüberlauf zu vermeiden. Bei \textit{SSD} hingegen muss immer die gesamte Batchgröße an Bildern in den GPU Speicher geladen werden oder gegebenenfalls die Batchgröße wie oben reduziert werden, was hinsichtlich des Gradientenverfahren womöglich nicht gewünscht sein kann.
 
-Die Lernrate sowie das Momentum bleiben wie in der Dokumentation empfohlen unverändert zu den Referenzwerten. Im Gegensatz zu \textit{SSD} wird kein Maximum für die Anzahl an Epochen, sondern ein Maximalwert für die zu durchlaufenen Batches gesetzt. Dieser Wert wird abhängig von der Menge an gelabelten Klassen gesetzt und kann als Empfehlung aus der Dokumentation entnommen werden. 
+Die Lernrate sowie das Momentum bleiben wie in der Dokumentation empfohlen unverändert zu den Referenzwerten. Im Gegensatz zu \textit{SSD} wird kein Maximum für die Anzahl an Epochen, sondern ein Maximalwert für die zu durchlaufenen Batches gesetzt. Dieser Wert wird abhängig von der Menge an gelabelten Klassen gesetzt und kann als Empfehlung aus der Dokumentation für das \textit{Darknet} Framework entnommen werden. 
 
 \section{Dashboard Entwicklung}
 

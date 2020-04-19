@@ -67,37 +67,62 @@ Die Detektion reagierte allerdings invariant gegenüber unterschiedlichen Hinter
 
 \subsection*{YOLO}
 
-Das Training von \textit{YOLO} ergab eine \textit{mAP} von 80.36\%. Abbildung \ref{yolo_result} zeigt die Verbesserung des Modells während dem Trainingsprozess. Es fällt auf, dass nach etwa 3600 Batches (umgerechnet circa 230 Epochen) bereits eine \textit{mAP} von 79\% erreicht wurde.
+Um eine möglichst gute Aussage über den Vergleich der beiden Objektdetektoren treffen zu können kommt bei \textit{YOLO} der exakt gleiche Trainings- und Testdatensatz wie beim \textit{SSD} zum Einsatz. Das Training von \textit{YOLO} ergab eine \textit{mAP} von 80.36\%. Abbildung \ref{yolo_result} zeigt die Verbesserung des Modells während dem Trainingsprozess. 
 
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[width=13cm]{Bilder/yolo_result.png} 
-		\caption{Aufzeichnung des Trainingsprozess von \textit{YOLO}}
+		\caption{Entwicklung von \textit{text} und \textit{mAP} während dem Trainingsprozess von \textit{YOLO}}
 		\label{yolo_result}
 	\end{center}
 \end{figure}
+
+Wie beim \textit{SSD} erreicht das Modell relativ frühzeitig nach bereits etwa 4000 Batches eine \textit{mAP} von 79\%, woraufhin das Training vor Erreichung der durch die Dokumentation nahegelegte maximale Anzahl an Batches abgebrochen wurde. Das kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt. Tabelle \ref{table:yoloresults} zeigt die \textit{mAP} für jede gelabelte Klasse:
 
 \begin{center}
 	\begin{tabular}[h]{l|c}
 		Klasse & mAP \\
 		\hline
-		Saskia Wasser Groß & 76.69\% \\
-		Saskia Wasser Klein & 80.63\% \\
-		Pepsi Cola Groß & 73.14\% \\
-		Pepsi Cola Klein & 75.24\% \\
-		ISO & 90.28\% \\
-		ACE & 86.69\% \\
-		Stenger Johannisbeerschorle & 72.50\% \\
-		Stenger Apfelsaftschorle & 78.05 \% \\
-		Vitamalz Malzbier & 81.94\%
+		Saskia Wasser Groß & 76.69\% (-0.93\%)\\
+		Saskia Wasser Klein & 80.63\% (+4.67\%)\\
+		Pepsi Cola Groß & 73.14\% (-21.8\%)\\
+		Pepsi Cola Klein & 75.24\% (-11.14\%)\\
+		ISO & 90.28\% (+3.91\%)\\
+		ACE & 86.69\% (+1.26\%)\\
+		Stenger Johannisbeerschorle & 72.50\% (+3.03\%)\\
+		Stenger Apfelsaftschorle & 78.05\% (-4.43\%)\\
+		Vitamalz Malzbier & 81.94\% (+5.7\%)
 	\end{tabular}
-	\captionof{table}{Validierungsergebnisse YOLO}
+	\captionof{table}{Validierungsergebnisse YOLO mit Vergleich zu \textit{SSD}}
 	\label{table:yoloresults}
 \end{center}
 
-TODO:
- - Vergleiche wie bei SSD (siehe Bewertungskriterien)
+Auffällig niedrig ist die \textit{mAP} der Klassen \textit{Pepsi Cola Groß} und \textit{Pepsi Cola Klein}. Ein reiner Wertevergleich gibt jedoch keinen guten Einblick in den tatsächlichen Unterschied der zwei trainierten Modelle. Deshalb wird im folgenden das Detektionsverhalten auf den gleichen Bildern wie zuvor bei SSD evaluiert:
+
+\begin{figure}[ht]
+	\centering
+	\subfigure[verdeckt]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_verdeckt.jpg}}
+	\hspace{2cm}
+	\subfigure[winkel]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_winkel.jpg}}
+	\caption{Detektionsverhalten von \textit{YOLO} bei extremen Blicklagen}
+	\label{lagen_yolo}
+\end{figure}
  
+\begin{figure}[ht]
+	\subfigure[1 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_entfernung1.jpg}}\hfill
+	\subfigure[2 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_entfernung2.jpg}}\hfill
+	\subfigure[3 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_entfernung3.jpg}}\hfill
+	\caption{Detektionsverhalten von \textit{YOLO} bei unterschiedlichen Entfernungen}
+	\label{entfernung_yolo}
+\end{figure}
+ 
+ \begin{figure}[ht]
+ 	\subfigure[überbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_beleuchtung1.jpg}}\hfill
+ 	\subfigure[normal]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_beleuchtung2.jpg}}\hfill
+ 	\subfigure[unterbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_beleuchtung3.jpg}}\hfill
+ 	\caption{Detektionsverhalten von \textit{YOLO} bei unterschiedlichen Beleuchtungsverhältnissen}
+ 	\label{sicht_yolo}
+ \end{figure}
  
 \section{Reaktionsvermögen}
 
@@ -112,9 +137,6 @@ TODO:
 
 \section{Trainingsverhalten}
 
-Eine Epoche lokales Training mit anschließendem Testen des Durchlaufs beim \textit{SSD} auf einer \textit{NVIDIA GTX 1080} dauert im Schnitt neun Minuten. Die Messung basiert auf einer Batch Größe von 16 Bildern bei insgesamt 998 Bildern pro Epoche. Insgesamt wurden 16,5 Stunden zum Erstellen eines Modells mit dem \textit{SSD} benötigt. Bei einer Unterbrechung des Trainings kann durch Ablage von sogenannten Modell-Checkpoints zu einem späteren Zeitpunkt mit dem Trainings fortgefahren werden. 
-
-TODO:
-	- YOLO Trainingsverhalten
+Eine Epoche lokales Training mit anschließendem Testen des Durchlaufs beim \textit{SSD} auf einer \textit{NVIDIA GTX 1080} dauert im Schnitt neun Minuten. Die Messung basiert auf einer Batch Größe von 16 Bildern bei insgesamt 998 Bildern pro Epoche. Insgesamt wurden 16,5 Stunden zum Erstellen eines Modells mit dem \textit{SSD} benötigt. Beim Training von \textit{YOLO} benötigt eine Batch mit einer Größe von 64 etwa eine Minute und 30 Sekunden, bis zur Erreichung des optimalen Modells vergehen etwa acht Stunden. Die Dauer der beiden Trainingsdurchläufe lässt sich allerdings nur schwer vergleichen. Zum einen wird für das Training von \textit{YOLO} wie im vorherigen Kapitel erwähnt eine andere GPU verwendet, deren Tensor Kerne den Trainingsprozess merklich beschleunigen. Zum anderen werden die beiden Objektdetektoren in zwei verschiedenen Frameworks implementiert, wodurch ein anderes Trainingsverhalten von Grund auf gegeben ist und Unterschiede in der Performance auftreten können. Bei beiden Trainings kann durch Ablage von sogenannten Modell-Checkpoints zu einem späteren Zeitpunkt mit dem Trainings fortgefahren werden. 
 
 

@@ -79,7 +79,7 @@ Um eine möglichst gute Aussage über den Vergleich der beiden Objektdetektoren 
 
 Wie beim \textit{SSD} erreicht das Modell relativ frühzeitig nach bereits etwa 3600 Batches eine \textit{mAP} von 79\%. Das Training wurde daher vor Erreichung der durch die Dokumentation nahegelegte maximale Anzahl an Batches nach 11000 Batches abgebrochen. Das kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt und das Modell dementsprechend leichter trainiert werden kann. 
 
-Der \textit{confidence score} liegt standardmäßig bei 0.25. Nach mehreren Durchläufen stellt sich heraus, dass dieser Wert nicht verändert werden sollte. Ein zu geringer Wert sorgt zwar dafür, dass möglicherweise mehr Objekte erkannt werden. Allerdings steigt damit auch die Rate an falsch erkannter Objekte. Ein Parameter für die Obergrenze der Überlappung zweier Bounding Boxen existiert nicht.
+Der \textit{confidence score} liegt standardmäßig bei 0.25. Nach mehreren Durchläufen stellt sich heraus, dass dieser Wert nicht verändert werden sollte. Ein zu geringer Wert sorgt zwar dafür, dass möglicherweise mehr Objekte erkannt werden. Allerdings steigt damit auch die Rate an falsch oder doppelt erkannter Objekte. Ein Parameter für die Obergrenze der Überlappung zweier Bounding Boxen existiert nicht.
 
 Tabelle \ref{table:yoloresults} zeigt die \textit{mAP} für jede gelabelte Klasse:
 
@@ -101,7 +101,7 @@ Tabelle \ref{table:yoloresults} zeigt die \textit{mAP} für jede gelabelte Klass
 	\label{table:yoloresults}
 \end{center}
 
-Auffällig niedrig ist die \textit{mAP} der Klassen \textit{Pepsi Cola Groß} und \textit{Pepsi Cola Klein}. Ein reiner Wertevergleich gibt jedoch keinen guten Einblick in den tatsächlichen Unterschied der zwei trainierten Modelle. Deshalb wird im folgenden das Detektionsverhalten auf den gleichen Bildern wie zuvor bei SSD evaluiert:
+Auffällig niedrig ist die \textit{mAP} der Klassen \textit{Pepsi Cola Groß} und \textit{Pepsi Cola Klein}. Ein Wertevergleich gibt jedoch keinen guten Einblick in den Unterschied der zwei trainierten Modelle in der Praxis. Im folgenden wird daher das Detektionsverhalten auf den gleichen Bildern wie zuvor beim \textit{SSD} evaluiert:
 
 \begin{figure}[H]
 	\centering
@@ -132,7 +132,7 @@ Wie bei \textit{SSD} erfolgt nach bereits drei Metern Entfernung keine Detektion
  	\label{sicht_yolo}
 \end{figure}
 
-Beim Testen der verschiedenen Beleuchtungsverhältnisse fällt auf, dass im Gegensatz zum \textit{SSD} die Flasche in der unterbelichteten Umgebung nicht erkannt wird bzw. nur mit einem \text{confidence score} von 6\%. 
+Beim Testen der verschiedenen Beleuchtungsverhältnisse fällt auf, dass im Gegensatz zum \textit{SSD} die Flasche in der unterbelichteten Umgebung nicht erkannt wird beziehungsweise mit einem \textit{confidence score} von nur 6\%. 
  
 \section{Reaktionsvermögen}
 

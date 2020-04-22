@@ -45,10 +45,10 @@ Die Lernrate sowie das Momentum bleiben wie in der Dokumentation empfohlen unver
 
 Der Server wurde mit dem \textit{Flask} Framework in Python implementiert und läuft auf dem \textit{Web Server Gateway Interface} (WSGI) server \textit{Waitress}. Er führt den Inferenzalgorithmus des \textit{SSDs} bzw. des \textit{YOLO} Objektdetektors für jeden Frame des empfangenen Videostreams der Drohne aus und streamt die inferierten Bilder mit den Bounding Boxen an jeden Client. Der Client wurde mit dem \textit{Bootstrap} Framework designed (siehe Abbildung \ref{webapp}).
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/webapp.jpeg} 
-		\caption[Webapp SmartWarehouse]{Webapp SmartWarehouse}
+		\caption[Webapplikation SmartWarehouse]{Webapplikation SmartWarehouse}
 		\label{webapp}
 	\end{center}
 \end{figure}
@@ -73,7 +73,9 @@ Der obige Algorithmus wird momentan dazu verwendet, um für das Industrieszenari
 \subsection*{Drohnen Interface}
 
 TODO
+
 - Abbildung Kommunikationskanäle (udp videostream, sockets für commands + responses)
+
 - Flugsequenz Programmierung
 
 \subsection*{Modellinferenz}

@@ -94,9 +94,11 @@ def detect(original_image, min_score, max_overlap, top_k, model, suppress=None):
 def infere(frame, object_counter, last_detected_objects, model):
     # Interfere with model
     cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    cv2_image = numpy.rot90(cv2_image)
     pil_image = Image.fromarray(cv2_image)
     pil_image, det_objects = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000, model=model)
     cv2_image = numpy.array(pil_image)
+    cv2_image = numpy.rot90(cv2_image, 3)
     cv2_image = cv2_image[:, :, ::-1].copy()
 
     # Count objects

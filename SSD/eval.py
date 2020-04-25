@@ -24,7 +24,7 @@ model.eval()
 
 # Load validation data
 validation_dataset = PascalVOCDataset(data_folder,
-                                split='validation',
+                                split='test',
                                 keep_difficult=keep_difficult)
 validation_loader = torch.utils.data.DataLoader(validation_dataset, batch_size=batch_size, shuffle=False,
                                           collate_fn=validation_dataset.collate_fn, num_workers=workers, pin_memory=True)

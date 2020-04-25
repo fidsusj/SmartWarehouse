@@ -1,4 +1,6 @@
 import json
+import time
+
 import cv2
 import torch
 import torch.backends.cudnn as cudnn
@@ -12,7 +14,7 @@ from SSD.utils import voc_labels
 
 # Config
 app = Flask(__name__)
-fvs = FileVideoStream(0).start()
+fvs = FileVideoStream(0)
 fps = FPS().start()
 
 counter = {}
@@ -41,7 +43,9 @@ def index():
 
 def gen():
     global detected_objects, counter
-    while True:
+    fvs.start()
+    time.sleep(1)
+    while not fvs.stopped:
         fps = FPS().start()
         frame = fvs.read()
         image, new_detected_objects, counter = infere(frame, counter, detected_objects, model)
@@ -50,7 +54,7 @@ def gen():
         _, encodedImage = cv2.imencode('.jpg', image)
         fps.update()
         fps.stop()
-        # print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
+        print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + bytearray(encodedImage) + b'\r\n')
 

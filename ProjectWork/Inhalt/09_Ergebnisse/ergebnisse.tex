@@ -19,7 +19,7 @@ Die Entscheidung zum \textit{Early Stopping} basiert auf dem Anstieg der Differe
 Zur Epoche 121 betrug das Ergebnis der Kostenfunktion 1.7. Es ergab eine \textit{mAP} von 83.1\%, leicht über den Referenzergebnissen von \textit{SSD} zu \textit{PascalVOC} (siehe Abbildung \ref{result}). Die Ergebnisse zu den einzelnen Klassen sind in folgender Tabelle dargestellt:
 
 \begin{center}
-	\begin{tabular}[h]{l|c}
+	\begin{tabular}[H]{l|c}
 		Klasse & mAP \\
 		\hline
 		Saskia Wasser Groß & 77.62\% \\
@@ -42,7 +42,7 @@ Als erstes kann bei der Detektion der minimale \textit{confidence score} angegeb
 
 Die zweite Möglichkeit besteht darin, die maximale Überlappung zweier Bounding Boxen festzulegen. Somit werden doppelte Bounding Boxen, die sich flächenmäßig über einem gewissen Grenzwert überlappen, auf eine Bounding Box reduziert. Er stellte ich sich Parameter von 0.45 als geeignet heraus. Außerdem wurden Inkonsistenzen im Detektionsverhalten festgestellt.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\subfigure[verdeckt]{\includegraphics[width=0.30\textwidth]{Bilder/verdeckt.jpeg}}
 	\hspace{2cm}
@@ -53,7 +53,7 @@ Die zweite Möglichkeit besteht darin, die maximale Überlappung zweier Bounding
 
 So sind von anderen Objekten verdeckte Objekte nur schwer zu erkennen, genauso wie Objekte aus extremen Blicklagen (siehe Abbildung \ref{lagen}). Diese Fälle wurden im Datensatz zwar zu 12.5\% abgedeckt, es lässt sich aber keine Aussage darüber treffen, ob eine Erweiterung des Datensatzes eine Abhilfe für dieses Problem hätte liefern können. 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\subfigure[1 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/einmeter.jpeg}}\hfill
 	\subfigure[2 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/zweimeter.jpeg}}\hfill
 	\subfigure[3 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/dreimeter.jpeg}}\hfill
@@ -63,7 +63,7 @@ So sind von anderen Objekten verdeckte Objekte nur schwer zu erkennen, genauso w
 
 Auch die Entfernung zum zu detektierenden Objekt besitzt eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{entfernung} wird gezeigt, dass ab einer Entfernung von drei Metern keine Detektion mehr erfolgte. 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\subfigure[überbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/ueberbeleuchtet.jpeg}}\hfill
 	\subfigure[normal]{\includegraphics[width=0.30\textwidth]{Bilder/normalbeleuchtet.jpeg}}\hfill
 	\subfigure[unterbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/unterbeleuchtet.jpeg}}\hfill
@@ -87,7 +87,7 @@ Um eine möglichst gute Aussage über den Vergleich der beiden Objektdetektoren 
 	\end{center}
 \end{figure}
 
-Wie beim \textit{SSD} erreicht das Modell relativ frühzeitig nach bereits etwa 3600 Batches eine \textit{mAP} von 79\%. Das Training wurde daher vor Erreichung der durch die Dokumentation nahegelegte maximale Anzahl an Batches nach 11000 Batches abgebrochen. Das kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt und das Modell dementsprechend leichter trainiert werden kann. 
+Wie beim \textit{SSD} erreicht das Modell relativ frühzeitig nach bereits etwa 4500 Batches eine \textit{mAP} von 80\%. Da sich das Modell ab diesem Zeitpunkt nicht mehr maßgeblich verbessert hat wurde das Training vor Erreichung der durch die Dokumentation nahegelegte maximale Anzahl an Batches abgebrochen. Das frühe Erreichen eines sehr guten Ergebnis kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt und das Modell dementsprechend leichter trainiert werden kann. 
 
 Der \textit{confidence score} liegt standardmäßig bei 0.25. Nach mehreren Durchläufen stellt sich heraus, dass dieser Wert nicht verändert werden sollte. Ein zu geringer Wert sorgt zwar dafür, dass möglicherweise mehr Objekte erkannt werden, allerdings steigt damit auch die Rate an falsch oder doppelt erkannter Objekte. Ein Parameter für die Obergrenze der Überlappung zweier Bounding Boxen existiert nicht.
 
@@ -111,7 +111,7 @@ Tabelle \ref{table:yoloresults} zeigt die \textit{mAP} für jede Klasse.
 	\label{table:yoloresults}
 \end{center}
 
-Auch bei \textit{YOLO} können verdeckte Objekte nur schwer erkannt werden. Ein Unterschied zu \textit{SSD} zeigt sich bei der Ansicht von oben (siehe Abbildung \ref{lagen_yolo}).
+Auch bei \textit{YOLO} können verdeckte Objekte nur schwer erkannt werden. Ein Unterschied zu \textit{SSD} zeigt sich bei der Ansicht von oben:
 
 \begin{figure}[H]
 	\centering

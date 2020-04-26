@@ -1,7 +1,9 @@
 \chapter{Zusammenfassung und Ausblick}
 
-\begin{itemize}
-	\item Klare Darstellung, was die Arbeit geliefert hat
-	\item Was liefert die Arbeit, was bisher noch nicht bekannt war (Mehrwert, auch wenn etwas nicht geht)?
-	\item Ca. 2-4 Punkte: Zukünftige Ziele 
-\end{itemize}
+In der Arbeit sollten sich vor allem zwei Erkenntnisse herausgestellt haben. Zunächst ist evaluiert worden, dass Objektdetektoren wie \textit{SSD} und \textit{YOLO} durchaus das Potential ausweisen, industriell genutzt zu werden. Nicht nur hinsichtlich ihrer Präzision im Detektionsvermögen weisen sie zuversichtliche Ergebnisse auf, sondern auch in der Schnelligkeit ihrer Detektion. Beide weisen bei speziellen Detektionsszenarien ihre Stärken und Schwächen auf. Gerade die Detektion von teilweise verdeckten Objekten stellt nach wie vor ein Problem dar, für das alternative Lösungswege gefunden werden müssen. 
+
+Daneben stellt sich die Machbarkeitsstudie \textit{SmartWarehouse} unter bestimmten Umständen als machbar heraus. Es wurde eine Drohne programmiert, die ein Miniaturmodell eines Warenhauses durchfliegt. Ihr Drohnenstream wurde an einen Server zur Inferenz mit einem Objektdetektionsmodell mit \textit{YOLO} gesendet und die daraus resultierenden Objekte gezählt. Das Ergebnis und der Live-Stream der Inferenz wurden auf einer Webapplikation dargestellt. Offen bleibt das Problem einer doppelten Detektion von Objekten bei mehrfachen Erscheinen im Bild nach gewissen zeitlichen Abständen, da keine eindeutige Identifizierung von Objekten mit reiner Objektdetektion möglich ist.
+
+Um das \textit{SmartWarehouse} Szenario weiter auszubauen, soll als nächstes der Datensatz vom simplen Beispiel von Getränkeflaschen auf eine echte Warenhausumgebung erweitert werden. Dadurch wird ebenfalls erhofft, die Präzision des Modells weiter zu verbessern und Inkonsistenzen bei unterschiedlichen Beleuchtungsverhältnissen, extremen Blicklagen, größeren Entfernungen und unterschiedlichen Verdeckungsgraden zu beheben. Zudem muss die Flugsequenz der Drohne dahingehend optimiert werden, bei Stellen starker Verdeckungsgrade alternative Betrachtungswinkel zu wählen. 
+
+Um spezielle Rahmenbedingungen bei der Zählung durch Objektdetektion auszuschließen, könnte das Szenario ebenso zur eindeutigen Identifizierung von Objekten mit konventionellen RFID Chips erweitert werden. Dies ermöglicht ebenso neue Szenarien zu entwickeln, in denen Objektdetektion nur Suche von Objekten einer bestimmten Klasse genutzt wird und deren Identität anschließend mit RFID Chips sichergestellt wird. 

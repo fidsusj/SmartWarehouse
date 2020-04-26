@@ -56,23 +56,12 @@ Falls viele Objekte unterschiedlicher Skalierung in der Detektionsumgebung erkan
 
 \section{Machbarkeit des SmartWarehouse Szenarios}
 
-[Rahmenbedingungen SmartWarehouse erklären]
+Aufgrund der oben ausgewerteten Ergebnisse wurde sich für eine Nutzung des \textit{YOLOv3} Modells für das \textit{SmartWarehouse} Szenario entschieden. Ein großer Aspekt stellt hierbei die Erweiterbarkeit des Szenarios dar. Momentan ist das Szenario allein auf Getränkeflaschen exemplarisch ausgelegt. Kommt man zur eigentlichen Idee zurück, in großen Warenhäusern mit vielen verschiedenen Produkten automatisierte Inventuren durchzuführen, so fällt der Aspekt des besseren Präzision der Detektion für gleiche Objekte unterschiedlicher Skalierung bei \textit{SSD300} eher in den Hintergrund. Vielmehr ist es wichtig, aufgrund der Inferenz des Drohnenstreams, ein zuverlässiges Detektionsverhalten bei unterschiedlichen Blicklagen zu ermöglichen. Dies ist insbesondere dann wichtig, wenn Objekte durch andere Objekte verdeckt sind und trotzdem erkannt werden sollen. Die Flugsequenz der Drohne muss für solche Szenarien hingehend optimiert werden alternative Betrachtungswinkel in Erwägung ziehen. Erweitert man zusätzlich den Datensatz auf ein solch größeres Szenario, so könnten gerade solche klassischen Probleme, also Objektdetektion bei größere Entfernungen, Verdeckungsgraden und Blicklagen besser bewältigt werden. Da davon auszugehen ist, dass Warenhäuser eher gut belichtet sind, sollten extreme Beleuchtungseinflüsse ausgeschlossen werden können. Auch sind Objekte in Warenhäusern wohl kaum in Bewegung, weshalb auch die schnellere Inferenz von \textit{SSD300} bei komplexeren Datensätzen vernachlässigt werden kann. Letztendlich ist es beim Ausbau eines solchen Szenarios ebenso wichtig, schnell das Detektions-Modell auszubauen, was auch für \textit{YOLOv3} im Gegensatz zu \textit{SSD300} spricht. 
 
-[Detektor auswählen]
+Mit der in den vorgegangenen Kapiteln aufgezeigten Infrastruktur und der Wahl von \textit{YOLOv3}, lässt sich nun das \textit{SmartWarehouse} Szenario zunächst einfach realisieren. Durch die Anbindung der Drohne an den \textit{Flask} Server werden beim Ausführen der Flugsequenz kontinuierlich einzelne Bilder an der Server zur Inferenz weitergeleitet (siehe Abbildung \ref{commingsoon}). 
 
-Mit der aufgezeigten Infrastruktur, lässt sich das \textit{SmartWarehouse} Szenario zunächst einfach realisieren. Durch die Anbindung der Drohne an den \textit{Flask} Server werden beim Ausführen der Flugsequenz kontinuierlich einzelne Bilder an der Server zur Inferenz weitergeleitet (siehe Abbildung \ref{commingsoon}). 
+[Robin Bild]
 
-[Bild]
+Problem bei der Inferenz stellt nach wie vor die Detektion verdeckter Objekte dar. Beispielsweise sind Flaschen in Getränkekästen nur schwer detektierbar. Die Teilmerkmale verdeckter Objekte scheinen nicht ausreichend genug für eine zuversichtliche Detektion zu sein. Bei Herabsenken des \textit{confidence scores} zur Detektion gerade solcher Objekte werden wiederrum zuvor doppelt detektierte Objekte erneut doppelt erkannt. Es lässt sich hierbei kein gutes Gleichgewicht einstellen. 
 
-Problem bei der Inferenz stellt die Detektion verdeckter Objekte dar. Beispielsweise sind Flaschen in Getränkekästen nur schwer detektierbar. Die Teilmerkmale verdeckter Objekte scheinen nicht ausreichend genug für eine zuversichtliche Detektion zu sein. Bei Herabsenken des \textit{confidence scores} zur Detektion gerade solcher Objekte werden wiederrum zuvor doppelt detektierte Objekte erneut doppelt erkannt. Es lässt sich hierbei kein gutes Gleichgewicht einstellen. 
-
-Die Inferenz kann findet nach der Definition im Konzeptionskapitel in Echtzeit statt. Allerdings besitzt das \textit{SmartWarehouse} Szenario ein weiteres zentrales Problem bei der Umsetzbarkeit. Dieses Problem beruht nicht auf technischer Natur, sondern auf der Auswahl des Verfahrens. Der Zählalgorithmus kann das selbe Objekt bei größeren zeitlichen Intervallen oder bei unterschiedlichen absoluten Positionen auf dem Bild nicht als das selbe Objekt identifizieren. Demnach werden Objekte in solchen Szenarien doppelt gezählt. Solange allerdings Objekte nur durch das Bild \glqq gleiten\grqq{} und nicht erneut nach einem gewissen Intervall im Bild zu finden sind, so lassen sich Objekte präzise zählen. Das Problem der doppelten Detektion lässt sich also nicht mit dem Verfahren der Objektdetektion lösen, sondern nur auf konventionelle Verfahren mittels Scanning von Barcodes oder RFID-Chips. Das \textit{SmartWarehouse} Szenario ist somit nur begrenzt umsetzbar. 
-
-
-
-
-
-
-
-
-
+Die Inferenz kann findet nach der Definition im Konzeptionskapitel in Echtzeit statt. Allerdings besitzt das \textit{SmartWarehouse} Szenario ein weiteres zentrales Problem bei der Umsetzbarkeit. Dieses Problem beruht nicht auf technischer Natur, sondern auf der Auswahl des Verfahrens. Der Zählalgorithmus kann das selbe Objekt bei größeren zeitlichen Intervallen oder bei unterschiedlichen absoluten Positionen auf dem Bild nicht als das selbe Objekt identifizieren. Demnach werden Objekte in solchen Szenarien doppelt gezählt. Solange allerdings Objekte nur durch das Bild \glqq gleiten\grqq{} und nicht erneut nach einem gewissen Intervall im Bild zu finden sind, so lassen sich Objekte präzise zählen. Das Problem der doppelten Detektion lässt sich also nicht komplett mit dem Verfahren der Objektdetektion lösen, sondern nur auf konventionelle Verfahren mittels Scanning von Barcodes oder RFID-Chips. Das \textit{SmartWarehouse} Szenario ist somit nur unter bestimmten Umständen umsetzbar. 

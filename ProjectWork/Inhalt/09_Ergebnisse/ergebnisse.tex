@@ -4,7 +4,19 @@
 
 \subsection*{SSD}
 
-Ursprünglich wurden 500 Epochen für das Training vorgesehen für jeden der Kreuzvalidierungsschritte. Da allerdings beim Training schon nach knapp über hundert Epochen sich der Gradient der Kostenfunktion nur träge veränderte, wurde im Sinne des \textit{Early Stoppings} nach 120 Epochen das Training vorzeitig beendet, um \textit{Overfitting} zu vermeiden. Das niedrigste Ergebnis der Kostenfunktion betrug 1.726. Es ergab eine \textit{mAP} von 83.1\%, leicht über den Referenzergebnissen von \textit{SSD} zu \textit{PascalVOC} (siehe Abbildung \ref{result}). Die Ergebnisse zu den einzelnen Klassen sind in folgender Tabelle dargestellt:
+Ursprünglich wurden 500 Epochen für das Training vorgesehen. Da allerdings beim Training schon nach knapp über hundert Epochen sich der Gradient der Kostenfunktion nur träge veränderte, wurde im Sinne des \textit{Early Stoppings} nach 121 Epochen das Training vorzeitig beendet, um \textit{Overfitting} zu vermeiden. Abbildung \ref{ssdloss} zeigt den Verlauf der Trainingsverlustkurve und der Testverlustkurve während des Kreuzvalidierungsverfahrens.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=15cm]{Bilder/ssdloss.jpeg} 
+		\caption{Entwicklung der SSD Trainings- und Testverlustkurve}
+		\label{ssdloss}
+	\end{center}
+\end{figure}
+
+Die Entscheidung zum \textit{Early Stopping} basiert auf dem Anstieg der Differenz zwischen Trainings- und Testverlustkurve ab Epoche 122, was auf \textit{Overfitting} schließen lässt. Zur Epoche davor war die Differenz der beiden Kurven am niedrigsten bei vergleichsweise geringem Verlust im Trainingsverfahren. Auffällig ist ebenfalls der große Abfall der Trainingsverlustkurve bei Epoche 45 und Epoche 89. Hier findet ein Wechsel im Kreuzvalidierungsverfahren statt. Auch in Epoche 67 ist ein Ausschlag zu sehen, der allerdings kleiner im Vergleich zu den anderen ausfällt. 
+
+Zur Epoche 121 betrug das Ergebnis der Kostenfunktion 1.7. Es ergab eine \textit{mAP} von 83.1\%, leicht über den Referenzergebnissen von \textit{SSD} zu \textit{PascalVOC} (siehe Abbildung \ref{result}). Die Ergebnisse zu den einzelnen Klassen sind in folgender Tabelle dargestellt:
 
 \begin{center}
 	\begin{tabular}[h]{l|c}
@@ -28,16 +40,14 @@ Wird nun das trainierte Modell auf echte Daten angewendet, so fällt auf, dass m
 
 Als erstes kann bei der Detektion der minimale \textit{confidence score} angegeben werden, ab wann eine Detektion offiziell als solche wahrgenommen wird. Hier liegt die Herausforderung darin, einen optimalen Wert zu finden, sodass verdeckte Objekte noch als solche erkannt werden, aber doppelt erkannte Objekte nicht mehr auftreten. Der \textit{confidence score} wurde nach mehrmaligem Iterieren auf 0.75 festgelegt.
 
-Die zweite Möglichkeit besteht darin, die maximale Überlappung zweier Bounding Boxen festzulegen. Somit werden doppelte Bounding Boxen, die sich flächenmäßig über einem gewissen Grenzwert überlappen, auf eine Bounding Box reduziert. Er stellte ich sich Parameter von 0.5 als geeignet heraus.
-
-Außerdem wurden Inkonsistenzen im Detektionsverhalten festgestellt:
+Die zweite Möglichkeit besteht darin, die maximale Überlappung zweier Bounding Boxen festzulegen. Somit werden doppelte Bounding Boxen, die sich flächenmäßig über einem gewissen Grenzwert überlappen, auf eine Bounding Box reduziert. Er stellte ich sich Parameter von 0.5 als geeignet heraus. Außerdem wurden Inkonsistenzen im Detektionsverhalten festgestellt.
 
 \begin{figure}[ht]
 	\centering
 	\subfigure[verdeckt]{\includegraphics[width=0.30\textwidth]{Bilder/verdeckt.jpeg}}
 	\hspace{2cm}
 	\subfigure[winkel]{\includegraphics[width=0.30\textwidth]{Bilder/winkel.jpeg}}
-	\caption{Detektionsverhalten bei extremen Blicklagen}
+	\caption{Detektionsverhalten von SSD bei extremen Blicklagen}
 	\label{lagen}
 \end{figure}
 
@@ -47,7 +57,7 @@ So sind von anderen Objekten verdeckte Objekte nur schwer zu erkennen, genauso w
 	\subfigure[1 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/einmeter.jpeg}}\hfill
 	\subfigure[2 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/zweimeter.jpeg}}\hfill
 	\subfigure[3 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/dreimeter.jpeg}}\hfill
-	\caption{Detektionsverhalten bei unterschiedlichen Entfernungen}
+	\caption{Detektionsverhalten von SSD bei unterschiedlichen Entfernungen}
 	\label{entfernung}
 \end{figure}
 
@@ -57,7 +67,7 @@ Auch die Entfernung zum zu detektierenden Objekt besitzt eine Auswirkung auf das
 	\subfigure[überbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/ueberbeleuchtet.jpeg}}\hfill
 	\subfigure[normal]{\includegraphics[width=0.30\textwidth]{Bilder/normalbeleuchtet.jpeg}}\hfill
 	\subfigure[unterbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/unterbeleuchtet.jpeg}}\hfill
-	\caption{Detektionsverhalten bei unterschiedlichen Beleuchtungsverhältnissen}
+	\caption{Detektionsverhalten von SSD bei unterschiedlichen Beleuchtungsverhältnissen}
 	\label{sicht}
 \end{figure}
 
@@ -79,60 +89,62 @@ Um eine möglichst gute Aussage über den Vergleich der beiden Objektdetektoren 
 
 Wie beim \textit{SSD} erreicht das Modell relativ frühzeitig nach bereits etwa 3600 Batches eine \textit{mAP} von 79\%. Das Training wurde daher vor Erreichung der durch die Dokumentation nahegelegte maximale Anzahl an Batches nach 11000 Batches abgebrochen. Das kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt und das Modell dementsprechend leichter trainiert werden kann. 
 
-Der \textit{confidence score} liegt standardmäßig bei 0.25. Nach mehreren Durchläufen stellt sich heraus, dass dieser Wert nicht verändert werden sollte. Ein zu geringer Wert sorgt zwar dafür, dass möglicherweise mehr Objekte erkannt werden. Allerdings steigt damit auch die Rate an falsch oder doppelt erkannter Objekte. Ein Parameter für die Obergrenze der Überlappung zweier Bounding Boxen existiert nicht.
+Der \textit{confidence score} liegt standardmäßig bei 0.25. Nach mehreren Durchläufen stellt sich heraus, dass dieser Wert nicht verändert werden sollte. Ein zu geringer Wert sorgt zwar dafür, dass möglicherweise mehr Objekte erkannt werden, allerdings steigt damit auch die Rate an falsch oder doppelt erkannter Objekte. Ein Parameter für die Obergrenze der Überlappung zweier Bounding Boxen existiert nicht.
 
-Tabelle \ref{table:yoloresults} zeigt die \textit{mAP} für jede gelabelte Klasse:
+Tabelle \ref{table:yoloresults} zeigt die \textit{mAP} für jede Klasse.
 
 \begin{center}
 	\begin{tabular}[H]{l|c}
 		Klasse & mAP \\
 		\hline
-		Saskia Wasser Groß & 76.69\% (-0.93\%)\\
-		Saskia Wasser Klein & 80.63\% (+4.67\%)\\
-		Pepsi Cola Groß & 73.14\% (-21.8\%)\\
-		Pepsi Cola Klein & 75.24\% (-11.14\%)\\
-		ISO & 90.28\% (+3.91\%)\\
-		ACE & 86.69\% (+1.26\%)\\
-		Stenger Johannisbeerschorle & 72.50\% (+3.03\%)\\
-		Stenger Apfelsaftschorle & 78.05\% (-4.43\%)\\
-		Vitamalz Malzbier & 81.94\% (+5.7\%)
+		Saskia Wasser Groß & 76.69\% \\
+		Saskia Wasser Klein & 80.63\% \\
+		Pepsi Cola Groß & 73.14\% \\
+		Pepsi Cola Klein & 75.24\% \\
+		ISO & 90.28\% \\
+		ACE & 86.69\% \\
+		Stenger Johannisbeerschorle & 72.50\% \\
+		Stenger Apfelsaftschorle & 78.05\% \\
+		Vitamalz Malzbier & 81.94\%
 	\end{tabular}
-	\captionof{table}{Validierungsergebnisse YOLO mit Vergleich zu \textit{SSD}}
+	\captionof{table}{Validierungsergebnisse YOLO}
 	\label{table:yoloresults}
 \end{center}
 
-Auffällig niedrig ist die \textit{mAP} der Klassen \textit{Pepsi Cola Groß} und \textit{Pepsi Cola Klein}. Ein Wertevergleich gibt jedoch keinen guten Einblick in den Unterschied der zwei trainierten Modelle in der Praxis. Im folgenden wird daher das Detektionsverhalten auf den gleichen Bildern wie zuvor beim \textit{SSD} evaluiert:
+Auch bei \textit{YOLO} können verdeckte Objekte nur schwer erkannt werden. Ein Unterschied zu \textit{SSD} zeigt sich bei der Ansicht von oben (siehe Abbildung \ref{lagen_yolo}).
 
 \begin{figure}[H]
 	\centering
 	\subfigure[verdeckt]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_verdeckt.jpg}}
 	\hspace{2cm}
 	\subfigure[winkel]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_winkel.jpg}}
-	\caption{Detektionsverhalten von \textit{YOLO} bei extremen Blicklagen}
+	\caption{Detektionsverhalten von YOLO bei extremen Blicklagen}
 	\label{lagen_yolo}
 \end{figure}
 
-Auch bei \textit{YOLO} können verdeckte Objekte nur schwer erkannt werden. Ein Unterschied zeigt sich bei der Ansicht von oben (siehe Abbildung \ref{lagen_yolo}). Hier werden zwei von drei Flaschen erkannt, die allerdings der falschen Klasse (\textit{Saskia Wasser Groß} statt \textit{Saskia Wasser Klein}) zugeordnet werden und eine der zwei Bounding Boxes zwei Flaschen umschließt.
+Hier werden zwei von drei Flaschen erkannt, die allerdings der falschen Klasse (\textit{Saskia Wasser Groß} statt \textit{Saskia Wasser Klein}) zugeordnet werden und eine der zwei Bounding Boxes zwei Flaschen umschließt.
 
 \begin{figure}[H]
 	\subfigure[1 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_entfernung1.jpg}}\hfill
 	\subfigure[2 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_entfernung2.jpg}}\hfill
 	\subfigure[3 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_entfernung3.jpg}}\hfill
-	\caption{Detektionsverhalten von \textit{YOLO} bei unterschiedlichen Entfernungen}
+	\caption{Detektionsverhalten von YOLO bei unterschiedlichen Entfernungen}
 	\label{entfernung_yolo}
 \end{figure}
 
-Wie bei \textit{SSD} erfolgt nach bereits drei Metern Entfernung keine Detektion mehr (siehe Abbildung \ref{entfernung_yolo}). Der \textit{confidence score} für die korrekt erkannte Bounding Box liegt bei nur 2\%. Beide Modelle sind damit für große Distanzen zwischen der Drohne und den Objekten ungeeignet.
+Wie bei \textit{SSD} erfolgt nach bereits drei Metern Entfernung keine Detektion mehr (siehe Abbildung \ref{entfernung_yolo}). Der \textit{confidence score} für die korrekt erkannte Bounding Box liegt bei nur 2\%.
  
 \begin{figure}[H]
  	\subfigure[überbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_beleuchtung2.jpg}}\hfill
  	\subfigure[normal]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_beleuchtung1.jpg}}\hfill
  	\subfigure[unterbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_beleuchtung3.jpg}}\hfill
- 	\caption{Detektionsverhalten von \textit{YOLO} bei unterschiedlichen Beleuchtungsverhältnissen}
+ 	\caption{Detektionsverhalten von YOLO bei unterschiedlichen Beleuchtungsverhältnissen}
  	\label{sicht_yolo}
 \end{figure}
 
 Beim Testen der verschiedenen Beleuchtungsverhältnisse fällt auf, dass im Gegensatz zum \textit{SSD} die Flasche in der unterbelichteten Umgebung nicht erkannt wird beziehungsweise mit einem \textit{confidence score} von nur 6\%. 
+
+Gleich zu \textit{SSD} reagiert \textit{YOLO} auch invariant gegenüber unterschiedlichen Hintergründen oder Bildauflösungen.
  
 \section{Reaktionsvermögen}
 
@@ -144,6 +156,4 @@ Ein weiteres Problem beschreibt die initiale Latenz zwischen der Inferenz und de
 
 \section{Trainingsverhalten}
 
-Eine Epoche lokales Training mit anschließendem Testen des Durchlaufs beim \textit{SSD} auf einer \textit{NVIDIA GTX 1080} dauert im Schnitt neun Minuten. Die Messung basiert auf einer Batch Größe von 16 Bildern bei insgesamt 998 Bildern pro Epoche. Insgesamt wurden 16,5 Stunden zum Erstellen eines Modells mit dem \textit{SSD} benötigt. Beim Training von \textit{YOLO} benötigt eine Batch mit einer Größe von 64 etwa eine Minute und 30 Sekunden, bis zur Erreichung des optimalen Modells vergehen etwa acht Stunden. Die Dauer der beiden Trainingsdurchläufe lässt sich allerdings nur schwer vergleichen. Zum einen wird für das Training von \textit{YOLO} wie im vorherigen Kapitel erwähnt eine andere GPU verwendet, deren Tensor Kerne den Trainingsprozess merklich beschleunigen. Zum anderen werden die beiden Objektdetektoren in zwei verschiedenen Frameworks implementiert, wodurch ein anderes Trainingsverhalten von Grund auf gegeben ist und Unterschiede in der Performance auftreten können. Bei beiden Verfahren kann das Training durch die Ablage von sogenannten Modell-Checkpoints zu einem späteren Zeitpunkt fortgeführt werden. Das ist vor allem dann von Vorteil, wenn nachträglich Parameter oder Trainingsdaten angepasst werden und kein kompletter Neustart des Trainings erforderlich ist.
-
-
+Eine Epoche lokales Training mit anschließendem Testen des Durchlaufs beim \textit{SSD} auf einer \textit{NVIDIA GeForce GTX 1080} dauert im Schnitt neun Minuten. Die Messung basiert auf einer Batch Größe von 16 Bildern bei insgesamt 998 Bildern pro Epoche. Insgesamt wurden 16,5 Stunden zum Erstellen eines Modells mit dem \textit{SSD} benötigt. Beim Training von \textit{YOLO} benötigt eine Batch mit einer Größe von 64 auf einer \textit{NVIDIA GeForce RTX 2060} etwa eine Minute und 30 Sekunden, bis zur Erreichung des optimalen Modells vergehen etwa acht Stunden. Die Dauer der beiden Trainingsdurchläufe lässt sich allerdings nur schwer vergleichen. Zum einen wird für das Training von \textit{YOLO} eine andere GPU verwendet, deren Tensor Kerne den Trainingsprozess merklich beschleunigen. Zum anderen werden die beiden Objektdetektoren in zwei verschiedenen Frameworks implementiert, wodurch ein anderes Trainingsverhalten von Grund auf gegeben ist und Unterschiede in der Performance auftreten können. Auch die Batch Größe wurde unterschiedlich gewählt, was sich auf die Häufigkeit des Gradientenabstiegs auswirkt. Bei beiden Verfahren kann das Training durch die Ablage von sogenannten Modell-Checkpoints zu einem späteren Zeitpunkt fortgeführt werden. Das ist vor allem dann von Vorteil, wenn nachträglich Parameter oder Trainingsdaten angepasst werden und kein kompletter Neustart des Trainings erforderlich ist.

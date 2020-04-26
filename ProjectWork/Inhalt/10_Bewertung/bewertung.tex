@@ -4,20 +4,31 @@
 
 Die Bewertung der beiden Detektoren für den industriellen Einsatz baut auf den in Kapitel 3.2 eingeführten Bewertungskriterien auf. 
 
-Hinsichtlich der Präzision fallen beide Objektdetektoren besser als die ursprünglichen Referenzergebnisse aus den wissenschaftlichen Veröffentlichungen aus. Es ist aber zu bemerken, dass die Ergebnisse nicht gut miteinander vergleichbar sind, da sie auf unterschiedlichen Daten trainiert wurden. Der Vergleichsdatensatz ist hierbei \textit{PascalVOC 2007}, der 20 Klassen besitzt und damit für das Modell komplexer zu modellieren ist, als der \textit{SmartWarehouse} Datensatz mit nur 9 Klassen. Mit 83,1\% fällt \textit{SSD300} um 8,8\% besser aus, während \textit{YOLOv3} sogar eine Verbesserung von 16.7\% verzeichnet. Dennoch lässt sich darauf schließen, dass beide Implementierungen bezüglich Präzision in einer Größenordnung skalieren, die dem Niveau der Vergleichsergebnisse aus \textit{PascalVOC 2007} nachkommt. Die leicht erhöhte Präzision von \textit{SSD300} gegenüber \textit{YOLOv3} liegt daran, dass \textit{SSD300} im Gegensatz zu \textit{YOLOv3} Bounding Box Vorschläge unterschiedlicher Seitenverhältnisse zulässt und die Unterteilung in Gitterstrukturen ebenfalls für mehrere Skalierungen durchgeführt wird.
+Hinsichtlich der Präzision fallen beide Objektdetektoren besser als die ursprünglichen Referenzergebnisse aus den wissenschaftlichen Veröffentlichungen aus. Es ist aber zu bemerken, dass die Ergebnisse nicht gut mit denen der wissenschaftlichen Veröffentlichungen vergleichbar sind, da sie auf unterschiedlichen, deutlich einfacheren Daten trainiert wurden. Der Vergleichsdatensatz ist hierbei \textit{PascalVOC 2007}, der 20 Klassen besitzt und damit für das Modell komplexer zu modellieren ist, als der \textit{SmartWarehouse} Datensatz mit nur 9 Klassen. Mit 83,1\% fällt \textit{SSD300} um 8,8\% besser aus, während \textit{YOLOv3} sogar eine Verbesserung von 16.7\% verzeichnet. Dennoch lässt sich darauf schließen, dass beide Implementierungen bezüglich Präzision in einer Größenordnung skalieren, die dem Niveau der Vergleichsergebnisse aus \textit{PascalVOC 2007} nachkommt. Die leicht erhöhte Präzision von \textit{SSD300} gegenüber \textit{YOLOv3} liegt daran, dass \textit{SSD300} im Gegensatz zu \textit{YOLOv3} Bounding Box Vorschläge unterschiedlicher Seitenverhältnisse zulässt und die Unterteilung in Gitterstrukturen ebenfalls für mehrere Skalierungen durchgeführt wird. Dies wird vor allem erkenntlich beim Vergleich der \textit{mAP} bei den Klassen \textit{Pepsi Cola Groß} und \textit{Pepsi Cola Klein}. Objekte der Klassen sehen grundsätzlich gleich aus, nur die Größe ändert sich, sind also unterschiedlich skaliert. Lässt man den Effekt bei unterschiedlichen Skalierungen allerdings außer Auge, so schneidet \textit{YOLOv3} dennoch besser ab als \textit{SSD300} auf Basis des \textit{SmartWarehouse} Datensatzes. Tabelle \ref{table:rescomparison} zeigt die Präzisionsergebnisse im Vergleich.
 
-TODO:
-- unterstützt YOLOv3 unterschiedliche Seitenverhältnisse?
+\begin{center}
+	\begin{tabular}[H]{l|c|c|c}
+		Klasse & mAP SSD & mAP YOLO & Differenz \\
+		\hline
+		Saskia Wasser Groß & 77.62\%  & 76.69\% & (-0.93\%) \\
+		Saskia Wasser Klein & 75.96\%  & 80.63\% & (+4.67\%) \\
+		Pepsi Cola Groß & 94.94\% & 73.14\% & (-21.8\%) \\
+		Pepsi Cola Klein & 86.38\% & 75.24\% & (-11.14\%) \\
+		ISO & 86.37\% & 90.28\% & (+3.91\%) \\
+		ACE & 85.43\% & 86.69\% & (+1.26\%) \\
+		Stenger Johannisbeerschorle & 69.47\% & 72.50\% & (+3.03\%) \\
+		Stenger Apfelsaftschorle & 82.48 \% & 78.05\% & (-4.43\%) \\
+		Vitamalz Malzbier & 76.24\% & 81.94\% & (+5.7\%)
+	\end{tabular}
+	\captionof{table}{Validierungsergebnisse SSD im Vergleich zu YOLO}
+	\label{table:rescomparison}
+\end{center}
 
-Ein weiteres Bewertungskriterium ist das Reaktionsvermögen. Hier schneidet \textit{SSD} mit 30 FPS besser ab als \textit{YOLO} mit 28 FPS. 
+Ein weiteres Bewertungskriterium ist das Reaktionsvermögen. Hier schneidet \textit{SSD300} mit durchschnittlich 31 FPS leicht besser ab als \textit{YOLOv3} mit 28 FPS, wobei dieser Unterschied kaum als wahres Entscheidungskriterium gesehen werden sollte, \textit{SSD300} \textit{YOLOv3} vorzuziehen. Auf einem leichten Datensatz wie \textit{SMartWarehouse} gibt es also kaum Unterschiede im Reaktionsvermögen als im Vergleich zu größeren und komplexeren Datensätzen wie \textit{PascalVOC 2007} (siehe Abbildung \ref{result}). Laut wissenschaftlichen Referenzergebnissen scheidet hier \textit{SSD300} um 25 FPS besser ab als \textit{YOLO}.
 
-TODO:
-- Reaktionsvermögen YOLO
+Bezüglich Trainingsverhalten könnte \textit{SSD300} das Training mit leistungsfähigeren Grafikkarten wie der \textit{NVIDIA Tesla V100} von 16,5 Stunden auf umgerechnet 5,2 Stunden geschätzt rund drei Mal schneller vollziehen. Die Rechnung legt die Tabelle \ref{table:comparison} zugrunde. Pro Sekunde kann eine \textit{NVIDIA GeForce GTX 1080} hierbei $2560 \cdot 9,784 = 25.047,04 teraFLOPs$ vollziehen im Vergleich zu $5120 \cdot 14,13 = 72.345,6 TeraFLOPs$ pro Sekunde bei einer \textit{NVIDIA Tesla V100}. Da die \textit{NVIDIA Tesla V100} zusätzlich noch über Tensor Cores verfügt, kann der Zeitgewinn sogar noch höher eingeschätzt werden. Bei acht \textit{NVIDIA Tesla V100} wie in Abbildung \ref{tpu} betragen die Trainingskosten nur noch ca. 39 Minuten. Auch hier ist zu bemerken, dass das Ergebnis nicht mit den in Abbildung \ref{tpu} angeführten 216 Minuten zu vergleichen ist, da nicht nur die Netzstruktur bei \textit{SSD300} einfacher ist als bei \textit{ResNet-50} mit 50 \textit{hidden Layern}, sondern vermutlich auch der Benchmark Datensatz größer war\footnote{Hier fehlen in der referenzierten Quelle die Angaben zum Referenzdatensatz}. Dennoch lässt sich festhalten, dass sich \textit{SSD300} durchaus mit aktuellen Cloud Grafikkarten effizient trainieren lassen lässt. Da die Custom-Implementierung allerdings Hilfsstrukturen auf dem Sekundärspeicher erstellt, können hierbei beim Trainieren auf der Cloud Probleme auftreten. Meistens wird der Sekundärspeicher auf virtuellen Maschinen in der Cloud zum Schutz vor Angriffen nur \textit{read-only} bereitgestellt. 
 
-Bezüglich Trainingsverhalten könnte \textit{SSD300} das Training mit leistungsfähigeren Grafikkarten wie der \textit{NVIDIA Tesla V100} von 16,5 Stunden auf umgerechnet 5,2 Stunden rund drei Mal schneller vollziehen. Die Rechnung legt die Tabelle \ref{table:comparison} zugrunde. Pro Sekunde kann eine \textit{NVIDIA GTX 1080} hierbei $2560 \cdot 8,873 = 22.714,88 teroFLOPs$ vollziehen im Vergleich zu $5120 \cdot 14,13 = 72.345,6 TeraFLOPs$ pro Sekunde bei einer \textit{NVIDIA Tesla V100}. Da die \textit{NVIDIA Tesla V100} zusätzlich noch über Tensor Cores verfügt, kann der Zeitgewinn sogar noch höher eingeschätzt werden. Bei acht \textit{NVIDIA Tesla V100} wie in Abbildung \ref{tpu} betragen die Trainingskosten nur noch ca. 39 Minuten. Auch hier ist zu bemerken, dass das Ergebnis nicht mit den in Abbildung \ref{tpu} angeführten 216 Minuten zu vergleichen ist, da nicht nur die Netzstruktur bei \textit{SSD300} einfacher ist als bei \textit{ResNet-50} mit 50 \textit{hidden Layern}, sondern vermutlich auch der Benchmark Datensatz größer war\footnote{Hier fehlen in der referenzierten Quelle die Angaben zum Referenzdatensatz}. Dennoch lässt sich festhalten, dass sich \textit{SSD300} durchaus mit aktuellen Cloud Grafikkarten effizient trainieren lassen lässt. Da die Custom-Implementierung allerdings Hilfsstrukturen auf dem Sekundärspeicher erstellt, können hierbei beim Trainieren auf der Cloud Probleme auftreten. Meistens wird der Sekundärspeicher auf virtuellen Maschinen in der Cloud zum Schutz vor Angriffen nur \textit{read-only} bereitgestellt. 
-
-TODO:
-- Bewertung Trainingsverhalten YOLO
+\textit{YOLOv3} ließ sich mit acht Stunden deutlich schneller trainieren, allerdings unter vollkommen anderen Voraussetzungen. Nicht nur die verwendeten \textit{Deep Learning} Frameworks sind unterschiedlich, sondern auch die Trainingshardware. Als Grafikkarte wurde bei \textit{YOLOv3} eine \textit{NVIDIA GeForce RTX 2060 SUPER} verwendet, die zusätzlich über 272 Tensor Cores verfügt und somit die Rechenleistung erhöht. Auch musste bei \textit{YOLOv3} nicht die Batch Größe erniedrigt werden wie bei \textit{SSD300}, um einem GPU Speicherüberlauf entgegen zu wirken. \textit{YOLO} löst dieses Problem allgemein durch das \textit{Subdivision} Konzept, welches bei \textit{SSD} nicht existiert. Bei \textit{SSD300} mussten somit durch die geringere Batch Größe zwangsmäßig mehr Gradientenabstiege vollzogen werden, was zwar auch auf die größere Stabilität hinweist, aber sich als Seiteneffekt auch auf die Trainingslänge auswirkt. Ein Training in der Cloud ist allerdings mit hoher Wahrscheinlichkeit immer noch schneller, z.B. auf Basis einer \textit{NVIDIA Tesla V100}, deren technische Daten zur Rechenleistung rund doppelt so gut sind wie die zur \textit{NVIDIA GeForce RTX 2060 SUPER} (siehe Tabelle \ref{table:comparison}). 
 
 Zuletzt muss das Inferenzverhalten betrachtet werden. Hierzu kann folgende Tabelle \ref{table:inference} herangezogen werden:
 
@@ -25,24 +36,23 @@ Zuletzt muss das Inferenzverhalten betrachtet werden. Hierzu kann folgende Tabel
 	\begin{tabular}[h]{l|c|c}
 		 & SSD300 & YOLOv3 \\
 		\hline
-		Beleuchtung & 0 & ? \\
-		Extreme Blicklagen & - & ? \\
-		Entfernung & 0 & ? \\
-		Verdeckung & - & ? \\
-		Doppelte Erkennung & + & ? \\
-		Hintergrund & + & ? \\
-		Bildauflösung & + & ? \\
+		Beleuchtung & 0 & - \\
+		Extreme Blicklagen & - & 0 \\
+		Entfernung & 0 & 0 \\
+		Verdeckung & - & - \\
+		Doppelte Erkennung & + & + \\
+		Hintergrund & + & + \\
+		Bildauflösung & + & + \\
 	\end{tabular}
 	\captionof{table}{Inferenzverhalten SSD300 und YOLOv3}
 	\label{table:inference}
 \end{center}
 
-Hinsichtlich der Beleuchtung lässt sich nur eine Hypothese aufstellen, dass gerade sehr transparente Objekte durch die starke Überbeleuchtung nur schwer durch Mustererkennung detektierbar sind. Welche Features letztendlich das neuronale Netz zur Detektion heranzieht, lässt sich nicht sagen und damit die Hypothese nicht beweisen. Bei extremen Blicklagen lässt sich allerdings feststellen, dass \textit{YOLOv3} scheinbar besser abschneidet als \textit{SSD300}. Auch scheint die Detektion ab gewissen Entfernungen und Verdeckungsgraden nur erschwert möglich zu sein. Diesem Problem könnte mit einer Ausweitung des Trainingsdatensatzes möglicherweise entgegen gewirkt werden. Im \textit{SmartWarehouse} Datensatz sind solche Fälle mit 12.5\% nur unterbesetzt abgebildet. Neben einer Erweiterung des Datensatzes wäre ebenso das Anwenden von \textit{Data Augmentation} oder \textit{Transfer Learning} eine Alternative, mit der der Generalisierungsgrad des Modells gesteigert werden könnte.
+Hinsichtlich der Beleuchtung lässt sich nur eine Hypothese aufstellen, dass gerade sehr transparente Objekte durch die starke Überbeleuchtung nur schwer durch Mustererkennung detektierbar sind. Welche Features letztendlich das neuronale Netz zur Detektion heranzieht, lässt sich nicht sagen und damit die Hypothese nicht beweisen. Beim Test auf Unterbeleuchtung konnte \textit{SSD300} allerdings Objekte besser erkennen als \textit{YOLOv3}. Bei extremen Blicklagen hingegen lässt sich allerdings feststellen, dass \textit{YOLOv3} scheinbar besser, wenn auch nicht optimal, abschneidet als \textit{SSD300}. Auch scheint die Detektion ab gewissen Entfernungen und Verdeckungsgraden nur erschwert möglich zu sein. Diesem Problem könnte mit einer Ausweitung des Trainingsdatensatzes möglicherweise entgegen gewirkt werden. Im \textit{SmartWarehouse} Datensatz sind solche Fälle mit 12.5\% nur unterbesetzt abgebildet. Neben einer Erweiterung des Datensatzes wäre ebenso das Anwenden von \textit{Data Augmentation} oder \textit{Transfer Learning} eine Alternative, mit der der Generalisierungsgrad des Modells gesteigert werden könnte. Das Problem der Detektion von verdeckten Objekten scheint aber bei beiden Objektdetektoren vorzuliegen. Auch hier könnte die Erweiterung des Datensatzes dazu dienen, dass die Modelle neue Merkmale gerade von teilweise verdeckten Objekten erlernen könnten. Ob das Erkennen von Teilmerkmalen allerdings ausreicht, um einen genügend hohen \textit{confidence score} zu entwickeln, bleibt offen. Das Problem doppelter Erkennung, wird von beiden allerdings gut gelöst, durch das Festlegen eines Schwellwertes im \textit{confidence score}. Auch scheinen keine Merkmale aus Hintergrundinformationen zur Detektion heran gezogen worden sein, da das Detektionsverhalten von \textit{SSD300} als auch von \textit{YOLOv3} invariant zu unterschiedlichen Hintergründen war. Auch die Bildauflösung hat keine Auswirkung auf das Detektionsvermögen.
 
-TODO:
-- Bewertung Inferenzverhalten YOLO
+Insgesamt lässt sich schließen, dass sowohl \textit{SSD300} als auch \textit{YOLOv3} Objektdetektoren für den industriellen Einsatz darstellen. Welcher der beiden Detektoren präferiert genutzt werden soll, lässt sich generell nicht aussagen. Beide Detektoren haben ihre Stärken in unterschiedlichen Anwendungsgebieten. 
 
-Insgesamt lässt sich schließen, dass sowohl \textit{SSD300} als auch \textit{YOLOv3} Objektdetektoren für den industriellen Einsatz darstellen. Welcher der beiden Detektoren präferiert genutzt werden soll, lässt sich generell nicht aussagen. Beide Detektoren haben ihre Stärken in unterschiedlichen Anwendungsgebieten. Hierzu müssen erst von Robin die Sachen nachgetragen werden, um dies zu beurteilen...
+Falls viele Objekte unterschiedlicher Skalierung in der Detektionsumgebung erkannt werden sollen, so ist \textit{SSD300} \textit{YOLOv3} vorzuziehen. Falls dies allerdings nicht der Fall ist und bei einfachen Datensätzen wie \textit{SmartWarehouse} mehr Wert auf Genauigkeit gelegt wird, so ist \textit{YOLOv3} die bessere Wahl. Im Reaktionsvermögen sind beide bei einfachen Datensätzen circa gleich schnell, ein Unterschied lässt sich anscheinend erst bei komplexeren Datensätzen erkennen. Bezüglich des Trainingsverhaltens ist \textit{YOLOv3} \textit{SSD300} vorzuziehen, nicht nur aufgrund der Möglichkeit \textit{Subdivisions} zu definieren, sondern auch aufgrund der einfacheren Aufsetzbarkeit. Es ist nicht zu vergessen, dass aufgrund der mangelnden Anpassbarkeit auf eigene Datensätze eine Custom-Implementierung von \textit{SSD300} gewählt wurde und diese ebenso an vielen Stellen noch angepasst werden musste. Mit dem Inferenzverhalten als letztes Bewertungskriterium lässt sich aufgrund des weiter ausbaufähigen Datensatzes nur vage schließen, dass \textit{SSD300} für Fälle unterschiedlicher Beleuchtungsverhältnisse besser abschneidet, während \textit{YOLOv3} bei extremeren Blicklagen zuversichtlicher detektiert. 
 
 \section{Machbarkeit des SmartWarehouse Szenarios}
 
@@ -57,4 +67,12 @@ Mit der aufgezeigten Infrastruktur, lässt sich das \textit{SmartWarehouse} Szen
 Problem bei der Inferenz stellt die Detektion verdeckter Objekte dar. Beispielsweise sind Flaschen in Getränkekästen nur schwer detektierbar. Die Teilmerkmale verdeckter Objekte scheinen nicht ausreichend genug für eine zuversichtliche Detektion zu sein. Bei Herabsenken des \textit{confidence scores} zur Detektion gerade solcher Objekte werden wiederrum zuvor doppelt detektierte Objekte erneut doppelt erkannt. Es lässt sich hierbei kein gutes Gleichgewicht einstellen. 
 
 Die Inferenz kann findet nach der Definition im Konzeptionskapitel in Echtzeit statt. Allerdings besitzt das \textit{SmartWarehouse} Szenario ein weiteres zentrales Problem bei der Umsetzbarkeit. Dieses Problem beruht nicht auf technischer Natur, sondern auf der Auswahl des Verfahrens. Der Zählalgorithmus kann das selbe Objekt bei größeren zeitlichen Intervallen oder bei unterschiedlichen absoluten Positionen auf dem Bild nicht als das selbe Objekt identifizieren. Demnach werden Objekte in solchen Szenarien doppelt gezählt. Solange allerdings Objekte nur durch das Bild \glqq gleiten\grqq{} und nicht erneut nach einem gewissen Intervall im Bild zu finden sind, so lassen sich Objekte präzise zählen. Das Problem der doppelten Detektion lässt sich also nicht mit dem Verfahren der Objektdetektion lösen, sondern nur auf konventionelle Verfahren mittels Scanning von Barcodes oder RFID-Chips. Das \textit{SmartWarehouse} Szenario ist somit nur begrenzt umsetzbar. 
+
+
+
+
+
+
+
+
 

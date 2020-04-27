@@ -72,14 +72,39 @@ Der obige Algorithmus wird momentan dazu verwendet, um für das Industrieszenari
 
 \section{Drohnen Anbindung}
 
-\subsection*{Drohnenflugsequenz}
+\subsection*{Flugsequenz}
+Wie in Kapitel \ref{drone_selection} beschrieben wird das Versenden von Befehlen mittels einer bidirektionalen Verbindung realisiert. Die Kommunikation durch eine Socket\footnote{Mit Sockets können Daten bidirektional zwischen  Programmen ausgetauscht werden, die entweder auf dem gleichen oder auf einem anderen durch eine Netzwerkadresse erreichbaren PC laufen.} Verbindung ist dabei die ideale Lösung. Python bietet ein \textit{socket} Modul an, welches verschiedene Typen von Sockets unterstützt. Das nachfolgende Listing zeigt die Initialisierung einer Instanz der Socket Klasse:
 
-[Robin]
+\lstinputlisting[
+label={code:python},
+caption={Initialisierung der Socket Klasse},
+captionpos=b,
+basicstyle=\ttfamily\scriptsize,   
+firstline=1,              
+lastline=2                 
+]{Quellcode/socket_init.py}
+
+Die Methode \textit{socket()} erzeugt eine neue Instanz der Socket Klasse und benötigt zwei Parameter für die Adressfamilie und den Verbindungstyp. \textit{AF\_INET} steht für Internet-Socket-Adresse, die sich aus IP-Adresse und Portnummer zusammensetzt. Der Parameter \textit{SOCK\_DGRAM} gibt an, dass die Socket Verbindung über das UDP-Protokoll aufgebaut wird. Für das Empfangen von Daten wird die Instanz zusätzlich an eine Adresse (hier \textit{localhost:9000}) gebunden.
+
+Im folgenden Listing wird jeweils die Methode zum Senden von Befehlen und Empfangen von Antworten gezeigt:
+
+\lstinputlisting[
+label={code:python},
+caption={Methode für das Versenden von Befehlen und Empfangen von Antworten},
+captionpos=b,
+basicstyle=\ttfamily\scriptsize,   
+firstline=1,              
+lastline=22                 
+]{Quellcode/socket_send_command.py}
+
+Die Methode \textit{send\_command()} bekommt beim Aufruf den auszuführenden Befehl als Parameter vom Typ \textit{String} übergeben. Für jeden Befehl wird eine neue Instanz der Klasse \textit{Stats} in das \textit{log} Array einfügt. Die Klasse \textit{Stats} dient für die Datenhaltung eines gesendeten Befehls und die entweder noch ausstehende oder bereits erfolgte Antwort. Daraufhin wird der Befehl mit Hilfe der Methode \textit{socket.sendto()} an den Socket übermittelt. Dieser erhält neben dem Befehl auch die Zieladresse, die als Tupel bestehend aus IP-Adresse und Port übergeben wird. Im nächsten Schritt wird mittels einer Schleife auf das Erreichen der Antwort gewartet. Dabei wird die seit dem Versand der Nachricht vergangene Zeit berechnet und wenn diese größer als die auf 15 Sekunden festgelegte Konstante \textit{MAX\_TIME\_OUT} ist, gibt die Methode \textit{False} zurück. Sobald jedoch eine Antwort empfangen wurde, kann die Schleife übersprungen und \textit{True} zurückgegeben werden.
+
+Aufgrund der UDP basierten Verbindung ist nicht garantiert, ob und in welcher Reihenfolge Antworten empfangen werden können. Um dem entgegenzuwirken kommt die Methode \textit{receive\_thread()} zum Einsatz, die in einem parallel laufenden Thread ausgeführt wird und die empfangene Antwort immer dem zuletzt geschickten Befehl zuordnet. Durch die Zuweisung wird die zuvor beschriebene Blockierung durch die Schleife in der Methode \textit{send\_command()} aufgehoben. 
+
+Mit diesen zwei Methoden wird ein synchroner Versand der Befehle möglich, bei dem immer nur dann ein neuer Befehl geschickt wird, wenn bereits eine Antwort auf den vorherigen empfangen oder ein Timeout erkannt wurde.
 
 \subsection*{Modellinferenz}
 
 Der Video Stream der Drohne kann auf dem zentralen Server mittels der \textit{openCV} Klasse \textit{VideoCapture} in Python über das UDP Protokoll angesprochen werden. Anschließend kann jeder Frame des Streams einzeln durch \textit{SSD} inferiert werden.
 
-[TAM Architektur Bild]
-
-Da das \textit{Darknet} Framework in \textit{YOLO} allerdings wie zuvor angemerkt in C implementiert ist, kann keine nahtlose Inferenz auf dem Python Server wie bei \textit{SSD} umgesetzt werden. Hierfür muss auf die Kompilierung einer \textit{Dynamic Link Library} (DLL) zurückgegriffen werden. Eine \textit{DLL} ist eine ausführbare Datei, die Funktionen und Ressourcen als geteilte Bibliothek bereitstellt. Programme, die in verschiedenen Programmiersprachen implementiert wurden, können dadurch die gleiche DLL-Funktion aufrufen und die Inferenz kann somit durch das Python Programm aufgerufen werden \cite{MicrosoftCorporation.27.01.2020}.
+Da das \textit{Darknet} Framework für \textit{YOLO} allerdings wie zuvor angemerkt in C implementiert ist, kann keine nahtlose Inferenz auf dem Python Server wie bei \textit{SSD} umgesetzt werden. Hierfür muss auf die Kompilierung einer \textit{Dynamic Link Library} (DLL) zurückgegriffen werden. Eine \textit{DLL} ist eine ausführbare Datei, die Funktionen und Ressourcen als geteilte Bibliothek bereitstellt. Programme, die in verschiedenen Programmiersprachen implementiert wurden, können dadurch die gleiche DLL-Funktion aufrufen und die Inferenz mit \textit{YOLO} kann somit durch das Python Programm aufgerufen werden \cite{MicrosoftCorporation.27.01.2020}.

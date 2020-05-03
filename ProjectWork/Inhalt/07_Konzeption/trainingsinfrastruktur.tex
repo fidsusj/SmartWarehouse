@@ -1,4 +1,4 @@
-\section{Auswahl der Trainingsinfrastruktur}
+\section{Auswahl der Trainingsinfrastruktur} \label{infrastructure}
 
 Bei der Auswahl der Trainingsinfrastruktur wurden zunächst die Cloud PaaS-Angebote in Betrachtung gezogen. Diese ermöglichen meist eine weit bessere Performance als lokales Training. Wichtig bei der Auswahl war hierbei 
 
@@ -8,17 +8,17 @@ Bei der Auswahl der Trainingsinfrastruktur wurden zunächst die Cloud PaaS-Angeb
 	\item ein einfaches Aufsetzen der Trainingsinfrastruktur.
 \end{itemize}
 
-Insbesondere sollten die Testversionen der jeweiligen Angebote zu Nutze gemacht werden, um niedrige Betriebskosten zu erreichen. In Tabelle \ref{table:comparison} sind die Ergebnisse der Untersuchung dargestellt. 
+Insbesondere sollten die Testversionen der jeweiligen Angebote zu Nutze gemacht werden, um niedrige Betriebskosten zu erreichen. Manche Testversionen bieten hierbei ein Startkontingent, das je nach ausgewählter Hardware unterschiedlich schnell bei Nutzung verbraucht wird, bei anderen Cloud Anbietern wird die Hardwarekonfiguration vorgegeben, die anschließend nur für eine bestimmte Zeitdauer unter Last genutzt werden kann. In Tabelle \ref{table:comparison} sind die Ergebnisse der Untersuchung dargestellt. 
 
 \begin{center}
 	\begin{tabular}[h]{l|c|c|c|c|c}
 		& AWS & GCP & Azure & FloydHub & Colab \\
 		\hline
-		Nutzungsrahmen & 50 Std. & 300\$ & 200\$ & 2 Std. & Kostenlos \\
+		Nutzungsrahmen & 50 Std. & 300\$ & 200\$ & 2 Std. & Keine Beschränkung \\
 		Hardware-Beschleuniger & Nein & Ja & Ja & Ja & Ja \\
 		Setup-Komplexität & Hoch & Mittel & Mittel & Einfach & Einfach \\
 	\end{tabular}
-	\captionof{table}{Vergleich der SaaS-Angebote der Cloud Anbieter}
+	\captionof{table}{Kostenlose SaaS-Angebote der Cloud Anbieter}
 	\label{table:comparison}
 \end{center}
 
@@ -28,7 +28,7 @@ Auf Empfehlung wurde anschließend die \textit{GCP} betrachtet. Diese bietet mit
 
 \textit{Microsoft Azure} bietet für 200\$ bei einer Laufzeit von 30 Tagen Zugang zu allen \textit{Microsoft Azure} Diensten \cite{MicrosoftAzure.2020}. Darunter gehört eine \textit{NC6} Instanz mit sechs vCPUs und einer \textit{NVIDIA Tesla K80} \cite{MicrosoftAzure.202003124}. Da \textit{Microsoft Azures} Angebot allerdings nur sehr oberflächlich beschrieben wurde, wurde sich letzten Endes auch gegen \textit{Microsoft Azure} entschieden. 
 
-Als letzter Anbieter wurde \textit{FloydHub} getestet. Hervorzuheben ist die besonders einfache Vorgehensweise bei der Account Erstellung und dem Aufsetzen der Trainingsinfrastruktur, was bereits im Grundlagen Kapitel beschrieben wurde. \textit{FloydHub} bietet 20 Stunden CPU Trainingszeit bzw. 2 Stunden GPU Trainingszeit auf einer \textit{NVIDIA Tesla K80} \cite{FloydHub.2020}. Neben einer \textit{NVIDIA Tesla K80} konnte ebenso Trainingszeit auf einer \textit{NVIDIA Tesla V100} erworben werden. Zudem wurde das verwendete \textit{PyTorch} Framework unterstützt. Aufgrund der einfachen Handhabung wurde sich trotz der erhöhten Kosten für \textit{FloydHub} entschieden. 
+Als letzter Anbieter wurde \textit{FloydHub} getestet. Hervorzuheben ist die besonders einfache Vorgehensweise bei der Account Erstellung und dem Aufsetzen der Trainingsinfrastruktur, was bereits in Kapitel \ref{cloud} beschrieben wurde. \textit{FloydHub} bietet 20 Stunden CPU Trainingszeit bzw. 2 Stunden GPU Trainingszeit auf einer \textit{NVIDIA Tesla K80} \cite{FloydHub.2020}. Neben einer \textit{NVIDIA Tesla K80} konnte ebenso Trainingszeit auf einer \textit{NVIDIA Tesla V100} erworben werden. Zudem wurde das verwendete \textit{PyTorch} Framework unterstützt. Aufgrund der einfachen Handhabung wurde sich trotz der erhöhten Kosten für \textit{FloydHub} entschieden. 
 
 Während des Trainings mit der \textit{NVIDIA Tesla K80} fiel allerdings auf, dass die Wahl dieser GPU keine großen Performance Verbesserungen gegenüber lokalem Training brachte. Während lokal innerhalb einer Stunde 16 Epochen durchlaufen werden konnten, waren dies bei \textit{Floydhub} hingegen nur 8 Epochen. Dies veranlasste eine Gegenüberstellung gängiger Cloud GPUs mit lokalen GPUs, allen voran den bereits vorhandenen Desktop-Grafikkarten \textit{GeForce GTX 1080} und \textit{GeForce RTX 2060} (siehe Tabelle \ref{table:hardware}) \cite{TechPowerUp.20200209}.
 

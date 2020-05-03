@@ -1,8 +1,8 @@
-\section{Datensatzformate}
+\section{Datensatzformate} \label{format}
 
 Basierend darauf, welcher Objektdetektor trainiert werden soll, muss der zum Training verwendete Datensatz in einem bestimmten Format vorliegen. Zum Trainieren des \textit{SSDs} wird das sogenannte \textit{Pascal Visual Object Classes} (PascalVOC) Format benötigt. 
 
-Es definiert eine Unterteilung in \textit{Annotations}, \textit{ImageSets} und \textit{JPEGImages}. Während in dem Ordner \textit{JPEGImages} alle Bilder des Datensatzes vorhanden sind, befindet sich unter anderem die Information über die vorhandenen Objekte in dem Bild im Ordner \textit{Annotations}. Für jedes Bild des Datensatzes werden die Informationen in einer gleichnamigen XML-Datei abgelegt (siehe Listing \ref{pascalvoc:PascalVOC}).
+Es definiert eine Unterteilung in \textit{JPEGImages}, \textit{Annotations} und \textit{ImageSets}. Während in dem Ordner \textit{JPEGImages} alle Bilder des Datensatzes vorhanden sind, befindet sich unter anderem die Information über die vorhandenen Objekte in dem Bild im Ordner \textit{Annotations}. Für jedes Bild des Datensatzes werden die Informationen in einer gleichnamigen XML-Datei abgelegt (siehe Listing \ref{pascalvoc:PascalVOC}).
 
 \lstset{language=XML}
 \lstinputlisting[

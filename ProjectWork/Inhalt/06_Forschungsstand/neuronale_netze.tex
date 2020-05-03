@@ -1,4 +1,4 @@
-\section{Neuronale Netze}
+\section{Neuronale Netze} \label{anns}
 
 Ein neuronales Netz bildet die Grundlage des \textit{Deep Learnings} \cite{AurelienGeron.2018}. Zunächst soll die einfachste Architektur eines neuronalen Netzes, das Perzeptron \cite{AurelienGeron.2018}, exemplarisch erklärt werden als auch der Lernprozess eines maschinellen Lernmodells an sich, um darauf basierend die Auswirkungen von Hyperparametern auf den Lernprozess des Modells zu erklären. 
 
@@ -71,7 +71,7 @@ Als letztes ist das sogenannte \textit{Reinforcement Learning} zu nennen. Hierbe
 
 Um zu verstehen, wie ein neuronales Netz durch überwachtes Lernen \glqq lernt\grqq{}, muss zunächst der Begriff der Kostenfunktion (engl.: \textit{cost function}) eingeführt werden. Die Kostenfunktion ist ein Qualitätsmaß dafür, wie weit die Ausgabe einer LTU vom erwarteten Wert abweicht \cite{AurelienGeron.2018}. Angenommen dem neuronalen Netz wird ein Datensatz zur Klassifikation übergeben, so ist am Ende meist nicht nur eine LTU zu Ausgabe aktiviert, was auf eine eindeutige Klassifikation schließen würde, sondern meist mehrere zu einem frühen Stadium des neuronalen Netzes.
 
-Eine oft genutzte Kostenfunktion ist die \textit{Root Mean Squared Error Funktion} (RMSE) \cite{AurelienGeron.2018}:
+Eine oft genutzte Kostenfunktion ist die \textit{Root Mean Squared Error Funktion} (RMSE):
 
 \begin{equation} \label{mse}
 E(\boldsymbol{z},\boldsymbol{o}) = \sqrt{\frac{1}{n}\sum_{k=0}^n (z_k-o_k)^2}.
@@ -96,10 +96,12 @@ Bei beiden ist $z$ der erwartete Ausgabevektor des Perzeptrons, während $o$ die
 	\item Stärke der Aktivierung des vorherigen Perzeptrons
 \end{enumerate}
 
-angepasst werden \cite{AurelienGeron.2018}. Hierbei wird das sogenannte \textit{Gradientenverfahren} eingesetzt. Es berechnet in einem iterativen Prozess über mehrere Testdaten das globale Minimum der Kostenfunktion nach den Gewichtungen der Verbindungen und damit auch nach den Bias Werten, die natürlich ebenso Gewichtungen darstellen. Ergebnis eines Durchlaufs im Gradientenverfahren (\ref{gradientenverfahren}) ist die Gewichtungsmatrix, die die Änderung der Gewichtung jeder einzelnen Verbindung eines Perzeptrons zu jeder LTU des Folgeperzeptrons angibt \cite{AurelienGeron.2018}:
+angepasst werden \cite{AurelienGeron.2018}. 
+
+Hierbei wird das sogenannte \textit{Gradientenverfahren} eingesetzt. Es berechnet in einem iterativen Prozess über mehrere Testdaten das globale Minimum der Kostenfunktion nach den Gewichtungen der Verbindungen und damit auch nach den Bias Werten, die natürlich ebenso Gewichtungen darstellen. Ergebnis eines Durchlaufs im Gradientenverfahren (siehe Formel \ref{gradientenverfahren}) ist die Gewichtungsmatrix, die die Änderung der Gewichtung jeder einzelnen Verbindung eines Perzeptrons zu jeder LTU des Folgeperzeptrons angibt \cite{AurelienGeron.2018}:
 
 \begin{equation} \label{gradientenverfahren}
-w_{ijt} = w_{ijt-1} - \eta\frac{\partial E}{\partial w_{ij}}. \qquad\text{\cite{PhilippeLucidarme.2017}} 
+w_{ijt} = w_{ijt-1} - \eta\frac{\partial E}{\partial w_{ij}}.
 \end{equation}
 \equations{Neuberechnung der Gewichtungsmatrix durch partielle Differentiation}
 

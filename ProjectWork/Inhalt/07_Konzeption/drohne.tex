@@ -1,5 +1,4 @@
-\section{Auswahl einer Drohne}
-\label{drone_selection}
+\section{Auswahl einer Drohne} \label{drone_selection}
 
 Bei der Auswahl der Drohne sind vor allem zwei Bereiche zu betrachten:
 
@@ -18,20 +17,20 @@ Diese schreiben unter anderem vor \cite{Drohnen.de.2020}:
 	\item Flugverbotszonen (Wohngrundstücke, Naturschutzgebiete, etc.).
 \end{itemize}
 
-Aufgrund dieser Auflagen wurde der Beschluss gefasst, dass die auszuwählende Drohne nur innerhalb von geschlossenen Wohnräumen im privaten Betrieb genutzt werden soll und zudem ein Startgewicht von unter 250g besitzen soll. Um eine studentische Machbarkeitsstudie durchführen zu können, ist eine solche eingeschränkte Anwendungsumgebung allemal ausreichend. 
+Aufgrund dieser Auflagen wurde der Beschluss gefasst, dass die auszuwählende Drohne nur innerhalb von geschlossenen Wohnräumen im privaten Betrieb genutzt werden soll und zudem ein Startgewicht von unter 250g besitzen soll. Um eine studentische Machbarkeitsstudie durchführen zu können, ist eine solche eingeschränkte Anwendungsumgebung ausreichend. 
 
-Die Programmierbarkeit der Drohne gehört zu der wichtigsten technischen Anforderung an die Drohne. Zudem soll sie eine integrierte Kamera aufweisen, die in der Lage ist, einen Videostream zur Laufzeit zur Verarbeitung bereit zu stellen. Auch die Akkulaufzeit und Robustheit der Drohne wurden als Entscheidungskriterien aufgenommen. Bezüglich der Kostenübernahme konnte zuvor eine Einigung mit Vertretern des Informatik Labors der DHBW Karlsruhe erzielt werden. Die Kosten werden vollständig übernommen, solange sie sich im Rahmen eines Studienarbeit angemessenen Budgets befinden.
+Die Programmierbarkeit der Drohne gehört zu der wichtigsten technischen Anforderung an die Drohne. Zudem soll sie eine integrierte Kamera aufweisen, die in der Lage ist, einen Videostream zur Laufzeit zur Verarbeitung bereit zu stellen. Auch die Akkulaufzeit und Robustheit der Drohne wurden als Entscheidungskriterien aufgenommen.
 
-Die sehr speziellen Anforderungen ließen nur ein Drohnen Modell auf dem Markt zu, die \textit{Tello EDU} Drohne von der Firma Ryze Tech. Sie bietet eine Kamera mit 720p Übertragungsqualität an, eine Akkulaufzeit von 13 Minuten und eine Programmierschnittstelle für die Steuerung sowie das Empfangen von Aufzeichnungen der Kamera. Auch wirbt sie mit der Fähigkeit von präzisem Schweben, was gerade für die Objektdetektion von Vorteil sein könnte \cite{RyzeRobotics.2020}.
+Analysiert man den Markt auf programmierbare Drohnen mit den genannten technischen Anforderungen und einem frei zugänglichen \textit{Software Development Kit} (SDK), so fällt das Angebot sehr gering aus. Eine Wahl kann nur zwischen den beiden Modellen der \textit{Bebop 2} von der Firma Parrot oder der \textit{Tello EDU} Drohne von der Firma Ryze Tech getroffen werden. Die gesetzlichen Auflagen und die daraus abgeleiteten, projektkrelevanten Bedingungen lassen allerdings nur die \textit{Tello EDU} Drohne zu. Sie bietet eine Kamera mit 720p Übertragungsqualität an, eine Akkulaufzeit von 13 Minuten und eine Programmierschnittstelle für die Steuerung sowie das Empfangen von Aufzeichnungen der Kamera. Auch wirbt sie mit der Fähigkeit von präzisem Schweben, was gerade für die Objektdetektion von Vorteil sein könnte \cite{RyzeRobotics.2020}.
 
 Für die Steuerung sowie den Zugriff auf den Videostream bietet die \textit{Tello EDU} ein eigenes WiFi Netz an, zu dem sich das Steuergerät verbinden muss. Die Kommunikation erfolgt über das \textit{UDP} Protokoll\footnote{UDP steht für User Datagram Protocol. Es ist ein Transportprotokoll, welches im Gegensatz zu TCP verbindungslos und nicht zuverlässig ist.} und besteht aus mehreren Kommunikationskanälen: 
 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=8cm]{Bilder/communication_tello.pdf} 
-		\caption{Kommunikationskanäle der Tello Edu Drohne}
+		\caption{Kommunikationskanäle der Tello EDU Drohne}
 		\label{communication_tello}
 	\end{center}
 \end{figure}
 
-Der Video Stream und der Status der Tello Edu werden unidirektional durch die Client Applikation bei der Tello Edu abgefragt, wohingegen für das Senden von Befehlen eine bidirektionale Verbindung zum Einsatz kommt. Das liegt daran, dass die Tello Edu auf jeden erhaltenen Befehl auch eine Antwort zurücksendet. Es existieren Befehle zur Steuerung und zum Auslesen von Informationen wie zum Beispiel der Geschwindigkeit oder Ladezustand der Batterie. Als Hilfestellung wird zusätzlich ein Beispielprogramm mitgeliefert, in welchem das Senden und Empfangen von Befehlen implementiert wurde \cite{RyzeTech.2018}. 
+Der Video Stream und der Status der \textit{Tello EDU} werden unidirektional durch die Client Applikation bei der \textit{Tello EDU} abgefragt, wohingegen für das Senden von Befehlen eine bidirektionale Verbindung zum Einsatz kommt. Das liegt daran, dass die \textit{Tello EDU} auf jeden erhaltenen Befehl auch eine Antwort zurücksendet. Es existieren Befehle zur Steuerung und zum Auslesen von Informationen wie zum Beispiel der Geschwindigkeit oder Ladezustand der Batterie. Als Hilfestellung wird zusätzlich ein Beispielprogramm mitgeliefert, in welchem das Senden und Empfangen von Befehlen implementiert wurde \cite{RyzeTech.2018}. 

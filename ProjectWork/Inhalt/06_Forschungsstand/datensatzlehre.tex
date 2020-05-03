@@ -18,8 +18,8 @@ Unter Hinzunahme des COCO \textit{trainval135k} Datensatzes erreicht der \textit
 
 \subsection*{Techniken zum Trainieren bei geringen Datenmengen}
 
-Bei Betrachtung der obigen Ergebnisse wird schnell deutlich, dass für ein komplexeres \textit{Deep Learning} Modell ein umfangreicher Datensatz von Nöten ist. Allerdings gibt es zwei bekannte Techniken, wie auch mit kleineren Datenbeständen ein sehenswertes Ergebnis erzielt werden kann. 
+Bei Betrachtung der obigen Ergebnisse wird schnell deutlich, dass für ein komplexeres \textit{Deep Learning} Modell ein umfangreicher Datensatz von Nöten ist. Allerdings gibt es drei bekannte Techniken, wie auch mit kleineren Datenbeständen ein sehenswertes Ergebnis erzielt werden kann. Eines davon ist das \textit{K-Kreuzvalidierungsverfahrens}, das bereits betrachtet wurde.
 
-Beim sogenannten \textit{Transfer Learning} können von einem bereits für ein ähnliches Problem trainiertes Modell die ersten Schichten des neuronalen Netzes für das neue Modell wiederverwendet werden. Die übernommenen Gewichtungen werden nicht mit trainiert. Neben einer kleineren Datenmenge zum Trainieren hat das \textit{Transfer Learning} ebenso den Vorteil das Training selbst zu beschleunigen \cite{AurelienGeron.2018}.
+Daneben können beim sogenannten \textit{Transfer Learning} von einem bereits für ein ähnliches Problem trainiertes Modell die ersten Schichten des neuronalen Netzes für das neue Modell wiederverwendet werden. Die übernommenen Gewichtungen werden nicht mit trainiert. Neben einer kleineren Datenmenge zum Trainieren hat das \textit{Transfer Learning} ebenso den Vorteil das Training selbst zu beschleunigen \cite{AurelienGeron.2018}.
 
 Eine weitere Technik beschreibt das künstliche Vergrößern des Datensatzes durch affine Transformationen wie Translation, Rotation oder Skalierung und wird \textit{Data Augmentation} genannt \cite{AurelienGeron.2018}.

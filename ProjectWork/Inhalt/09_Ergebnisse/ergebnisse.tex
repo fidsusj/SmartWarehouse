@@ -1,5 +1,7 @@
 \chapter{Ergebnisse} \label{evaluation}
 
+In diesem Kapitel werden die Ergebnisse des Trainings und des Einsatzes der Objektdetektoren nach den in Kapitel \ref{eval} definierten Kriterien dargestellt. Es beinhaltet die Ergebnisse zur Präzision, zum Inferenzverhalten, zum Reaktionsvermögen und zum Trainingsverhalten der Detektoren.
+
 \section{Präzision und Inferenzverhalten}
 
 \subsection*{SSD}
@@ -9,7 +11,7 @@ Ursprünglich wurden 500 Epochen für das Training vorgesehen. Da allerdings bei
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=8cm]{Bilder/ssdloss.jpeg} 
-		\caption{Entwicklung der SSD Trainings- und Testverlustkurve}
+		\caption{Entwicklung der SSD Trainings- und Testverlustkurve während dem Training}
 		\label{ssdloss}
 	\end{center}
 \end{figure}
@@ -82,32 +84,32 @@ Um eine möglichst gute Aussage über den Vergleich der beiden Objektdetektoren 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=8cm]{Bilder/yolo_result.png} 
-		\caption{\textit{YOLO}: Entwicklung von durchschnittlichem Verlust (avg loss) und \textit{mAP} während dem Training}
+		\caption{Entwicklung der YOLO Testverlustkurve und der \textit{mAP} während dem Training}
 		\label{yolo_result}
 	\end{center}
 \end{figure}
 
-Wie beim \textit{SSD} erreicht das Modell relativ frühzeitig nach bereits etwa 4500 Batches eine \textit{mAP} von 80\%. Da sich das Modell ab diesem Zeitpunkt nicht mehr maßgeblich verbessert hat, wurde das Training vor Erreichung der durch die Dokumentation nahegelegte maximale Anzahl an Batches abgebrochen. Das frühe Erreichen eines sehr guten Ergebnis kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt und das Modell dementsprechend leichter trainiert werden kann. 
+Wie beim \textit{SSD} erreicht das Modell nach bereits etwa 4500 Batches eine \textit{mAP} von 80\%. Da sich das Modell ab diesem Zeitpunkt nicht mehr maßgeblich verbessert hat, wurde das Training vor Erreichung der durch die Dokumentation nahegelegte maximale Anzahl an Batches abgebrochen. Das frühe Erreichen eines sehr guten Ergebnis kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt und das Modell dementsprechend leichter trainiert werden kann. 
 
 Der \textit{confidence score} liegt standardmäßig bei 0.25. Nach mehreren Durchläufen stellt sich heraus, dass dieser Wert nicht verändert werden sollte. Ein zu geringer Wert sorgt zwar dafür, dass möglicherweise mehr Objekte erkannt werden, allerdings steigt damit auch die Rate an falsch oder doppelt erkannter Objekte. Ein Parameter für die Obergrenze der Überlappung zweier Bounding Boxen existiert nicht.
 
 Tabelle \ref{table:yoloresults} zeigt die \textit{mAP} für jede Klasse.
 
 \begin{center}
-	\begin{tabular}[H]{l|c}
-		Klasse & mAP \\
+	\begin{tabular}[H]{l|c|c}
+		Klasse & mAP & Differenz zu SSD\\
 		\hline
-		Saskia Wasser Groß & 76.69\% \\
-		Saskia Wasser Klein & 80.63\% \\
-		Pepsi Cola Groß & 73.14\% \\
-		Pepsi Cola Klein & 75.24\% \\
-		ISO & 90.28\% \\
-		ACE & 86.69\% \\
-		Stenger Johannisbeerschorle & 72.50\% \\
-		Stenger Apfelsaftschorle & 78.05\% \\
-		Vitamalz Malzbier & 81.94\%
+		Saskia Wasser Groß & 76.69\% & (-0.93\%) \\
+		Saskia Wasser Klein & 80.63\% & (+4.67\%) \\
+		Pepsi Cola Groß & 73.14\% & (-21.8\%) \\
+		Pepsi Cola Klein & 75.24\% & (-11.14\%) \\
+		ISO & 90.28\% & (+3.91\%) \\
+		ACE & 86.69\% & (+1.26\%) \\
+		Stenger Johannisbeerschorle & 72.50\% & (+3.03\%) \\
+		Stenger Apfelsaftschorle & 78.05\% & (-4.43\%) \\
+		Vitamalz Malzbier & 81.94\% & (+5.7\%)
 	\end{tabular}
-	\captionof{table}{Validierungsergebnisse YOLO}
+	\captionof{table}{Validierungsergebnisse YOLO im Vergleich zu SSD}
 	\label{table:yoloresults}
 \end{center}
 

@@ -8,13 +8,13 @@ Ursprünglich wurden 500 Epochen für das Training vorgesehen. Da allerdings bei
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=13cm]{Bilder/ssdloss.jpeg} 
+		\includegraphics[width=8cm]{Bilder/ssdloss.jpeg} 
 		\caption{Entwicklung der SSD Trainings- und Testverlustkurve}
 		\label{ssdloss}
 	\end{center}
 \end{figure}
 
-Die Entscheidung zum \textit{Early Stopping} basiert auf dem Anstieg der Differenz zwischen Trainings- und Testverlustkurve ab Epoche 122, was auf \textit{Overfitting} schließen lässt. Zur Epoche davor war die Differenz der beiden Kurven am niedrigsten bei vergleichsweise geringem Verlust im Trainingsverfahren. Auffällig ist ebenfalls der große Abfall der Trainingsverlustkurve bei Epoche 45 und Epoche 89. Hier findet ein Wechsel im Kreuzvalidierungsverfahren statt. Auch in Epoche 67 ist ein Ausschlag zu sehen, der allerdings kleiner im Vergleich zu den anderen ausfällt. 
+Die Entscheidung zum \textit{Early Stopping} basiert auf dem Anstieg der Differenz zwischen Trainings- und Testverlustkurve ab Epoche 122, was auf \textit{Overfitting} schließen lässt. Zur Epoche davor war die Differenz der beiden Kurven am niedrigsten bei vergleichsweise geringem Verlust im Trainingsverfahren. Auffällig ist ebenfalls der große Abfall der Trainingsverlustkurve bei Epoche 45 und Epoche 89. Hier findet ein Wechsel im Kreuzvalidierungsverfahren statt. Die bessere Generalisierungsfähigkeit des Modells bei neuen Testdaten zeigt Ausschlag, indem die Klassifikationsergebnisse schlagartig besser werden und zu niedrigeren Kosten führen. Auch in Epoche 67 ist einer dieser Ausschläge zu sehen, der allerdings kleiner im Vergleich zu den anderen ausfällt. 
 
 Zur Epoche 121 betrug das Ergebnis der Kostenfunktion 1.7. Es ergab eine \textit{mAP} von 83.1\%, leicht über den Referenzergebnissen von \textit{SSD} zu \textit{PascalVOC} (siehe Abbildung \ref{result}). Die Ergebnisse zu den einzelnen Klassen sind in folgender Tabelle dargestellt:
 
@@ -51,7 +51,7 @@ Die zweite Möglichkeit besteht darin, die maximale Überlappung zweier Bounding
 	\label{lagen}
 \end{figure}
 
-So sind von anderen Objekten verdeckte Objekte nur schwer zu erkennen, genauso wie Objekte aus extremen Blicklagen (siehe Abbildung \ref{lagen}). Diese Fälle wurden im Datensatz zwar zu 12.5\% abgedeckt, es lässt sich aber keine Aussage darüber treffen, ob eine Erweiterung des Datensatzes eine Abhilfe für dieses Problem hätte liefern können. 
+So sind von anderen Objekten verdeckte Objekte nur schwer zu erkennen, genauso wie Objekte aus extremen Blicklagen (siehe Abbildung \ref{lagen}). Diese Fälle wurden im Datensatz zwar zu 12.5\% abgedeckt, scheinen allerdings nur wenig Auswirkung auf besseres Detektionsverhalten für solche Fälle geliefert zu haben. Es lässt sich auch keine Aussage darüber treffen, ob eine Erweiterung des Datensatzes mit weiteren solchen Extremfällen eine Abhilfe für dieses Problem hätte liefern können. 
 
 \begin{figure}[H]
 	\subfigure[1 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/einmeter.jpeg}}\hfill
@@ -77,17 +77,17 @@ Die Detektion reagierte allerdings invariant gegenüber unterschiedlichen Hinter
 
 \subsection*{YOLO}
 
-Um eine möglichst gute Aussage über den Vergleich der beiden Objektdetektoren treffen zu können kommt bei \textit{YOLO} der exakt gleiche Trainings- und Testdatensatz wie beim \textit{SSD} zum Einsatz. Das Training von \textit{YOLO} ergab eine \textit{mAP} von 80.36\%. Abbildung \ref{yolo_result} zeigt die Verbesserung des Modells während dem Trainingsprozess. 
+Um eine möglichst gute Aussage über den Vergleich der beiden Objektdetektoren treffen zu können, kommt bei \textit{YOLO} der exakt gleiche Trainings- und Testdatensatz wie beim \textit{SSD} zum Einsatz. Das Training von \textit{YOLO} ergab eine \textit{mAP} von 80.36\%. Abbildung \ref{yolo_result} zeigt die Verbesserung des Modells während dem Trainingsprozess. 
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=13cm]{Bilder/yolo_result.png} 
+		\includegraphics[width=8cm]{Bilder/yolo_result.png} 
 		\caption{\textit{YOLO}: Entwicklung von durchschnittlichem Verlust (avg loss) und \textit{mAP} während dem Training}
 		\label{yolo_result}
 	\end{center}
 \end{figure}
 
-Wie beim \textit{SSD} erreicht das Modell relativ frühzeitig nach bereits etwa 4500 Batches eine \textit{mAP} von 80\%. Da sich das Modell ab diesem Zeitpunkt nicht mehr maßgeblich verbessert hat wurde das Training vor Erreichung der durch die Dokumentation nahegelegte maximale Anzahl an Batches abgebrochen. Das frühe Erreichen eines sehr guten Ergebnis kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt und das Modell dementsprechend leichter trainiert werden kann. 
+Wie beim \textit{SSD} erreicht das Modell relativ frühzeitig nach bereits etwa 4500 Batches eine \textit{mAP} von 80\%. Da sich das Modell ab diesem Zeitpunkt nicht mehr maßgeblich verbessert hat, wurde das Training vor Erreichung der durch die Dokumentation nahegelegte maximale Anzahl an Batches abgebrochen. Das frühe Erreichen eines sehr guten Ergebnis kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt und das Modell dementsprechend leichter trainiert werden kann. 
 
 Der \textit{confidence score} liegt standardmäßig bei 0.25. Nach mehreren Durchläufen stellt sich heraus, dass dieser Wert nicht verändert werden sollte. Ein zu geringer Wert sorgt zwar dafür, dass möglicherweise mehr Objekte erkannt werden, allerdings steigt damit auch die Rate an falsch oder doppelt erkannter Objekte. Ein Parameter für die Obergrenze der Überlappung zweier Bounding Boxen existiert nicht.
 
@@ -156,4 +156,15 @@ Ein weiteres Problem beschreibt die initiale Latenz zwischen der Inferenz und de
 
 \section{Trainingsverhalten}
 
-Eine Epoche lokales Training mit anschließendem Testen des Durchlaufs beim \textit{SSD} auf einer \textit{NVIDIA GeForce GTX 1080} dauert im Schnitt neun Minuten. Die Messung basiert auf einer Batch Größe von 16 Bildern bei insgesamt 998 Bildern pro Epoche. Insgesamt wurden 16,5 Stunden zum Erstellen eines Modells mit dem \textit{SSD} benötigt. Beim Training von \textit{YOLO} benötigt eine Batch mit einer Größe von 64 auf einer \textit{NVIDIA GeForce RTX 2060} etwa eine Minute und 30 Sekunden, bis zur Erreichung des optimalen Modells vergehen etwa acht Stunden. Die Dauer der beiden Trainingsdurchläufe lässt sich allerdings nur schwer vergleichen. Zum einen wird für das Training von \textit{YOLO} eine andere GPU verwendet, deren Tensor Kerne den Trainingsprozess merklich beschleunigen. Zum anderen werden die beiden Objektdetektoren in zwei verschiedenen Frameworks implementiert, wodurch ein anderes Trainingsverhalten von Grund auf gegeben ist und Unterschiede in der Performance auftreten können. Auch die Batch Größe wurde unterschiedlich gewählt, was sich auf die Häufigkeit des Gradientenabstiegs auswirkt. Bei beiden Verfahren kann das Training durch die Ablage von sogenannten Modell-Checkpoints zu einem späteren Zeitpunkt fortgeführt werden. Das ist vor allem dann von Vorteil, wenn nachträglich Parameter oder Trainingsdaten angepasst werden und kein kompletter Neustart des Trainings erforderlich ist.
+\begin{center}
+	\begin{tabular}[H]{l|c|c|c|c}
+		Detektor & Hardware & Batch Größe & Dauer Epoche & Dauer Insgesamt \\
+		\hline
+		SSD & GTX 1080 & 16 & 9 Min. & 16.5 Std. \\
+		YOLO & RTX 2060 & 64 & 1.5 Min. & 8 Std.
+	\end{tabular}
+	\captionof{table}{Trainingsverhalten von SSD und YOLO}
+	\label{table:duration}
+\end{center}
+
+Tabelle \ref{table:duration} zeigt die Ergebnisse des Trainingsverhaltens von \textit{SSD} und \textit{YOLO}. Pro Epoche wurden 998 Bilder durchlaufen. Die Dauer der beiden Trainingsdurchläufe lässt sich allerdings nur schwer vergleichen. Zum einen wird für das Training von \textit{YOLO} eine andere GPU verwendet, deren Tensor Kerne den Trainingsprozess merklich beschleunigen. Zum anderen werden die beiden Objektdetektoren in zwei verschiedenen Frameworks implementiert, wodurch ein anderes Trainingsverhalten von Grund auf gegeben ist und Unterschiede in der Performance auftreten können. Auch die Batch Größe wurde unterschiedlich gewählt, was sich auf die Häufigkeit des Gradientenabstiegs auswirkt. Bei beiden Verfahren kann das Training durch die Ablage von sogenannten Modell-Checkpoints zu einem späteren Zeitpunkt fortgeführt werden. Das ist vor allem dann von Vorteil, wenn nachträglich Parameter oder Trainingsdaten angepasst werden und kein kompletter Neustart des Trainings erforderlich ist.

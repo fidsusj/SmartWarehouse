@@ -1,4 +1,5 @@
 import json
+import threading
 import time
 
 import cv2
@@ -8,13 +9,15 @@ from imutils.video import FPS
 from flask import Flask, render_template, Response
 from waitress import serve
 
+from Drone.tello import Tello
 from SSD.detect import infere
 from SSD.fileVideoStream import FileVideoStream
 from SSD.utils import voc_labels
 
 # Config
 app = Flask(__name__)
-fvs = FileVideoStream(0)
+tello = Tello()
+fvs = FileVideoStream("udp://127.0.0.1:11111")
 fps = FPS().start()
 
 counter = {}
@@ -41,6 +44,16 @@ def index():
     return render_template('index.html')
 
 
+def flight_sequence():
+    pass
+    # tello.send_command('takeoff')
+    # tello.send_command('up 20')
+    # tello.send_command('forward 20')
+    # tello.send_command('right 40')
+    # tello.send_command('left 150')
+    # tello.send_command('land')
+
+
 def gen():
     global detected_objects, counter
     fvs.start()
@@ -62,6 +75,12 @@ def gen():
 @app.route('/video_feed')
 def video_feed():
     return Response(gen(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
+@app.route('/fly')
+def fly():
+    flight_thread = threading.Thread(target=flight_sequence)
+    flight_thread.start()
 
 
 @app.route('/getObjects', methods=['GET'])

@@ -46,14 +46,14 @@ def gen():
     fvs.start()
     time.sleep(1)
     while not fvs.stopped:
-        fps = FPS().start()
         frame = fvs.read()
+        fps = FPS().start()
         image, new_detected_objects, counter = infere(frame, counter, detected_objects, model)
+        fps.update()
+        fps.stop()
         if len(new_detected_objects) != 0:
             detected_objects = new_detected_objects
         _, encodedImage = cv2.imencode('.jpg', image)
-        fps.update()
-        fps.stop()
         print("[INFO] approx. FPS: {:.2f}".format(fps.fps()))
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + bytearray(encodedImage) + b'\r\n')

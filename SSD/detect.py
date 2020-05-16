@@ -96,7 +96,7 @@ def infere(frame, object_counter, last_detected_objects, model):
     cv2_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     cv2_image = numpy.rot90(cv2_image)
     pil_image = Image.fromarray(cv2_image)
-    pil_image, det_objects = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000, model=model)
+    pil_image, det_objects = detect(pil_image, min_score=0.7, max_overlap=0.45, top_k=200, model=model)
     cv2_image = numpy.array(pil_image)
     cv2_image = numpy.rot90(cv2_image, 3)
     cv2_image = cv2_image[:, :, ::-1].copy()
@@ -132,29 +132,19 @@ if __name__ == '__main__':
     cudnn.benchmark = True
     cudnn.enabled = True
 
-    vc = cv2.VideoCapture(0)
+    vc = cv2.VideoCapture("C:\\Users\\Felix\\OneDrive\\Desktop\\Down\\b9.jpeg")
 
-    while True:
-        _, image = vc.read()
+    _, image = vc.read()
 
-        # Interfere with model
-        cv2_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-        cv2_image = numpy.rot90(cv2_image)
-        pil_image = Image.fromarray(cv2_image)
-        pil_image, det_objects = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000, model=model)
-        cv2_image = numpy.array(pil_image)
-        cv2_image = numpy.rot90(cv2_image, 3)
-        cv2_image = cv2_image[:, :, ::-1].copy()
+    # Interfere with model
+    cv2_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    cv2_image = numpy.rot90(cv2_image)
+    pil_image = Image.fromarray(cv2_image)
+    pil_image, det_objects = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000, model=model)
+    cv2_image = numpy.array(pil_image)
+    cv2_image = numpy.rot90(cv2_image, 3)
+    cv2_image = cv2_image[:, :, ::-1].copy()
 
-        # Display frame
-        cv2.imshow("SmartWarehouse", cv2_image)
-        cv2.waitKey(1)
-
-        # Save image on key down
-        if keyboard.is_pressed('s'):
-            os.chdir("C:\\Users\\Felix\\OneDrive\\Desktop\\Saved")
-            cv2.imwrite("single.jpeg", cv2_image)
-
-        if keyboard.is_pressed('d'):
-            os.chdir("C:\\Users\\Felix\\OneDrive\\Desktop\\Saved")
-            cv2.imwrite("double.jpeg", cv2_image)
+    # Display frame
+    cv2.imshow("SmartWarehouse", cv2_image)
+    cv2.waitKey(0)

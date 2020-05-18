@@ -15,7 +15,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-            <img src="{{ url_for('video_feed') }}">
+            <img width="720" height="405" src="{{ url_for('video_feed') }}">
         </div>
         <div class="col-lg-4">
             <div class="card text-center">
@@ -64,6 +64,11 @@
             </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-lg-4">
+            <button type="button" class="btn btn-dark" onclick="fly()">Fly</button>
+        </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -71,6 +76,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script>
+        function fly() {
+            fetch("{{ url_for('fly') }}");
+        }
+
         function updateCounter() {
             fetch("{{ url_for('getObjects') }}", {
                 method: 'GET'

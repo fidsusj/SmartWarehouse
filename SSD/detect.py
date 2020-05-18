@@ -1,4 +1,3 @@
-import keyboard as keyboard
 import numpy
 import cv2
 import torch.backends.cudnn as cudnn

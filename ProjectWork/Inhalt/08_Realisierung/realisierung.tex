@@ -101,7 +101,14 @@ Die Methode \textit{send\_command()} erhält beim Aufruf den auszuführenden Bef
 
 Aufgrund der UDP basierten Verbindung ist nicht garantiert, ob und in welcher Reihenfolge Antworten empfangen werden können. Um dem entgegenzuwirken, kommt die Methode \textit{receive\_thread()} zum Einsatz, die in einem parallel laufenden Thread ausgeführt wird und die empfangene Antwort immer dem zuletzt geschickten Befehl zuordnet. Durch die Zuweisung wird die zuvor beschriebene Blockierung durch die Schleife in der Methode \textit{send\_command()} aufgehoben. 
 
-Mit diesen zwei Methoden wird ein synchroner Versand der Befehle möglich, bei dem immer nur dann ein neuer Befehl geschickt wird, wenn bereits eine Antwort auf den vorherigen empfangen oder ein Timeout erkannt wurde. In der Flugsequenz fliegt die Drohne zunächst nah vor einem Regal mit zwei Böden her, um alle Objekte aus der Nahaufnahme detektieren zu können. Danach fliegt die Drohne zurück, um das gesamte Regal im Blickwinkel zu haben. Die finale Befehlskette sieht wie folgt aus:
+\begin{figure}[ht]
+	\subfigure[Drohne während der Nahaufnahme]{\includegraphics[width=8cm]{Bilder/detail_scan.jpeg}} 
+	\subfigure[Drohne während der Gesamtaufnahme]{\includegraphics[width=7cm]{Bilder/all_scan.jpeg}} 
+	\caption[Drohnenflugsequenz]{Drohnenflugsequenz} 
+	\label{sequenz}
+\end{figure} 
+
+Mit diesen zwei Methoden wird ein synchroner Versand der Befehle möglich, bei dem immer nur dann ein neuer Befehl geschickt wird, wenn bereits eine Antwort auf den vorherigen empfangen oder ein Timeout erkannt wurde. In der Flugsequenz fliegt die Drohne zunächst nah vor einem Regal mit zwei Böden her, um alle Objekte aus der Nahaufnahme detektieren zu können, danach fliegt die Drohne zurück, um das gesamte Regal im Blickwinkel zu haben (siehe Abbildung \ref{sequenz}). Die finale Befehlskette sieht wie folgt aus:
 
 \begin{itemize}
 	\item Command (Übernahme der Steuerung)

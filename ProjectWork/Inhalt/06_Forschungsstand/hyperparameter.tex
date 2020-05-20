@@ -17,7 +17,7 @@ Var(X + Y) = Var(X) + Var(Y)
 
 gilt.
 
-Durch die größer werdende Standardabweichung können demnach Gewichtungswerte entstehen, die weit vom Mittelwert Null abweichen. Dies kann wiederum dazu führen, dass der Gradientenabstieg während des Backpropagation-Verfahrens nur langsam vollzogen werden kann, da der Gradient bei bestimmten Aktivierungsfunktionen wie der \textit{Sigmoid-Funktion} gegen Null konvergiert \cite{AurelienGeron.2018}. 
+Durch die größer werdende Standardabweichung können demnach Gewichtungswerte entstehen, die weit vom Mittelwert Null abweichen. Dies kann wiederum dazu führen, dass der Gradientenabstieg während des Backpropagation-Verfahrens nur langsam vollzogen werden kann, da der Gradient bei bestimmten Aktivierungsfunktionen wie der \textit{Sigmoid-Funktion} an solchen Stellen gegen Null konvergiert \cite{AurelienGeron.2018}. 
 
 Eine \textit{Xavier Initialisierung} umgeht das Problem der sogenannten \textit{schwindenden Gradienten}, indem die Gewichte nach
 

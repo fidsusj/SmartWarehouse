@@ -4,7 +4,7 @@ Um die Bilddaten der Drohne für eine Inventur zu verarbeiten, soll die Drohne v
 
 Auf dem Server soll zudem das \textit{Deep Learning} Modell zur Inferenz integriert werden. Aufgabe des Servers soll es sein, die von der Drohne empfangenen Video-Stream-Frames mit dem Modell zu inferieren, die detektierten Objekte für die Inventur mit Hilfe eines Zählalgorithmus zu zählen und die Bilddaten mit den eingezeichneten Bounding Boxen anschließend per Livestream an eine Webapplikation zur Visualisierung weiterzugeben. Eine \textit{REST} Schnittstelle soll Aussagen über die Bestandsdaten des Warenhauses liefern.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/UI.png} 
 		\caption[SmartWarehouse User Interface Prototyp]{SmartWarehouse User Interface Prototyp}
@@ -12,4 +12,12 @@ Auf dem Server soll zudem das \textit{Deep Learning} Modell zur Inferenz integri
 	\end{center}
 \end{figure}
 
-Die Client-Anwendung soll das Live-Drohnenbild mit den eingezeichneten, erkannten Objekten zeigen. Zudem wird die Anzahl an erkannten Objekten der spezifischen Klassen rechts daneben dargestellt. 
+Die Client-Anwendung soll das Live-Drohnenbild mit den eingezeichneten, erkannten Objekten zeigen. Zudem wird die Anzahl an erkannten Objekten der spezifischen Klassen rechts daneben dargestellt. Abbildung \ref{tam} visualisiert das technische Architekturmodell des gesamten SmartWarehouse Szenarios.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=10cm]{Bilder/tam.pdf}
+		\caption[Architektur des SmartWarehouse Szenarios]{Architektur des SmartWarehouse Szenarios}
+		\label{tam}
+	\end{center}
+\end{figure}

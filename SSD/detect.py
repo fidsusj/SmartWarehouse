@@ -1,3 +1,4 @@
+import keyboard
 import numpy
 import cv2
 import torch.backends.cudnn as cudnn
@@ -131,7 +132,7 @@ if __name__ == '__main__':
     cudnn.benchmark = True
     cudnn.enabled = True
 
-    vc = cv2.VideoCapture("C:\\Users\\Felix\\OneDrive\\Desktop\\Down\\b9.jpeg")
+    vc = cv2.VideoCapture("C:\\Users\\Felix\\OneDrive\\Desktop\\eval2\\b3.jpeg")
 
     _, image = vc.read()
 
@@ -139,7 +140,7 @@ if __name__ == '__main__':
     cv2_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     cv2_image = numpy.rot90(cv2_image)
     pil_image = Image.fromarray(cv2_image)
-    pil_image, det_objects = detect(pil_image, min_score=0.75, max_overlap=0.5, top_k=1000, model=model)
+    pil_image, det_objects = detect(pil_image, min_score=0.91, max_overlap=0.5, top_k=1000, model=model)
     cv2_image = numpy.array(pil_image)
     cv2_image = numpy.rot90(cv2_image, 3)
     cv2_image = cv2_image[:, :, ::-1].copy()
@@ -147,3 +148,8 @@ if __name__ == '__main__':
     # Display frame
     cv2.imshow("SmartWarehouse", cv2_image)
     cv2.waitKey(0)
+    while True:
+        if keyboard.is_pressed('s'):
+            os.chdir("C:\\Users\\Felix\\OneDrive\\Desktop\\Saved")
+            cv2.imwrite("pic.jpeg", cv2_image)
+            break

@@ -45,9 +45,9 @@ class Tello:
 
         # to receive video -- send cmd: command, streamon
         self.socket.sendto(b'command', self.tello_address)
-        print ('sent: command')
+        print('sent: command')
         self.socket.sendto(b'streamon', self.tello_address)
-        print ('sent: streamon')
+        print('sent: streamon')
 
         self.socket_video.bind((local_ip, self.local_video_port))
 
@@ -87,7 +87,7 @@ class Tello:
                 self.response, ip = self.socket.recvfrom(3000)
                 # print(self.response)
             except socket.error as exc:
-                print ("Caught exception socket.error : %s" % exc)
+                print("Caught exception socket.error : %s" % exc)
 
     def _receive_video_thread(self):
         """
@@ -108,7 +108,7 @@ class Tello:
                     packet_data = ""
 
             except socket.error as exc:
-                print ("Caught exception socket.error : %s" % exc)
+                print("Caught exception socket.error : %s" % exc)
 
     def _h264_decode(self, packet_data):
         """
@@ -141,7 +141,7 @@ class Tello:
 
         """
 
-        print (">> send cmd: {}".format(command))
+        print(">> send cmd: {}".format(command))
         self.abort_flag = False
         timer = threading.Timer(self.command_timeout, self.set_abort_flag)
 

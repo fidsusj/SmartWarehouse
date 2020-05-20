@@ -21,14 +21,15 @@ def index():
 
 def flight_sequence():
     tello.send_command('takeoff')
-    tello.send_command('up 150')
-    tello.send_command('right 100')
-    tello.send_command('down 100')
-    tello.send_command('left 100')
-    tello.send_command('up 100')
-    tello.send_command('right 50')
-    tello.send_command('back 150')
-    tello.send_command('streamoff')
+    tello.send_command('down 20')
+    #tello.send_command('up 150')
+    #tello.send_command('right 100')
+    #tello.send_command('down 100')
+    #tello.send_command('left 100')
+    #tello.send_command('up 100')
+    #tello.send_command('right 50')
+    #tello.send_command('back 150')
+    #tello.send_command('streamoff')
     tello.send_command('land')
 
 

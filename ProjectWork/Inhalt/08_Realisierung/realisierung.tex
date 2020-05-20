@@ -125,6 +125,16 @@ Mit diesen zwei Methoden wird ein synchroner Versand der Befehle möglich, bei d
 	\item land (Landung)
 \end{itemize}
 
+Die Befehlssequenz zur Steuerung der Drohne wird parallel zur Inferenz der Bilder ausgeführt, wie durch Abbildung \ref{sequence_diagram} verdeutlicht.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=15cm]{Bilder/sequence_diagram.pdf}
+		\caption[Ablaufsequenz für die Verarbeitung von Drohnenbefehlen und Inferenz von Bildern]{Ablaufsequenz für die Verarbeitung von Drohnenbefehlen und Inferenz von Bildern}
+		\label{sequence_diagram}
+	\end{center}
+\end{figure}
+
 \subsection*{Modellinferenz}
 
 Der Video Stream der Drohne kann auf dem zentralen Server mittels der \textit{openCV} Klasse \textit{VideoCapture} in Python über das UDP Protokoll angesprochen werden. Anschließend kann jeder Frame des Streams einzeln durch \textit{SSD} inferiert werden.

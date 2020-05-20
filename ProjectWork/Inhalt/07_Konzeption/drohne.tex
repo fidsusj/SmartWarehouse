@@ -7,21 +7,11 @@ Bei der Auswahl der Drohne sind vor allem zwei Bereiche zu betrachten:
 	\item Die technischen Anforderungen an die Drohne.
 \end{itemize}
 
-Was die gesetzlichen Anforderungen betrifft, so wurden im Juni 2019 von der \textit{European Aviation Safety Agency} (EASA) einheitliche Regeln veröffentlicht, die den Drohnenbetrieb in der Europäischen Union einheitlich regeln sollen. Da den Mitgliedsstaaten ein Zeitraum von einem Jahr zur Umsetzung der Regularien zugesprochen wurde, gelten in Deutschland weiterhin die Vorschriften der deutschen Drohnen-Verordnung von 2017 \cite{EASA.2019}.
+Aufgrund der gesetzlichen Auflagen aus Kapitel \ref{drohnen} wurde der Beschluss gefasst, dass die auszuwählende Drohne nur innerhalb von geschlossenen Wohnräumen im privaten Betrieb genutzt werden soll und zudem ein Startgewicht von unter 250g besitzen soll. Um eine studentische Machbarkeitsstudie durchführen zu können, ist eine solche eingeschränkte Anwendungsumgebung ausreichend. 
 
-Diese schreiben unter anderem vor \cite{Drohnen.de.2020}:
-\begin{itemize}
-	\item Eine Kennzeichnungspflicht ab einem Startgewicht von über 250g,
-	\item Eine maximale Flughöhe von 100 Metern über dem Grund,
-	\item Eine Haftpflichtversicherung und
-	\item Flugverbotszonen (Wohngrundstücke, Naturschutzgebiete, etc.).
-\end{itemize}
+Die Programmierbarkeit der Drohne gehört zu der wichtigsten technischen Anforderung an die Drohne. Zudem soll sie eine integrierte Kamera aufweisen, die in der Lage ist, einen Videostream zur Laufzeit zur Verarbeitung bereit zu stellen. Hierzu wurden in Kapitel \ref{drohnen} bereits die beiden auf dem Markt verfügbaren Modelle  gegenübergestellt. Eine Wahl kann nur zwischen den beiden Modellen der \textit{Bebop 2} von der Firma Parrot oder der \textit{Tello EDU} Drohne von der Firma Ryze Tech getroffen werden. Die gesetzlichen Auflagen, speziell die Kennzeichnungspflicht, und die daraus abgeleiteten, projektkrelevanten Bedingungen lassen allerdings nur die \textit{Tello EDU} Drohne zu, zudem sie mit vertretbaren Budget erworben werden kann. Des Weiteren wird noch eine Garantie zu präzisem Schweben geboten, was gerade für die Objektdetektion vorteilhaft werden kann. Im Vergleich dazu erscheint die \textit{Parrot Bebop 2} vielmehr als eine Drohne, die für den Einsatz im Außenbereich konzipiert wurde.
 
-Aufgrund dieser Auflagen wurde der Beschluss gefasst, dass die auszuwählende Drohne nur innerhalb von geschlossenen Wohnräumen im privaten Betrieb genutzt werden soll und zudem ein Startgewicht von unter 250g besitzen soll. Um eine studentische Machbarkeitsstudie durchführen zu können, ist eine solche eingeschränkte Anwendungsumgebung ausreichend. 
-
-Die Programmierbarkeit der Drohne gehört zu der wichtigsten technischen Anforderung an die Drohne. Zudem soll sie eine integrierte Kamera aufweisen, die in der Lage ist, einen Videostream zur Laufzeit zur Verarbeitung bereit zu stellen. Auch die Akkulaufzeit und Robustheit der Drohne wurden als Entscheidungskriterien aufgenommen.
-
-Analysiert man den Markt auf programmierbare Drohnen mit den genannten technischen Anforderungen und einem frei zugänglichen \textit{Software Development Kit} (SDK), so fällt das Angebot sehr gering aus. Eine Wahl kann nur zwischen den beiden Modellen der \textit{Bebop 2} von der Firma Parrot oder der \textit{Tello EDU} Drohne von der Firma Ryze Tech getroffen werden. Die gesetzlichen Auflagen und die daraus abgeleiteten, projektkrelevanten Bedingungen lassen allerdings nur die \textit{Tello EDU} Drohne zu. Sie bietet eine Kamera mit 720p Übertragungsqualität an, eine Akkulaufzeit von 13 Minuten und eine Programmierschnittstelle für die Steuerung sowie das Empfangen von Aufzeichnungen der Kamera. Auch wirbt sie mit der Fähigkeit von präzisem Schweben, was gerade für die Objektdetektion von Vorteil sein könnte \cite{RyzeRobotics.2020}.
+---- Unteren Teil in 4.4 ------
 
 Für die Steuerung sowie den Zugriff auf den Videostream bietet die \textit{Tello EDU} ein eigenes WiFi Netz an, zu dem sich das Steuergerät verbinden muss. Die Kommunikation erfolgt über das \textit{UDP} Protokoll\footnote{UDP steht für User Datagram Protocol. Es ist ein Transportprotokoll, welches im Gegensatz zu TCP verbindungslos und nicht zuverlässig ist.} und besteht aus mehreren Kommunikationskanälen: 
 

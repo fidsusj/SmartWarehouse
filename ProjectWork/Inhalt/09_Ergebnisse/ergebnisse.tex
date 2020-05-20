@@ -45,15 +45,17 @@ Als erstes kann bei der Detektion der minimale \textit{confidence score} angegeb
 Die zweite Möglichkeit besteht darin, die maximale Überlappung zweier Bounding Boxen festzulegen. Somit werden doppelte Bounding Boxen, die sich flächenmäßig über einem gewissen Grenzwert überlappen, auf eine Bounding Box reduziert. Er stellte ich sich Parameter von 0.45 als geeignet heraus. Außerdem wurden Inkonsistenzen im Detektionsverhalten festgestellt.
 
 \begin{figure}[H]
-	\centering
-	\subfigure[Detektion verdeckter Objekte]{\includegraphics[width=0.30\textwidth]{Bilder/verdeckt.jpeg}}
-	\hspace{2cm}
-	\subfigure[Detektion aus extremen Blickwinkeln]{\includegraphics[width=0.30\textwidth]{Bilder/winkel.jpeg}}
+	\subfigure[Verdecktes Objekt I]{\includegraphics[width=0.20\textwidth]{Bilder/verdeckt.jpeg}}\hfill
+	\subfigure[Verdecktes Objekt II]{\includegraphics[width=0.20\textwidth]{Bilder/verdeckt2.jpeg}}\hfill
+	\subfigure[Extreme Blicklagen I]{\includegraphics[width=0.20\textwidth]{Bilder/winkel.jpeg}}\hfill
+	\subfigure[Extremen Blicklagen II]{\includegraphics[width=0.20\textwidth]{Bilder/winkel2.jpeg}}
 	\caption{Detektionsverhalten von SSD bei extremen Blicklagen}
 	\label{lagen}
 \end{figure}
 
-So sind von anderen Objekten verdeckte Objekte nur schwer zu erkennen, genauso wie Objekte aus extremen Blicklagen (siehe Abbildung \ref{lagen}). Diese Fälle wurden im Datensatz zwar zu 12.5\% abgedeckt, scheinen allerdings nur wenig Auswirkung auf besseres Detektionsverhalten für solche Fälle geliefert zu haben. Es lässt sich auch keine Aussage darüber treffen, ob eine Erweiterung des Datensatzes mit weiteren solchen Extremfällen eine Abhilfe für dieses Problem hätte liefern können. 
+So sind von anderen Objekten verdeckte Objekte nur schwer zu erkennen. So wird beispielsweise in Abbildung \ref{lagen} (a) das rechte hintere Objekt selbst bei einem sehr niedrigen \textit{confidence score} Schwellwert nicht erkannt. In Abbildung \ref{lagen} (b) hingegen ist eine Detektion ab einem \textit{confidence score} von 0.53 möglich, was allerdings wieder weitere ungenaue und ungewünschte Detektionen verursacht. Ähnliche Probleme ergeben sich für die Detektion von Objekte aus extremen Blicklagen. In Abbildung \ref{lagen} (c) werden die Objekte beispielsweise erst ab einem \textit{confidence score} von 0.54 erkannt, allerdings nicht als drei einzelne Objekte, sondern als ein großes Gesamtobjekt. Dies gilt allerdings nicht für alle Klassen. Bei Anwendung dieses Problemfalls auf eine andere Klasse ergeben sich bei vergleichbarem \textit{confidence score} von 0.56 sehenswertere Ergebnisse (siehe Abbildung \ref{lagen} (d)). 
+
+Die zwei genannten Problemfälle wurden im Datensatz zwar zu 12.5\% abgedeckt, scheinen allerdings nur wenig Auswirkung auf besseres Detektionsverhalten für solche Fälle geliefert zu haben. Es lässt sich auch keine Aussage darüber treffen, ob eine Erweiterung des Datensatzes mit weiteren solchen Extremfällen eine Abhilfe für dieses Problem hätte liefern können. 
 
 \begin{figure}[H]
 	\subfigure[1 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/einmeter.jpeg}}\hfill
@@ -63,19 +65,20 @@ So sind von anderen Objekten verdeckte Objekte nur schwer zu erkennen, genauso w
 	\label{entfernung}
 \end{figure}
 
-Auch die Entfernung zum zu detektierenden Objekt besitzt eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{entfernung} wird gezeigt, dass ab einer Entfernung von drei Metern keine Detektion mehr erfolgte. 
+Auch die Entfernung zum zu detektierenden Objekt besitzt eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{entfernung} wird gezeigt, dass ab einer Entfernung von drei Metern eine zuverlässige Detektion nicht mehr möglich ist. In diesem Beispiel ist erst ab einer niedrigeren \textit{confidence score} Grenze von 0.31 eine Detektion des Objekts wieder erfolgt, bei anderen Beispielen sogar erst ab einem Wert von 0.09.
 
 \begin{figure}[H]
-	\subfigure[überbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/ueberbeleuchtet.jpeg}}\hfill
-	\subfigure[normal]{\includegraphics[width=0.30\textwidth]{Bilder/normalbeleuchtet.jpeg}}\hfill
-	\subfigure[unterbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/unterbeleuchtet.jpeg}}\hfill
+	\subfigure[überbeleuchtet I]{\includegraphics[width=0.20\textwidth]{Bilder/ueberbeleuchtet2.jpeg}}\hfill
+	\subfigure[überbeleuchtet II]{\includegraphics[width=0.20\textwidth]{Bilder/ueberbeleuchtet.jpeg}}\hfill
+	\subfigure[normal]{\includegraphics[width=0.20\textwidth]{Bilder/normalbeleuchtet.jpeg}}\hfill
+	\subfigure[unterbeleuchtet]{\includegraphics[width=0.20\textwidth]{Bilder/unterbeleuchtet.jpeg}}\hfill
 	\caption{Detektionsverhalten von SSD bei unterschiedlichen Beleuchtungsverhältnissen}
 	\label{sicht}
 \end{figure}
 
-Des Weiteren haben unterschiedliche Beleuchtungsgrade eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{sicht} wird unterschieden zwischen dem Detektionsverhalten bei überbeleuchteten, normalen und unterbeleuchteten Sichtverhältnissen. Überbeleuchtete Umgebungsverhältnisse erschweren die Objektdetektion in diesem Beispiel. 
+Des Weiteren haben unterschiedliche Beleuchtungsgrade eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{sicht} wird unterschieden zwischen dem Detektionsverhalten bei überbeleuchteten, normalen und unterbeleuchteten Sichtverhältnissen. Überbeleuchtete Umgebungsverhältnisse erschweren die Objektdetektion. Zum einen können bestimmte Objekte gar nicht mehr erkannt werden (siehe Abbildung \ref{sicht} (b)) oder die dadurch verursachte Lichtabsorption und anschließende Emission durch die zu detektierenden Objekte führt zu einer Falschdetektion. In Abbildung \ref{sicht} (a) wird so beispielsweise mit einem \textit{confidence score} von 0.91 das Objekt der Klasse \textit{ACE} falsch als \textit{ISO} klassifiziert.
 
-Die Detektion reagierte allerdings invariant gegenüber unterschiedlichen Hintergründen oder Bildauflösungen.
+Alle Detektionen reagierten allerdings invariant gegenüber unterschiedlichen Hintergründen oder Bildauflösungen.
 
 \subsection*{YOLO}
 

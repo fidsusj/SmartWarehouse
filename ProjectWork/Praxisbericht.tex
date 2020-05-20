@@ -56,7 +56,7 @@
 \singlespacing
 \include{Inhalt/01_Standard/titelseite}  % Titelseite
 \newcounter{savepage}
-\pagenumbering{Roman}                    % Römische Seitenzahlen
+\pagenumbering{arabic}                    % Römische Seitenzahlen
 \onehalfspacing
 
 % ------ Erklärung, Sperrvermerk, Abstact
@@ -80,12 +80,12 @@
 %\listoftables                           % Erzeugen des Tabellenverzeichnisses
 \renewcommand{\lstlistlistingname}{Listenverzeichnis}
 \lstlistoflistings                      % Erzeugen des Listenverzeichnisses
-\setcounter{savepage}{\value{page}}
+% \setcounter{savepage}{\value{page}}
 
 
 % ---- Inhalt der Arbeit
 \cleardoublepage
-\pagenumbering{arabic}                  % Arabische Seitenzahlen für den Hauptteil
+% \pagenumbering{arabic}                  % Arabische Seitenzahlen für den Hauptteil
 \setlength{\parskip}{0.5\baselineskip}  % Abstand zwischen Absätzen
 \rmfamily
 \renewcommand*{\chapterpagestyle}{scrheadings}
@@ -131,8 +131,8 @@
 \cleardoublepage
 \renewcommand*{\chapterpagestyle}{plain}
 \pagestyle{plain}
-\pagenumbering{Roman}                   % Römische Seitenzahlen
-\setcounter{page}{\numexpr\value{savepage}+1}
+% \pagenumbering{Roman}                   % Römische Seitenzahlen
+% \setcounter{page}{\numexpr\value{savepage}+1}
 
 \printbibliography[title=Literaturverzeichnis]
 %\chapter*{Literaturverzeichnis}

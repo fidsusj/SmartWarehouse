@@ -7,7 +7,7 @@ h_{w}(x) = \sigma(z)_j = \frac{e^{z_j}}{\sum_{i=0}^n e^{z_i} }
 \end{equation}
 \equations{Die Softmax-Funktion}
 
-verwendet, die den Wert des $j$-ten LTUs einer Schicht mit allen anderen $n$ Werten der LTUs derselben Schicht ins Verhältnis setzt. Falls das neuronale Netz von der Eingangsschicht zur Ausgangsschicht unidirektional von den Eingangsdaten durchlaufen wird, ohne zu bereits besuchten Schichten zurückzukehren, nennt man das neuronale Netz auch \textit{Feed Forward Network}.
+verwendet, die den Wert des $j$-ten LTUs einer Schicht mit allen anderen $n$ Werten der LTUs derselben Schicht ins Verhältnis setzt. Falls das neuronale Netz von der Eingangsschicht zur Ausgangsschicht unidirektional von den Eingangsdaten durchlaufen wird, ohne zu bereits besuchten Schichten zurückzukehren, nennt man das neuronale Netz auch \textit{Feed-Forward Network}.
 
 Im Wesentlichen existieren vier Methoden, mit deren Hilfe neuronale Netze trainiert werden können: \textit{Überwachten Lernverfahren}, \textit{Halbüberwachte Lernverfahren}, \textit{unüberwachte Lernverfahren} und das \textit{Reinforcement Learning}. Für die Aufgabe der Objektdetektion sind allerdings wesentlich \textit{überwachten Lernverfahren} von Relevanz, die den Trainingsdaten Lösungen, sogenannte \textit{Labels} oder \textit{Annotations}, hinzufügen. Der Lernprozess wird hierbei über das Gradientenverfahren, basierend auf einer Kostenfunktion, und dem Backpropagation Algorithmus ermöglicht. Die Kostenfunktion ist ein Qualitätsmaß dafür, wie weit die Ausgabe einer LTU vom erwarteten Wert abweicht \cite{AurelienGeron.2018}. Eine bekannte Kostenfunktion für das \textit{überwachte Lernen} ist beispielsweise die \textit{Smooth L1} Funktion
 
@@ -19,7 +19,4 @@ SM_{L1}(\boldsymbol{z},\boldsymbol{o}) = \begin{cases}
 \end{equation}
 \equations{Die Smooth L1 Funktion}
 
-, bei der $z$ der erwartete Ausgabevektor des Perzeptrons ist, während $o$ die momentane Ausgabe darstellt.
-
-Für weitere Informationen über das Perzeptron, Lernmethoden, Gradientenverfahren und Backpropagation sind tiefgehendere Kapitel im Anhang hinterlegt.
-
+, bei der $z$ der erwartete Ausgabevektor des Perzeptrons ist, während $o$ die momentane Ausgabe darstellt. Die Kostenfunktion ist nur einer der vielen Parameter, die für das Trainingsverfahren eines neuronalen Netzes festgelegt werden kann. Weitere sogenannte \textit{Hyperparameter} folgen in nachfolgendem Kapitel. Außerdem sind weitere Informationen über das Perzeptron, über Lernmethoden, das Gradientenverfahren und den Backpropagation Algorithmus im Anhang hinterlegt.

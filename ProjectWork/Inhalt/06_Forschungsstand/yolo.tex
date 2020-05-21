@@ -1,12 +1,10 @@
 \subsection*{You Only Look Once}
 
-Der Algorithmus \textit{You Only Look Once} (YOLO) ist ein weiterer Objekterkennungsalgorithmus und betrachtet statt separaten Bildregionen das komplette Bild. Er benutzt nur ein neuronales Netz, um Bounding Boxen und Wahrscheinlichkeiten für bestimmte Klassen vorherzusagen.
+Der Algorithmus \textit{You Only Look Once} (YOLO) ist ein weiterer Objekterkennungsalgorithmus und betrachtet statt separaten Bildregionen das komplette Bild. Er benutzt nur ein neuronales Netz, um Bounding Boxen und Wahrscheinlichkeiten für bestimmte Klassen gleichzeitig vorherzusagen. Daher der Name \glqq You Only Look Once\grqq{}.
 
-Hierzu wird ein $S \times S$ Gitter über das Bild gelegt. Für jedes Feld im Gitter werden $B$ Bounding Boxen erzeugt. Jede Box besitzt neben den zum Gitterfeld relativen Positionswerten einen Wert, der die Vorhersage der jeweiligen Klasse und die Präzision der Box repräsentiert. Dieser Wert wird als \textit{confidence score} bezeichnet und wird durch die Multiplikation der Wahrscheinlichkeit für eine Klasse mit der \textit{IoU}, also die Präzision der berechneten Box im Verhältnis zu der Box aus den vortrainierten Testdaten festgelegt \cite{JosephRedmon.2016}.
+Hierzu wird ein $S \times S$ Gitter über das Bild gelegt. Für jedes Feld im Gitter werden durch ein einziges CNN $B$ Bounding Boxen vorhergesagt, als auch die zur Zelle dazugehörigen Klassenwahrscheinlichkeiten. Für jede Bouding Box wird nun der \textit{confidence score} für alle Klassen berechnet. Basierend auf den \textit{confidence scores} wird ein Regressionsproblem zur richtigen Lokalisation gelöst. Aus der Menge der resultierenden Bounding Boxen werden schließlich mit Hilfe eines festgelegten Schwellwertes für den \textit{confidence score} die Boxen mit lokalisierten Objekten bestimmt (siehe Abbildung \ref{yolo_model}) \cite{JosephRedmon.2016}.
 
-Aus der Menge an Bounding Boxen werden schließlich mit Hilfe eines festgelegten Schwellwertes die Boxen mit lokalisierten Objekten bestimmt (siehe Abbildung \ref{yolo_model}).
-
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/yolo_model.png} 
 		\caption[Vereinfachte Darstellung des YOLO Algorithmus]{Vereinfachte Darstellung des YOLO Algorithmus \cite{JosephRedmon.2016}}
@@ -16,11 +14,11 @@ Aus der Menge an Bounding Boxen werden schließlich mit Hilfe eines festgelegten
 
 \newpage
 
-Die vorhergesagten Werte werden in einem $S \times S \times (B * 5 + C)$ Tensor kodiert, wobei $S$ und $B$ wie zuvor beschrieben durch das Gitter und die Bounding Boxen festgelegt sind und $C$ die Anzahl der Klassen beschreibt. Abbildung \ref{yolo_architecture} zeigt den Aufbau des CNN von \textit{YOLO} für die Detektion. Es besteht aus 24 Convolutional Layern gefolgt von zwei \textit{Fully-Connected} Layern. Für die Genauigkeit bei der Detektion wird die Auflösung des Eingangsbildes verdoppelt \cite{JosephRedmon.2016}. 
+Die vorhergesagten Werte werden in einem $S \times S \times (B * 5 + C)$ Tensor kodiert, wobei $S$ und $B$ wie zuvor beschrieben durch das Gitter und die Bounding Boxen festgelegt sind und $C$ die Anzahl der Klassen beschreibt. Abbildung \ref{yolo_architecture} zeigt den Aufbau des CNN von \textit{YOLO} für die Detektion. Es besteht aus 24 \textit{Convolutional Layern} zur Feature Extraktion gefolgt von zwei \textit{Fully-Connected} Layern, um die Klassenwahrscheinlichkeiten und Bounding Box Koordinaten zu bestimmen. Für die Genauigkeit bei der Detektion wird die Auflösung des Eingangsbildes verdoppelt \cite{JosephRedmon.2016}. 
 
 In dem Netzwerk in Abbildung \ref{yolo_architecture} wird ein Bild mit einer Auflösung von $224 \times 224$ Pixeln verwendet und die vorhergesagten Werte im $7 \times 7 \times 30$ Tensor ausgegeben.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/yolo_architecture.png} 
 		\caption[YOLO Architektur]{YOLO Architektur \cite{JosephRedmon.2016}}
@@ -28,10 +26,7 @@ In dem Netzwerk in Abbildung \ref{yolo_architecture} wird ein Bild mit einer Auf
 	\end{center}
 \end{figure}
 
-Die mittlerweile dritte und aktuelle Version von \textit{YOLO} weist enorme Verbesserungen auf, gerade im Bezug auf die Erkennung von sehr kleinen Objekten wie zum Beispiel einzelne Vögel in einem Schwarm \cite{JosephRedmon.2018}.
-
-TODO Yolo v3: Veränderung neuronales Netz
-
+Die mittlerweile dritte und aktuelle Version von \textit{YOLO} weist einige Verbesserungen auf, gerade im Bezug auf die Erkennung von sehr kleinen Objekten wie zum Beispiel einzelnen Vögeln in einem Schwarm. Das in \textit{YOLOv3} verwendete CNN umfasst insgesamt 53 \textit{Convolutional Layer} und entstand aus mehreren Optimierungsschritten des in Abbildung \ref{yolo_architecture} dargestellten CNN \cite{JosephRedmon.2018}. 
 
 
 

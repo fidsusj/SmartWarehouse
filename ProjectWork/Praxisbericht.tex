@@ -9,23 +9,24 @@
 % ---- Unterschied: Die elektronische Version enthält keinen Platzhalter für die Unterschrift
 \usepackage{ifthen}
 \newboolean{e-Abgabe}
-\setboolean{e-Abgabe}{true}    % false=gedruckte Fassung
+\setboolean{e-Abgabe}{false}    % false=gedruckte Fassung
 
 % ---- Persönlichen Daten:
-\newcommand{\titel}{Machbarkeitsstudie: Smart Warehouse}
+\newcommand{\titel}{Machbarkeitsstudie}
+\newcommand{\titelcaption}{- Smart Warehouse -}
 \newcommand{\subtitel}{Echtzeit-Objektdetektoren im Vergleich}
 \newcommand{\titelheader}{Smart Warehouse}
 \newcommand{\arbeit}{Studienarbeit}
 \newcommand{\studiengang}{Angewandte Informatik}
-\newcommand{\studienjahr}{2019}
+\newcommand{\studienjahr}{2017}
 \newcommand{\autor}{Felix Hausberger und Robin Kuck}
 \newcommand{\autorReverse}{Hausberger, Felix und Kuck, Robin}
 \newcommand{\verfassungsort}{Karlsruhe}
 \newcommand{\matrikelnr}{2773463, 4409176}
 \newcommand{\kurs}{TINF17B2}
-\newcommand{\bearbeitungsmonat}{Oktober 2019 - Mai 2020}
-\newcommand{\abgabe}{18. Mai 2020}
-\newcommand{\bearbeitungszeitraum}{30.09.2019 - 18.05.2020}
+\newcommand{\bearbeitungsmonat}{Oktober 2019 - Juni 2020}
+\newcommand{\abgabe}{01. Juni 2020}
+\newcommand{\bearbeitungszeitraum}{30.09.2019 - 01.06.2020}
 \newcommand{\firmaName}{SAP SE}
 \newcommand{\firmaStrasse}{Dietmar-Hopp-Allee 16}
 \newcommand{\firmaPlz}{69190 Walldorf, Deutschland}
@@ -56,7 +57,7 @@
 \singlespacing
 \include{Inhalt/01_Standard/titelseite}  % Titelseite
 \newcounter{savepage}
-\pagenumbering{Roman}                    % Römische Seitenzahlen
+\pagenumbering{arabic}                    % Römische Seitenzahlen
 \onehalfspacing
 
 % ------ Erklärung, Sperrvermerk, Abstact
@@ -80,12 +81,12 @@
 %\listoftables                           % Erzeugen des Tabellenverzeichnisses
 \renewcommand{\lstlistlistingname}{Listenverzeichnis}
 \lstlistoflistings                      % Erzeugen des Listenverzeichnisses
-\setcounter{savepage}{\value{page}}
+% \setcounter{savepage}{\value{page}}
 
 
 % ---- Inhalt der Arbeit
 \cleardoublepage
-\pagenumbering{arabic}                  % Arabische Seitenzahlen für den Hauptteil
+% \pagenumbering{arabic}                  % Arabische Seitenzahlen für den Hauptteil
 \setlength{\parskip}{0.5\baselineskip}  % Abstand zwischen Absätzen
 \rmfamily
 \renewcommand*{\chapterpagestyle}{scrheadings}
@@ -109,6 +110,8 @@
 \input{Inhalt/06_Forschungsstand/yolo}
 \input{Inhalt/06_Forschungsstand/datensatzformate}
 \input{Inhalt/06_Forschungsstand/cloud}
+\input{Inhalt/06_Forschungsstand/drohnen}
+
 
 \input{Inhalt/07_Konzeption/trainingsdatensatz}
 \input{Inhalt/07_Konzeption/bewertungskriterien}
@@ -129,8 +132,8 @@
 \cleardoublepage
 \renewcommand*{\chapterpagestyle}{plain}
 \pagestyle{plain}
-\pagenumbering{Roman}                   % Römische Seitenzahlen
-\setcounter{page}{\numexpr\value{savepage}+1}
+% \pagenumbering{Roman}                   % Römische Seitenzahlen
+% \setcounter{page}{\numexpr\value{savepage}+1}
 
 \printbibliography[title=Literaturverzeichnis]
 %\chapter*{Literaturverzeichnis}
@@ -140,28 +143,11 @@
 %\printbibliography[keyword=online,heading=subbibliography,title={Internetquellen}]     % Ausgabe der Internetquellen
 
 % ---- Anhang
-
-\newgeometry{
-	left=2.5cm,
-	right=2.5cm,
-	top=0cm,
-	bottom=2.5cm,
-	includeheadfoot
-}
-
+\onehalfspacing
 \appendix
 \chapter{Anhang}
 %\captionsetup{list=false}
-
-\section*{Abbildungen}
-
-
-
-\restoregeometry
-\newpage
-
-\onehalfspacing
-%\include{Inhalt/12_Anhang/...}
+\input{Inhalt/12_Anhang/anhang}
 
 %\clearpage
 %\pagenumbering{Roman}  % römische Seitenzahlen für Anhang

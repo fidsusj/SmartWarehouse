@@ -1,13 +1,25 @@
-\section{Spezifikation der Inventursoftware}
+\section{Spezifikation der Inventursoftware} \label{software}
 
-Die Inventursoftware besteht aus einer einfachen Client-Server Anwendung. Die Client-Anwendung zeigt das Live-Drohnenbild mit den eingezeichneten, erkannten Objekten. Zudem wird die Anzahl an erkannten Objekten der spezifischen Klassen rechts daneben dargestellt. Wann die Drohne die Inventur durchführen soll, wird auf Initiative des Benutzers gestartet. 
+Abbildung \ref{tam} visualisiert das technische Architekturmodell des gesamten \textit{Smart Warehouse} Szenarios.
 
-\begin{figure}[ht]
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=10cm]{Bilder/tam.pdf}
+		\caption[Architektur des Smart Warehouse Szenarios]{Architektur des Smart Warehouse Szenarios}
+		\label{tam}
+	\end{center}
+\end{figure}
+
+Um die Bilddaten der Drohne für eine Inventur zu verarbeiten, soll die Drohne von einer Client-Anwendung angesprochen werden. Der Server, der als Client agiert und im \textit{Flask} Framework für Python zu schreiben ist, soll sich zur Drohne verbinden und die Flugsignale als Fluganweisungen zur Drohne senden. Da die Drohne keinerlei Sensoren zur Detektion möglicher Hindernisse enthält und es zudem nicht das Ziel ist, die Drohne automatisiert fliegen zu lassen, wird die Flugroute statisch als Flugsequenz festgelegt. Die Drohne soll dabei links oben starten und im Uhrzeigersinn die einzelnen Objektgruppen des Regals abfliegen. Dadurch soll eine möglichst genaue Detektion der einzelnen Objekte ermöglicht werden. Zum Schluss soll die Drohne den Blick auf das gesamte Regal ermöglichen und etwas zurück fliegen, damit auch die Detektion aller Objektklassen gemeinsam aus größerer Distanz getestet werden kann.
+
+Auf dem Server soll zudem das \textit{Deep Learning} Modell zur Inferenz integriert werden. Aufgabe des Servers soll es sein, die von der Drohne empfangenen Video-Stream-Frames mit dem Modell zu inferieren, die detektierten Objekte für die Inventur mit Hilfe eines Zählalgorithmus zu zählen und die Bilddaten mit den eingezeichneten Bounding Boxen anschließend per Livestream an eine Webapplikation zur Visualisierung weiterzugeben. Eine \textit{REST} Schnittstelle soll Aussagen über die Bestandsdaten des Warenhauses liefern und eine Möglichkeit bieten, die Flugsequenz zu initiieren.
+
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/UI.png} 
-		\caption[SmartWarehouse User Interface]{SmartWarehouse User Interface}
+		\caption[Smart Warehouse User Interface Prototyp]{Smart Warehouse User Interface Prototyp}
 		\label{ui}
 	\end{center}
 \end{figure}
 
-Der Server, geschrieben im \textit{Django} Framework für Python, verbindet sich zu Drohne und weißt deren Flugsequenzen an. Auf ihm ist das \textit{Deep Learning} Modell deployt. Der Server inferiert die von der Drohne empfangenen Video-Stream-Frames mit dem Modell und gibt diese anschließend an die Client Applikation weiter. Eine \textit{REST} Schnittstelle gibt Aussage über die Bestandsdaten des Warenhauses.
+Die Client-Anwendung soll das Live-Drohnenbild mit den eingezeichneten, erkannten Objekten zeigen. Zudem wird die Anzahl an erkannten Objekten der spezifischen Klassen rechts daneben dargestellt (siehe Abbildung \ref{ui}). 

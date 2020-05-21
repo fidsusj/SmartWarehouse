@@ -1,4 +1,4 @@
-\section{Einführen von Bewertungskriterien}
+\section{Einführen von Bewertungskriterien} \label{eval}
 
 Um Objektdetektoren miteinander vergleichbar zu machen und um deren Potential zum industriellen Einsatz zu bewerten, müssen konkrete Bewertungskriterien eingeführt werden.
 
@@ -12,14 +12,17 @@ Um eine Verarbeitung in Echtzeit zu ermöglichen, muss gewährleistet sein, dass
 
 \subsection*{Trainingsverhalten}
 
-Unter dem Punkt Trainingsverhalten wird zusammengefasst, wie schnell sich die einzelnen Modelle mit den unterschiedlichen Objektdetektoren trainieren lassen. Hierbei wird besonderer Fokus darauf gelegt, wie viele Trainingsepochen notwendig sind, bis der Gradient der Fehlerfunktion des neuronalen Netzes keine merkenswerten Fortschritte auf Basis des verwendeten Datensatzes mehr erzielt. Es soll aber auch betrachtet werden, wie mit doppelt erkannten Objekten während des Trainingsprozesses umgegangen wird. 
+Unter dem Punkt Trainingsverhalten wird zusammengefasst, wie schnell sich die einzelnen Modelle mit den unterschiedlichen Objektdetektoren trainieren lassen. Hierbei wird besonderer Fokus darauf gelegt, wie viele Trainingsepochen notwendig sind, bis der Gradient der Fehlerfunktion des neuronalen Netzes keine merkenswerten Fortschritte beim Abstieg auf Basis des verwendeten Datensatzes mehr erzielt.
 
 \subsection*{Inferenzverhalten}
 
-Im Zuge der Evaluation des Inferenzverhaltens werden drei Kriterien betrachtet. 
+Im Zuge der Evaluation des Inferenzverhaltens werden vier Kriterien betrachtet. 
 
 \begin{itemize}
-	\item Das Verhalten bei besonderen Beleuchtungsverhältnissen wie unterbeleuchteten oder überbeleuchteten Gegenden.
-	\item Das Verhalten bei extremen Blicklagen auf Basis der Entfernung und des Winkels zum detektierenden Objekt.
-	\item Das Verhalten bei nicht vollständig sichtbaren Objekten, z.B. bei Verdeckung.
+	\item Das Verhalten bei besonderen Beleuchtungsverhältnissen wie unterbeleuchteten oder überbeleuchteten Gegenden, 
+	\item Das Verhalten bei extremen Blicklagen auf Basis der Entfernung und des Winkels zum detektierenden Objekt,
+	\item Das Verhalten bei nicht vollständig sichtbaren Objekten, z.B. bei Verdeckung und
+	\item Der Umgang mit doppelt detektierten Objekten. 
 \end{itemize}
+
+Da es schwierig ist, das Verhalten bei solchen Detektionsbedingungen numerisch zu erfassen, soll lediglich eine Einordnung in die Kategorien \textit{gut (+)}, \textit{mittel (0)}, und \textit{schlecht (-)} erfolgen.

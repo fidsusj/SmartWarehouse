@@ -1,4 +1,4 @@
-\section{Datensatzlehre}
+\section{Anforderungen an einen Datensatzes zur Erstellung eines Deep Learning Modells} \label{data}
 
 \subsection*{Datensatzzusammensetzung}
 
@@ -10,16 +10,14 @@ Oft wird der Trainingsdatensatz mit dem Validierungsdatensatz zum sogenannten \t
 
 \subsection*{Qualität und Quantität der Daten}
 
-Um ein funktionsfähiges Modell zu trainieren, muss der Datensatz einem gewissen Standard nachkommen. Demnach müssen die zu klassifizierenden Objekte vollständig im Bild enthalten und gut erkennbar sein. Zwar gibt es gerade im \textit{PascalVOC} Datensatzformat ebenso die Möglichkeit, Objekte als \glqq schwierig erkennbar\grqq{} zu markieren, dennoch sollen solche Objekte nicht die Mehrheit im gesamten Datensatz ausmachen. Auch die Aufnahme von Objekten in unterschiedlichen Umgebungen, Verdeckungsgraden, Entfernungen und Blicklagen fördert langfristig das Abstraktionsvermögen des Modells. 
+Um ein funktionsfähiges Modell zu trainieren, muss der Datensatz einem gewissen Standard nachkommen. Demnach müssen die zu klassifizierenden Objekte vollständig im Bild enthalten und gut erkennbar sein. Zwar gibt es gerade im \textit{PascalVOC} Datensatzformat\footnote{PASCAL Visual Object Classes - Gängiges, standardisiertes Datensatzformat für Objektdetektion} ebenso die Möglichkeit, Objekte als \glqq schwierig erkennbar\grqq{} zu markieren, dennoch sollen solche Objekte nicht die Mehrheit im gesamten Datensatz ausmachen. Auch die Aufnahme von Objekten in unterschiedlichen Umgebungen, Verdeckungsgraden, Entfernungen und Blicklagen fördert langfristig das Abstraktionsvermögen des Modells. 
 
-Ebenso muss ein ausreichend großer Datensatz vorliegen, um das gewünschte Abstraktionsvermögen des Modells zu erreichen. Die Ergebnisse aus Abbildung \ref{result} wurden beispielsweise durch Kombination der \textit{Trainval} Datensätze von PascalVOC 2007 und 2012 erzielt und umfasst 16.551 Bilder im Trainingsverfahren \cite{ssd.20161229, MarkEveringham.20070607, MarkEveringham.20120521}. 
-
-Unter Hinzunahme des COCO \textit{trainval135k} Datensatzes erreicht der \textit{SSD} sogar das beste Ergebnis aus der ursprünglichen Veröffentlichung mit einer durchschnittlichen Präzision von 81.6\% \cite{ssd.20161229}. 
+Ebenso muss ein ausreichend großer Datensatz vorliegen, um das gewünschte Abstraktionsvermögen des Modells zu erreichen. Die Ergebnisse aus Abbildung \ref{result} wurden beispielsweise durch Kombination der \textit{Trainval} Datensätze von \textit{PascalVOC} 2007 und 2012 erzielt und umfasst 16.551 Bilder im Trainingsverfahren \cite{ssd.20161229, MarkEveringham.20070607, MarkEveringham.20120521}. 
 
 \subsection*{Techniken zum Trainieren bei geringen Datenmengen}
 
-Bei Betrachtung der obigen Ergebnisse wird schnell deutlich, dass für ein komplexeres \textit{Deep Learning} Modell ein umfangreicher Datensatz von Nöten ist. Allerdings gibt es zwei bekannte Techniken, wie auch mit kleineren Datenbeständen ein sehenswertes Ergebnis erzielt werden kann. 
+Bei Betrachtung der obigen Ergebnisse wird schnell deutlich, dass für ein komplexeres \textit{Deep Learning} Modell ein umfangreicher Datensatz von Nöten ist. Allerdings gibt es drei bekannte Techniken, wie auch mit kleineren Datenbeständen ein sehenswertes Ergebnis erzielt werden kann. Eines davon ist das \textit{K-Kreuzvalidierungsverfahrens}, das bereits betrachtet wurde.
 
-Beim sogenannten \textit{Transfer Learning} können von einem bereits für ein ähnliches Problem trainiertes Modell die ersten Schichten des neuronalen Netzes für das neue Modell wiederverwendet werden. Die übernommenen Gewichtungen werden nicht mit trainiert. Neben einer kleineren Datenmenge zum Trainieren hat das \textit{Transfer Learning} ebenso den Vorteil das Training selbst zu beschleunigen \cite{AurelienGeron.2018}.
+Daneben können beim sogenannten \textit{Transfer Learning} von einem bereits für ein ähnliches Problem trainiertes Modell die ersten Schichten des neuronalen Netzes für das neue Modell wiederverwendet werden. Die übernommenen Gewichtungen werden nicht mit trainiert. Neben einer kleineren Datenmenge zum Trainieren hat das \textit{Transfer Learning} ebenso den Vorteil das Training selbst zu beschleunigen \cite{AurelienGeron.2018}.
 
 Eine weitere Technik beschreibt das künstliche Vergrößern des Datensatzes durch affine Transformationen wie Translation, Rotation oder Skalierung und wird \textit{Data Augmentation} genannt \cite{AurelienGeron.2018}.

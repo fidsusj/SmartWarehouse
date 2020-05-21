@@ -1,4 +1,4 @@
-\section{Cloud Infrastruktur}
+\section{Cloud Infrastruktur} \label{cloud}
 
 Das Trainieren eines \textit{Deep Learning} Modells ist gerade bei großen CNN Architekturen rechenaufwendig. Tensor Operationen wie Matrixmultiplikationen und Konvolutionen erfordern im Rahmen des maschinellen Lernens hohe Parallelisierung und Taktfrequenzen, um in absehbarer Zeit gute Ergebnisse zu liefern. Die Rechenkapazität normaler Desktop-PCs reicht meist nicht aus, um performantes \textit{Deep Learning} betreiben zu können. 
 
@@ -6,7 +6,7 @@ Abhilfe bieten Software-as-a-Service (SaaS) bzw. Platform-as-a-Service (PaaS) An
 
 \subsection*{Trainingshardware}
 
-Gerade GPUs bieten sich aufgrund ihres hohen Parallelisierungsvermögens gegenüber herkömmlichen CPUs an. Insbesondere \textit{NVIDIA} nimmt hierbei eine Vorreiterrolle in der Produktion von Server-GPUs ein. Die \textit{Compute Unified Device Architecture} (CUDA) von \textit{NVIDIA} ermöglicht als Programmiermodel und parallele Computing Plattform das Auslagern von Rechenprozessen auf GPUs. Das \textit{CUDA} Toolkit beinhaltet GPU beschleunigte Bibliotheken, einen Compiler, Entwicklungswerkzeuge sowie die eigentliche \textit{CUDA} Laufzeit und wird von vielen \textit{Deep Learning} Bibliotheken genutzt, wie z.B. \textit{PyTorch} \cite{NVIDIA.20200209, PyTorch.20200209}. Hauptvergleichskriterien zwischen GPUs sind hierbei der Grad der möglichen Parallelisierung und die reine Rechenleistung im Verhältnis zum Stromverbrauch.
+Gerade GPUs bieten sich aufgrund ihres hohen Parallelisierungsvermögens gegenüber herkömmlichen CPUs an. Insbesondere \textit{NVIDIA} nimmt hierbei eine Vorreiterrolle in der Produktion von Server-GPUs ein. Die \textit{Compute Unified Device Architecture} (CUDA) von \textit{NVIDIA} ermöglicht als Programmiermodel und parallele Computing Plattform das Auslagern von Rechenprozessen auf GPUs. Das \textit{CUDA} Toolkit beinhaltet GPU beschleunigte Bibliotheken, einen Compiler, Entwicklungswerkzeuge sowie die eigentliche \textit{CUDA} Laufzeit und wird von vielen \textit{Deep Learning} Bibliotheken genutzt, wie z.B. \textit{PyTorch} \cite{NVIDIA.20200209, PyTorch.20200209}. Auch bietet \textit{NVIDIA} die sogenannte \textit{NVIDIA CUDA Deep Neural Network Library} (cuDNN) an, die hardwareoptimierte Routinen zu beispielsweise Konvolution oder Pooling ermöglicht \cite{NVIDIA.20200520}. Hauptvergleichskriterien zwischen GPUs sind hierbei der Grad der möglichen Parallelisierung und die reine Rechenleistung im Verhältnis zum Stromverbrauch.
 
 Neben GPUs existieren seit 2015 die von Google entwickelten \textit{Tensor Processing Units} (TPUs). Diese sind speziell entwickelte, anwendungsspezifische integrierte Schaltung (engl.: \textit{Application-Specific Integrated Circuit}) (ASIC) für Arbeitslasten im maschinellen Lernen \cite{GoogleCloud.20200209b}.
 
@@ -24,17 +24,7 @@ Außerdem bietet \textit{AWS SageMaker} die ersten vollständig integrierte Entw
 
 \textit{AI Platform} ist das Konkurrenzprodukt zu \textit{AWS SageMaker} von der \textit{Google Cloud Platform} (GCP). Die Plattform bietet ebenso verschiedene Komponenten für das \textit{Deep Learning} an. Hierzu gehören \textit{AI Platform Notebooks}, ein Dienst mit einer integrierten JupyterLab-Umgebung, \textit{Deep Learning} Virtual Machines (VM) mit vorinstalierten \textit{Deep Learning} Frameworks, verteiltes Training mit automatischer Hyperparameter-Abstimmung durch den \textit{AI Platform Training} Dienst oder \textit{AI Platform Prediction} zum Bereitstellen trainierter Modelle \cite{GoogleCloudPlatform.20200314}. 
 
-Hervorzuheben sind allerdings Googles TPU Hardwarebeschleuniger, die für Projekte im \textit{TensorFlow} Framework für jede Instanz mobilisiert werden können. Diese Art von Spezialhardware erreicht pro TPU-Kern eine Rechenleistung von bis zu 92 TOPS \cite{HaraldBogeholz.20170406}. Werden 2048 solcher TPU-Kerne zu einem TPU-Pod zusammen geschlossen, so ergibt sich eine Rechenleistung von über 100 PetaFLOPS \cite{GoogleCloud.20200209}. Zudem ist die größere Rechenleistung gleichzeitig effizienter als herkömmliche GPUs (siehe Abbildung \ref{tpu}).
-
-\begin{figure}[ht]
-	\begin{center}
-		\includegraphics[width=14cm]{Bilder/tpu_comparison.png} 
-		\caption[Vergleich V100 - TPU Pod]{Vergleich V100 - TPU Pod \cite{GoogleCloud.20200209b}}
-		\label{tpu}
-	\end{center}
-\end{figure}
-
-TPUs sind also darauf ausgelegt, ein optimales Preis-/Leistungsverhältnis beim Trainieren von \textit{Deep Leaning} Modellen zu erreichen \cite{GoogleCloudPlatform.20200314}.
+Hervorzuheben sind insbesondere Googles \textit{Tensor Processing Units} (TPUs). Dies sind spezielle Hardwarebeschleuniger, die speziell für \textit{Deep Learning} Projekte im \textit{TensorFlow} Framework optimiert wurden und für jede Instanz in der GCP mobilisiert werden können. Dabei wird pro TPU-Kern eine Rechenleistung von bis zu 92 TOPS erreicht \cite{NormanP.JouppiCliffYoungNishantPatilDavidPatterson.2017}. Werden 2048 solcher TPU-Kerne zu einem TPU-Pod zusammen geschlossen, so ergibt sich eine Rechenleistung von über 100 PetaFLOPS \cite{GoogleCloud.20200209}. Zudem ist die größere Rechenleistung gleichzeitig effizienter als herkömmliche GPUs \cite{GoogleCloud.20200209b}. TPUs sind also darauf ausgelegt, ein optimales Preis-/Leistungsverhältnis beim Trainieren von \textit{Deep Leaning} Modellen zu erreichen \cite{GoogleCloudPlatform.20200314}.
 
 \subsection*{Google Colab}
 
@@ -44,7 +34,7 @@ Auch können keine längerfristigen Trainingsjobs ausgeführt werden, ohne dass 
 
 \subsection*{Microsoft Azure}
 
-\textit{Microsoft Azures} Angebot für \textit{Deep Learning} in der Cloud ist zunächst wenig transparent. Sie bieten ebenso wie Amazon und Google das Trainieren und Bereitstellen von \textit{Deep Learning} Modellen an und zudem eine einige DevOps Landschaft für solche Arbeitsprozesse. Auch werden Frameworks wie \textit{TensorFlow} oder \textit{PyTorch} unterstützt sowie das Programmieren in \textit{Jupyter Noteboks} \cite{MicrosoftAzure.20200314}.
+\textit{Microsoft Azures} Angebot für \textit{Deep Learning} in der Cloud ist zunächst wenig transparent. Sie bieten ebenso wie Amazon und Google das Trainieren und Bereitstellen von \textit{Deep Learning} Modellen an und zudem eine eigene DevOps Landschaft für solche Arbeitsprozesse. Auch werden Frameworks wie \textit{TensorFlow} oder \textit{PyTorch} unterstützt sowie das Programmieren in \textit{Jupyter Noteboks} \cite{MicrosoftAzure.20200314}.
 
 \subsection*{FloydHub}
 

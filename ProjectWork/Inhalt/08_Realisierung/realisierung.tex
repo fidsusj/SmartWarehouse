@@ -1,121 +1,80 @@
 \chapter{Realisierung}
+\label{realisierung}
 
-Im folgenden Abschnitt soll auf die Implementierung des \textit{Smart Warehouse} Szenarios eingegangen werden. Insbesondere werden Probleme während der Umsetzung der beiden Objektdetektoren \textit{SSD} und \textit{YOLO} betrachtet, Herausforderungen im Rahmen der Drohnen Anbindung besprochen und letztendlich die Realisierung der Dashboard-Webapplikation und des Zählalgorithmus zur Durchführung der Inventur aufgezeigt. 
+Im folgenden Abschnitt soll auf die Implementierung des \textit{Smart Warehouse} Szenarios eingegangen werden. Insbesondere werden Probleme während der Umsetzung der beiden Objektdetektoren \textit{SSD} und \textit{YOLO} betrachtet, die Realisierung der Dashboard-Webapplikation und des Zählalgorithmus zur Durchführung der Inventur aufgezeigt und letztendlich Herausforderungen im Rahmen der Drohnen Anbindung besprochen.
 
 \section{Umsetzung der Objektdetektoren}
 
 \subsection*{SSD}
 
-Für den \textit{SSD} wurde wie bereits erläutert nicht die ursprüngliche Referenzimplementierung im \textit{Caffe} Framework verwendet, sondern eine Custom-Implementierung in \textit{PyTorch}. Neben kleineren Änderungen in der Codebasis zur Erreichung von Kompatibilität mit aktuellen Bibliotheksversionen und weiteren Anpassungen zur Integration eines eigenen Datenbestandes, wurden vor allem zwei größere Erweiterungen durchgeführt. Da der erstellte Datenbestand nur 1078 gelabelte Daten enthält, wurde zusätzlich zur Custom-Implementierung ein fünffaches Kreuzvalidierungsverfahren realisiert. Es dient dazu ein höheres Abstraktionsvermögen des Modells auf dem geringen Datenbestand zu erreichen. Auch unterstützte die Referenzimplementierung keine Validierung durch zuvor ungesehene Daten. Die Modellklassen des Datenbestandes wurden dahingehend angepasst.
+Die verwendete Custom-Implementierung in \textit{PyTorch} realisiert die \textit{SSD300} Variante des \textit{SSDs}. Neben kleineren Änderungen in der Codebasis zur Erreichung von Kompatibilität mit aktuellen Bibliotheksversionen und weiteren Anpassungen zur Integration eines eigenen Datenbestandes, wurden vor allem drei größere Erweiterungen durchgeführt. 
 
-Um ein lokales Training auf der \textit{NVIDIA GTX 1080} GPU zu ermöglichen, wurde zudem \textit{CUDA} Version 10.1 verwendet. Trainiert wurde mit folgenden Hyperparametern:
+Da der erstellte Datenbestand nur 1088 gelabelte Daten enthält, wurde zusätzlich zur Custom-Implementierung ein sechsfaches Kreuzvalidierungsverfahren realisiert, um ein höheres Abstraktionsvermögen des Modells auf dem geringen Datenbestand zu erreichen. Auch unterstützte die Referenzimplementierung keine Validierung durch zuvor ungesehene Daten. Die Modellklassen des Datenbestandes und die Validierungsskripte wurden dahingehend angepasst. Zudem fehlte eine Visualisierung der Entwicklung der Verlustkurven während des Trainingsverfahrens.
+
+Die Referenzimplementierung erstellt sich des Weiteren einige Hilfsdateien, in der die Pfade zu Bildern und weitere Datenstrukturen für Trainingszwecke abgespeichert werden. Ohne diese ist kein Training möglich, das Trainingsskript fordert demnach Zugriff auf den Sekundärspeicher. 
+
+Um ein lokales Training auf der \textit{NVIDIA GeForce GTX 1080} GPU zu ermöglichen, wurde zudem \textit{CUDA} Version 10.1 verwendet. Trainiert wurde mit folgenden Hyperparametern:
 \begin{itemize}
-	\item Batch Größe: 16
-	\item Lernrate: $1.0\cdot e^{-3}$
+	\item Batchgröße: 16
+	\item Lernrate: $1.0\cdot 10^{-3}$
 	\item Momentum: 0.9
-	\item Epochen: 500
-	\item Gradientenverfahren: Stochastic Gradient Descent
+	\item Kreuzvalidierungen: 6 à 22 Epochen
+	\item Epochen: 132
+	\item Gradientenverfahren: Mini-Batch
+	\item Aktivierungsfunktion: ReLU
 	\item Kostenfunktion: Smooth L1
 \end{itemize}
 
 Das Basisnetzwerk des \textit{SSDs} besteht aus einem auf \textit{ImageNet} vortrainierten \textit{VGG16}. Die restlichen \textit{Convolutional Layer} sind \textit{Xavier} initialisiert. 
 
-Die Hyperparameter sind nahezu gleich zu denen in der ursprünglichen wissenschaftlichen Veröffentlichung. Wesentlich die Batch Größe wurde für größere Stabilität von 32 auf 16 heruntergesetzt. Auch in der Evaluierung wurde die Batch Größe von 64 auf 48 herunter gesetzt, da die Eingangsdaten eine weitaus höhere Auflösung als die ursprünglich im \textit{PascalVOC} verwendeten Daten haben. Andernfalls wird Gefahr gelaufen einen Speicherüberlauf zu erzielen. 
-
-Ursprünglich wurden 500 Epochen für das Training vorgesehen für jeden der Kreuzvalidierungsschritte. Da allerdings beim Training schon nach knapp über hundert Epochen sich der Gradient der Kostenfunktion nur träge veränderte, wurde im Sinne des \textit{Early Stoppings} nach 108 Epochen das Training vorzeitig beendet, um \textit{Overfitting} zu vermeiden. Das niedrigste Ergebnis der Kostenfunktion betrug 1.726. Es ergab eine \textit{mAP} von 78.25\%, leicht über den Referenzergebnissen von \textit{SSD} zu \textit{PascalVOC} (siehe Abbildung \ref{result}). Die Ergebnisse zu den einzelnen Klassen sind in folgender Tabelle dargestellt:
-
-\begin{center}
-	\begin{tabular}[h]{l|c}
-		Klasse & mAP \\
-		\hline
-		Saskia Wasser Groß & 77.62\% \\
-		Saskia Wasser Klein & 75.96\% \\
-		Pepsi Cola Groß & 25.715\% \\
-		Pepsi Cola Klein & 50.00\% \\
-		ISO & 100.00\% \\
-		ACE & 100.00\% \\
-		Stenger Johannisbeerschorle & 100.00\% \\
-		Stenger Apfelsaftschorle & 100.00 \% \\
-		Vitamalz Malzbier & 75.00\%
-	\end{tabular}
-	\captionof{table}{Validierungsergebnisse SSD}
-	\label{table:ssdresults}
-\end{center}
-
-Wird nun das trainierte Modell auf echte Daten angewendet, so fällt auf, dass manche Objekte doppelt detektiert werden. Um dieses Problem zu lösen, gibt es zwei Möglichkeiten. 
-
-Als erstes kann bei der Detektion der minimale \textit{confidence score} angegeben werden, ab wann eine Detektion offiziell als solche wahrgenommen wird. Hier liegt die Herausforderung darin, einen optimalen Wert zu finden, sodass verdeckte Objekte noch als solche erkannt werden, aber doppelt erkannte Objekte nicht mehr auftreten. Der \textit{confidence score} wurde nach mehrmaligem Iterieren auf 0.75 festgelegt.
-
-Die zweite Möglichkeit besteht darin, die maximale Überlappung zweier Bounding Boxen festzulegen. Somit werden doppelte Bounding Boxen, die sich flächenmäßig über einem gewissen Grenzwert überlappen, auf eine Bounding Box reduziert. Er stellte ich sich Parameter von 0.5 als geeignet heraus.
-
-Außerdem wurden Inkonsistenzen im Detektionsverhalten festgestellt:
-
-\begin{figure}[ht]
-	\centering
-	\subfigure[verdeckt]{\includegraphics[width=0.30\textwidth]{Bilder/verdeckt.jpeg}}
-	\hspace{2cm}
-	\subfigure[winkel]{\includegraphics[width=0.30\textwidth]{Bilder/winkel.jpeg}}
-	\caption{Detektionsverhalten bei extremen Blicklagen}
-	\label{lagen}
-\end{figure}
-
-So sind von anderen Objekten verdeckte Objekte nur schwer zu erkennen, genauso wie Objekte aus extremen Blicklagen (siehe Abbildung \ref{lagen}). Diese Fälle wurden im Datensatz zwar zu 12.5\% abgedeckt, es lässt sich aber keine Aussage darüber treffen, ob eine Erweiterung des Datensatzes eine Abhilfe für dieses Problem hätte liefern können. 
-
-\begin{figure}[ht]
-	\subfigure[1 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/einmeter.jpeg}}\hfill
-	\subfigure[2 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/zweimeter.jpeg}}\hfill
-	\subfigure[3 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/dreimeter.jpeg}}\hfill
-	\caption{Detektionsverhalten bei unterschiedlichen Entfernungen}
-	\label{entfernung}
-\end{figure}
-
-Auch die Entfernung zum zu detektierenden Objekt besitzt eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{entfernung} wird gezeigt, dass ab einer Entfernung von drei Metern keine Detektion mehr erfolgte. 
-
-\begin{figure}[ht]
-	\subfigure[überbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/ueberbeleuchtet.jpeg}}\hfill
-	\subfigure[normal]{\includegraphics[width=0.30\textwidth]{Bilder/normalbeleuchtet.jpeg}}\hfill
-	\subfigure[unterbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/unterbeleuchtet.jpeg}}\hfill
-	\caption{Detektionsverhalten bei unterschiedlichen Beleuchtungsverhältnissen}
-	\label{sicht}
-\end{figure}
-
-Des Weiteren haben unterschiedliche Beleuchtungsgrade eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{sicht} wird unterschieden zwischen dem Detektionsverhalten bei überbeleuchteten, normalen und unterbeleuchteten Sichtverhältnissen. Überbeleuchtete Umgebungsverhältnisse erschweren die Objektdetektion in diesem Beispiel. 
-
-Die Detektion reagierte allerdings invariant gegenüber unterschiedlichen Hintergründen oder Bildauflösungen.
+Die Hyperparameter sind nahezu gleich zu denen in der ursprünglichen wissenschaftlichen Veröffentlichung. Die Batchgröße im \textit{Mini-Batch} Verfahren wurde für größere Stabilität von 32 auf 16 heruntergesetzt. Auch in der Evaluierung wurde die Batchgröße von 64 auf 48 verkleinert, da die Eingangsdaten eine weitaus höhere Auflösung als die ursprünglich im \textit{PascalVOC} verwendeten Daten haben. Andernfalls wird Gefahr gelaufen, einen Speicherüberlauf zu verursachen. Der Datensatz wurde in fünf Untermengen unterteilt, in jedem Kreuzvalidierungsschritt diente jeweils eine Untermenge als Testdatensatz.
 
 \subsection*{YOLO}
 
-Robin
+Für \textit{YOLO} wurde die neuste Version \textit{YOLOv3} implementiert. Hierbei kommt das \textit{Dark-""net} Framework zum Einsatz, eine Implementierung in C. Vor der initialen Kompilierung müssen einige Konfigurationsschritte unternommen werden, weil auch der Betrieb auf einer normalen CPU oder einer GPU mit Tensor Kernen möglich ist. Für das Training kommt eine \textit{NVIDIA GeForce RTX 2060} GPU auf Basis von \textit{CUDA} Version 10.0 zum Einsatz, deren enthaltenen Tensor Kerne mitbenutzt werden. Zudem ermöglicht das \textit{Darknet} Framework die Nutzung von \textit{cuDNN} Version 7.4 für hardwarebeschleunigte Matrizenoperationen. Die benötigten Hyperparameter wurden dabei wie folgt gesetzt:
 
-\section{Drohnen Anbindung}
+\begin{itemize}
+	\item Batchgröße: 64
+	\item Subdivisions: 16
+	\item Lernrate: $1.0\cdot 10^{-3}$
+	\item Momentum: 0.9
+	\item Maximale Anzahl Batches: 18000
+	\item Gradientenverfahren: Mini-Batch
+	\item Aktivierungsfunktion: LReLU
+	\item Kostenfunktion: Summe der Fehlerquadrate
+\end{itemize}
 
-\subsection*{Drohnen Interface}
+Im Unterschied zum \textit{SSD} kann \textit{YOLO} die in den GPU Speicher zu ladende Datenmenge eines Batches durch sogenannte \textit{Subdivisions} festgelegt. Hierbei werden nur noch $Batchgroesse \div Subdivisions$ Bilder gleichzeitig in die GPU geladen, um einen Speicherüberlauf zu vermeiden.
 
-Robin, evtl. ein Grundlagenkapitel (war auch in Markus Feedback die Rede)
-
-\subsection*{Modellinferenz}
-
-Der Video Stream der Drohne kann mittels der \textit{openCV} Klasse \textit{VideoCapture} über das UDP Protokoll angesprochen werden. Bei der Inferenz fällt allerdings entgegen der Erwartungen auf, dass die Inferenz überdurchschnittlich langsam verläuft. Das Problem lässt sich auf die synchrone Arbeitsweise der bisherigen Detektionsalgorithmen zurück führen, bei dem erst ein neuer Frame des Videostreams angefragt wird, sobald das aktuelle Bild durch die Vorverarbeitung gelaufen ist und durch das Modell inferiert wurde. 
-
-Um dem entgegen zu wirken, wurde ein Bufferkonzept in einem parallelem Thread realisiert, der einzelne Frames zeitgleich zur Inferenz anfragt und zwischenspeichert. Ist der Buffer voll, so werden nach dem \textit{First In First Out} Verfahren die älteren Frames verworfen. Dadurch konnte die FPS Anzahl von \textit{SSD} von maximal 18 auf die vollen 30 gesteigert werden. 
-
-Ein weiteres Problem beschreibt die initiale Latenz zwischen der Inferenz und der Bildaufnahme. Die Inferenz kann erst gestartet werden, sobald die Gewichtungen des Modells initialisiert wurden. Dies lässt sich umgehen, indem entweder der Thread zur Bildaufnahme verzögern gestartet wird oder dessen Buffer kleiner gewählt wird.
-
-+ Robin YOLO
+Die Lernrate sowie das Momentum bleiben wie in der Dokumentation empfohlen unverändert zu den Referenzwerten. Im Gegensatz zu \textit{SSD} wird kein Maximum für die Anzahl an Epochen, sondern ein Maximalwert für die zu durchlaufenen Batches gesetzt. Dieser Wert wird abhängig von der Menge an gelabelten Klassen gesetzt und kann als Empfehlung aus der Dokumentation für das \textit{Darknet} Framework entnommen werden. 
 
 \section{Dashboard Entwicklung}
 
-Der Server wurde mit dem \textit{Flask} Framework in Python implementiert und läuft auf dem \textit{Web Server Gateway Interface} (WSGI) server \textit{Waitress}. Er führt den Inferenzalgorithmus des \textit{SSDs} bzw. des \textit{YOLO} Objektdetektors für jeden Frame des empfangenen Videostreams der Drohne aus und streamt die inferierten Bilder mit den Bounding Boxen an jeden Client. Der Client wurde mit dem \textit{Bootstrap} Framework designed (siehe Abbildung \ref{webapp}).
+Der Server wurde mit dem \textit{Flask} Framework in Python implementiert und läuft auf dem \textit{Web Server Gateway Interface} (WSGI) Server \textit{Waitress}. Er führt den Inferenzalgorithmus des \textit{SSDs} bzw. des \textit{YOLO} Objektdetektors für jeden Frame des empfangenen Video-Streams aus und streamt die inferierten Bilder mit den Bounding Boxen an jeden Client. 
 
-\begin{figure}[ht]
+\lstinputlisting[
+label={code:python},
+caption={Streaming der inferierten Bilddaten},
+captionpos=b,
+basicstyle=\ttfamily\scriptsize,
+style=EigenerPythonStyle,   
+firstline=1,              
+lastline=22               
+]{Quellcode/server.py}
+
+Der Client wurde mit dem \textit{Bootstrap} Framework grafisch gestaltet (siehe Abbildung \ref{webapp}).
+
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/webapp.jpeg} 
-		\caption[Webapp SmartWarehouse]{Webapp SmartWarehouse}
+		\caption[Webapplikation Smart Warehouse]{Webapplikation Smart Warehouse}
 		\label{webapp}
 	\end{center}
 \end{figure}
 
-Auf Anfrage eines Client kann dieser die aktuell gezählten Objekte vom Server abfragen. Der Zählalgorithmus wird im folgenden Unterkapitel erklärt. 
+Auf Anfrage eines Client kann dieser die Flugsequenz initiieren und die aktuell gezählten Objekte vom Server abfragen. Der Zählalgorithmus hierzu wird im folgenden Unterkapitel erklärt. 
+
+\newpage
 
 \section{Zählalgorithmus}
 
@@ -128,4 +87,79 @@ firstline=1,
 lastline=11                 
 ]{Quellcode/algorithmus.txt}
 
-Der obige Algorithmus wird momentan dazu verwendet, um für das Industrieszenario einer Inventur einzelne detektierte Objekte zu zählen. Das Problem, dass der Algorithmus zu lösen versucht, enthält allerdings eine weitere Komplexitätsstufe. Dasselbe Objekt kann im Laufe der Inventur erneut auftreten und dessen relative Position im Bild ist ebenso variabel. In diesem Falle werden Objekte doppelt gezählt. 
+Der Algorithmus \ref{code:formfield} wird momentan dazu verwendet, um für das Industrieszenario einer Inventur einzelne detektierte Objekte zu zählen. Nach jedem Inferenzvorgang werden die detektierten Objekte abgespeichert, sodass der Algorithmus bei Aufruf sowohl auf die zuletzt detektierten Objekte \textit{o\_alt}, als auch auf die neu detektierten Objekte \textit{o\_neu} zugreifen kann. Für alle detektierten Objekte im aktuellen Durchlauf durchsucht er alle zuletzt detektierten Objekte, um herauszufinden, ob ein Objekt bereits im vorherigen Bild vorhanden war. Ausschlaggebend hierfür ist das gleiche \textit{Label} als auch die Distanz der Bounding Boxen des aktuell detektierten Objekts zum Objekt der Vorrunde. Nur falls das Objekt nach diesen Kriterien nicht bereits in der Vorrunde vorhanden war, wird es gezählt. Das Problem, das der Algorithmus zu lösen versucht, enthält allerdings eine weitere Komplexitätsstufe. Dasselbe Objekt kann im Laufe der Inventur erneut auftreten und dessen relative Position im Bild ist ebenso variabel. In diesem Falle werden Objekte doppelt gezählt. 
+
+\section{Drohnen Anbindung}
+
+Für die Steuerung sowie den Zugriff auf den Video-Stream bietet die \textit{Ryze Tello EDU} ein eigenes WiFi Netz an, zu dem sich das Steuergerät verbinden muss. Die Kommunikation erfolgt über das \textit{UDP} Protokoll\footnote{UDP steht für User Datagram Protocol. Es ist ein Transportprotokoll, welches im Gegensatz zu TCP verbindungslos und nicht zuverlässig ist.} und besteht aus mehreren Kommunikationskanälen. Das Senden von Flugkommandos und das Abfragen des Video-Streams läuft über eine bidirektionale Socket Verbindung zwischen Client Applikation und der \textit{Ryze Tello EDU}. Das liegt daran, dass die \textit{Ryze Tello EDU} auf jede erhaltene Nachricht auch eine Antwort zurücksendet. Damit das Warten auf die Antworten von zuvor gesendeten Fluganweisungen und auf den Empfang des Video-Streams nicht den Programmablauf blockiert, werden in der Modellklasse der \textit{Ryze Tello EDU} die Rückrufroutinen in einen eigenen Thread ausgelagert.
+
+Neben Befehlen zur Steuerung existieren ebenso Befehle zum Auslesen von Informationen wie zum Beispiel der Geschwindigkeit der Drohne oder des Ladezustands der Batterie \cite{RyzeTech.2018}. 
+
+Zur Kodierung der Videodaten wird der H.264 Codec verwendet. Um die Rohdaten beim Datenempfang wieder zu dekodieren, wird ein spezieller Decoder benötigt, der allerdings als externe Bibliothek nicht in Python, sondern in C++ geschrieben wurde. Beim Compilieren mit \textit{CMake} wird eine \textit{.pyd} Datei erstellt, die als Bibliothek in die Python Umgebung eingebunden werden kann. An dieser Stelle sei vermerkt, dass zum Compilieren des Decoders veraltete Bibliotheken von \textit{FFmpeg}\footnote{Multimedia Framework zum Verarbeiten von Video- und Audiomaterial} und \textit{Boost.Python}\footnote{Framework, das eine Schnittstelle zwischen Python und C++ bietet} benötigt werden, die nicht mehr verfügbar sind. Das Repository der \textit{Ryze Tello EDU} enthält allerdings exklusiv für Windows eine vorkompilierte Variante des Decoders. Die generierte Python Bibliothek ist allerdings nur in Python 2.7 lauffähig.
+
+\subsection*{Flugsequenz}
+
+Für die Flugsequenz bietet die Kommunikation durch eine Socket\footnote{Mit Sockets können Daten bidirektional zwischen  Programmen ausgetauscht werden, die entweder auf dem gleichen oder auf einem anderen durch eine Netzwerkadresse erreichbaren PC laufen.} Verbindung die ideale Lösung. Python bietet ein \textit{socket} Modul an, welches verschiedene Typen von Sockets unterstützt. Das nachfolgende Listing zeigt die Initialisierung einer Instanz der Socket Klasse:
+
+\lstinputlisting[
+label={code:python},
+caption={Initialisierung der Socket Klasse},
+captionpos=b,
+basicstyle=\ttfamily\scriptsize, 
+style=EigenerPythonStyle,     
+firstline=1,              
+lastline=2                 
+]{Quellcode/socket_init.py}
+
+Die Methode \textit{socket()} erzeugt eine neue Instanz der Socket Klasse und benötigt zwei Parameter für die Adressfamilie und den Verbindungstyp. \textit{AF\_INET} steht für Internet-Socket-Adresse, die sich aus IP-Adresse und Portnummer zusammensetzt. Der Parameter \textit{SOCK\_DGRAM} gibt an, dass die Socket Verbindung über das UDP-Protokoll aufgebaut wird. Für das Empfangen von Antworten wird die Instanz zusätzlich an eine Adresse (hier \textit{localhost:8999}) gebunden. 
+
+Die Flugkommandos werden als UTF-8 kodierte Zeichenketten an die Drohne über den Aufruf \textit{socket.sendto(msg, adress)} an den Socket übermittelt. Dieser erhält neben dem Befehl auch die Zieladresse, die als Tupel bestehend aus IP-Adresse und Port übergeben wird. Im nächsten Schritt wird mittels einer Schleife auf das Erreichen der Antwort gewartet, die abbricht, sobald eine gewissen Zeitgrenze übertreten wurde. Die blockierende Schleife stellt sicher, dass alle Nachrichten synchron und in der gleichen Reihenfolge an die Drohne gesendet werden.
+
+\begin{figure}[H]
+	\subfigure[Drohne während der Nahaufnahme]{\includegraphics[width=8cm]{Bilder/detail_scan.jpeg}} 
+	\subfigure[Drohne während der Gesamtaufnahme]{\includegraphics[width=7cm]{Bilder/all_scan.jpeg}} 
+	\caption[Drohnenflugsequenz]{Drohnenflugsequenz} 
+	\label{sequenz}
+\end{figure} 
+
+In der Flugsequenz fliegt die Drohne zunächst nah vor einem Regal mit zwei Böden her, um alle Objekte aus der Nahaufnahme detektieren zu können, danach fliegt die Drohne zurück, um das gesamte Regal im Blickwinkel zu haben (siehe Abbildung \ref{sequenz}). Die finale Befehlskette wird wie folgt festgelegt:
+
+\begin{itemize}
+	\item Command (Übernahme der Steuerung)
+	\item streamon (Einschalten von Video-Stream)
+	\item up 150 (Aufsteigen um 150 cm)
+	\item right 100 (Nach rechts fliegen um 100 cm)
+	\item down 100 (Absteigen um 100 cm)
+	\item left 100 (Nach links fliegen um 100 cm)
+	\item up 100 (Nach oben fliegen um 100 cm)
+	\item right 50 (Nach rechts fliegen um 50 cm)
+	\item back 150 (Nach hinten fliegen um 150 cm)
+	\item streamoff (Ausschalten von Video-Stream)
+	\item land (Landung)
+\end{itemize}
+
+\subsection*{Modellinferenz}
+
+Die Befehlssequenz zur Steuerung der Drohne wird parallel zur Inferenz der Bilder ausgeführt, wie durch Abbildung \ref{sequence_diagram} verdeutlicht.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=14cm]{Bilder/sequence_diagram.pdf}
+		\caption[Ablaufsequenz für die Verarbeitung von Drohnenbefehlen und Inferenz von Bildern]{Ablaufsequenz für die Verarbeitung von Drohnenbefehlen und Inferenz von Bildern}
+		\label{sequence_diagram}
+	\end{center}
+\end{figure}
+
+Der Video-Stream der Drohne kann auf dem zentralen Server durch die \textit{Tello} Modellklasse Frame für Frame abgefragt werden. Dadurch, dass die \textit{Ryze Tello EDU} Drohne einen stabilen Flugmodus anbietet, entstehen keine Probleme bei der Bildaufnahme. Auch sind die Bilder nicht verrauscht (siehe Abbildung \ref{rauschen}).
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=10cm]{Bilder/gesamt.jpeg}
+		\caption[Bild der Video-Kamera der Ryze Tello EDU Drohne]{Bild der Video-Kamera der Ryze Tello EDU Drohne}
+		\label{rauschen}
+	\end{center}
+\end{figure}
+
+Bei der Inferenz stellt sich nun ein zentrales Problem heraus. Da der H.264 Decoder nur auf Python Version 2.7 lauffähig ist und das verwendete \textit{PyTorch} Framework für den \textit{SSD} bzw. das \textit{Darknet} Framework für \textit{YOLO} nur auf Python Version 3 ausgeführt werden können, war es nicht möglich, eine Inferenz von Live-Video Daten der Drohne zu ermöglichen. Python Version 3 ist grundsätzlich nicht abwärtskompatibel zu früheren Versionen, demnach war der vom \textit{Ryze Tello EDU} SDK geforderte H.264 Decoder nicht mit der bestehenden Infrastruktur vereinbar. Aufgrund dessen wurde sich dazu entscheiden, die Problemstellung zu vereinfachen, indem statt Bilder der Drohne Bilder einer Webcam inferiert werden. Hierzu wird eine \textit{Microsoft LifeCam HD-3000} verwendet, die für bessere Vergleichbarkeit Bilder gleicher Auflösung und gleicher Bildrate liefert. Durch die \textit{VideoCapture} Klasse von \textit{OpenCV} ist das Integrieren der Webcam nahezu problemlos umsetzbar. 
+
+Da die verwendete Implementierung von \textit{SSD} ebenso in Python geschrieben ist, konnte eine einfache Integration des \textit{Seep Learning} Modells zur Inferenz auf den Server ermöglicht werden. Da das \textit{Darknet} Framework für \textit{YOLO} hingegen allerdings wie zuvor angemerkt in C implementiert ist, kann keine nahtlose Inferenz auf dem Python Server wie bei \textit{SSD} umgesetzt werden. Hierfür muss auf die Kompilierung einer \textit{Dynamic Link Library} (DLL) zurückgegriffen werden. Eine \textit{DLL} ist eine ausführbare Datei, die Funktionen und Ressourcen als geteilte Bibliothek bereitstellt. Programme, die in verschiedenen Programmiersprachen implementiert wurden, können dadurch die gleiche DLL-Funktion aufrufen und die Inferenz mit \textit{YOLO} kann somit durch das Python Programm aufgerufen werden \cite{MicrosoftCorporation.27.01.2020}.

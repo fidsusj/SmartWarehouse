@@ -49,7 +49,19 @@ Die Lernrate sowie das Momentum bleiben wie in der Dokumentation empfohlen unver
 
 \section{Dashboard Entwicklung}
 
-Der Server wurde mit dem \textit{Flask} Framework in Python implementiert und läuft auf dem \textit{Web Server Gateway Interface} (WSGI) server \textit{Waitress}. Er führt den Inferenzalgorithmus des \textit{SSDs} bzw. des \textit{YOLO} Objektdetektors für jeden Frame des empfangenen Videostreams der Drohne aus und streamt die inferierten Bilder mit den Bounding Boxen an jeden Client. Der Client wurde mit dem \textit{Bootstrap} Framework grafisch gestaltet (siehe Abbildung \ref{webapp}).
+Der Server wurde mit dem \textit{Flask} Framework in Python implementiert und läuft auf dem \textit{Web Server Gateway Interface} (WSGI) Server \textit{Waitress}. Er führt den Inferenzalgorithmus des \textit{SSDs} bzw. des \textit{YOLO} Objektdetektors für jeden Frame des empfangenen Video-Streams aus und streamt die inferierten Bilder mit den Bounding Boxen an jeden Client. 
+
+\lstinputlisting[
+label={code:python},
+caption={Streaming der inferierten Bilddaten},
+captionpos=b,
+basicstyle=\ttfamily\scriptsize,
+style=EigenerPythonStyle,   
+firstline=1,              
+lastline=22               
+]{Quellcode/server.py}
+
+Der Client wurde mit dem \textit{Bootstrap} Framework grafisch gestaltet (siehe Abbildung \ref{webapp}).
 
 \begin{figure}[H]
 	\begin{center}
@@ -59,7 +71,7 @@ Der Server wurde mit dem \textit{Flask} Framework in Python implementiert und l�
 	\end{center}
 \end{figure}
 
-Auf Anfrage eines Client kann dieser die aktuell gezählten Objekte vom Server abfragen. Der Zählalgorithmus wird im folgenden Unterkapitel erklärt. 
+Auf Anfrage eines Client kann dieser die Flugsequenz initiieren und die aktuell gezählten Objekte vom Server abfragen. Der Zählalgorithmus hierzu wird im folgenden Unterkapitel erklärt. 
 
 \section{Zählalgorithmus}
 
@@ -75,36 +87,30 @@ lastline=11
 Der Algorithmus \ref{code:formfield} wird momentan dazu verwendet, um für das Industrieszenario einer Inventur einzelne detektierte Objekte zu zählen. Nach jedem Inferenzvorgang werden die detektierten Objekte abgespeichert, sodass der Algorithmus bei Aufruf sowohl auf die zuletzt detektierten Objekte \textit{o\_alt}, als auch auf die neu detektierten Objekte \textit{o\_neu} zugreifen kann. Für alle detektierten Objekte im aktuellen Durchlauf durchsucht er alle zuletzt detektierten Objekte, um herauszufinden, ob ein Objekt bereits im vorherigen Bild vorhanden war. Ausschlaggebend hierfür ist das gleiche \textit{Label} als auch die Distanz der Bounding Boxen des aktuell detektierten Objekts zum Objekt der Vorrunde. Nur falls das Objekt nach diesen Kriterien nicht bereits in der Vorrunde vorhanden war, wird es gezählt. Das Problem, das der Algorithmus zu lösen versucht, enthält allerdings eine weitere Komplexitätsstufe. Dasselbe Objekt kann im Laufe der Inventur erneut auftreten und dessen relative Position im Bild ist ebenso variabel. In diesem Falle werden Objekte doppelt gezählt. 
 
 \section{Drohnen Anbindung}
-Für die Steuerung sowie den Zugriff auf den Videostream bietet die \textit{Tello EDU} ein eigenes WiFi Netz an, zu dem sich das Steuergerät verbinden muss. Die Kommunikation erfolgt über das \textit{UDP} Protokoll\footnote{UDP steht für User Datagram Protocol. Es ist ein Transportprotokoll, welches im Gegensatz zu TCP verbindungslos und nicht zuverlässig ist.} und besteht aus mehreren Kommunikationskanälen. Der Video Stream und der Status der \textit{Tello EDU} werden unidirektional durch die Client Applikation bei der \textit{Tello EDU} abgefragt, wohingegen für das Senden von Befehlen eine separate, bidirektionale Verbindung zum Einsatz kommt. Das liegt daran, dass die \textit{Tello EDU} auf jeden erhaltenen Befehl auch eine Antwort zurücksendet. Es existieren Befehle zur Steuerung und zum Auslesen von Informationen wie zum Beispiel der Geschwindigkeit oder Ladezustand der Batterie. Als Hilfestellung für wird ein Beispielprogramm mitgeliefert, in welchem das Senden und Empfangen von Befehlen implementiert wurde \cite{RyzeTech.2018}. 
+
+Für die Steuerung sowie den Zugriff auf den Video-Stream bietet die \textit{Ryze Tello EDU} ein eigenes WiFi Netz an, zu dem sich das Steuergerät verbinden muss. Die Kommunikation erfolgt über das \textit{UDP} Protokoll\footnote{UDP steht für User Datagram Protocol. Es ist ein Transportprotokoll, welches im Gegensatz zu TCP verbindungslos und nicht zuverlässig ist.} und besteht aus mehreren Kommunikationskanälen. Das Senden von Flugkommandos und das Abfragen des Video-Streams läuft über eine bidirektionale Socket Verbindung zwischen Client Applikation und der \textit{Ryze Tello EDU}. Das liegt daran, dass die \textit{Ryze Tello EDU} auf jede erhaltene Nachricht auch eine Antwort zurücksendet. Damit das Warten auf die Antworten von zuvor gesendeten Fluganweisungen und auf den Empfang des Video-Streams nicht den Programmablauf blockiert, werden in der Modellklasse der \textit{Ryze Tello EDU} die Rückrufroutinen in einen eigenen Thread ausgelagert.
+
+Neben Befehlen zur Steuerung existieren ebenso Befehle zum Auslesen von Informationen wie zum Beispiel der Geschwindigkeit der Drohne oder des Ladezustands der Batterie \cite{RyzeTech.2018}. 
+
+Zur Kodierung der Videodaten wird der H.264 Codec verwendet. Um die Rohdaten beim Datenempfang wieder zu dekodieren, wird ein spezieller Decoder benötigt, der allerdings als externe Bibliothek nicht in Python, sondern in C++ geschrieben wurde. Beim Compilieren mit \textit{CMake} wird eine \textit{.pyd} Datei erstellt, die als Bibliothek in die Python Umgebung eingebunden werden kann. An dieser Stelle sei vermerkt, dass zum Compilieren des Decoders veraltete Bibliotheken von \textit{FFmpeg}\footnote{Multimedia Framework zum Verarbeiten von Video- und Audiomaterial} und \textit{Boost.Python}\footnote{Framework, das eine Schnittstelle zwischen Python und C++ bietet} benötigt werden, die nicht mehr verfügbar sind. Das Repository der \textit{Ryze Tello EDU} enthält allerdings exklusiv für Windows eine vorkompilierte Variante des Decoders. Die generierte Python Bibliothek ist allerdings nur in Python 2.7 lauffähig.
 
 \subsection*{Flugsequenz}
+
 Für die Flugsequenz bietet die Kommunikation durch eine Socket\footnote{Mit Sockets können Daten bidirektional zwischen  Programmen ausgetauscht werden, die entweder auf dem gleichen oder auf einem anderen durch eine Netzwerkadresse erreichbaren PC laufen.} Verbindung die ideale Lösung. Python bietet ein \textit{socket} Modul an, welches verschiedene Typen von Sockets unterstützt. Das nachfolgende Listing zeigt die Initialisierung einer Instanz der Socket Klasse:
 
 \lstinputlisting[
 label={code:python},
 caption={Initialisierung der Socket Klasse},
 captionpos=b,
-basicstyle=\ttfamily\scriptsize,   
+basicstyle=\ttfamily\scriptsize, 
+style=EigenerPythonStyle,     
 firstline=1,              
 lastline=2                 
 ]{Quellcode/socket_init.py}
 
-Die Methode \textit{socket()} erzeugt eine neue Instanz der Socket Klasse und benötigt zwei Parameter für die Adressfamilie und den Verbindungstyp. \textit{AF\_INET} steht für Internet-Socket-Adresse, die sich aus IP-Adresse und Portnummer zusammensetzt. Der Parameter \textit{SOCK\_DGRAM} gibt an, dass die Socket Verbindung über das UDP-Protokoll aufgebaut wird. Für das Empfangen von Daten wird die Instanz zusätzlich an eine Adresse (hier \textit{localhost:9000}) gebunden.
+Die Methode \textit{socket()} erzeugt eine neue Instanz der Socket Klasse und benötigt zwei Parameter für die Adressfamilie und den Verbindungstyp. \textit{AF\_INET} steht für Internet-Socket-Adresse, die sich aus IP-Adresse und Portnummer zusammensetzt. Der Parameter \textit{SOCK\_DGRAM} gibt an, dass die Socket Verbindung über das UDP-Protokoll aufgebaut wird. Für das Empfangen von Antworten wird die Instanz zusätzlich an eine Adresse (hier \textit{localhost:8999}) gebunden. 
 
-Im folgenden Listing wird jeweils die Methode zum Senden von Befehlen und Empfangen von Antworten gezeigt:
-
-\lstinputlisting[
-label={code:python},
-caption={Methode für das Versenden von Befehlen und Empfangen von Antworten},
-captionpos=b,
-basicstyle=\ttfamily\scriptsize,   
-firstline=1,              
-lastline=22                 
-]{Quellcode/socket_send_command.py}
-
-Die Methode \textit{send\_command()} erhält beim Aufruf den auszuführenden Befehl als Parameter vom Typ \textit{String}. Für jeden Befehl wird eine neue Instanz der Klasse \textit{Stats} in das \textit{log} Array einfügt. Die Klasse \textit{Stats} dient für die Datenhaltung eines gesendeten Befehls und die entweder noch ausstehende oder bereits erfolgte Antwort. Daraufhin wird der Befehl mit Hilfe der Methode \textit{socket.sendto()} an den Socket übermittelt. Dieser erhält neben dem Befehl auch die Zieladresse, die als Tupel bestehend aus IP-Adresse und Port übergeben wird. Im nächsten Schritt wird mittels einer Schleife auf das Erreichen der Antwort gewartet. Dabei wird die seit dem Versand der Nachricht vergangene Zeit berechnet und wenn diese größer als die auf 15 Sekunden festgelegte Konstante \textit{MAX\_TIME\_OUT} ist, gibt die Methode \textit{False} zurück. Sobald jedoch eine Antwort empfangen wurde, kann die Schleife übersprungen und \textit{True} zurückgegeben werden.
-
-Aufgrund der UDP basierten Verbindung ist nicht garantiert, ob und in welcher Reihenfolge Antworten empfangen werden können. Um dem entgegenzuwirken, kommt die Methode \textit{receive\_thread()} zum Einsatz, die in einem parallel laufenden Thread ausgeführt wird und die empfangene Antwort immer dem zuletzt geschickten Befehl zuordnet. Durch die Zuweisung wird die zuvor beschriebene Blockierung durch die Schleife in der Methode \textit{send\_command()} aufgehoben. 
+Die Flugkommandos werden als UTF-8 kodierte Zeichenketten an die Drohne über den Aufruf \textit{socket.sendto(msg, adress)} an den Socket übermittelt. Dieser erhält neben dem Befehl auch die Zieladresse, die als Tupel bestehend aus IP-Adresse und Port übergeben wird. Im nächsten Schritt wird mittels einer Schleife auf das Erreichen der Antwort gewartet, die abbricht, sobald eine gewissen Zeitgrenze übertreten wurde. Die blockierende Schleife stellt sicher, dass alle Nachrichten synchron und in der gleichen Reihenfolge an die Drohne gesendet werden.
 
 \begin{figure}[ht]
 	\subfigure[Drohne während der Nahaufnahme]{\includegraphics[width=8cm]{Bilder/detail_scan.jpeg}} 
@@ -113,11 +119,11 @@ Aufgrund der UDP basierten Verbindung ist nicht garantiert, ob und in welcher Re
 	\label{sequenz}
 \end{figure} 
 
-Mit diesen zwei Methoden wird ein synchroner Versand der Befehle möglich, bei dem immer nur dann ein neuer Befehl geschickt wird, wenn bereits eine Antwort auf den vorherigen empfangen oder ein Timeout erkannt wurde. In der Flugsequenz fliegt die Drohne zunächst nah vor einem Regal mit zwei Böden her, um alle Objekte aus der Nahaufnahme detektieren zu können, danach fliegt die Drohne zurück, um das gesamte Regal im Blickwinkel zu haben (siehe Abbildung \ref{sequenz}). Die finale Befehlskette sieht wie folgt aus:
+In der Flugsequenz fliegt die Drohne zunächst nah vor einem Regal mit zwei Böden her, um alle Objekte aus der Nahaufnahme detektieren zu können, danach fliegt die Drohne zurück, um das gesamte Regal im Blickwinkel zu haben (siehe Abbildung \ref{sequenz}). Die finale Befehlskette wird wie folgt festgelegt:
 
 \begin{itemize}
 	\item Command (Übernahme der Steuerung)
-	\item streamon (Einschalten von Video Stream)
+	\item streamon (Einschalten von Video-Stream)
 	\item up 150 (Aufsteigen um 150 cm)
 	\item right 100 (Nach rechts fliegen um 100 cm)
 	\item down 100 (Absteigen um 100 cm)
@@ -125,9 +131,11 @@ Mit diesen zwei Methoden wird ein synchroner Versand der Befehle möglich, bei d
 	\item up 100 (Nach oben fliegen um 100 cm)
 	\item right 50 (Nach rechts fliegen um 50 cm)
 	\item back 150 (Nach hinten fliegen um 150 cm)
-	\item streamoff (Ausschalten von Video Stream)
+	\item streamoff (Ausschalten von Video-Stream)
 	\item land (Landung)
 \end{itemize}
+
+\subsection*{Modellinferenz}
 
 Die Befehlssequenz zur Steuerung der Drohne wird parallel zur Inferenz der Bilder ausgeführt, wie durch Abbildung \ref{sequence_diagram} verdeutlicht.
 
@@ -139,8 +147,16 @@ Die Befehlssequenz zur Steuerung der Drohne wird parallel zur Inferenz der Bilde
 	\end{center}
 \end{figure}
 
-\subsection*{Modellinferenz}
+Der Video-Stream der Drohne kann auf dem zentralen Server durch die \textit{Tello} Modellklasse Frame für Frame abgefragt werden. Dadurch, dass die \textit{Ryze Tello EDU} Drohne einen stabilen Flugmodus anbietet, entstehen keine Probleme bei der Bildaufnahme. Auch sind die Bilder nicht verrauscht (siehe Abbildung \ref{rauschen}).
 
-Der Video Stream der Drohne kann auf dem zentralen Server mittels der \textit{openCV} Klasse \textit{VideoCapture} in Python über das UDP Protokoll angesprochen werden. Anschließend kann jeder Frame des Streams einzeln durch \textit{SSD} inferiert werden.
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=10cm]{Bilder/gesamt.jpeg}
+		\caption[Bild der Video-Kamera der Ryze Tello EDU Drohne]{Bild der Video-Kamera der Ryze Tello EDU Drohne}
+		\label{rauschen}
+	\end{center}
+\end{figure}
 
-Da das \textit{Darknet} Framework für \textit{YOLO} allerdings wie zuvor angemerkt in C implementiert ist, kann keine nahtlose Inferenz auf dem Python Server wie bei \textit{SSD} umgesetzt werden. Hierfür muss auf die Kompilierung einer \textit{Dynamic Link Library} (DLL) zurückgegriffen werden. Eine \textit{DLL} ist eine ausführbare Datei, die Funktionen und Ressourcen als geteilte Bibliothek bereitstellt. Programme, die in verschiedenen Programmiersprachen implementiert wurden, können dadurch die gleiche DLL-Funktion aufrufen und die Inferenz mit \textit{YOLO} kann somit durch das Python Programm aufgerufen werden \cite{MicrosoftCorporation.27.01.2020}.
+Bei der Inferenz stellt sich nun ein zentrales Problem heraus. Da der H.264 Decoder nur auf Python Version 2.7 lauffähig ist und das verwendete \textit{PyTorch} Framework für den \textit{SSD} bzw. das \textit{Darknet} Framework für \textit{YOLO} nur auf Python Version 3 ausgeführt werden können, war es nicht möglich, eine Inferenz von Live-Video Daten der Drohne zu ermöglichen. Python Version 3 ist grundsätzlich nicht abwärtskompatibel zu früheren Versionen, demnach war der vom \textit{Ryze Tello EDU} SDK geforderte H.264 Decoder nicht mit der bestehenden Infrastruktur vereinbar. Aufgrund dessen wurde sich dazu entscheiden, die Problemstellung zu vereinfachen, indem statt Bilder der Drohne Bilder einer Webcam inferiert werden. Durch die \textit{VideoCapture} Klasse von \textit{OpenCV} ist dies nahezu problemlos umsetzbar. 
+
+Da die verwendete Implementierung von \textit{SSD} ebenso in Python geschrieben ist, konnte eine einfache Integration des \textit{Seep Learning} Modells zur Inferenz auf den Server ermöglicht werden. Da das \textit{Darknet} Framework für \textit{YOLO} hingegen allerdings wie zuvor angemerkt in C implementiert ist, kann keine nahtlose Inferenz auf dem Python Server wie bei \textit{SSD} umgesetzt werden. Hierfür muss auf die Kompilierung einer \textit{Dynamic Link Library} (DLL) zurückgegriffen werden. Eine \textit{DLL} ist eine ausführbare Datei, die Funktionen und Ressourcen als geteilte Bibliothek bereitstellt. Programme, die in verschiedenen Programmiersprachen implementiert wurden, können dadurch die gleiche DLL-Funktion aufrufen und die Inferenz mit \textit{YOLO} kann somit durch das Python Programm aufgerufen werden \cite{MicrosoftCorporation.27.01.2020}.

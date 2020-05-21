@@ -70,18 +70,19 @@
 }
 
 % ---- Eigener Python-Style für den Quellcode
-\definecolor{PyKeywordsBlue}{HTML}{0000AC}
+\definecolor{PyKeywordsOrange}{HTML}{f59e42}
 \definecolor{PyCommentGrey}{HTML}{808080}
-\definecolor{PyStringGreen}{HTML}{008080}
+\definecolor{PyStringGreen}{HTML}{21915d}
 
 \renewcommand{\ttdefault}{pcr}
 \lstdefinestyle{EigenerPythonStyle}{
 	language=Python,
 	columns=flexible,
 	frame=lr,
-	keywordstyle=\bfseries\color{PyKeywordsBlue},
+	keywordstyle=\bfseries\color{PyKeywordsOrange},
 	commentstyle=\itshape\color{PyCommentGrey},
-	stringstyle=\color{PyStringGreen}
+	stringstyle=\color{PyStringGreen},
+	morekeywords={@app.route, yield, True, None}
 }
 
 % ---- Eigener C#-Style für den Quellcode

@@ -15,7 +15,7 @@ Bezüglich Trainingsverhalten könnte \textit{SSD300} das Training mit leistungs
 Zuletzt muss das Inferenzverhalten betrachtet werden. Hierzu kann folgende Tabelle \ref{table:inference} herangezogen werden:
 
 \begin{center}
-	\begin{tabular}[h]{l|c|c}
+	\begin{tabular}[H]{l|c|c}
 		Kriterium & SSD300 & YOLOv3 \\
 		\hline
 		Beleuchtung & 0 & 0 \\
@@ -39,7 +39,7 @@ Auch scheint die Detektion ab gewissen Entfernungen und Verdeckungsgraden nur er
 Eine Ausweitung des Trainingsdatensatzes erscheint demnach nicht abwegig. Im \textit{Smart Warehouse} Datensatz sind die behandelten Fälle mit 12.5\% nur unterbesetzt abgebildet. Neben einer Erweiterung des Datensatzes wäre ebenso das Anwenden von \textit{Data Augmentation} oder \textit{Transfer Learning} eine Alternative, mit der der Generalisierungsgrad des Modells gesteigert werden könnte. Das Problem der Detektion von verdeckten Objekten scheint aber bei beiden Objektdetektoren vorzuliegen. Auch hier könnte die Erweiterung des Datensatzes dazu dienen, dass die Modelle neue Merkmale gerade von teilweise verdeckten Objekten erlernen könnten. Ob das Erkennen von Teilmerkmalen allerdings ausreicht, um einen genügend hohen \textit{confidence score} zu entwickeln, bleibt offen. Das Problem doppelter Erkennung, wird von beiden allerdings gut gelöst, durch das Festlegen eines Schwellwertes im \textit{confidence score}. Auch scheinen keine Merkmale aus Hintergrundinformationen zur Detektion heran gezogen worden sein, da das Detektionsverhalten von \textit{SSD300} als auch von \textit{YOLOv3} invariant zu unterschiedlichen Hintergründen war. Auch die Bildauflösung hat keine Auswirkung auf das Detektionsvermögen.
 
 \begin{center}
-	\begin{tabular}[h]{l|c|c}
+	\begin{tabular}[H]{l|c|c}
 		Kriterium & SSD300 & YOLOv3 \\
 		\hline
 		Präzision & + & + \\

@@ -10,8 +10,8 @@ Ursprünglich wurden 500 Epochen für das Training vorgesehen. Da allerdings bei
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=8cm]{Bilder/ssdloss.jpeg} 
-		\caption{Entwicklung der SSD Trainings- und Testverlustkurve während dem Training}
+		\includegraphics[width=9cm]{Bilder/ssdloss.jpeg} 
+		\caption{Entwicklung der SSD Trainings- und Testverlustkurve im Training}
 		\label{ssdloss}
 	\end{center}
 \end{figure}
@@ -80,6 +80,8 @@ Des Weiteren haben unterschiedliche Beleuchtungsgrade eine Auswirkung auf das De
 
 Alle Detektionen reagierten allerdings invariant gegenüber unterschiedlichen Hintergründen oder Bildauflösungen.
 
+\newpage
+
 \subsection*{YOLO}
 
 Um eine möglichst gute Aussage über den Vergleich der beiden Objektdetektoren treffen zu können, kommt bei \textit{YOLO} der exakt gleiche Trainings- und Testdatensatz wie beim \textit{SSD} zum Einsatz. Das Training von \textit{YOLO} ergab eine \textit{mAP} von 80.36\%. Abbildung \ref{yolo_result} zeigt die Verbesserung des Modells während dem Trainingsprozess. 
@@ -87,7 +89,7 @@ Um eine möglichst gute Aussage über den Vergleich der beiden Objektdetektoren 
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=8cm]{Bilder/yolo_result.png} 
-		\caption{Entwicklung der YOLO Testverlustkurve und der \textit{mAP} während dem Training}
+		\caption{Entwicklung der YOLO Testverlustkurve und der \textit{mAP} im Training}
 		\label{yolo_result}
 	\end{center}
 \end{figure}

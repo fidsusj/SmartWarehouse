@@ -2,7 +2,7 @@
 
 Zwar liefern die oben genannten Objektdetektoren akkurate Ergebnisse, allerdings sind sie als zu rechenintensiv und langsam einzuordnen, als dass sie für Echtzeit Applikationen eingesetzt werden könnten. Der \textit{Single Shot MultiBox Detector} (SSD) unterscheidet sich von vorhergehenden Modellen, wie beispielsweise den \textit{R-CNN} Detektoren, dahingehend, dass er bewusst auf den Schritt der Generierung von Bounding Box Vorschlägen und des Poolings verzichtet, um wesentlich schneller ablaufen zu können als andere Objektdetektoren. Die Präzision der Klassifikationen bleibt hierbei erhalten, selbst Bilder niedriger Auflösung können weiterhin verarbeitet werden. Dem \textit{SSD} genügt also ein einziges tiefes neuronales Netz zum Lokalisieren und Klassifizieren von Objekten. Wie der \textit{SSD} aufgebaut ist und welche Ansätze er verfolgt, soll in diesem Unterkapitel erläutert werden \cite{ssd.20161229}. 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/ssd_framework.png} 
 		\caption[SSD Bounding Box Vorschläge]{SSD Bounding Box Vorschläge - Objekte unterschiedlicher Skalierung, hier Katze (blau) und Hund (rot), werden durch unterschiedlich große Gittereinteilungen und Bounding Box Seitenverhältnissen detektiert \cite{ssd.20161229}.}
@@ -12,7 +12,7 @@ Zwar liefern die oben genannten Objektdetektoren akkurate Ergebnisse, allerdings
 
 Die Architektur des \textit{SSD} zielt darauf ab, durch unterschiedlich große \textit{Convolutional Layer} \textit{Feature Maps} unterschiedlicher Skalierung in die Klassifikation mit einfließen zu lassen. Anschaulich kann es sich vorgestellt werden, als werde das Bild in mehrere unterschiedlich große Gitterstrukturen unterteilt und die resultierenden Zellen jeweils einzeln klassifiziert. Dadurch ist es möglich, Objekte unterschiedlicher Größe zu erkennen. Für jede Zelle im Gitter wird eine gleiche Anzahl vordefinierter Bounding Boxen, die unterschiedliche Seitenverhältnisse aufweisen, definiert. Daher entstammt der Name \glqq MultiBox\grqq{}. Abbildung \ref{framework} zeigt beispielsweise, wie eine Katze (in blau) und ein im Vergleich zur Katze größerer Hund (in rot) durch unterschiedlich große Gittereinteilungen und Bounding Box Seitenverhältnisse detektiert werden. Durch die \textit{MultiBox} Eigenschaft wird ebenso sichergestellt, dass sowohl horizontal als auch vertikal ausgeprägte Objekte in der selben Zelle gleichzeitig erkannt werden können (siehe Abbildung \ref{boundingboxes}) \cite{ssd.20161229}.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=7cm]{Bilder/bounding_boxes.png} 
 		\caption[Bounding Boxes]{Bounding Boxes - In einer Gitterzelle treten Bounding Box Vorschläge mehrerer unterschiedlicher Skalierungen auf, um auch zwei Objekte unterschiedlicher Skalierung, deren Zentrum in der selben Gitterzelle liegt, gleichzeitig detektieren zu können \cite{AndrewNg.2019}.}
@@ -22,7 +22,7 @@ Die Architektur des \textit{SSD} zielt darauf ab, durch unterschiedlich große \
 
 Für jede dieser Bounding Boxen bestimmt der \textit{SSD} Wahrscheinlichkeiten für Klassenzugehörigkeiten als auch Verschiebungen der vordefinierten Bounding Box zur wahren Bounding Box des Objekts für jede Klasse. Die Kostenfunktion ist durch die gewichtete Summe des Lokalisationsverlustes und des Klassifikationsverlustes bestimmt. Während der Klassifikationverlust durch eine Softmax-Funktion (\ref{softmax}) bestimmt werden kann, wird der Lokalisationsverlust über die Smooth L1 Funktion (\ref{smooth}) bestimmt \cite{ssd.20161229}.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/ssd_architecture.png} 
 		\caption[SSD Architektur]{SSD Architektur \cite{ssd.20161229}}

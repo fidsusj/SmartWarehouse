@@ -6,7 +6,7 @@ Ein Teilziel der Machbarkeitsstudie ist es, anhand vorbestimmter Kriterien eine 
 
 \textit{Regional Convolutional Neural Networks} (R-CNNs) vertreten den Ansatz, für ein Bild mehrere Lokationsvorschläge für mögliche Objekte zu liefern, sogenannte \textit{Regions of Interest} (RoIs), und diese anschließend zu klassifizieren. 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=8cm]{Bilder/rcnn.png} 
 		\caption[R-CNN Architektur]{R-CNN Architektur \cite{RohithGandhi.20180709}}
@@ -18,7 +18,7 @@ Bei dem klassischen \textit{R-CNN} Detektor werden durch den \textit{Selective S
 
 Da der sogenannte \textit{Region Proposal} Schritt durch den \textit{Selective Search} Algorithmus allerdings viel Zeit in Anspruch nimmt, entstand eine Weiterentwicklung des \textit{R-CNN } Netzes, das \textit{Fast R-CNN} Netz. Dieses tauscht den Schritt des \textit{Selective Search} Algorithmus mit dem Einsatz des CNNs. Außerdem wird das klassische CNN leicht angepasst. Bei \textit{Fast R-CNN} wird ein Bild zunächst einem CNN unterworfen. Bevor eine \textit{Feature Map} durch \textit{Fully-Connected Layer} zu einem einzigen \textit{Feature Vektor} vereinfacht wird, werden aus der \textit{Feature Map} die verschiedenen \textit{RoIs} extrahiert. Dies geschieht wiederrum mit dem \textit{Selective Search} Algorithmus, mit dem Unterschied, dass dieser nun nur auf der \textit{Feature Map} operiert und nicht auf dem gesamten Bild. Durch \textit{RoI Pooling Layer} werden die einzelnen entstandenen Regionen in eine feste Größe transformiert und einzeln einer Klassifikation durch \textit{Fully-Connected Layer} und einer Softmax-Funktion unterworfen. Die Komponente mit dem \textit{Bounding Box Regressor} bleibt gleich. Durch den Tausch des CNNs mit dem \textit{Selective Search} Algorithmus werden die mathematischen Faltungsoperationen nur einmal statt 2000 Mal pro Bild ausgeführt, was die Performanz des Detektors gegenüber eines klassischen \textit{R-CNNs} enorm steigert \cite{RossGirshick.2015}.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=8cm]{Bilder/fasterrcnn.png} 
 		\caption[Faster R-CNN Architektur]{Faster R-CNN Architektur \cite{RohithGandhi.20180709}}

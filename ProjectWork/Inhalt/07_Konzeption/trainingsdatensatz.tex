@@ -20,8 +20,6 @@ Um das zweite Ziel der Arbeit zu erarbeiten, kann auf den Ergebnissen des ersten
 
 \section{Erstellen eines Trainingsdatensatzes} \label{traindata}
 
-Das \textit{Smart Warehouse} lehnt sich an ein großes Warenhaus an, bei dem Produkte nicht in Kartons verpackt, sondern als ganzes auf Regalen angeordnet sind, ähnlich wie bei Warenhäusern wie \textit{Baumarkt} oder \textit{Selgros}. Bei dem Aufbau des Trainingsdatensatzes hat die Machbarkeitsstudie allerdings nicht zum Ziel, ein solches Warenhaus vollständig im Datensatz abzubilden, sondern wesentlich den Datensatz so umfangreich zu wählen, um eine generelle Umsetzbarkeit des \textit{Smart Warehouse} Szenarios zu beweisen. Im Rahmen des Projektes wurde sich deshalb exemplarisch auf Getränkeflaschen eines Warenhauses konzentriert. Dabei wurden neun Kategorien festgelegt (siehe Abbildung \ref{categories}). 
-
 \begin{figure}[H]
 	\subfigure[Saskia Wasser Klein]{\includegraphics[width=0.30\textwidth]{Bilder/wasser_klein.jpg}}\hfill
 	\subfigure[Saskia Wasser Groß]{\includegraphics[width=0.30\textwidth]{Bilder/wasser_gross.jpg}}\hfill
@@ -35,6 +33,8 @@ Das \textit{Smart Warehouse} lehnt sich an ein großes Warenhaus an, bei dem Pro
 	\caption{Die neun Datensatz-Kategorien}
 	\label{categories}
 \end{figure}
+
+Das \textit{Smart Warehouse} lehnt sich an ein großes Warenhaus an, bei dem Produkte nicht in Kartons verpackt, sondern als ganzes auf Regalen angeordnet sind, ähnlich wie bei Warenhäusern wie \textit{Baumarkt} oder \textit{Selgros}. Bei dem Aufbau des Trainingsdatensatzes hat die Machbarkeitsstudie allerdings nicht zum Ziel, ein solches Warenhaus vollständig im Datensatz abzubilden, sondern wesentlich den Datensatz so umfangreich zu wählen, um eine generelle Umsetzbarkeit des \textit{Smart Warehouse} Szenarios zu beweisen. Im Rahmen des Projektes wurde sich deshalb exemplarisch auf Getränkeflaschen eines Warenhauses konzentriert. Dabei wurden neun Kategorien festgelegt (siehe Abbildung \ref{categories}). 
 
 Der Datensatz ist 1.45 GB groß und besteht aus 1088 manuell annotierten Bildern. Sie dienen später dazu die ausgewählten Objektdetektoren zu trainieren. Die Bilder besitzen eine Auflösung von 2112x4608 Pixeln mit einer Farbtiefe von 24 Bit. Alle neuen Kategorien sind nahezu gleich häufig im Datensatz vorhanden. 
 

@@ -4,7 +4,7 @@ Der Algorithmus \textit{You Only Look Once} (YOLO) ist ein weiterer Objekterkenn
 
 Hierzu wird ein $S \times S$ Gitter über das Bild gelegt. Für jedes Feld im Gitter werden durch ein einziges CNN $B$ Bounding Boxen vorhergesagt, als auch die zur Zelle dazugehörigen Klassenwahrscheinlichkeiten. Für jede Bouding Box wird nun der \textit{confidence score} für alle Klassen berechnet. Basierend auf den \textit{confidence scores} wird ein Regressionsproblem zur richtigen Lokalisation gelöst. Aus der Menge der resultierenden Bounding Boxen werden schließlich mit Hilfe eines festgelegten Schwellwertes für den \textit{confidence score} die Boxen mit lokalisierten Objekten bestimmt (siehe Abbildung \ref{yolo_model}) \cite{JosephRedmon.2016}.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/yolo_model.png} 
 		\caption[Vereinfachte Darstellung des YOLO Algorithmus]{Vereinfachte Darstellung des YOLO Algorithmus \cite{JosephRedmon.2016}}
@@ -18,7 +18,7 @@ Die vorhergesagten Werte werden in einem $S \times S \times (B * 5 + C)$ Tensor 
 
 In dem Netzwerk in Abbildung \ref{yolo_architecture} wird ein Bild mit einer Auflösung von $224 \times 224$ Pixeln verwendet und die vorhergesagten Werte im $7 \times 7 \times 30$ Tensor ausgegeben.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/yolo_architecture.png} 
 		\caption[YOLO Architektur]{YOLO Architektur \cite{JosephRedmon.2016}}
@@ -27,7 +27,6 @@ In dem Netzwerk in Abbildung \ref{yolo_architecture} wird ein Bild mit einer Auf
 \end{figure}
 
 Die mittlerweile dritte und aktuelle Version von \textit{YOLO} weist einige Verbesserungen auf, gerade im Bezug auf die Erkennung von sehr kleinen Objekten wie zum Beispiel einzelnen Vögeln in einem Schwarm. Das in \textit{YOLOv3} verwendete CNN umfasst insgesamt 53 \textit{Convolutional Layer} und entstand aus mehreren Optimierungsschritten des in Abbildung \ref{yolo_architecture} dargestellten CNN \cite{JosephRedmon.2018}. 
-
 
 
 

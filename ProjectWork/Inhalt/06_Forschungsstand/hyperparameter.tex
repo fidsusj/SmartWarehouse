@@ -58,7 +58,7 @@ Die Momentum Optimierung kann dazu benutzt werden, das \textit{stochastische Gra
 
 Generell wird zwischen drei verschiedenen Arten unterschieden, das Gradientenverfahren durchzuführen (siehe Abbildung \ref{gradient}):
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/gradient_descent.png} 
 		\caption[Gradientenverfahren]{Gradientenverfahren \cite{ImadDabbura.20171221}}
@@ -76,7 +76,7 @@ Ein Kompromiss der beiden Verfahren bietet das \textit{Mini-Batch} Verfahren, be
 
 Zwei bekannte und ähnliche Aktivierungsfunktionen sind die \textit{Sigmoid-Funktion} und die \textit{Tangens Hyperbolicus} Funktion. Da diese allerdings durch ihr schnelles Konvergieren gegen den Grenzwert anfällig für das Problem \textit{schwindender Gradienten} sind \cite{AurelienGeron.2018}, wird die \textit{Rectified Linear Unit} (ReLU) bzw. \textit{Parametric/Leaky Rectified Linear Unit} (PReLU/LRelU) Aktivierungsfunktion bevorzugt (siehe Abbildung \ref{relu}). 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\subfigure[ReLU]{\includegraphics[width=7.5cm]{Bilder/relu.png}} 
 	\subfigure[PReLU/LReLU]{\includegraphics[width=7.5cm]{Bilder/prelu.png}} 
 	\caption[ReLU-Aktivierungsfunktionen]{ReLU-Aktivierungsfunktionen \cite{DanqingLiu.20171130}} 
@@ -87,7 +87,7 @@ Bei \textit{ReLU} kann es während des Trainingsprozesses dazu kommen, dass LTUs
 
 Eine letzte Variante der Aktivierungsfunktionen beschreibt die \textit{ELU} Funktion (siehe Abbildung \ref{elu}).
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=12cm]{Bilder/elu.png} 
 		\caption[ELU-Aktivierungsfunktion]{ELU-Aktivierungsfunktion \cite{DanqingLiu.20171130}}

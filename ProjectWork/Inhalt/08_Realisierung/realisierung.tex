@@ -74,6 +74,8 @@ Der Client wurde mit dem \textit{Bootstrap} Framework grafisch gestaltet (siehe 
 
 Auf Anfrage eines Client kann dieser die Flugsequenz initiieren und die aktuell gezählten Objekte vom Server abfragen. Der Zählalgorithmus hierzu wird im folgenden Unterkapitel erklärt. 
 
+\newpage
+
 \section{Zählalgorithmus}
 
 \lstinputlisting[
@@ -113,7 +115,7 @@ Die Methode \textit{socket()} erzeugt eine neue Instanz der Socket Klasse und be
 
 Die Flugkommandos werden als UTF-8 kodierte Zeichenketten an die Drohne über den Aufruf \textit{socket.sendto(msg, adress)} an den Socket übermittelt. Dieser erhält neben dem Befehl auch die Zieladresse, die als Tupel bestehend aus IP-Adresse und Port übergeben wird. Im nächsten Schritt wird mittels einer Schleife auf das Erreichen der Antwort gewartet, die abbricht, sobald eine gewissen Zeitgrenze übertreten wurde. Die blockierende Schleife stellt sicher, dass alle Nachrichten synchron und in der gleichen Reihenfolge an die Drohne gesendet werden.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\subfigure[Drohne während der Nahaufnahme]{\includegraphics[width=8cm]{Bilder/detail_scan.jpeg}} 
 	\subfigure[Drohne während der Gesamtaufnahme]{\includegraphics[width=7cm]{Bilder/all_scan.jpeg}} 
 	\caption[Drohnenflugsequenz]{Drohnenflugsequenz} 
@@ -142,7 +144,7 @@ Die Befehlssequenz zur Steuerung der Drohne wird parallel zur Inferenz der Bilde
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=15cm]{Bilder/sequence_diagram.pdf}
+		\includegraphics[width=14cm]{Bilder/sequence_diagram.pdf}
 		\caption[Ablaufsequenz für die Verarbeitung von Drohnenbefehlen und Inferenz von Bildern]{Ablaufsequenz für die Verarbeitung von Drohnenbefehlen und Inferenz von Bildern}
 		\label{sequence_diagram}
 	\end{center}

@@ -4,13 +4,15 @@ Der Aufbau eines typischen Perzeptrons besteht aus einer oder mehreren Schichten
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=9cm]{Bilder/perceptron.png} 
+		\includegraphics[width=7cm]{Bilder/perceptron.png} 
 		\caption[Linear Threshold Unit]{Linear Threshold Unit \cite{AurelienGeron.2018}}
 		\label{ltu}
 	\end{center}
 \end{figure}
 
-Es besteht aus $n$ Eingängen mit $x_{i} \in \mathbb{Q}$, die im Inputvektor $\boldsymbol{x}$ zusammengefasst werden. Jeder Eingang wird mit einem Gewicht $w_{i}$ aus dem Gewichtsvektor $\boldsymbol{w}$ versehen. Die LTU berechnet das Skalarprodukt $\boldsymbol{w}^{T} \circ \boldsymbol{x}$ aller Eingänge $\boldsymbol{x}$ mit ihren Gewichten $\boldsymbol{w}$ und wendet anschließend auf das Ergebnis $z$ eine Aktivierungsfunktion an. Das Ergebnis $h_{w}(x)$ kann anschließend als Eingabe für ein weiteres Perzeptron dienen. Die einfachste Aktivierungsfunkion für ANNs ist die \textit{Heaviside-Funktion} \cite{AurelienGeron.2018}: 
+Es besteht aus $n$ Eingängen mit $x_{i} \in \mathbb{Q}$, die im Inputvektor $\boldsymbol{x}$ zusammengefasst werden. Jeder Eingang wird mit einem Gewicht $w_{i}$ aus dem Gewichtsvektor $\boldsymbol{w}$ versehen. Die LTU berechnet das Skalarprodukt $\boldsymbol{w}^{T} \circ \boldsymbol{x}$ aller Eingänge $\boldsymbol{x}$ mit ihren Gewichten $\boldsymbol{w}$ und wendet anschließend auf das Ergebnis $z$ eine Aktivierungsfunktion an. Das Ergebnis $h_{w}(x)$ kann anschließend als Eingabe für ein weiteres Perzeptron dienen.
+
+Die einfachste Aktivierungsfunkion für ANNs ist die \textit{Heaviside-Funktion} \cite{AurelienGeron.2018}: 
 
 \begin{equation} \label{heaviside}
 \begin{split}

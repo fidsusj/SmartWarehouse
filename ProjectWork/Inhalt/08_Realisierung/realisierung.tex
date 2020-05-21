@@ -19,7 +19,8 @@ Um ein lokales Training auf der \textit{NVIDIA GeForce GTX 1080} GPU zu ermögli
 	\item Momentum: 0.9
 	\item Kreuzvalidierungen: 6 à 22 Epochen
 	\item Epochen: 132
-	\item Gradientenverfahren: Stochastic Gradient Descent
+	\item Gradientenverfahren: Mini-Batch
+	\item Aktivierungsfunktion: ReLU
 	\item Kostenfunktion: Smooth L1
 \end{itemize}
 
@@ -29,7 +30,7 @@ Die Hyperparameter sind nahezu gleich zu denen in der ursprünglichen wissenscha
 
 \subsection*{YOLO}
 
-Für \textit{YOLO} wurde die neuste Version \textit{YOLOv3} implementiert. Hierbei kommt das \textit{Dark-""net} Framework zum Einsatz, eine Implementierung in C. Vor der initialen Kompilierung müssen einige Konfigurationsschritte unternommen werden, weil auch der Betrieb auf einer normalen CPU oder einer GPU mit Tensor Kernen möglich ist. Für das Training kommt eine \textit{NVIDIA GeForce RTX 2060 SUPER} GPU zum Einsatz, deren enthaltenen Tensor Kerne mitbenutzt werden. Die benötigten Hyperparameter wurden dabei wie folgt gesetzt:
+Für \textit{YOLO} wurde die neuste Version \textit{YOLOv3} implementiert. Hierbei kommt das \textit{Dark-""net} Framework zum Einsatz, eine Implementierung in C. Vor der initialen Kompilierung müssen einige Konfigurationsschritte unternommen werden, weil auch der Betrieb auf einer normalen CPU oder einer GPU mit Tensor Kernen möglich ist. Für das Training kommt eine \textit{NVIDIA GeForce RTX 2060} GPU auf Basis von \textit{CUDA} Version 10.0 zum Einsatz, deren enthaltenen Tensor Kerne mitbenutzt werden. Zudem ermöglicht \textit{YOLO} die Nutzung von \textit{cuDNN} Version 7.4 für hardwarebeschleunigte Matrizenoperationen. Die benötigten Hyperparameter wurden dabei wie folgt gesetzt:
 
 \begin{itemize}
 	\item Batchgröße: 64
@@ -37,6 +38,9 @@ Für \textit{YOLO} wurde die neuste Version \textit{YOLOv3} implementiert. Hierb
 	\item Lernrate: $1.0\cdot 10^{-3}$
 	\item Momentum: 0.9
 	\item Maximale Anzahl Batches: 18000
+	\item Gradientenverfahren: Mini-Batch
+	\item Aktivierungsfunktion: LReLU
+	\item Kostenfunktion: Summe der Fehlerquadrate
 \end{itemize}
 
 Im Unterschied zum \textit{SSD} kann \textit{YOLO} die in den GPU Speicher zu ladende Datenmenge eines Batches durch sogenannte \textit{Subdivisions} festgelegt. Hierbei werden nur noch $Batchgroesse \div Subdivisions$ Bilder gleichzeitig in die GPU geladen, um einen Speicherüberlauf zu vermeiden.
@@ -50,7 +54,7 @@ Der Server wurde mit dem \textit{Flask} Framework in Python implementiert und l�
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/webapp.jpeg} 
-		\caption[Webapplikation SmartWarehouse]{Webapplikation SmartWarehouse}
+		\caption[Webapplikation Smart Warehouse]{Webapplikation Smart Warehouse}
 		\label{webapp}
 	\end{center}
 \end{figure}

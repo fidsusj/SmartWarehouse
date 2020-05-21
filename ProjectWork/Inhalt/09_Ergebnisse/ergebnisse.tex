@@ -116,38 +116,39 @@ Tabelle \ref{table:yoloresults} zeigt die \textit{mAP} für jede Klasse.
 	\label{table:yoloresults}
 \end{center}
 
-Auch bei \textit{YOLO} können verdeckte Objekte nur schwer erkannt werden. Ein Unterschied zu \textit{SSD} zeigt sich bei der Ansicht von oben:
+Auch bei \textit{YOLO} können verdeckte Objekte nur schwer erkannt werden. In den beiden Beispielen (Abbildung \ref{lagen_yolo} (a) und (b)) wurden jeweils nur die beiden vorderen Flaschen detektiert, da der \textit{Confidence Score} für die zwei stark verdeckten Flaschen bei nur 15\% und 8\% liegt. Bei einer extremen Blicklage fällt das Ergebnis noch schlechter als bei \textit{SSD} aus. Hier werden im Beispiel von Abbildung \ref{lagen_yolo} (c) beide gefundenen Flaschen mit einem \textit{confidence score} von 97\% und 53\% sogar falsch klassifiziert, wobei wie bei \textit{SSD} die gleichen zwei Flaschen mit einer Box umschlossen sind.
 
 \begin{figure}[H]
-	\centering
-	\subfigure[verdeckt]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_verdeckt.jpg}}
-	\hspace{2cm}
-	\subfigure[winkel]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_winkel.jpg}}
+	\subfigure[Verdecktes Objekt I]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_verdeckt.jpg}}\hfill
+	\subfigure[Verdecktes Objekt II]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_verdeckt2.jpg}}\hfill
+	\subfigure[Extreme Blicklagen I]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_winkel.jpg}}\hfill
+	\subfigure[Extreme Blicklagen II]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_winkel2.jpg}}\hfill
 	\caption{Detektionsverhalten von YOLO bei extremen Blicklagen}
 	\label{lagen_yolo}
 \end{figure}
 
-Hier werden zwei von drei Flaschen erkannt, die allerdings der falschen Klasse (\textit{Saskia Wasser Groß} statt \textit{Saskia Wasser Klein}) zugeordnet werden und eine der zwei Bounding Boxes zwei Flaschen umschließt.
+Bei größeren Entfernungen scheint \textit{YOLO} anfälliger zu sein als \textit{SSD}. Nach bereits zwei Metern Entfernung erfolgt keine zufällige Detektion mehr (siehe Abbildung \ref{entfernung_yolo} (b)). In dem Beispiel wird lediglich ein \textit{confidence score} von 14\% erzielt. Bei anderen Klassen werden Objekte sogar falsch klassifiziert (siehe Abbildung \ref{entfernung_yolo} (c)).
 
 \begin{figure}[H]
-	\subfigure[1 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_entfernung1.jpg}}\hfill
-	\subfigure[2 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_entfernung2.jpg}}\hfill
-	\subfigure[3 Meter]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_entfernung3.jpg}}\hfill
+	\subfigure[1 Meter]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_entfernung1.jpg}}\hfill
+	\subfigure[2 Meter]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_entfernung2.jpg}}\hfill
+	\subfigure[2 Meter II]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_entfernung2_2.jpg}}\hfill
+	\subfigure[3 Meter]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_entfernung3.jpg}}\hfill
 	\caption{Detektionsverhalten von YOLO bei unterschiedlichen Entfernungen}
 	\label{entfernung_yolo}
 \end{figure}
 
-Wie bei \textit{SSD} erfolgt nach bereits drei Metern Entfernung keine Detektion mehr (siehe Abbildung \ref{entfernung_yolo}). Der \textit{confidence score} für die korrekt erkannte Bounding Box liegt bei nur 2\%.
+Bei verschiedenen Beleuchtungsverhältnissen verhält sich \textit{YOLO} ähnlich zu \textit{SSD}. Bei Abbildung \ref{sicht_yolo} (b) und (c) sowie (d) und (e) fällt auf, dass die Detektion je nach Klasse unterschiedlich gut ausfällt. Im Beispiel wird eine Flasche der Klasse \textit{ACE} mit einem \textit{confidence score} von 61\% in einer überbeleuchteten und mit 56\% in einer unterbeleuchteten Umgebung detektiert, wohingegen die Klasse \textit{Saskia Wasser Klein} in der jeweils gleichen Beleuchtungsumgebung bei nur 1\% in überbeleuchteter und 6\% in unterbeleuchteter Umgebung liegt.
  
 \begin{figure}[H]
- 	\subfigure[überbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_beleuchtung2.jpg}}\hfill
- 	\subfigure[normal]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_beleuchtung1.jpg}}\hfill
- 	\subfigure[unterbeleuchtet]{\includegraphics[width=0.30\textwidth]{Bilder/yolo_beleuchtung3.jpg}}\hfill
+ 	\subfigure[normal]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_beleuchtung.jpg}}\hfill
+ 	\subfigure[überbeleuchtet]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_überbeleuchtung.jpg}}\hfill
+ 	\subfigure[überbeleuchtet II]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_überbeleuchtung2.jpg}}\hfill
+ 	\subfigure[unterbeleuchtet]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_unterbeleuchtet.jpg}}\hfill
+	\subfigure[unterbeleuchtet II]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_unterbeleuchtet2.jpg}}\hfill
  	\caption{Detektionsverhalten von YOLO bei unterschiedlichen Beleuchtungsverhältnissen}
  	\label{sicht_yolo}
 \end{figure}
-
-Beim Testen der verschiedenen Beleuchtungsverhältnisse fällt auf, dass im Gegensatz zum \textit{SSD} die Flasche in der unterbelichteten Umgebung nicht erkannt wird beziehungsweise mit einem \textit{confidence score} von nur 6\%. 
 
 Gleich zu \textit{SSD} reagiert \textit{YOLO} auch invariant gegenüber unterschiedlichen Hintergründen oder Bildauflösungen.
  

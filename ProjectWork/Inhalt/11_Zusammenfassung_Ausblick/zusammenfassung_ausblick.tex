@@ -1,12 +1,30 @@
 \chapter{Zusammenfassung und Ausblick}
 
-Ziel der Arbeit war es zum einen zu evaluieren, wie gut die bestehenden Objektdetektoren für industrielle Anwendungsszenarien grundsätzlich geeignet sind, zum anderen, ob das spezifische Anwendungsszenario zur Durchführung einer Inventur von Warenhäusern mit einer Drohne prototypisch umsetzbar ist. Nach dieser Arbeit sind nun folgende Erkenntnisse festzuhalten.
+Ziel der Arbeit war es zum einen zu evaluieren, wie gut die bestehenden Objektdetektoren für industrielle Anwendungsszenarien grundsätzlich geeignet sind, zum anderen, ob das spezifische Anwendungsszenario zur Durchführung einer Inventur von Warenhäusern mit einer Drohne prototypisch umsetzbar ist. In der Machbarkeitsstudie \textit{Smart Warehouse} wurden schließlich folgende Ergebnisse erzielt:
 
-Zunächst ist evaluiert worden, dass Objektdetektoren wie \textit{SSD} und \textit{YOLO} durchaus das Potential ausweisen, industriell genutzt zu werden. Nicht nur hinsichtlich ihrer Präzision im Detektionsvermögen weisen sie zuversichtliche Ergebnisse auf, sondern auch in der Schnelligkeit ihrer Detektion. Beide weisen bei speziellen Detektionsszenarien ihre Stärken und Schwächen auf. Gerade die Detektion von teilweise verdeckten Objekten stellt nach wie vor ein Problem dar, für das alternative Lösungswege gefunden werden müssen. 
+\begin{itemize}
+	\item Erstellung eines exemplarischen Trainingsdatensatzes am Beispiel von Getränkeflaschen für die Detektion von Waren in einem Warenhaus,
+	\item Architektur-Analyse und Vergleich gängiger Objektdetektoren nach ausgewählten Kriterien,
+	\item Analyse und Vergleich von lokalen und cloudbasierten Trainingsinfrastrukturen nach ausgewählten Kriterien,
+	\item Auswahl einer programmierbaren Drohne mit Video-Stream Anbindung,
+	\item Trainieren zweier Objektdetektoren auf dem erstellten Trainingsdatensatz mit anschließendem Vergleich der entstandenen Modelle nach ausgewählten Kriterien,
+	\item Programmierung einer Flugsequenz für eine Drohne sowie Decodierung des empfangenen Video-Streams der Drohne,
+	\item Entwicklung einer Client-Server Anwendung mit serverseitigem Live-Stream von inferierten Bilddaten,
+	\item Serverseitige Inferenz von Bilddaten einer Webcam in Echtzeit und
+	\item Entwicklung eines Konzepts zur Durchführung einer kostengünstigen, zeitsparenden und ressourcenschonenden Inventur eines Warenhauses
+\end{itemize}
+
+\newpage
+
+Nach diesen Ergebnissen der Arbeit sind folgende Erkenntnisse festzuhalten:
+
+Objektdetektoren wie \textit{SSD} und \textit{YOLO} weisen durchaus das Potential auf, industriell genutzt zu werden. Nicht nur hinsichtlich ihrer Präzision im Detektionsvermögen weisen sie zuversichtliche Ergebnisse auf, sondern auch in der Schnelligkeit ihrer Detektion. Beide haben bei speziellen Detektionsszenarien ihre Stärken und Schwächen. Gerade die Detektion von teilweise verdeckten Objekten stellt nach wie vor ein Problem dar, für das alternative Lösungswege gefunden werden müssen. 
 
 Daneben stellt sich die Machbarkeitsstudie \textit{Smart Warehouse} basierend auf den gegebenen Rahmenbedingungen und den getroffenen Entscheidungen als nicht machbar heraus. Es wurde eine Drohne programmiert, die ein Miniaturmodell eines Warenhauses durchfliegt. Ihr Drohnenstream konnte zwar abgefragt werden, allerdings wegen Kompatibilitätsproblemen der Laufzeitumgebungen nicht durch ein \textit{Deep Learning} Modell inferiert werden. Anstelle eines Video-Streams der Drohne wurde ein Video-Stream einer Webcam an einen Server zur Inferenz mit dem \textit{YOLO} Objektdetektionsmodell gesendet und die daraus resultierenden Objekte gezählt. Das Ergebnis und der Live-Stream der Inferenz wurden auf einer Webapplikation dargestellt. Offen bleibt das Problem einer doppelten Detektion von Objekten bei mehrfachen Erscheinen im Bild nach gewissen zeitlichen Abständen, da keine eindeutige Identifizierung von Objekten mit reiner Objektdetektion möglich ist. Damit wäre das Zählen von gleichen Objekten an unterschiedlichen Lagerplätzen mit Hilfe eines Objektdetektors nicht umsetzbar, zumindest nicht ohne weitere Zuhilfenahme von zum Beispiel einem GPS Sensor. Auch das Detektieren von verdeckten Objekten bleibt eine weitere Problematik.
 
 Um das \textit{Smart Warehouse} Szenario weiter auszubauen, soll als nächstes der Datensatz vom simplen Beispiel von Getränkeflaschen auf eine echte Warenhausumgebung erweitert werden. Dadurch wird ebenfalls erhofft, die Präzision des Modells weiter zu verbessern und Inkonsistenzen bei unterschiedlichen Beleuchtungsverhältnissen, extremen Blicklagen, größeren Entfernungen und unterschiedlichen Verdeckungsgraden zu beheben. Zudem muss die Flugsequenz der Drohne dahingehend optimiert werden, bei Stellen starker Verdeckungsgrade alternative Betrachtungswinkel zu wählen. 
+
+\newpage
 
 Als nächstes muss ein eigener H.264 Decoder implementiert werden, der die neuste Python Version unterstützt und im Einklang mit den verwendeten \textit{Deep Learning} Frameworks steht. Nach diesem Schritt könnten anschließend auch Live-Bilder des Video-Streams der Drohne inferiert werden.
 

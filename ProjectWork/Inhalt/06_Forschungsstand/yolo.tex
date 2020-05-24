@@ -16,8 +16,6 @@ Hierzu wird ein $S \times S$ Gitter über das Bild gelegt. Für jedes Feld im Gi
 
 Die vorhergesagten Werte werden in einem $S \times S \times (B * 5 + C)$ Tensor kodiert, wobei $S$ und $B$ wie zuvor beschrieben durch das Gitter und die Bounding Boxen festgelegt sind und $C$ die Anzahl der Klassen beschreibt. Abbildung \ref{yolo_architecture} zeigt den Aufbau des CNN von \textit{YOLO} für die Detektion. Es besteht aus 24 \textit{Convolutional Layern} zur Feature Extraktion gefolgt von zwei \textit{Fully-Connected} Layern, um die Klassenwahrscheinlichkeiten und Bounding Box Koordinaten zu bestimmen. Für die Genauigkeit bei der Detektion wird die Auflösung des Eingangsbildes verdoppelt \cite{JosephRedmon.2016}. 
 
-In dem Netzwerk in Abbildung \ref{yolo_architecture} wird ein Bild mit einer Auflösung von $224 \times 224$ Pixeln verwendet und die vorhergesagten Werte im $7 \times 7 \times 30$ Tensor ausgegeben.
-
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[width=15cm]{Bilder/yolo_architecture.png} 
@@ -25,6 +23,8 @@ In dem Netzwerk in Abbildung \ref{yolo_architecture} wird ein Bild mit einer Auf
 		\label{yolo_architecture}
 	\end{center}
 \end{figure}
+
+In dem Netzwerk in Abbildung \ref{yolo_architecture} wird ein Bild mit einer Auflösung von $224 \times 224$ Pixeln verwendet und die vorhergesagten Werte im $7 \times 7 \times 30$ Tensor ausgegeben. Im Trainingsprozess wird die Lernrate zu Beginn langsam von $10^{-3}$ auf $10^{-2}$ angehoben, um eine Divergenz wegen instabilen Gradienten zu vermeiden. Anschließend wird die Lernrate für 75 Epochen beibehalten, bis sie daraufhin für 30 Epochen auf $10^{-3}$ gesenkt wird. Zuletzt wird sie für weitere 30 Epochen auf $10^{-4}$ herabgesetzt \cite{JosephRedmon.2016}.
 
 Die mittlerweile dritte und aktuelle Version von \textit{YOLO} weist einige Verbesserungen auf, gerade im Bezug auf die Erkennung von sehr kleinen Objekten wie zum Beispiel einzelnen Vögeln in einem Schwarm. Das in \textit{YOLOv3} verwendete CNN umfasst insgesamt 53 \textit{Convolutional Layer} und entstand aus mehreren Optimierungsschritten des in Abbildung \ref{yolo_architecture} dargestellten CNN \cite{JosephRedmon.2018}. 
 

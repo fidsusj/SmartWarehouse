@@ -30,11 +30,11 @@ Auf Empfehlung wurde anschließend die \textit{GCP} betrachtet. Diese bietet mit
 
 Als letzter Anbieter wurde \textit{FloydHub} getestet. Hervorzuheben ist die besonders einfache Vorgehensweise bei der Account Erstellung und dem Aufsetzen der Trainingsinfrastruktur, was bereits in Kapitel \ref{cloud} beschrieben wurde. \textit{FloydHub} bietet 20 Stunden CPU Trainingszeit bzw. 2 Stunden GPU Trainingszeit auf einer \textit{NVIDIA Tesla K80} \cite{FloydHub.2020}. Neben einer \textit{NVIDIA Tesla K80} konnte ebenso Trainingszeit auf einer \textit{NVIDIA Tesla V100} erworben werden. Zudem wurde das verwendete \textit{PyTorch} Framework unterstützt. Aufgrund der einfachen Handhabung wurde sich trotz der erhöhten Kosten für \textit{FloydHub} entschieden. 
 
-Während des Trainings mit der \textit{NVIDIA Tesla K80} fiel allerdings auf, dass die Wahl dieser GPU keine großen Performance Verbesserungen gegenüber lokalem Training brachte. Während lokal innerhalb einer Stunde 16 Epochen durchlaufen werden konnten, waren dies bei \textit{Floydhub} hingegen nur 8 Epochen. Dies veranlasste eine Gegenüberstellung gängiger Cloud GPUs mit lokalen GPUs, allen voran den bereits vorhandenen Desktop-Grafikkarten \textit{NVIDIA GeForce GTX 1080} und \textit{NVIDIA GeForce RTX 2060} (siehe Tabelle \ref{table:hardware}) \cite{TechPowerUp.20200209}.
+Während des Trainings mit der \textit{NVIDIA Tesla K80} fiel allerdings auf, dass die Wahl dieser GPU keine großen Performance Verbesserungen gegenüber lokalem Training brachte. Während lokal innerhalb einer Stunde 16 Epochen durchlaufen werden konnten, waren dies bei \textit{Floydhub} hingegen nur 8 Epochen. Dies veranlasste eine Gegenüberstellung gängiger Cloud GPUs mit lokalen GPUs, allen voran den bereits vorhandenen Desktop-Grafikkarten \textit{NVIDIA GeForce GTX 1080} und \textit{NVIDIA GeForce RTX 2060 SUPER} (siehe Tabelle \ref{table:hardware}) \cite{TechPowerUp.20200209}.
 
 \begin{center}
 	\begin{tabular}[H]{l|c|c|c|c|c|c}
-		& K80 & P100 & T4 & V100 & GTX 1080 & RTX 2060 \\
+		& K80 & P100 & T4 & V100 & GTX 1080 & RTX 2060 SUPER \\
 		\hline
 		CUDA Cores & 2496 & 3584 & 2560 & 5120 & 2560 & 2176 \\
 		Tensor Cores & / & / & 320 & 640 & / & 272 \\
@@ -50,4 +50,4 @@ Hierbei fällt auf, dass im Grad der Parallelisierung eine \textit{NVIDIA Tesla 
 
 Auch wurden Überlegungen zum Training in \textit{Google Colab} unternommen, da hier ein einfaches Training mit TPUs ermöglicht werden kann. Da allerdings in \textit{Google Colab} nach 90 Minuten ein Trainingsjob beendet wird und die Rechenresourcen neuen Nutzern zugewiesen werden, war diese Art des Trainings ebenfalls nicht möglich. 
 
-Aus arbeitstechnischen Gründen ist anzumerken, dass die beiden Objektdetektoren \textit{SSD} und \textit{YOLO} lokal jeweils auf unterschiedlicher Hardware trainiert werden, \textit{SSD} auf einer \textit{NVIDIA GeForce GTX 1080} und \textit{YOLO} auf einer \textit{NVIDIA GeForce RTX 2060} GPU.
+Aus arbeitstechnischen Gründen ist anzumerken, dass die beiden Objektdetektoren \textit{SSD} und \textit{YOLO} lokal jeweils auf unterschiedlicher Hardware trainiert werden, \textit{SSD} auf einer \textit{NVIDIA GeForce GTX 1080} und \textit{YOLO} auf einer \textit{NVIDIA GeForce RTX 2060 SUPER} GPU.

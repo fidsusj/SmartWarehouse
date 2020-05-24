@@ -4,8 +4,6 @@ In diesem Kapitel werden die Ergebnisse des Trainings und des Einsatzes der Obje
 
 \section{Präzision und Inferenzverhalten}
 
-\subsection*{SSD}
-
 Ursprünglich wurden 500 Epochen für das Training vorgesehen. Da allerdings beim Training schon nach knapp über hundert Epochen sich der Gradient der Kostenfunktion nur träge veränderte, wurde im Sinne des \textit{Early Stoppings} nach 121 Epochen das Training vorzeitig beendet, um \textit{Overfitting} zu vermeiden. Abbildung \ref{ssdloss} zeigt den Verlauf der Trainingsverlustkurve und der Testverlustkurve während des Kreuzvalidierungsverfahrens.
 
 \begin{figure}[H]
@@ -16,33 +14,43 @@ Ursprünglich wurden 500 Epochen für das Training vorgesehen. Da allerdings bei
 	\end{center}
 \end{figure}
 
-Die Entscheidung zum \textit{Early Stopping} basiert auf dem Anstieg der Differenz zwischen Trainings- und Testverlustkurve ab Epoche 122, was auf \textit{Overfitting} schließen lässt. Zur Epoche davor war die Differenz der beiden Kurven am niedrigsten bei vergleichsweise geringem Verlust im Trainingsverfahren. Auffällig ist ebenfalls der große Abfall der Trainingsverlustkurve bei Epoche 45 und Epoche 89. Hier findet ein Wechsel im Kreuzvalidierungsverfahren statt. Die bessere Generalisierungsfähigkeit des Modells bei neuen Testdaten zeigt Ausschlag, indem die Klassifikationsergebnisse schlagartig besser werden und zu niedrigeren Kosten führen. Auch in Epoche 67 ist einer dieser Ausschläge zu sehen, der allerdings kleiner im Vergleich zu den anderen ausfällt. 
+Die Entscheidung zum \textit{Early Stopping} basiert auf dem Anstieg der Differenz zwischen Trainings- und Testverlustkurve ab Epoche 122, was auf \textit{Overfitting} schließen lässt. Zur Epoche davor war die Differenz der beiden Kurven am niedrigsten bei vergleichsweise geringem Verlust im Trainingsverfahren. Auffällig ist ebenfalls der große Abfall der Trainingsverlustkurve bei Epoche 45 und Epoche 89. Hier findet ein Wechsel im Kreuzvalidierungsverfahren statt. Die bessere Generalisierungsfähigkeit des Modells bei neuen Testdaten zeigt Ausschlag, indem die Klassifikationsergebnisse schlagartig besser werden und zu niedrigeren Kosten führen. Auch in Epoche 67 ist einer dieser Ausschläge zu sehen, der allerdings kleiner im Vergleich zu den anderen ausfällt. Zur Epoche 121 betrug das Ergebnis der Kostenfunktion 1.7. Es ergab eine \textit{mAP} von 83.1\%, leicht über den Referenzergebnissen von \textit{SSD} zu \textit{PascalVOC} (siehe Abbildung \ref{result}).
 
-Zur Epoche 121 betrug das Ergebnis der Kostenfunktion 1.7. Es ergab eine \textit{mAP} von 83.1\%, leicht über den Referenzergebnissen von \textit{SSD} zu \textit{PascalVOC} (siehe Abbildung \ref{result}). Die Ergebnisse zu den einzelnen Klassen sind in folgender Tabelle dargestellt:
+Das Training von \textit{YOLO} ergab eine \textit{mAP} von 80.36\%, wobei nach bereits etwa 4500 Batches eine \textit{mAP} von 80\% erreicht wurde (siehe Abbildung \ref{yolo_result}). Da sich das Modell ab diesem Zeitpunkt nicht mehr maßgeblich verbessert hat, wurde das Training vor Erreichung der durch die Dokumentation nahegelegte maximale Anzahl an Batches abgebrochen. Das frühe Erreichen eines sehr guten Ergebnis kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt und das Modell dementsprechend leichter trainiert werden kann. 
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=8cm]{Bilder/yolo_result.png} 
+		\caption{Entwicklung der YOLO Testverlustkurve und der \textit{mAP} im Training}
+		\label{yolo_result}
+	\end{center}
+\end{figure}
+
+Die Ergebnisse zu den einzelnen Klassen sind in folgender Tabelle dargestellt:
 
 \begin{center}
-	\begin{tabular}[H]{l|c}
-		Klasse & mAP \\
+	\begin{tabular}[H]{l|c|c}
+		Klasse & mAP SSD & mAP YOLO \\
 		\hline
-		Saskia Wasser Groß & 77.62\% \\
-		Saskia Wasser Klein & 75.96\% \\
-		Pepsi Cola Groß & 94.94\% \\
-		Pepsi Cola Klein & 86.38\% \\
-		ISO & 86.37\% \\
-		ACE & 85.43\% \\
-		Stenger Johannisbeerschorle & 69.47\% \\
-		Stenger Apfelsaftschorle & 82.48 \% \\
-		Vitamalz Malzbier & 76.24\%
+		Saskia Wasser Groß & 77.62\% & 76.69\% \\
+		Saskia Wasser Klein & 75.96\% & 80.63\% \\
+		Pepsi Cola Groß & 94.94\% & 73.14\% \\
+		Pepsi Cola Klein & 86.38\% & 75.24\% \\
+		ISO & 86.37\% & 90.28\% \\
+		ACE & 85.43\% & 86.69\% \\
+		Stenger Johannisbeerschorle & 69.47\% & 72.50\% \\
+		Stenger Apfelsaftschorle & 82.48 \% & 78.05\% \\
+		Vitamalz Malzbier & 76.24 & 81.94\%\%
 	\end{tabular}
-	\captionof{table}{Validierungsergebnisse SSD}
-	\label{table:ssdresults}
+	\captionof{table}{Validierungsergebnisse von SSD und YOLO}
+	\label{table:ssdyoloresults}
 \end{center}
 
 Wird nun das trainierte Modell auf echte Daten angewendet, so fällt auf, dass manche Objekte doppelt detektiert werden. Um dieses Problem zu lösen, gibt es zwei Möglichkeiten. 
 
-Als erstes kann bei der Detektion der minimale \textit{confidence score} angegeben werden, ab wann eine Detektion offiziell als solche wahrgenommen wird. Hier liegt die Herausforderung darin, einen optimalen Wert zu finden, sodass verdeckte Objekte noch als solche erkannt werden, aber doppelt erkannte Objekte nicht mehr auftreten. Der \textit{confidence score} wurde nach mehrmaligem Iterieren auf 0.7 festgelegt.
+Als erstes kann bei der Detektion der minimale \textit{confidence score} angegeben werden, ab wann eine Detektion offiziell als solche wahrgenommen wird. Hier liegt die Herausforderung darin, einen optimalen Wert zu finden, sodass verdeckte Objekte noch als solche erkannt werden, aber doppelt erkannte Objekte nicht mehr auftreten. Der \textit{confidence score} für \textit{SSD} wurde nach mehrmaligem Iterieren auf 0.7 gesetzt. Bei \textit{YOLO} ist der \textit{confidence score} standardmäßig auf 0.25 festgelegt. Nach mehreren Durchläufen stellt sich heraus, dass dieser Wert nicht verändert werden sollte. Ein zu geringer Wert sorgt zwar dafür, dass möglicherweise mehr Objekte erkannt werden, allerdings steigt damit auch die Rate an falsch oder doppelt erkannter Objekte.
 
-Die zweite Möglichkeit besteht darin, die maximale Überlappung zweier Bounding Boxen festzulegen. Somit werden doppelte Bounding Boxen, die sich flächenmäßig über einem gewissen Grenzwert überlappen, auf eine Bounding Box reduziert. Er stellte ich sich Parameter von 0.45 als geeignet heraus. Außerdem wurden Inkonsistenzen im Detektionsverhalten festgestellt.
+Die zweite Möglichkeit besteht darin, die maximale Überlappung zweier Bounding Boxen festzulegen. Somit werden doppelte Bounding Boxen, die sich flächenmäßig über einem gewissen Grenzwert überlappen, auf eine Bounding Box reduziert. Es stellte sich ein Wert von 0.45 beim \textit{SSD} als geeignet heraus. Bei \textit{YOLO} hingegen existiert dieser Parameter nicht. Außerdem wurden Inkonsistenzen im Detektionsverhalten festgestellt.
 
 \begin{figure}[H]
 	\subfigure[Verdecktes Objekt I]{\includegraphics[width=0.20\textwidth]{Bilder/verdeckt.jpeg}}\hfill
@@ -54,6 +62,17 @@ Die zweite Möglichkeit besteht darin, die maximale Überlappung zweier Bounding
 \end{figure}
 
 So sind von anderen Objekten verdeckte Objekte nur schwer zu erkennen. So wird beispielsweise in Abbildung \ref{lagen} (a) das rechte hintere Objekt selbst bei einem sehr niedrigen \textit{confidence score} Schwellwert nicht erkannt. In Abbildung \ref{lagen} (b) hingegen ist eine Detektion ab einem \textit{confidence score} von 0.53 möglich, was allerdings wieder weitere ungenaue und ungewünschte Detektionen verursacht. Ähnliche Probleme ergeben sich für die Detektion von Objekte aus extremen Blicklagen. In Abbildung \ref{lagen} (c) werden die Objekte beispielsweise erst ab einem \textit{confidence score} von 0.54 erkannt, allerdings nicht als drei einzelne Objekte, sondern als ein großes Gesamtobjekt. Dies gilt allerdings nicht für alle Klassen. Bei Anwendung dieses Problemfalls auf eine andere Klasse ergeben sich bei vergleichbarem \textit{confidence score} von 0.56 sehenswertere Ergebnisse (siehe Abbildung \ref{lagen} (d)). Demnach könnte man darauf schließen, dass durch Ausbau des Datensatzes eine bessere Inferenz für solche Fälle ermöglicht werden könnte.
+
+\begin{figure}[H]
+	\subfigure[Verdecktes Objekt I]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_verdeckt.jpg}}\hfill
+	\subfigure[Verdecktes Objekt II]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_verdeckt2.jpg}}\hfill
+	\subfigure[Extreme Blicklagen I]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_winkel.jpg}}\hfill
+	\subfigure[Extreme Blicklagen II]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_winkel2.jpg}}\hfill
+	\caption{Detektionsverhalten von YOLO bei extremen Blicklagen}
+	\label{lagen_yolo}
+\end{figure}
+
+Auch bei \textit{YOLO} können verdeckte Objekte nur schwer erkannt werden. In den beiden Beispielen (Abbildung \ref{lagen_yolo} (a) und (b)) wurden jeweils nur die beiden vorderen Flaschen detektiert, da der \textit{Confidence Score} für die zwei stark verdeckten Flaschen bei nur 0.15 und 0.08 liegt. Bei einer extremen Blicklage fällt das Ergebnis noch schlechter als bei \textit{SSD} aus. Hier werden im Beispiel von Abbildung \ref{lagen_yolo} (c) beide gefundenen Flaschen mit einem \textit{confidence score} von 0.97 und 0.53 sogar falsch klassifiziert, wobei wie bei \textit{SSD} die gleichen zwei Flaschen mit einer Box umschlossen sind.
 
 Die zwei genannten Problemfälle wurden im Datensatz zwar zu 12.5\% abgedeckt, scheinen allerdings nur wenig Auswirkung auf besseres Detektionsverhalten für solche Fälle geliefert zu haben. Es lässt sich auch keine Aussage darüber treffen, ob eine Erweiterung des Datensatzes mit weiteren solchen Extremfällen eine Abhilfe für dieses Problem hätte liefern können. 
 
@@ -68,68 +87,6 @@ Die zwei genannten Problemfälle wurden im Datensatz zwar zu 12.5\% abgedeckt, s
 Auch die Entfernung zum zu detektierenden Objekt besitzt eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{entfernung} wird gezeigt, dass ab einer Entfernung von drei Metern eine zuverlässige Detektion nicht mehr möglich ist. In diesem Beispiel ist erst ab einer niedrigeren \textit{confidence score} Grenze von 0.31 eine Detektion des Objekts wieder erfolgt, bei anderen Beispielen sogar erst ab einem Wert von 0.09.
 
 \begin{figure}[H]
-	\subfigure[Überbeleuchtet I]{\includegraphics[width=0.20\textwidth]{Bilder/ueberbeleuchtet2.jpeg}}\hfill
-	\subfigure[Überbeleuchtet II]{\includegraphics[width=0.20\textwidth]{Bilder/ueberbeleuchtet.jpeg}}\hfill
-	\subfigure[normal]{\includegraphics[width=0.20\textwidth]{Bilder/normalbeleuchtet.jpeg}}\hfill
-	\subfigure[Unterbeleuchtet]{\includegraphics[width=0.20\textwidth]{Bilder/unterbeleuchtet.jpeg}}\hfill
-	\caption{Detektionsverhalten von SSD bei unterschiedlichen Beleuchtungsverhältnissen}
-	\label{sicht}
-\end{figure}
-
-Des Weiteren haben unterschiedliche Beleuchtungsgrade eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{sicht} wird unterschieden zwischen dem Detektionsverhalten bei überbeleuchteten, normalen und unterbeleuchteten Sichtverhältnissen. Überbeleuchtete Umgebungsverhältnisse erschweren die Objektdetektion. Zum einen können bestimmte Objekte gar nicht mehr erkannt werden (siehe Abbildung \ref{sicht} (b)) oder die dadurch verursachte Lichtabsorption und anschließende Emission durch die zu detektierenden Objekte führt zu einer Falschdetektion. In Abbildung \ref{sicht} (a) wird so beispielsweise mit einem \textit{confidence score} von 0.91 das Objekt der Klasse \textit{ACE} falsch als \textit{ISO} klassifiziert.
-
-Alle Detektionen reagierten allerdings invariant gegenüber unterschiedlichen Hintergründen oder Bildauflösungen.
-
-\newpage
-
-\subsection*{YOLO}
-
-Um eine möglichst gute Aussage über den Vergleich der beiden Objektdetektoren treffen zu können, kommt bei \textit{YOLO} der exakt gleiche Trainings- und Testdatensatz wie beim \textit{SSD} zum Einsatz. Das Training von \textit{YOLO} ergab eine \textit{mAP} von 80.36\%. Abbildung \ref{yolo_result} zeigt die Verbesserung des Modells während dem Trainingsprozess. 
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=8cm]{Bilder/yolo_result.png} 
-		\caption{Entwicklung der YOLO Testverlustkurve und der \textit{mAP} im Training}
-		\label{yolo_result}
-	\end{center}
-\end{figure}
-
-Das Modell erreicht nach bereits etwa 4500 Batches eine \textit{mAP} von 80\%. Da sich das Modell ab diesem Zeitpunkt nicht mehr maßgeblich verbessert hat, wurde das Training vor Erreichung der durch die Dokumentation nahegelegte maximale Anzahl an Batches abgebrochen. Das frühe Erreichen eines sehr guten Ergebnis kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt und das Modell dementsprechend leichter trainiert werden kann. 
-
-Der Schwellwert des \textit{confidence scores} liegt standardmäßig bei 0.25. Nach mehreren Durchläufen stellt sich heraus, dass dieser Wert nicht verändert werden sollte. Ein zu geringer Wert sorgt zwar dafür, dass möglicherweise mehr Objekte erkannt werden, allerdings steigt damit auch die Rate an falsch oder doppelt erkannter Objekte. Ein Parameter für die Obergrenze der Überlappung zweier Bounding Boxen existiert nicht.
-
-Tabelle \ref{table:yoloresults} zeigt die \textit{mAP} für jede Klasse.
-
-\begin{center}
-	\begin{tabular}[H]{l|c|c}
-		Klasse & mAP & Differenz zu SSD\\
-		\hline
-		Saskia Wasser Groß & 76.69\% & (-0.93\%) \\
-		Saskia Wasser Klein & 80.63\% & (+4.67\%) \\
-		Pepsi Cola Groß & 73.14\% & (-21.8\%) \\
-		Pepsi Cola Klein & 75.24\% & (-11.14\%) \\
-		ISO & 90.28\% & (+3.91\%) \\
-		ACE & 86.69\% & (+1.26\%) \\
-		Stenger Johannisbeerschorle & 72.50\% & (+3.03\%) \\
-		Stenger Apfelsaftschorle & 78.05\% & (-4.43\%) \\
-		Vitamalz Malzbier & 81.94\% & (+5.7\%)
-	\end{tabular}
-	\captionof{table}{Validierungsergebnisse YOLO im Vergleich zu SSD}
-	\label{table:yoloresults}
-\end{center}
-
-\begin{figure}[H]
-	\subfigure[Verdecktes Objekt I]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_verdeckt.jpg}}\hfill
-	\subfigure[Verdecktes Objekt II]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_verdeckt2.jpg}}\hfill
-	\subfigure[Extreme Blicklagen I]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_winkel.jpg}}\hfill
-	\subfigure[Extreme Blicklagen II]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_winkel2.jpg}}\hfill
-	\caption{Detektionsverhalten von YOLO bei extremen Blicklagen}
-	\label{lagen_yolo}
-\end{figure}
-
-Auch bei \textit{YOLO} können verdeckte Objekte nur schwer erkannt werden. In den beiden Beispielen (Abbildung \ref{lagen_yolo} (a) und (b)) wurden jeweils nur die beiden vorderen Flaschen detektiert, da der \textit{Confidence Score} für die zwei stark verdeckten Flaschen bei nur 0.15 und 0.08 liegt. Bei einer extremen Blicklage fällt das Ergebnis noch schlechter als bei \textit{SSD} aus. Hier werden im Beispiel von Abbildung \ref{lagen_yolo} (c) beide gefundenen Flaschen mit einem \textit{confidence score} von 0.97 und 0.53 sogar falsch klassifiziert, wobei wie bei \textit{SSD} die gleichen zwei Flaschen mit einer Box umschlossen sind.
-
-\begin{figure}[H]
 	\subfigure[1 Meter]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_entfernung1.jpg}}\hfill
 	\subfigure[2 Meter]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_entfernung2.jpg}}\hfill
 	\subfigure[2 Meter II]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_entfernung2_2.jpg}}\hfill
@@ -138,7 +95,18 @@ Auch bei \textit{YOLO} können verdeckte Objekte nur schwer erkannt werden. In d
 	\label{entfernung_yolo}
 \end{figure}
 
-Bei größeren Entfernungen scheint \textit{YOLO} anfälliger zu sein als \textit{SSD}. Nach bereits zwei Metern Entfernung erfolgt keine zufällige Detektion mehr (siehe Abbildung \ref{entfernung_yolo} (b)). In dem Beispiel wird lediglich ein \textit{confidence score} von 0.14 erzielt. Bei anderen Klassen werden Objekte sogar falsch klassifiziert (siehe Abbildung \ref{entfernung_yolo} (c)).
+Bei größeren Entfernungen scheint \textit{YOLO} anfälliger zu sein als \textit{SSD}. Nach bereits zwei Metern Entfernung erfolgt keine zuverlässige Detektion mehr (siehe Abbildung \ref{entfernung_yolo} (b)). In dem Beispiel wird lediglich ein \textit{confidence score} von 0.14 erzielt. Bei anderen Klassen werden Objekte sogar falsch klassifiziert (siehe Abbildung \ref{entfernung_yolo} (c)).
+
+\begin{figure}[H]
+	\subfigure[Überbeleuchtet I]{\includegraphics[width=0.20\textwidth]{Bilder/ueberbeleuchtet2.jpeg}}\hfill
+	\subfigure[Überbeleuchtet II]{\includegraphics[width=0.20\textwidth]{Bilder/ueberbeleuchtet.jpeg}}\hfill
+	\subfigure[normal]{\includegraphics[width=0.20\textwidth]{Bilder/normalbeleuchtet.jpeg}}\hfill
+	\subfigure[Unterbeleuchtet]{\includegraphics[width=0.20\textwidth]{Bilder/unterbeleuchtet.jpeg}}\hfill
+	\caption{Detektionsverhalten von SSD bei unterschiedlichen Beleuchtungsverhältnissen}
+	\label{sicht}
+\end{figure}
+
+Des Weiteren haben unterschiedliche Beleuchtungsgrade eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{sicht} wird unterschieden zwischen dem Detektionsverhalten bei überbeleuchteten, normalen und unterbeleuchteten Sichtverhältnissen. Überbeleuchtete Umgebungsverhältnisse erschweren die Objektdetektion. Zum einen können bei \textit{SSD} bestimmte Objekte gar nicht mehr erkannt werden (siehe Abbildung \ref{sicht} (b)) oder die dadurch verursachte Lichtabsorption und anschließende Emission durch die zu detektierenden Objekte führt zu einer Falschdetektion. In Abbildung \ref{sicht} (a) wird so beispielsweise mit einem \textit{confidence score} von 0.91 das Objekt der Klasse \textit{ACE} falsch als \textit{ISO} klassifiziert.
 
 \begin{figure}[H]
 	\subfigure[Normal]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_beleuchtung.jpg}}\hfill
@@ -150,9 +118,9 @@ Bei größeren Entfernungen scheint \textit{YOLO} anfälliger zu sein als \texti
 	\label{sicht_yolo}
 \end{figure}
 
-Bei verschiedenen Beleuchtungsverhältnissen verhält sich \textit{YOLO} ähnlich zu \textit{SSD}. Bei Abbildung \ref{sicht_yolo} (b) und (c) sowie (d) und (e) fällt auf, dass die Detektion je nach Klasse unterschiedlich gut ausfällt. Im Beispiel wird eine Flasche der Klasse \textit{ACE} mit einem \textit{confidence score} von 0.61 in einer überbeleuchteten und mit 0.56 in einer unterbeleuchteten Umgebung detektiert, wohingegen die Klasse \textit{Saskia Wasser Klein} in der jeweils gleichen Beleuchtungsumgebung bei nur 0.01 in überbeleuchteter und 0.06 in unterbeleuchteter Umgebung liegt.
+\textit{YOLO} verhält sich bei den verschiedenen Beleuchtungsverhältnissen ähnlich zu \textit{SSD}. Bei Abbildung \ref{sicht_yolo} (b) und (c) sowie (d) und (e) fällt auf, dass die Detektion je nach Klasse unterschiedlich gut ausfällt. Im Beispiel wird eine Flasche der Klasse \textit{ACE} mit einem \textit{confidence score} von 0.61 in einer überbeleuchteten und mit 0.56 in einer unterbeleuchteten Umgebung detektiert, wohingegen die Klasse \textit{Saskia Wasser Klein} in der jeweils gleichen Beleuchtungsumgebung bei nur 0.01 in überbeleuchteter und 0.06 in unterbeleuchteter Umgebung liegt.
 
-Gleich zu \textit{SSD} reagiert \textit{YOLO} auch invariant gegenüber unterschiedlichen Hintergründen oder Bildauflösungen.
+Alle Detektionen reagierten allerdings invariant gegenüber unterschiedlichen Hintergründen oder Bildauflösungen.
  
 \section{Reaktionsvermögen}
 

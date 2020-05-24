@@ -46,15 +46,26 @@ Der Datensatz ist 1.45 GB groß und besteht aus 1088 manuell annotierten Bildern
 	\end{center}
 \end{figure}
 
-Durch das Tool \textit{LabelImg} wurden die Daten sowohl für das \textit{PascalVOC}, als auch das \textit{YOLO} Format annotiert (siehe Abbildung \ref{labelImg}). Im initialen Datensatz sind auf 75\% der Bilder die Objekte der jeweiligen Kategorien einzeln und klar erkennbar abgebildet. Hierdurch wird erhofft, dass Modell zunächst auf die Muster der jeweiligen Objekte zu trainieren. Hinsichtlich der im folgenden Kapitel eingeführten Bewertungskriterien sind weitere 12,5\% der Bilder so ausgewählt, dass ein möglichst gutes Inferenzverhalten, gerade bei schwierigen Aufnahmeumständen und möglichen Problemsituationen, gewährleistet werden kann. Dies umfasst vor allem Situationen der starken Überdeckung, unterschiedlicher Entfernungen und Blicklagen sowie wechselnde Lichtverhältnisse. Je nach Umgebung wurden Bilder dieses Anteils als schwer erkennbar markiert. Auch wurde darauf geachtet, die Hintergründe der zu detektierenden Objekte kontinuierlich zu variieren. Um das Warenhaus zu simulieren, sind in den letzten 12,5\% der Bilder die Objekte auf Regalen angeordnet, jeweils hintereinander oder in Getränkekästen. Ein Ausschnitt aus dem Datensatz kann in Abbildung \ref{dataset} eingesehen werden. 
+Durch das Tool \textit{LabelImg} wurden die Daten sowohl für das \textit{PascalVOC}, als auch das \textit{YOLO} Format annotiert (siehe Abbildung \ref{labelImg}). Im initialen Datensatz sind auf 75\% der Bilder die Objekte der jeweiligen Kategorien einzeln und klar erkennbar abgebildet (siehe Abbildung \ref{categories}). Hierdurch wird erhofft, dass Modell zunächst auf die Muster der jeweiligen Objekte zu trainieren. 
 
 \begin{figure}[H]
-	\subfigure{\includegraphics[width=0.20\textwidth]{Bilder/dataset1.jpg}}\hfill
-	\subfigure{\includegraphics[width=0.20\textwidth]{Bilder/dataset2.jpg}}\hfill
-	\subfigure{\includegraphics[width=0.20\textwidth]{Bilder/dataset3.jpg}}\hfill
-	\subfigure{\includegraphics[width=0.20\textwidth]{Bilder/dataset4.jpg}}\hfill
-	\caption{Ausschnitt aus dem Smart Warehouse Datensatz}
+	\subfigure[Verdeckung]{\includegraphics[width=0.20\textwidth]{Bilder/dataset1.jpg}}\hfill
+	\subfigure[Extreme Blicklagen]{\includegraphics[width=0.20\textwidth]{Bilder/dataset2.jpg}}\hfill
+	\subfigure [Unterbeleuchtung]{\includegraphics[width=0.20\textwidth]{Bilder/dataset3.jpg}}\hfill
+	\subfigure[Nahaufnahme]{\includegraphics[width=0.20\textwidth]{Bilder/dataset4.jpg}}\hfill
+	\caption{Ausschnitt I aus dem Smart Warehouse Datensatz}
 	\label{dataset}
 \end{figure}
 
-Aus dem Gesamtdatensatz von 1088 Bildern wurden 90 Bilder für die spätere Validierung herausgezogen. Die restlichen 998 bestehen aus 200 Bildern Testdaten und 798 Bildern für das Training. Der Datensatz wurde sowohl für das \textit{PascalVOC} Format als auch für das \textit{YOLO} Format auf \textit{Kaggle}\footnote{Kaggle ist eine Online-Plattform für Datenwissenschaftler. Hier werden regelmäßig neue Datensätze bereitgestellt, oft im Zusammenhang mit bestimmten dazugehörigen Problemstellungen, die es unter der Gemeinschaft zu lösen gilt. Für bestimmte Problemstellungen werden sogar Preisgelder für deren Lösung ausgezahlt.} veröffentlicht \cite{FelixHausberger.20200503}.
+Hinsichtlich der im folgenden Kapitel eingeführten Bewertungskriterien sind weitere Bilder so ausgewählt, dass ein möglichst gutes Inferenzverhalten, gerade bei schwierigen Aufnahmeumständen und möglichen Problemsituationen, gewährleistet werden kann. So sind Verdeckungen von zu detektierenden Objekten zu 13\% im Datensatz abgebildet (siehe Abbildung \ref{dataset} (a)), Detektionssituationen aus extremen Blicklagen zu 4\% (siehe Abbildung \ref{dataset} (b)) und schwierige Beleuchtungs- \& Lichtverhältnisse zu 8\% (siehe Abbildung \ref{dataset} (c)). Nur wenige Beispiele (2\%) sind zu unterschiedlichen Entfernungen während der Detektion im Datensatz vorhanden (siehe Abbildung \ref{dataset} (d)). Je nach Umgebung wurden Bilder zudem als schwer erkennbar markiert. Auch wurde darauf geachtet, die Hintergründe der zu detektierenden Objekte kontinuierlich zu variieren. Mit der Anreicherung des Datensatzes mit Repräsentationen von solchen erschwerten Aufnahmeumständen wird erhofft, die Generalisierungsfähigkeit darauf aufbauender \textit{Deep Learning} Modelle zu steigern.
+
+Um schließlich das Warenhaus zu simulieren, bei dem mehrere Objekte auf einmal detektiert werden sollen, sind in 12,5\% aller Bilder die Objekte auf Regalen angeordnet, jeweils hintereinander oder in Getränkekästen. Ein Ausschnitt hierzu kann in Abbildung \ref{dataset2} eingesehen werden. 
+
+\begin{figure}[H]
+	\subfigure[Objekte im Regal]{\includegraphics[width=0.45\textwidth]{Bilder/dataset5.jpg}}\hfill
+	\subfigure[Objekte im Getränkekasten]{\includegraphics[width=0.45\textwidth]{Bilder/dataset6.jpg}}\hfill
+	\caption{Ausschnitt II aus dem Smart Warehouse Datensatz}
+	\label{dataset2}
+\end{figure}
+
+Aus dem Gesamtdatensatz von 1088 Bildern wurden 90 Bilder für die spätere Validierung herausgezogen. Die restlichen 998 bestehen aus 200 Bildern Testdaten und 798 Bildern für das Training. In 90\% aller Bilder sind nur Objekte einer Klasse abgebildet, da Warenbestände ebenso meist nach den Waren gruppiert sind. Der Datensatz wurde sowohl für das \textit{PascalVOC} Format als auch für das \textit{YOLO} Format auf \textit{Kaggle}\footnote{Kaggle ist eine Online-Plattform für Datenwissenschaftler. Hier werden regelmäßig neue Datensätze bereitgestellt, oft im Zusammenhang mit bestimmten dazugehörigen Problemstellungen, die es unter der Gemeinschaft zu lösen gilt. Für bestimmte Problemstellungen werden sogar Preisgelder für deren Lösung ausgezahlt.} veröffentlicht \cite{FelixHausberger.20200503}.

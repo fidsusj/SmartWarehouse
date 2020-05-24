@@ -68,10 +68,10 @@ Die zwei genannten Problemfälle wurden im Datensatz zwar zu 12.5\% abgedeckt, s
 Auch die Entfernung zum zu detektierenden Objekt besitzt eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{entfernung} wird gezeigt, dass ab einer Entfernung von drei Metern eine zuverlässige Detektion nicht mehr möglich ist. In diesem Beispiel ist erst ab einer niedrigeren \textit{confidence score} Grenze von 0.31 eine Detektion des Objekts wieder erfolgt, bei anderen Beispielen sogar erst ab einem Wert von 0.09.
 
 \begin{figure}[H]
-	\subfigure[überbeleuchtet I]{\includegraphics[width=0.20\textwidth]{Bilder/ueberbeleuchtet2.jpeg}}\hfill
-	\subfigure[überbeleuchtet II]{\includegraphics[width=0.20\textwidth]{Bilder/ueberbeleuchtet.jpeg}}\hfill
+	\subfigure[Überbeleuchtet I]{\includegraphics[width=0.20\textwidth]{Bilder/ueberbeleuchtet2.jpeg}}\hfill
+	\subfigure[Überbeleuchtet II]{\includegraphics[width=0.20\textwidth]{Bilder/ueberbeleuchtet.jpeg}}\hfill
 	\subfigure[normal]{\includegraphics[width=0.20\textwidth]{Bilder/normalbeleuchtet.jpeg}}\hfill
-	\subfigure[unterbeleuchtet]{\includegraphics[width=0.20\textwidth]{Bilder/unterbeleuchtet.jpeg}}\hfill
+	\subfigure[Unterbeleuchtet]{\includegraphics[width=0.20\textwidth]{Bilder/unterbeleuchtet.jpeg}}\hfill
 	\caption{Detektionsverhalten von SSD bei unterschiedlichen Beleuchtungsverhältnissen}
 	\label{sicht}
 \end{figure}
@@ -141,11 +141,11 @@ Auch bei \textit{YOLO} können verdeckte Objekte nur schwer erkannt werden. In d
 Bei größeren Entfernungen scheint \textit{YOLO} anfälliger zu sein als \textit{SSD}. Nach bereits zwei Metern Entfernung erfolgt keine zufällige Detektion mehr (siehe Abbildung \ref{entfernung_yolo} (b)). In dem Beispiel wird lediglich ein \textit{confidence score} von 0.14 erzielt. Bei anderen Klassen werden Objekte sogar falsch klassifiziert (siehe Abbildung \ref{entfernung_yolo} (c)).
 
 \begin{figure}[H]
-	\subfigure[normal]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_beleuchtung.jpg}}\hfill
-	\subfigure[überbeleuchtet]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_ueberbeleuchtung.jpg}}\hfill
-	\subfigure[überbeleuchtet II]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_ueberbeleuchtung2.jpg}}\hfill
-	\subfigure[unterbeleuchtet]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_unterbeleuchtet.jpg}}\hfill
-	\subfigure[unterbeleuchtet II]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_unterbeleuchtet2.jpg}}\hfill
+	\subfigure[Normal]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_beleuchtung.jpg}}\hfill
+	\subfigure[Überbeleuchtet]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_ueberbeleuchtung.jpg}}\hfill
+	\subfigure[Überbeleuchtet II]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_ueberbeleuchtung2.jpg}}\hfill
+	\subfigure[Unterbeleuchtet]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_unterbeleuchtet.jpg}}\hfill
+	\subfigure[Unterbeleuchtet II]{\includegraphics[width=0.15\textwidth]{Bilder/yolo_unterbeleuchtet2.jpg}}\hfill
 	\caption{Detektionsverhalten von YOLO bei unterschiedlichen Beleuchtungsverhältnissen}
 	\label{sicht_yolo}
 \end{figure}

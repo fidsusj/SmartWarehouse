@@ -4,11 +4,11 @@ In diesem Kapitel werden die Ergebnisse des Trainings und des Einsatzes der Obje
 
 \section{Präzision und Inferenzverhalten}
 
-Ursprünglich wurden 500 Epochen für das Training vorgesehen. Da allerdings beim Training schon nach knapp über hundert Epochen sich der Gradient der Kostenfunktion nur träge veränderte, wurde im Sinne des \textit{Early Stoppings} nach 121 Epochen das Training vorzeitig beendet, um \textit{Overfitting} zu vermeiden. Abbildung \ref{ssdloss} zeigt den Verlauf der Trainingsverlustkurve und der Testverlustkurve während des Kreuzvalidierungsverfahrens.
+Ursprünglich wurden 500 Epochen für das Training von \textit{SSD} vorgesehen. Da allerdings beim Training schon nach knapp über hundert Epochen sich der Gradient der Kostenfunktion nur träge veränderte, wurde im Sinne des \textit{Early Stoppings} nach 121 Epochen das Training vorzeitig beendet, um \textit{Overfitting} zu vermeiden. Abbildung \ref{ssdloss} zeigt den Verlauf der Trainingsverlustkurve und der Testverlustkurve während des Kreuzvalidierungsverfahrens.
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=9cm]{Bilder/ssdloss.jpeg} 
+		\includegraphics[width=10cm]{Bilder/ssdloss.jpeg} 
 		\caption{Entwicklung der SSD Trainings- und Testverlustkurve im Training}
 		\label{ssdloss}
 	\end{center}
@@ -16,7 +16,7 @@ Ursprünglich wurden 500 Epochen für das Training vorgesehen. Da allerdings bei
 
 Die Entscheidung zum \textit{Early Stopping} basiert auf dem Anstieg der Differenz zwischen Trainings- und Testverlustkurve ab Epoche 122, was auf \textit{Overfitting} schließen lässt. Zur Epoche davor war die Differenz der beiden Kurven am niedrigsten bei vergleichsweise geringem Verlust im Trainingsverfahren. Auffällig ist ebenfalls der große Abfall der Trainingsverlustkurve bei Epoche 45 und Epoche 89. Hier findet ein Wechsel im Kreuzvalidierungsverfahren statt. Die bessere Generalisierungsfähigkeit des Modells bei neuen Testdaten zeigt Ausschlag, indem die Klassifikationsergebnisse schlagartig besser werden und zu niedrigeren Kosten führen. Auch in Epoche 67 ist einer dieser Ausschläge zu sehen, der allerdings kleiner im Vergleich zu den anderen ausfällt. Zur Epoche 121 betrug das Ergebnis der Kostenfunktion 1.7. Es ergab eine \textit{mAP} von 83.1\%, leicht über den Referenzergebnissen von \textit{SSD} zu \textit{PascalVOC} (siehe Abbildung \ref{result}).
 
-Das Training von \textit{YOLO} ergab eine \textit{mAP} von 80.36\%, wobei nach bereits etwa 4500 Batches eine \textit{mAP} von 80\% erreicht wurde (siehe Abbildung \ref{yolo_result}). Da sich das Modell ab diesem Zeitpunkt nicht mehr maßgeblich verbessert hat, wurde das Training vor Erreichung der durch die Dokumentation nahegelegte maximale Anzahl an Batches abgebrochen. Das frühe Erreichen eines sehr guten Ergebnis kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt und das Modell dementsprechend leichter trainiert werden kann. 
+Das Training von \textit{YOLO} ergab eine \textit{mAP} von 80.36\%, wobei nach bereits etwa 4500 Batches eine \textit{mAP} von 80\% erreicht wurde (siehe Abbildung \ref{yolo_result}). Da sich das Modell ab diesem Zeitpunkt nicht mehr maßgeblich verbessert hat, wurde das Training vor Erreichung der durch die Dokumentation nahegelegten maximalen Anzahl an Batches abgebrochen. Das frühe Erreichen eines sehr guten Ergebnis kann darauf zurückgeführt werden, dass es sich bei den gelabelten Klassen um Objekte des gleichen Typs handelt und das Modell dementsprechend leichter trainiert werden kann. 
 
 \begin{figure}[H]
 	\begin{center}
@@ -46,7 +46,7 @@ Die Ergebnisse zu den einzelnen Klassen sind in folgender Tabelle dargestellt:
 	\label{table:ssdyoloresults}
 \end{center}
 
-Wird nun das trainierte Modell auf echte Daten angewendet, so fällt auf, dass manche Objekte doppelt detektiert werden. Um dieses Problem zu lösen, gibt es zwei Möglichkeiten. 
+Werden nun die trainierten Modelle auf echte Daten angewendet, so fällt auf, dass manche Objekte doppelt detektiert werden. Um dieses Problem zu lösen, gibt es zwei Möglichkeiten. 
 
 Als erstes kann bei der Detektion der minimale \textit{confidence score} angegeben werden, ab wann eine Detektion offiziell als solche wahrgenommen wird. Hier liegt die Herausforderung darin, einen optimalen Wert zu finden, sodass verdeckte Objekte noch als solche erkannt werden, aber doppelt erkannte Objekte nicht mehr auftreten. Der \textit{confidence score} für \textit{SSD} wurde nach mehrmaligem Iterieren auf 0.7 gesetzt. Bei \textit{YOLO} ist der \textit{confidence score} standardmäßig auf 0.25 festgelegt. Nach mehreren Durchläufen stellt sich heraus, dass dieser Wert nicht verändert werden sollte. Ein zu geringer Wert sorgt zwar dafür, dass möglicherweise mehr Objekte erkannt werden, allerdings steigt damit auch die Rate an falsch oder doppelt erkannter Objekte.
 
@@ -61,7 +61,7 @@ Die zweite Möglichkeit besteht darin, die maximale Überlappung zweier Bounding
 	\label{lagen}
 \end{figure}
 
-So sind von anderen Objekten verdeckte Objekte nur schwer zu erkennen. So wird beispielsweise in Abbildung \ref{lagen} (a) das rechte hintere Objekt selbst bei einem sehr niedrigen \textit{confidence score} Schwellwert nicht erkannt. In Abbildung \ref{lagen} (b) hingegen ist eine Detektion ab einem \textit{confidence score} von 0.53 möglich, was allerdings wieder weitere ungenaue und ungewünschte Detektionen verursacht. Ähnliche Probleme ergeben sich für die Detektion von Objekte aus extremen Blicklagen. In Abbildung \ref{lagen} (c) werden die Objekte beispielsweise erst ab einem \textit{confidence score} von 0.54 erkannt, allerdings nicht als drei einzelne Objekte, sondern als ein großes Gesamtobjekt. Dies gilt allerdings nicht für alle Klassen. Bei Anwendung dieses Problemfalls auf eine andere Klasse ergeben sich bei vergleichbarem \textit{confidence score} von 0.56 sehenswertere Ergebnisse (siehe Abbildung \ref{lagen} (d)). Demnach könnte man darauf schließen, dass durch Ausbau des Datensatzes eine bessere Inferenz für solche Fälle ermöglicht werden könnte.
+So sind von anderen Objekten verdeckte Objekte bei \textit{SSD} nur schwer zu erkennen. So wird beispielsweise in Abbildung \ref{lagen} (a) das rechte hintere Objekt selbst bei einem sehr niedrigen \textit{confidence score} Schwellwert nicht erkannt. In Abbildung \ref{lagen} (b) hingegen ist eine Detektion ab einem \textit{confidence score} von 0.53 möglich, was allerdings wieder weitere ungenaue und ungewünschte Detektionen verursacht. Ähnliche Probleme ergeben sich für die Detektion von Objekte aus extremen Blicklagen. In Abbildung \ref{lagen} (c) werden die Objekte beispielsweise erst ab einem \textit{confidence score} von 0.54 erkannt, allerdings nicht als drei einzelne Objekte, sondern als ein großes Gesamtobjekt. Dies gilt allerdings nicht für alle Klassen. Bei Anwendung dieses Problemfalls auf eine andere Klasse ergeben sich bei vergleichbarem \textit{confidence score} von 0.56 sehenswertere Ergebnisse (siehe Abbildung \ref{lagen} (d)). Demnach könnte man darauf schließen, dass durch Ausbau des Datensatzes eine bessere Inferenz für solche Fälle ermöglicht werden könnte.
 
 \begin{figure}[H]
 	\subfigure[Verdecktes Objekt I]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_verdeckt.jpg}}\hfill
@@ -72,7 +72,7 @@ So sind von anderen Objekten verdeckte Objekte nur schwer zu erkennen. So wird b
 	\label{lagen_yolo}
 \end{figure}
 
-Auch bei \textit{YOLO} können verdeckte Objekte nur schwer erkannt werden. In den beiden Beispielen (Abbildung \ref{lagen_yolo} (a) und (b)) wurden jeweils nur die beiden vorderen Flaschen detektiert, da der \textit{Confidence Score} für die zwei stark verdeckten Flaschen bei nur 0.15 und 0.08 liegt. Bei einer extremen Blicklage fällt das Ergebnis noch schlechter als bei \textit{SSD} aus. Hier werden im Beispiel von Abbildung \ref{lagen_yolo} (c) beide gefundenen Flaschen mit einem \textit{confidence score} von 0.97 und 0.53 sogar falsch klassifiziert, wobei wie bei \textit{SSD} die gleichen zwei Flaschen mit einer Box umschlossen sind.
+Auch bei \textit{YOLO} können verdeckte Objekte nur schwer erkannt werden. In den beiden Beispielen (Abbildung \ref{lagen_yolo} (a) und (b)) wurden jeweils nur die beiden vorderen Flaschen detektiert, da der \textit{confidence score} für die zwei stark verdeckten Flaschen bei nur 0.15 und 0.08 liegt. Bei einer extremen Blicklage fällt das Ergebnis noch schlechter als bei \textit{SSD} aus. Hier werden im Beispiel von Abbildung \ref{lagen_yolo} (c) beide gefundenen Flaschen mit einem \textit{confidence score} von 0.97 und 0.53 sogar falsch klassifiziert, wobei wie bei \textit{SSD} die gleichen zwei Flaschen mit einer Box umschlossen sind.
 
 Die zwei genannten Problemfälle wurden im Datensatz zwar zu 12.5\% abgedeckt, scheinen allerdings nur wenig Auswirkung auf besseres Detektionsverhalten für solche Fälle geliefert zu haben. Es lässt sich auch keine Aussage darüber treffen, ob eine Erweiterung des Datensatzes mit weiteren solchen Extremfällen eine Abhilfe für dieses Problem hätte liefern können. 
 
@@ -84,7 +84,7 @@ Die zwei genannten Problemfälle wurden im Datensatz zwar zu 12.5\% abgedeckt, s
 	\label{entfernung}
 \end{figure}
 
-Auch die Entfernung zum zu detektierenden Objekt besitzt eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{entfernung} wird gezeigt, dass ab einer Entfernung von drei Metern eine zuverlässige Detektion nicht mehr möglich ist. In diesem Beispiel ist erst ab einer niedrigeren \textit{confidence score} Grenze von 0.31 eine Detektion des Objekts wieder erfolgt, bei anderen Beispielen sogar erst ab einem Wert von 0.09.
+Auch die Entfernung zum zu detektierenden Objekt besitzt eine Auswirkung auf das Detektionsverhalten. In Abbildung \ref{entfernung} wird gezeigt, dass ab einer Entfernung von drei Metern eine zuverlässige Detektion bei \textit{SSD} nicht mehr möglich ist. In diesem Beispiel ist erst ab einer niedrigeren \textit{confidence score} Grenze von 0.31 eine Detektion des Objekts wieder erfolgt, bei anderen Beispielen sogar erst ab einem Wert von 0.09.
 
 \begin{figure}[H]
 	\subfigure[1 Meter]{\includegraphics[width=0.20\textwidth]{Bilder/yolo_entfernung1.jpg}}\hfill
@@ -120,7 +120,7 @@ Des Weiteren haben unterschiedliche Beleuchtungsgrade eine Auswirkung auf das De
 
 \textit{YOLO} verhält sich bei den verschiedenen Beleuchtungsverhältnissen ähnlich zu \textit{SSD}. Bei Abbildung \ref{sicht_yolo} (b) und (c) sowie (d) und (e) fällt auf, dass die Detektion je nach Klasse unterschiedlich gut ausfällt. Im Beispiel wird eine Flasche der Klasse \textit{ACE} mit einem \textit{confidence score} von 0.61 in einer überbeleuchteten und mit 0.56 in einer unterbeleuchteten Umgebung detektiert, wohingegen die Klasse \textit{Saskia Wasser Klein} in der jeweils gleichen Beleuchtungsumgebung bei nur 0.01 in überbeleuchteter und 0.06 in unterbeleuchteter Umgebung liegt.
 
-Alle Detektionen reagierten allerdings invariant gegenüber unterschiedlichen Hintergründen oder Bildauflösungen.
+Alle Detektionen beider Modelle reagierten allerdings invariant gegenüber unterschiedlichen Hintergründen oder Bildauflösungen.
  
 \section{Reaktionsvermögen}
 
@@ -137,10 +137,10 @@ Ein weiteres Problem beschreibt die initiale Latenz zwischen der Inferenz und de
 		Detektor & Hardware & Batchgröße & Dauer Epoche & Dauer Insgesamt \\
 		\hline
 		SSD & GTX 1080 & 16 & 9 Min. & 16.5 Std. \\
-		YOLO & RTX 2060 SUPER & 64 & 1.5 Min. & 8 Std.
+		YOLO & RTX 2060 & 64 & 1.5 Min. & 8 Std.
 	\end{tabular}
 	\captionof{table}{Trainingsverhalten von SSD und YOLO}
 	\label{table:duration}
 \end{center}
 
-Tabelle \ref{table:duration} zeigt die Ergebnisse des Trainingsverhaltens von \textit{SSD} und \textit{YOLO}. Pro Epoche wurden 998 Bilder durchlaufen. Die Dauer der beiden Trainingsdurchläufe lässt sich allerdings nur schwer vergleichen. Zum einen wird für das Training von \textit{YOLO} eine andere GPU verwendet, deren Tensor Kerne den Trainingsprozess merklich beschleunigen. Zum anderen werden die beiden Objektdetektoren in zwei verschiedenen Frameworks implementiert, wodurch ein anderes Trainingsverhalten von Grund auf gegeben ist und Unterschiede in der Performance auftreten können. So unterstützt das \textit{Darknet} Framework beispielsweise die Nutzung der \textit{cuDNN} Bibliothek für hardwarebeschleunigte Matrizenoperationen. Auch die Batchgröße wurde unterschiedlich gewählt, was sich auf die Häufigkeit des Gradientenabstiegs auswirkt. Bei beiden Verfahren kann das Training durch die Ablage von sogenannten Modell-Checkpoints zu einem späteren Zeitpunkt fortgeführt werden. Das ist vor allem dann von Vorteil, wenn nachträglich Parameter oder Trainingsdaten angepasst werden und kein kompletter Neustart des Trainings erforderlich ist.
+Tabelle \ref{table:duration} zeigt die Ergebnisse des Trainingsverhaltens von \textit{SSD} und \textit{YOLO}. Pro Epoche wurden 998 Bilder durchlaufen. Die Dauer der beiden Trainingsdurchläufe lässt sich allerdings nur schwer vergleichen. Zum einen wird für das Training von \textit{YOLO} eine andere GPU verwendet, deren Tensor Cores den Trainingsprozess merklich beschleunigen\footnote{Nach einem bekannten Fork von \textit{YOLO} kann durch Unterstützung von Tensor Cores eine doppelt so schnelle Trainingszeit erreicht werden \cite{AlexeyAB.20200403}}. Zum anderen werden die beiden Objektdetektoren in zwei verschiedenen Frameworks implementiert, wodurch ein anderes Trainingsverhalten von Grund auf gegeben ist und Unterschiede in der Performance auftreten können. So unterstützt das \textit{Darknet} Framework beispielsweise die Nutzung der \textit{cuDNN} Bibliothek für hardwarebeschleunigte Matrizenoperationen. Auch die Batchgröße wurde unterschiedlich gewählt, was sich auf die Häufigkeit des Gradientenabstiegs auswirkt. Bei beiden Verfahren kann das Training durch die Ablage von sogenannten Modell-Checkpoints zu einem späteren Zeitpunkt fortgeführt werden. Das ist vor allem dann von Vorteil, wenn nachträglich Parameter oder Trainingsdaten angepasst werden und kein kompletter Neustart des Trainings erforderlich ist.

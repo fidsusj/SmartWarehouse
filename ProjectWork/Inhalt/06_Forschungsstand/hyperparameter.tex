@@ -83,6 +83,8 @@ Zwei bekannte und ähnliche Aktivierungsfunktionen sind die \textit{Sigmoid-Funk
 	\label{relu}
 \end{figure} 
 
+\newpage
+
 Bei \textit{ReLU} kann es während des Trainingsprozesses dazu kommen, dass LTUs nach dem Gradientenabstieg einen negativen Wert aufweisen, weshalb sie nicht weiter aktiviert werden und für den Rest der Trainingsdauer \glqq tot\grqq{} sind. Um dies zu verhindern, wurde \textit{LReLU} dazu genutzt, um eine Reaktivierung zu ermöglichen, da auch für negative LTU Werte ein Gradient der Aktivierungsfunktion bestimmt werden kann. Bei \textit{LReLU} ist die Steigung der Funktion im zweiten Quadranten statisch gewählt, während sie bei \textit{PReLU} dynamisch von neuronalen Netz während des Trainingsprozesses selbst gelernt werden kann \cite{AurelienGeron.2018}.
 
 Eine letzte Variante der Aktivierungsfunktionen beschreibt die \textit{ELU} Funktion (siehe Abbildung \ref{elu}).

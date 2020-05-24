@@ -1,8 +1,6 @@
 \section{Datensatzformate} \label{format}
 
-Basierend darauf, welcher Objektdetektor trainiert werden soll, muss der zum Training verwendete Datensatz in einem bestimmten Format vorliegen. Zum Trainieren des \textit{SSDs} wird das sogenannte \textit{Pascal Visual Object Classes} (PascalVOC) Format benötigt. 
-
-Es definiert eine Unterteilung in \textit{JPEGImages}, \textit{Annotations} und \textit{ImageSets}. Während in dem Ordner \textit{JPEGImages} alle Bilder des Datensatzes vorhanden sind, befindet sich unter anderem die Information über die vorhandenen Objekte in dem Bild im Ordner \textit{Annotations}. Für jedes Bild des Datensatzes werden die Informationen in einer gleichnamigen XML-Datei abgelegt (siehe Listing \ref{pascalvoc:PascalVOC}).
+Basierend darauf, welcher Objektdetektor trainiert werden soll, muss der zum Training verwendete Datensatz in einem bestimmten Format vorliegen. Zum Trainieren des \textit{SSDs} wird das sogenannte \textit{Pascal Visual Object Classes} (PascalVOC) Format benötigt. Es definiert eine Unterteilung in \textit{JPEGImages}, \textit{Annotations} und \textit{ImageSets}. Während in dem Ordner \textit{JPEGImages} alle Bilder des Datensatzes vorhanden sind, befindet sich die Information über die vorhandenen Objekte in dem Bild im Ordner \textit{Annotations}.
 
 \lstset{language=XML}
 \lstinputlisting[
@@ -13,7 +11,7 @@ firstline=1,
 lastline=26
 ]{Quellcode/annotation.xml}
 
-Neben allgemeinen Metainformationen über das Bild befindet sich hier ebenso eine Liste aller markierten Objekte. Pro Objekt wird die Klassifikationskategorie, die Ausrichtung (z.B. \glqq Frontal\grqq{}), die Information über vollständiges Erscheinen im Bild, die Information über schwere Erkennbarkeit und die Bounding Box angegeben. Im Ordner \textit{ImageSets/Main} wird eine Unterteilung in Trainings-, Test- und Validierungsdatensatz durch drei Textdateien realisiert, die die Dateinamen der Bilddateien als Auflistung enthalten \cite{MarkEveringhamS.M.AliEslamiLucVanGoolChristopherK.I.WilliamsJohnWinnAndrewZis.2014,MarkEveringham.20120521,MarkEveringham.20120521}. 
+Für jedes Bild des Datensatzes werden die Informationen in einer gleichnamigen XML-Datei abgelegt (siehe Listing \ref{pascalvoc:PascalVOC}). Neben allgemeinen Metainformationen über das Bild befindet sich hier ebenso eine Liste aller markierten Objekte. Pro Objekt wird die Klassifikationskategorie, die Ausrichtung (z.B. \glqq Frontal\grqq{}), die Information über vollständiges Erscheinen im Bild, die Information über schwere Erkennbarkeit und die Bounding Box angegeben. Im Ordner \textit{ImageSets/Main} wird eine Unterteilung in Trainings-, Test- und Validierungsdatensatz durch drei Textdateien realisiert, die die Dateinamen der Bilddateien als Auflistung enthalten \cite{MarkEveringhamS.M.AliEslamiLucVanGoolChristopherK.I.WilliamsJohnWinnAndrewZis.2014,MarkEveringham.20120521,MarkEveringham.20120521}. 
 
 Das \textit{YOLO} Format für den \textit{YOLO} Objektdetektor definiert in einer \textit{.names}-Datei alle im Datensatz vorhandenen Kategorien durch simple Auflistung der Bezeichner. Die Bilder werden zusammen mit ihren Annotationen in einem separaten Ordner abgelegt. Die Annotationen folgen hier dem Format:
 

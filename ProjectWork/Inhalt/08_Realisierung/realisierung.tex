@@ -31,7 +31,7 @@ Die Hyperparameter sind nahezu gleich zu denen in der ursprünglichen wissenscha
 
 \subsection*{YOLO}
 
-Für \textit{YOLO} wurde die neuste Version \textit{YOLOv3} implementiert. Hierbei kommt das \textit{Dark-""net} Framework zum Einsatz, eine Implementierung in C. Vor der initialen Kompilierung müssen einige Konfigurationsschritte unternommen werden, weil auch der Betrieb auf einer normalen CPU oder einer GPU mit Tensor Kernen möglich ist. Für das Training kommt eine \textit{NVIDIA GeForce RTX 2060} GPU auf Basis von \textit{CUDA} Version 10.0 zum Einsatz, deren enthaltenen Tensor Kerne mitbenutzt werden. Zudem ermöglicht das \textit{Darknet} Framework die Nutzung von \textit{cuDNN} Version 7.4 für hardwarebeschleunigte Matrizenoperationen. Die benötigten Hyperparameter wurden dabei wie folgt gesetzt:
+Für \textit{YOLO} wurde die neuste Version \textit{YOLOv3} implementiert. Hierbei kommt das \textit{Dark-""net} Framework zum Einsatz, eine Implementierung in C. Vor der initialen Kompilierung müssen einige Konfigurationsschritte unternommen werden, weil auch der Betrieb auf einer normalen CPU oder einer GPU mit Tensor Cores möglich ist. Für das Training kommt eine \textit{NVIDIA GeForce RTX 2060 SUPER} GPU auf Basis von \textit{CUDA} Version 10.0 zum Einsatz, deren enthaltenen Tensor Cores mitbenutzt werden. Zudem ermöglicht das \textit{Darknet} Framework die Nutzung von \textit{cuDNN} Version 7.4 für hardwarebeschleunigte Matrizenoperationen. Die benötigten Hyperparameter wurden dabei wie folgt gesetzt:
 
 \begin{itemize}
 	\item Batchgröße: 64
